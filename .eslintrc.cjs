@@ -9,7 +9,9 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:prettier/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:@next/next/recommended",
   ],
+
   overrides: [
     {
       files: ["config/**/*.ts", "src/global-definitions.d.ts", "src/libs.d.ts"],
@@ -25,6 +27,18 @@ module.exports = {
       },
     },
     {
+      files: ["*.ts", "*.tsx"],
+
+      extends: [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      ],
+
+      parserOptions: {
+        project: ["./tsconfig.json"],
+      },
+    },
+    {
       files: ["**/*.tsx"],
       rules: {
         "react/require-default-props": "off",
@@ -37,10 +51,6 @@ module.exports = {
         sourceType: "module",
         project: "./tsconfig.json",
       },
-      extends: [
-        "plugin:@typescript-eslint/recommended",
-        "next/core-web-vitals",
-      ],
       files: ["*.ts", "*.tsx"],
     },
   ],
@@ -53,6 +63,13 @@ module.exports = {
         required: {
           some: ["nesting", "id"],
         },
+      },
+    ],
+
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
       },
     ],
     "jsx-a11y/label-has-for": [
