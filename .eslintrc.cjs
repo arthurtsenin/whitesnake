@@ -11,7 +11,6 @@ module.exports = {
     "plugin:react/jsx-runtime",
     "plugin:@next/next/recommended",
   ],
-
   overrides: [
     {
       files: ["config/**/*.ts", "src/global-definitions.d.ts", "src/libs.d.ts"],
@@ -19,6 +18,7 @@ module.exports = {
         "import/no-default-export": "off",
       },
     },
+
     {
       files: ["src/redux/slices/*.ts"],
       rules: {
@@ -26,6 +26,7 @@ module.exports = {
         "jsx-a11y/label-has-associated-control": "off",
       },
     },
+
     {
       files: ["*.ts", "*.tsx"],
 
@@ -55,7 +56,13 @@ module.exports = {
     },
   ],
   parser: "@typescript-eslint/parser",
-  plugins: ["react", "@typescript-eslint", "prettier"],
+  plugins: [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "simple-import-sort",
+    "unused-imports",
+  ],
   rules: {
     "jsx-a11y/label-has-associated-control": [
       "error",
@@ -65,7 +72,11 @@ module.exports = {
         },
       },
     ],
-
+    "import/extensions": [
+      "off",
+      "ignorePakages",
+      { js: "never", mjs: "never", jsx: "never", ts: "never", tsx: "never" },
+    ],
     "prettier/prettier": [
       "error",
       {
@@ -95,5 +106,57 @@ module.exports = {
     ],
     "no-nested-ternary": "off",
     "no-unneeded-ternary": "off",
+    "react/function-component-definition": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+        argsIgnorePattern: "^_",
+      },
+    ],
+    //#endregion  //*======== Unused Import ===========
+
+    //#region  //*=========== Import Sort ===========
+    "simple-import-sort/exports": "warn",
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        groups: [
+          // ext library & side effect imports
+          ["^@?\\w", "^\\u0000"],
+          // {s}css files
+          ["^.+\\.s?css$"],
+          // Lib and hooks
+          ["^@/lib", "^@/hooks"],
+          // static data
+          ["^@/data"],
+          // components
+          ["^@/components", "^@/container"],
+          // zustand store
+          ["^@/store"],
+          // Other imports
+          ["^@/"],
+          // relative paths up until 3 level
+          [
+            "^\\./?$",
+            "^\\.(?!/?$)",
+            "^\\.\\./?$",
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./\\.\\./?$",
+            "^\\.\\./\\.\\.(?!/?$)",
+            "^\\.\\./\\.\\./\\.\\./?$",
+            "^\\.\\./\\.\\./\\.\\.(?!/?$)",
+          ],
+          ["^@/types"],
+          // other that didnt fit in
+          ["^"],
+        ],
+      },
+    ],
+    //#endregion  //*======== Import Sort ===========
   },
 };
