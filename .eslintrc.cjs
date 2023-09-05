@@ -19,6 +19,7 @@ module.exports = {
         "import/no-default-export": "off",
       },
     },
+
     {
       files: ["src/redux/slices/*.ts"],
       rules: {
@@ -65,7 +66,11 @@ module.exports = {
         },
       },
     ],
-
+    "import/extensions": [
+      "off",
+      "ignorePakages",
+      { js: "never", mjs: "never", jsx: "never", ts: "never", tsx: "never" },
+    ],
     "prettier/prettier": [
       "error",
       {
@@ -95,5 +100,6 @@ module.exports = {
     ],
     "no-nested-ternary": "off",
     "no-unneeded-ternary": "off",
+    "react/function-component-definition": "off",
   },
 };

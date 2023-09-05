@@ -18,9 +18,10 @@
         "name": "next"
       }
     ],
+    "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@/*": ["./src/*"],
-      "~/*": ["./public/*"]
+      "@*": ["./src/*"],
+      "~*": ["./public/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
