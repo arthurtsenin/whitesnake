@@ -11,7 +11,6 @@ module.exports = {
     "plugin:react/jsx-runtime",
     "plugin:@next/next/recommended",
   ],
-
   overrides: [
     {
       files: ["config/**/*.ts", "src/global-definitions.d.ts", "src/libs.d.ts"],
@@ -27,6 +26,7 @@ module.exports = {
         "jsx-a11y/label-has-associated-control": "off",
       },
     },
+    
     {
       files: ["*.ts", "*.tsx"],
 

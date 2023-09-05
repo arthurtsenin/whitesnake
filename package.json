@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "jest --watch",
     "lint:fix": "eslint src --fix && yarn format",
     "lint:strict": "eslint --max-warnings=0 src",
     "typecheck": "tsc --noEmit --incremental false",
@@ -16,11 +17,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@testing-library/jest-dom": "^6.1.2",
+    "@testing-library/react": "^14.0.0",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
     "@typescript-eslint/typescript-estree": "^5.59.2",
     "classnames": "^2.3.2",
     "eslint": "^8.48.0",
+    "jest-environment-jsdom": "^29.6.4",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -29,6 +33,7 @@
     "typescript": "^4.9.5"
   },
   "devDependencies": {
+    "jest": "^27.5.1",
     "@commitlint/cli": "^16.3.0",
     "@commitlint/config-conventional": "^16.2.4",
     "@svgr/webpack": "^6.5.1",
