@@ -56,7 +56,13 @@ module.exports = {
     },
   ],
   parser: "@typescript-eslint/parser",
-  plugins: ["react", "@typescript-eslint", "prettier"],
+  plugins: [
+    "react",
+    "@typescript-eslint",
+    "prettier",
+    "simple-import-sort",
+    "unused-imports",
+  ],
   rules: {
     "jsx-a11y/label-has-associated-control": [
       "error",
@@ -101,5 +107,56 @@ module.exports = {
     "no-nested-ternary": "off",
     "no-unneeded-ternary": "off",
     "react/function-component-definition": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        vars: "all",
+        varsIgnorePattern: "^_",
+        args: "after-used",
+        argsIgnorePattern: "^_",
+      },
+    ],
+    //#endregion  //*======== Unused Import ===========
+
+    //#region  //*=========== Import Sort ===========
+    "simple-import-sort/exports": "warn",
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        groups: [
+          // ext library & side effect imports
+          ["^@?\\w", "^\\u0000"],
+          // {s}css files
+          ["^.+\\.s?css$"],
+          // Lib and hooks
+          ["^@/lib", "^@/hooks"],
+          // static data
+          ["^@/data"],
+          // components
+          ["^@/components", "^@/container"],
+          // zustand store
+          ["^@/store"],
+          // Other imports
+          ["^@/"],
+          // relative paths up until 3 level
+          [
+            "^\\./?$",
+            "^\\.(?!/?$)",
+            "^\\.\\./?$",
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./\\.\\./?$",
+            "^\\.\\./\\.\\.(?!/?$)",
+            "^\\.\\./\\.\\./\\.\\./?$",
+            "^\\.\\./\\.\\./\\.\\.(?!/?$)",
+          ],
+          ["^@/types"],
+          // other that didnt fit in
+          ["^"],
+        ],
+      },
+    ],
+    //#endregion  //*======== Import Sort ===========
   },
 };
