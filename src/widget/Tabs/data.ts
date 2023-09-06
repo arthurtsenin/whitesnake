@@ -1,12 +1,12 @@
 import { StaticImageData } from "next/image";
 
-import artboard1 from "$/artboards/Artboard1-min.webp";
-import artboard2 from "$/artboards/Artboard2-min.webp";
-import artboard3 from "$/artboards/Artboard3-min.webp";
-import artboard4 from "$/artboards/Artboard4-min.webp";
-import artboard5 from "$/artboards/Artboard5-min.webp";
-import artboard6 from "$/artboards/Artboard6-min.webp";
-import artboard7 from "$/artboards/Artboard7-min.webp";
+import artboard1 from "../../../public/artboards/Artboard1-min.webp";
+import artboard2 from "../../../public/artboards/Artboard2-min.webp";
+import artboard3 from "../../../public/artboards/Artboard3-min.webp";
+import artboard4 from "../../../public/artboards/Artboard4-min.webp";
+import artboard5 from "../../../public/artboards/Artboard5-min.webp";
+import artboard6 from "../../../public/artboards/Artboard6-min.webp";
+import artboard7 from "../../../public/artboards/Artboard7-min.webp";
 
 export type TabType = {
   id: number;
