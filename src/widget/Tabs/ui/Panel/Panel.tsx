@@ -1,8 +1,9 @@
-import { PanelType } from "@widget/Tabs/data";
 import Image from "next/image";
 import { FC } from "react";
 
 import styles from "./Panel.module.scss";
+
+import { PanelType } from "@/widget/Tabs/data";
 
 type PanelProps = {
   panel: PanelType;
