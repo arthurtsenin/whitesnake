@@ -36,8 +36,8 @@ jobs:
       - name: Type check
         uses: borales/actions-yarn@v4
         with:
-          cmd: yarn typecheck # will run yarn typecheck command
-      - name: 💅 Prettier check
+          cmd: typecheck # will run yarn typecheck command
+      - name: Prettier check
         uses: borales/actions-yarn@v4
         with:
-          cmd: yarn format:check # will run yarn format command
+          cmd: format:check # will run yarn format command
