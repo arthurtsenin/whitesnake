@@ -1,0 +1,75 @@
+.container {
+  border: none;
+  appearance: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.title {
+  color: #414141;
+  font-weight: 600;
+  font-size: 20px;
+  transition: all ease-in-out 0.5s;
+  text-wrap: nowrap;
+}
+
+.activeTitle {
+  color: #827eff;
+}
+
+.circle {
+  aspect-ratio: 1/1;
+  width: 16px;
+  min-width: 16px;
+  position: relative;
+  border-radius: 50px;
+  background: #414141;
+}
+
+.circle::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+}
+
+.circle.activeCircle {
+  background: linear-gradient(240deg, #c8b5ff, #827eff);
+  border-radius: 50px;
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #414141;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.progress::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  width: 0;
+  right: 0;
+  background: linear-gradient(240deg, #c8b5ff, #827eff);
+  border-radius: inherit;
+  transition: all ease-in-out 0.5s;
+}
+
+.progress.activeProgress:before {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
