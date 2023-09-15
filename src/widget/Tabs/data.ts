@@ -13,7 +13,7 @@ export type PanelType = {
   id: number;
   name: string;
   description: string;
-  image: StaticImageData | null;
+  image: StaticImageData | string;
 };
 
 export type PanelsType = {
@@ -45,42 +45,42 @@ export const INDUSTRY_PANELS: PanelsType = {
     id: INDUSTRY_TABS[INDUSTRY.ONE].id,
     name: INDUSTRY_TABS[INDUSTRY.ONE].name,
     description: "",
-    image: null,
+    image: "",
   },
   [INDUSTRY_TABS[INDUSTRY.TWO].name]: {
     id: INDUSTRY_TABS[INDUSTRY.TWO].id,
     name: INDUSTRY_TABS[INDUSTRY.TWO].name,
     description: "",
-    image: null,
+    image: "",
   },
   [INDUSTRY_TABS[INDUSTRY.THREE].name]: {
     id: INDUSTRY_TABS[INDUSTRY.THREE].id,
     name: INDUSTRY_TABS[INDUSTRY.THREE].name,
     description: "",
-    image: null,
+    image: "",
   },
   [INDUSTRY_TABS[INDUSTRY.FOUR].name]: {
     id: INDUSTRY_TABS[INDUSTRY.FOUR].id,
     name: INDUSTRY_TABS[INDUSTRY.FOUR].name,
     description: "",
-    image: null,
+    image: "",
   },
   [INDUSTRY_TABS[INDUSTRY.FIVE].name]: {
     id: INDUSTRY_TABS[INDUSTRY.FIVE].id,
     name: INDUSTRY_TABS[INDUSTRY.FIVE].name,
     description: "",
-    image: null,
+    image: "",
   },
   [INDUSTRY_TABS[INDUSTRY.SIX].name]: {
     id: INDUSTRY_TABS[INDUSTRY.SIX].id,
     name: INDUSTRY_TABS[INDUSTRY.SIX].name,
     description: "",
-    image: null,
+    image: "",
   },
   [INDUSTRY_TABS[INDUSTRY.SEVEN].name]: {
     id: INDUSTRY_TABS[INDUSTRY.SEVEN].id,
     name: INDUSTRY_TABS[INDUSTRY.SEVEN].name,
     description: "",
-    image: null,
+    image: "",
   },
 };
