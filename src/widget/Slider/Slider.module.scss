@@ -1,0 +1,21 @@
+.container {
+  margin: 0 auto;
+}
+
+.barContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.slidesContainer {
+  margin: 0 auto;
+  overflow: hidden;
+  height: 400px;
+  border-radius: 8px;
+}
+
+.slides {
+  transition: ease 1000ms;
+}

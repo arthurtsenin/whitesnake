@@ -1,0 +1,19 @@
+.wrapper {
+  height: 60vh;
+  min-height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+}
+
+.wrapper img {
+  border-radius: 50px;
+}
+
+.text {
+  width: 50%;
+  color: white;
+  position: absolute;
+}

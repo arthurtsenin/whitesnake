@@ -2,111 +2,34 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
+  plugins: ["@typescript-eslint", "simple-import-sort", "unused-imports"],
   extends: [
-    "airbnb",
-    "airbnb-typescript",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:@next/next/recommended",
-  ],
-  overrides: [
-    {
-      files: ["config/**/*.ts", "src/global-definitions.d.ts", "src/libs.d.ts"],
-      rules: {
-        "import/no-default-export": "off",
-      },
-    },
-
-    {
-      files: ["src/redux/slices/*.ts"],
-      rules: {
-        "no-param-reassign": "off",
-        "jsx-a11y/label-has-associated-control": "off",
-      },
-    },
-
-    {
-      files: ["*.ts", "*.tsx"],
-
-      extends: [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking",
-      ],
-
-      parserOptions: {
-        project: ["./tsconfig.json"],
-      },
-    },
-    {
-      files: ["**/*.tsx"],
-      rules: {
-        "react/require-default-props": "off",
-        "consistent-return": "off",
-      },
-    },
-    {
-      parserOptions: {
-        ecmaVersion: "latest",
-        sourceType: "module",
-        project: "./tsconfig.json",
-      },
-      files: ["*.ts", "*.tsx"],
-    },
-  ],
-  parser: "@typescript-eslint/parser",
-  plugins: [
-    "react",
-    "@typescript-eslint",
+    "eslint:recommended",
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
     "prettier",
-    "simple-import-sort",
-    "unused-imports",
+    "plugin:eslint-comments/recommended",
   ],
   rules: {
-    "jsx-a11y/label-has-associated-control": [
+    "eslint-comments/no-use": [
       "error",
-      {
-        required: {
-          some: ["nesting", "id"],
-        },
-      },
+      { allow: ["eslint-disable-next-line", "eslint"] },
     ],
-    "import/extensions": [
-      "off",
-      "ignorePakages",
-      { js: "never", mjs: "never", jsx: "never", ts: "never", tsx: "never" },
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        endOfLine: "auto",
-      },
-    ],
-    "jsx-a11y/label-has-for": [
-      "error",
-      {
-        required: {
-          some: ["nesting", "id"],
-        },
-      },
-    ],
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        devDependencies: ["**/*.test.{ts,tsx,js,jsx}"],
-      },
-    ],
-    "import/prefer-default-export": "off",
-    "react/react-in-jsx-scope": 0,
-    indent: "off",
-    "@typescript-eslint/no-unused-vars": [
+    "no-unused-vars": "off",
+    "no-console": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/no-unescaped-entities": "off",
+
+    "react/display-name": "off",
+    "react/jsx-curly-brace-presence": [
       "warn",
-      { argsIgnorePattern: "^action" },
+      { props: "never", children: "never" },
     ],
-    "no-nested-ternary": "off",
-    "no-unneeded-ternary": "off",
-    "react/function-component-definition": "off",
+
+    //#region  //*=========== Unused Import ===========
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "warn",
     "unused-imports/no-unused-vars": [
@@ -158,5 +81,9 @@ module.exports = {
       },
     ],
     //#endregion  //*======== Import Sort ===========
+  },
+  globals: {
+    React: true,
+    JSX: true,
   },
 };

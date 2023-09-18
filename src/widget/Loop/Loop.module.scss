@@ -1,0 +1,23 @@
+.loop {
+  width: 100%;
+  overflow: hidden;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+}
+
+.list[data-animate="true"] .item {
+  animation: loopAnimation linear infinite;
+}
+
+@keyframes loopAnimation {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

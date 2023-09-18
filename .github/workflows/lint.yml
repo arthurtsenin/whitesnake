@@ -1,66 +1,51 @@
-# https://github.com/kentcdodds/kentcdodds.com/blob/main/.github/workflows/deployment.yml
-name: Code Check
+name: CI
+
+permissions: { checks: write, actions: read, contents: read }
+
 on:
   push:
     branches:
       - main
-  pull_request: {}
-
-concurrency:
-  group: ${{ github.job }}-${{ github.ref }}
-  cancel-in-progress: true
+  pull_request:
 
 jobs:
-  lint:
-    name: ⬣ ESLint
+  build:
+    name: Test
     runs-on: ubuntu-latest
     steps:
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: ⎔ Setup node
+      - name: Set Node.js 18.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18.x
 
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-
-      - name: 🔬 Lint
-        run: yarn lint:strict
-
-  typecheck:
-    name: ʦ TypeScript
-    runs-on: ubuntu-latest
-    steps:
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v2
-
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
+      - name: Run install
+        uses: borales/actions-yarn@v4
         with:
-          node-version: 16
+          cmd: install # will run yarn install command
 
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-
-      - name: 🔎 Type check
-        run: yarn typecheck
-
-  prettier:
-    name: 💅 Prettier
-    runs-on: ubuntu-latest
-    steps:
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v2
-
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v3
+      - name: Build develop bundle
+        uses: borales/actions-yarn@v4
         with:
-          node-version: 16
+          cmd: build # will run yarn build:prod command
 
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+      - name: Prettier format
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: format # will run yarn formatting command
 
-      - name: 💅 Prettier check
-        run: yarn format:check
+      - name: Lint the app
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: lint:strict # will run yarn lint command
+
+      - name: Type check
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: typecheck # will run yarn typecheck command
+
+      - name: Prettier check
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: format:check # will run yarn format checker command
