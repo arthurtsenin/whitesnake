@@ -11,8 +11,13 @@ module.exports = {
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "prettier",
+    "plugin:eslint-comments/recommended",
   ],
   rules: {
+    "eslint-comments/no-use": [
+      "error",
+      { allow: ["eslint-disable-next-line", "eslint"] },
+    ],
     "no-unused-vars": "off",
     "no-console": "warn",
     "@typescript-eslint/explicit-module-boundary-types": "off",
