@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.item {
+  width: 30%;
+  min-width: 430px;
+  height: 430px;
+  background: #101010;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.name {
+  font-style: normal;
+  font-weight: 500;
+  color: #757575;
+}
