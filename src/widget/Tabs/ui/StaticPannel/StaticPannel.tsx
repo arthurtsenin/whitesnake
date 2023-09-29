@@ -1,15 +1,15 @@
 import Image from "next/image";
 import { FC } from "react";
 
-import styles from "./Panel.module.scss";
+import styles from "./StaticPannel.module.scss";
 
-import { PanelType } from "@/widget/Tabs/data";
+import { IndustryType } from "@/widget/Tabs/data";
 
-type PanelProps = {
-  panel: PanelType;
+type StaticPannelProps = {
+  panel: IndustryType;
 };
 
-export const Panel: FC<PanelProps> = ({ panel }) => {
+export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
   return (
     <div className={styles.wrapper}>
       <Image

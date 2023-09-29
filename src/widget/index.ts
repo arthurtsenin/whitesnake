@@ -1,4 +1,5 @@
 import { Accordion } from "./Accordion/Accordion";
-import { Tabs } from "./Tabs/Tabs";
+import { DynamicTabs } from "./Tabs/DynamicTabs";
+import { StaticTabs } from "./Tabs/StaticTabs";
 
-export { Accordion, Tabs };
+export { Accordion, DynamicTabs, StaticTabs };
