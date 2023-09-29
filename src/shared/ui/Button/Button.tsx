@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { ComponentPropsWithoutRef, FC } from "react";
 
-import styles from "./Button.module.scss";
+import styles from "./Button.module.css";
 
 type ButtonProps = ComponentPropsWithoutRef<"button"> & {
   variant?: "primary" | "secondary" | "transparent";

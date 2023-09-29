@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
-import styles from "./CaseCard.module.scss";
+import styles from "./CaseCard.module.css";
 
 type CaseCardProps = {
   caption: string;
