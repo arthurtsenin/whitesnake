@@ -13,6 +13,12 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
     "plugins": [
       {
         "name": "next"
@@ -21,8 +27,7 @@
     "paths": {
       "@/*": ["./src/*"],
       "&/*": ["./public/*"]
-    },
-    "forceConsistentCasingInFileNames": true
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
