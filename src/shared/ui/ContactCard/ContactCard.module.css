@@ -2,7 +2,7 @@
   padding: 20px;
   width: 25%;
   aspect-ratio: 1/1;
-  border: 1px solid rgba(255, 255, 255, 0.201);
+  border: 1px solid rgb(255 255 255 / 20.1%);
   border-radius: 12px;
   background: #101010b9;
 }
@@ -10,12 +10,12 @@
 .title {
   font-weight: 700;
   font-size: 30px;
-  color: #ffffff;
+  color: #fff;
 }
 
 .description {
   margin-top: 20px;
   font-weight: 500;
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgb(255 255 255 / 60%);
 }

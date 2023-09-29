@@ -18,22 +18,16 @@
 
 .hover {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  inset: 0;
   padding: 15px;
   background-color: #0101012c;
   backdrop-filter: blur(20px);
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   color: white;
   text-decoration: none;
   font-size: 50px;
-
   transition: ease 500ms;
   opacity: 0;
 }

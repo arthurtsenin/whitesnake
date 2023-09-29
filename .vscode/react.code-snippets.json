@@ -1,0 +1,56 @@
+{
+  "Next Pages": {
+    "prefix": "np",
+    "body": [
+      "use client",
+
+      "export default function ${1:${TM_FILENAME_BASE/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}}Page() {",
+      "  return (",
+      "        <section>",
+      "            $0",
+      "        </section>",
+      "  )",
+      "}"
+    ]
+  },
+
+  "React Functional Component": {
+    "prefix": "rc",
+    "body": [
+      "use client",
+      "type ${1:${TM_FILENAME_BASE}}Props = {}",
+      "export const ${1:${TM_FILENAME_BASE}} = () => {",
+      "  return (",
+      "    <div>",
+      "      $0",
+      "    </div>",
+      "  )",
+      "}"
+    ]
+  },
+
+  "Wrap with class": {
+    "prefix": "cx",
+    "body": ["className=' ' "]
+  },
+
+  "React.useState": {
+    "prefix": "us",
+    "body": [
+      "const [${1}, set${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}] = React.useState<$3>(${2:initial${1/(^[a-zA-Z])(.*)/${1:/upcase}${2}/}})$0"
+    ]
+  },
+
+  "React.useEffect": {
+    "prefix": "uf",
+    "body": ["React.useEffect(() => {", "  $0", "}, []);"]
+  },
+  "React.useRef": {
+    "prefix": "urf",
+    "body": ["const ${1:someRef} = React.useRef($0)"]
+  },
+  "Variable unpackage": {
+    "prefix": "qwe",
+    "body": ["var($0)"]
+  }
+}

@@ -17,9 +17,10 @@
     box-sizing: border-box;
     width: 2px;
     height: 12px;
-    background: currentColor;
+    background: currentcolor;
     transform: rotate(55deg);
   }
+
   &::after {
     transform: rotate(-55deg);
   }

@@ -68,7 +68,7 @@
   transition: all ease-in-out 0.5s;
 }
 
-.progress.activeProgress:before {
+.progress.activeProgress::before {
   right: auto;
   left: 0;
   width: 100%;
