@@ -1,0 +1,177 @@
+:root {
+  --ui-mobile-small-device-size: 320px;
+  --ui-mobile-medium-device-size: 450px;
+  --ui-tablet-small-device-size: 744px;
+  --ui-tablet-medium-device-size: 1200px;
+  --ui-desktop-small-device-size: 1440px;
+  --ui-desktop-medium-device-size: 1920px;
+  --container-base-width: 90%;
+  --index-100: 1;
+  --index-200: 2;
+  --index-300: 3;
+  --index-400: 4;
+  --index-500: 5;
+  --fs-section-suptitle: 16px;
+  --fs-section-title: 70px;
+  --fs-section-description: 20px;
+  --fs-hero-title: 100px;
+  --fs-hero-description: 20px;
+  --fs-card-information-title: 32px;
+  --fs-card-information-description: 20px;
+  --fs-case-card-title: 26px;
+  --fs-case-card-description: 20px;
+  --fs-tab: 18px;
+  --fs-panel-title: 50px;
+  --fs-panel-subtitle: 20px;
+  --fs-progress-lable: 20px;
+  --fs-banner-title: 70px;
+  --fs-banner-description: 20px;
+  --fs-contacts-title: 32px;
+  --fs-contacts-description: 20px;
+  --fs-questions-title: 32px;
+  --fs-questions-description: 20px;
+  --fs-navlink: 18px;
+  --fs-notification: 20px;
+  --fs-principles-title: 50px;
+  --fs-principles-description: 50px;
+  --fs-basis-title: 32px;
+  --fs-basis-description: 20px;
+  --fs-service-variants-title: 70px;
+  --fs-service-variants-subtitle: 20px;
+  --fs-service-variants-description: 20px;
+  --fs-service-stack: 20px;
+  --fw-light: 400;
+  --fw-regular: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --clr-bg: #000;
+  --clr-border: rgb(255 255 255 / 3%);
+  --clr-main-text: #fff;
+  --clr-secondary-text: rgb(255 255 255 / 60%);
+  --clr-title-gradient: linear-gradient(
+    135deg,
+    #fff 30%,
+    rgb(255 255 255 / 38%) 100%
+  );
+  --clr-tab-list-bg: rgb(255 255 255 / 3%);
+  --clr-tab-bg: radial-gradient(
+      70.71% 70.71% at 50% 50%,
+      rgb(0 225 244 / 15%) 0%,
+      rgb(255 255 255 / 0%) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgb(255 255 255 / 10%) 0%,
+      rgb(255 255 255 / 0%) 100%
+    );
+  --clr-card-bg: #101010;
+  --clr-card-bg-gradient: radial-gradient(
+    70.71% 70.71% at 50% 50%,
+    rgb(20 0 244 / 15%) 0%,
+    rgb(42 27 215 / 0%) 100%
+  );
+  --clr-statistic-figure-bg-100: linear-gradient(
+    144deg,
+    #c8b5ff -7.77%,
+    #9e94ff 56.12%,
+    #827eff 99.34%
+  );
+  --clr-statistic-figure-bg-200: linear-gradient(
+    144deg,
+    #c8b5ff -7.77%,
+    #827eff 99.34%
+  );
+  --clr-statistic-figure-bg-300: linear-gradient(
+    180deg,
+    rgb(130 126 255 / 0%) 28.8%,
+    #827eff 100%
+  );
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+a,
+ul,
+li {
+  all: unset;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li {
+  display: block;
+}
+
+body {
+  background-color: black;
+}
+
+/* TODO add responsive
+  
+  $fs-principles-title: '50px';
+  $fs-principles-description: '50px';
+  $fs-basis-title: '32px';
+  $fs-basis-description: '20px';
+  $fs-service-variants-title: '70px';
+  $fs-service-variants-subtitle: '20px';
+  $fs-service-variants-description: '20px';
+  $fs-service-stack: '20px';
+  $fw-light: '400';
+  $fw-regular: '500';
+  $fw-semibold: '600';
+  $fw-bold: '700';
+  */
+
+@media screen and (width <=1440px) {
+  :root {
+    --fs-card-information-title: 30px;
+    --fs-card-information-description: 18px;
+  }
+}
+
+@media screen and (width <=1200px) {
+  :root {
+    --fs-hero-title: 50px;
+  }
+}
+
+@media screen and (width <=768px) {
+  :root {
+    --fs-hero-title: 50px;
+    --fs-card-information-title: 26px;
+    --fs-card-information-description: 16px;
+    --fs-banner-title: 50px;
+  }
+}
+
+@media screen and (width <=450px) {
+  :root {
+    --fs-hero-title: 30px;
+    --fs-section-suptitle: 8px;
+    --fs-section-title: 26px;
+    --fs-section-description: 12px;
+    --fs-hero-description: 14px;
+    --fs-case-card-title: 18px;
+    --fs-case-card-description: 10px;
+    --fs-tab: 10px;
+    --fs-panel-title: 18px;
+    --fs-progress-lable: 14px;
+    --fs-banner-description: 16px;
+    --fs-questions-title: 18px;
+    --fs-questions-description: 12px;
+    --fs-navlink: 8px;
+    --fs-notification: 12px;
+  }
+}
