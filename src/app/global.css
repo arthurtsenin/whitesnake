@@ -87,6 +87,11 @@
     #fff 30%,
     rgb(255 255 255 / 38%) 100%
   );
+  --clr-border-gradient: linear-gradient(
+    346deg,
+    rgba(255, 0, 0, 1) 40%,
+    rgba(255, 181, 181, 1) 100%
+  );
   --clr-tab-bg-gradient: radial-gradient(
       70.71% 70.71% at 50% 50%,
       rgb(238 32 32 / 50%) 0%,

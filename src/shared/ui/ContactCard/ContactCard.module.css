@@ -1,10 +1,12 @@
+:root {
+  --container-padding: 16px;
+}
+
 .container {
   position: relative;
-  padding: 40px;
+  padding: var(--container-padding);
 
   width: 25%;
-
-  padding: 40px;
 
   aspect-ratio: 1/1;
 
@@ -39,18 +41,26 @@
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 12px;
+    border-radius: var(--radius-200);
     padding: 1px;
-    background: linear-gradient(
-      346deg,
-      rgba(255, 0, 0, 1) 40%,
-      rgba(255, 181, 181, 1) 100%
-    );
+    background: var(--clr-border-gradient);
     -webkit-mask:
       linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     transition: all 3s ease-in-out;
+  }
+}
+
+@media screen and (min-width: 744px) {
+  :root {
+    --container-padding: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --container-padding: 40px;
   }
 }
