@@ -244,8 +244,7 @@ body {
     --gap-case-card: 16px;
     --gap-row-case-cards: 32px;
     --gap-column-case-cards: 0px;
-
-    --fs-tab: 14px;
+    --radius-300: var(--radius-100) --fs-tab: 14px;
     --fs-panel-title: 18px;
     --fs-panel-subtitle: 12px;
     --pannel-text-width: 311px;
