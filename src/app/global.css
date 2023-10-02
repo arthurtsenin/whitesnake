@@ -20,7 +20,7 @@
   --radius-100: 8px;
   --radius-200: 12px;
   --radius-300: 24px;
-  --radius-400: 50px;
+  --radius-400: 50%;
   --header-height: 112px;
   --gap-header: 40px;
   --fs-navlink: 18px;
@@ -38,8 +38,14 @@
   --fs-section-title: 70px;
   --fs-section-subtitle: 20px;
   --gap-section-title: 24px;
+
   --fs-case-card-title: 24px;
+  --pl-case-card-title: 36px;
   --fs-case-card-description: 20px;
+  --gap-case-card: 32px;
+  --gap-row-case-cards: 40px;
+  --gap-column-case-cards: 40px;
+
   --fs-tab: 18px;
   --fs-panel-title: 50px;
   --fs-panel-subtitle: 20px;
@@ -106,6 +112,7 @@ h4,
 h5,
 h6,
 button,
+figure,
 a,
 ul,
 li,
@@ -121,6 +128,7 @@ h4,
 h5,
 h6,
 button,
+figure,
 ul,
 li,
 p {
@@ -131,9 +139,15 @@ p {
 body {
   background-color: var(--clr-main-bg);
   color: var(--clr-main-text);
+  overflow-x: hidden;
+  position: relative;
 }
 
-@media screen and (max-width: 1200px) {
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media screen and (width <= 1200px) {
   :root {
     --gap-layout: 240px;
     --gap-widget: 64px;
@@ -154,10 +168,15 @@ body {
     --fs-section-title: 48px;
     --fs-section-subtitle: 20px;
     --gap-section-title: 24px;
-    --fs-case-card-title: 24px;
 
+    --fs-case-card-title: 24px;
+    --pl-case-card-title: 36px;
     /* change after design on hover */
     --fs-case-card-description: 20px;
+    --gap-case-card: 16px;
+    --gap-row-case-cards: 40px;
+    --gap-column-case-cards: 24px;
+
     --fs-tab: 18px;
     --fs-panel-title: 50px;
     --fs-panel-subtitle: 20px;
@@ -190,7 +209,7 @@ body {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (width <= 375px) {
   :root {
     --gap-layout: 80px;
     --gap-widget: 40px;
@@ -211,10 +230,15 @@ body {
     --fs-section-title: 24px;
     --fs-section-subtitle: 12px;
     --gap-section-title: 8px;
-    --fs-case-card-title: 18px;
 
+    --fs-case-card-title: 18px;
+    --pl-case-card-title: 0px;
     /* change after design on hover */
-    --fs-case-card-description: 20px;
+    --fs-case-card-description: 14px;
+    --gap-case-card: 16px;
+    --gap-row-case-cards: 32px;
+    --gap-column-case-cards: 0px;
+
     --fs-tab: 14px;
     --fs-panel-title: 18px;
     --fs-panel-subtitle: 12px;
@@ -222,7 +246,6 @@ body {
     --gap-pannel-text: 5px;
 
     /* unknown component */
-
     /* --fs-instruction-title:38px;
     --instruction-title-width: 356px;
     --gap-instruction-contanet:106px;
@@ -251,7 +274,7 @@ body {
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (width <= 320px) {
   :root {
     --gap-layout: 80px;
     --gap-widget: 32px;
@@ -272,10 +295,15 @@ body {
     --fs-section-title: 24px;
     --fs-section-subtitle: 14px;
     --gap-section-title: 8px;
-    --fs-case-card-title: 16px;
 
+    --fs-case-card-title: 16px;
+    --pl-case-card-title: 0px;
     /* change after design on hover */
-    --fs-case-card-description: 20px;
+    --fs-case-card-description: 12px;
+    --gap-case-card: 16px;
+    --gap-row-case-cards: 24px;
+    --gap-column-case-cards: 0px;
+
     --fs-tab: 14px;
     --fs-panel-title: 16px;
     --fs-panel-subtitle: 12px;
