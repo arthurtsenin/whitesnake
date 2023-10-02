@@ -1,0 +1,23 @@
+.suptitle {
+  font-size: var(--fs-section-suptitle);
+  color: var(--clr-secondary-text);
+  font-weight: var(--fw-bold);
+  letter-spacing: 80%;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: var(--fs-section-subtitle);
+  color: var(--clr-secondary-text);
+  font-weight: var(--fw-light);
+  letter-spacing: -5%;
+  text-transform: capitalize;
+}
+
+.title {
+  font-size: var(--fs-section-title);
+  color: var(--clr-title-gradient);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.77px;
+  text-transform: capitalize;
+}
