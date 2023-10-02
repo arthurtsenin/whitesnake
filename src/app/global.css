@@ -20,7 +20,7 @@
   --radius-100: 8px;
   --radius-200: 12px;
   --radius-300: 24px;
-  --radius-400: 50px;
+  --radius-400: 50%;
   --header-height: 112px;
   --gap-header: 40px;
   --fs-navlink: 18px;
@@ -30,6 +30,7 @@
   --hiro-description-width: 677px;
   --gap-hero-text: 40px;
   --btn-width: 250px;
+  --btn-height: 80px;
   --fs-button-text: 20px;
   --fs-card-benefit-title: 32px;
   --fs-card-benefit-description: 20px;
@@ -37,8 +38,14 @@
   --fs-section-title: 70px;
   --fs-section-subtitle: 20px;
   --gap-section-title: 24px;
+
   --fs-case-card-title: 24px;
+  --pl-case-card-title: 36px;
   --fs-case-card-description: 20px;
+  --gap-case-card: 32px;
+  --gap-row-case-cards: 40px;
+  --gap-column-case-cards: 40px;
+
   --fs-tab: 18px;
   --fs-panel-title: 50px;
   --fs-panel-subtitle: 20px;
@@ -76,22 +83,24 @@
   --clr-button-secondary-bg: #ee2020;
   --clr-button-transparent-gradient: linear-gradient(
     135deg,
-    #fff 30%,
-    rgb(255 255 255 / 38%) 100%
+    #ffffff 30%,
+    #ffffff00 100%
   );
   --clr-main-text: #fff;
-  --clr-secondary-text: rgb(255 255 255 / 50%);
+  --clr-secondary-text: rgb(255 255 255 / 60%);
   --clr-border: rgb(255 255 255 / 3%);
   --clr-title-gradient: linear-gradient(
     135deg,
     #fff 30%,
     rgb(255 255 255 / 38%) 100%
   );
+
   --clr-border-gradient: linear-gradient(
     346deg,
     rgba(255, 0, 0, 1) 40%,
     rgba(255, 181, 181, 1) 100%
   );
+  --clr-contact-card-bg: #101010;
   --clr-tab-bg-gradient: radial-gradient(
       70.71% 70.71% at 50% 50%,
       rgb(238 32 32 / 50%) 0%,
@@ -109,6 +118,7 @@ h4,
 h5,
 h6,
 button,
+figure,
 a,
 ul,
 li,
@@ -123,6 +133,8 @@ h3,
 h4,
 h5,
 h6,
+button,
+figure,
 ul,
 li,
 p {
@@ -133,6 +145,12 @@ p {
 body {
   background-color: var(--clr-main-bg);
   color: var(--clr-main-text);
+  overflow-x: hidden;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 @media screen and (width <= 1200px) {
@@ -150,15 +168,21 @@ body {
     --fs-card-benefit-title: 16px;
     --fs-card-benefit-description: 12px;
     --btn-width: 196px;
+    --btn-height: 50px;
     --fs-button-text: 16px;
     --fs-section-suptitle: 15px;
     --fs-section-title: 48px;
     --fs-section-subtitle: 20px;
     --gap-section-title: 24px;
-    --fs-case-card-title: 24px;
 
+    --fs-case-card-title: 24px;
+    --pl-case-card-title: 36px;
     /* change after design on hover */
     --fs-case-card-description: 20px;
+    --gap-case-card: 16px;
+    --gap-row-case-cards: 40px;
+    --gap-column-case-cards: 24px;
+
     --fs-tab: 18px;
     --fs-panel-title: 50px;
     --fs-panel-subtitle: 20px;
@@ -204,6 +228,7 @@ body {
     --hiro-description-width: 288px;
     --gap-hero-text: 16px;
     --btn-width: 164px;
+    --btn-height: 50px;
     --fs-button-text: 16px;
     --fs-card-benefit-title: 16px;
     --fs-card-benefit-description: 12px;
@@ -211,10 +236,15 @@ body {
     --fs-section-title: 24px;
     --fs-section-subtitle: 12px;
     --gap-section-title: 8px;
-    --fs-case-card-title: 18px;
 
+    --fs-case-card-title: 18px;
+    --pl-case-card-title: 0px;
     /* change after design on hover */
-    --fs-case-card-description: 20px;
+    --fs-case-card-description: 14px;
+    --gap-case-card: 16px;
+    --gap-row-case-cards: 32px;
+    --gap-column-case-cards: 0px;
+
     --fs-tab: 14px;
     --fs-panel-title: 18px;
     --fs-panel-subtitle: 12px;
@@ -222,7 +252,6 @@ body {
     --gap-pannel-text: 5px;
 
     /* unknown component */
-
     /* --fs-instruction-title:38px;
     --instruction-title-width: 356px;
     --gap-instruction-contanet:106px;
@@ -264,6 +293,7 @@ body {
     --hiro-description-width: 288px;
     --gap-hero-text: 16px;
     --btn-width: 140px;
+    --btn-height: 50px;
     --fs-button-text: 14px;
     --fs-card-benefit-title: 16px;
     --fs-card-benefit-description: 12px;
@@ -271,10 +301,15 @@ body {
     --fs-section-title: 24px;
     --fs-section-subtitle: 14px;
     --gap-section-title: 8px;
-    --fs-case-card-title: 16px;
 
+    --fs-case-card-title: 16px;
+    --pl-case-card-title: 0px;
     /* change after design on hover */
-    --fs-case-card-description: 20px;
+    --fs-case-card-description: 12px;
+    --gap-case-card: 16px;
+    --gap-row-case-cards: 24px;
+    --gap-column-case-cards: 0px;
+
     --fs-tab: 14px;
     --fs-panel-title: 16px;
     --fs-panel-subtitle: 12px;
