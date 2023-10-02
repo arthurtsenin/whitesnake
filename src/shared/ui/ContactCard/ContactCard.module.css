@@ -10,7 +10,7 @@
 
   background: #101010;
 
-  border-radius: 12px;
+  border-radius: var(--radius-200);
   border: 1px solid rgba(255, 255, 255, 0.15);
 
   transition: all ease-in-out 0.3s;
@@ -22,7 +22,7 @@
   gap: var(--gap-contacts-text);
 }
 .title {
-  font-weight: 700;
+  font-weight: var(--fw-bold);
   font-size: var(--fs-contacts-title);
 
   color: var(--clr-main-text);
