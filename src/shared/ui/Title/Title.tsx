@@ -13,7 +13,7 @@ export const Title: FC<TitleProps> = ({ title, subtitle, suptitle }) => {
     <div className={styles.text}>
       {suptitle && <p className={styles.suptitle}>{suptitle}</p>}
       <h2 className={styles.title}>{title}</h2>
-      {subtitle && <p className={styles.substitle}>{subtitle}</p>}
+      {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
     </div>
   );
 };

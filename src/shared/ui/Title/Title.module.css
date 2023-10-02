@@ -1,23 +1,43 @@
+.text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: var(--gap-section-title);
+}
+
 .suptitle {
   font-size: var(--fs-section-suptitle);
   color: var(--clr-secondary-text);
   font-weight: var(--fw-bold);
-  letter-spacing: 80%;
+  letter-spacing: 6.4px;
   text-transform: uppercase;
+  line-height: 100%;
 }
 
 .subtitle {
   font-size: var(--fs-section-subtitle);
   color: var(--clr-secondary-text);
   font-weight: var(--fw-light);
-  letter-spacing: -5%;
-  text-transform: capitalize;
+  letter-spacing: -0.6px;
+  line-height: 130%;
+}
+
+.subtitle:first-letter {
+  text-transform: uppercase;
 }
 
 .title {
   font-size: var(--fs-section-title);
-  color: var(--clr-title-gradient);
+  background: var(--clr-title-gradient);
   font-weight: var(--fw-bold);
+  color: var(--clr-main-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   letter-spacing: -0.77px;
-  text-transform: capitalize;
+  word-wrap: break-word;
+  line-height: 90%;
+}
+
+.title:first-letter {
+  text-transform: uppercase;
 }
