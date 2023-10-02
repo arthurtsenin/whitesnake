@@ -2,18 +2,20 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 
-import styles from "./CaseCard.module.scss";
+import styles from "./CaseCard.module.css";
+
+import arrow from "&/arrow-right.svg";
 
 type CaseCardProps = {
   caption: string;
   description: string;
-  adress: string;
-  image: StaticImageData;
+  path: string;
+  image: StaticImageData | string;
 };
 
 export const CaseCard: FC<CaseCardProps> = ({
   image,
-  adress,
+  path,
   description,
   caption,
 }) => {
@@ -21,8 +23,10 @@ export const CaseCard: FC<CaseCardProps> = ({
     <figure className={styles.container}>
       <div className={styles.wrapper}>
         <Image src={image} alt={caption} />
-        <Link href={adress} className={styles.hover}>
-          <div className={styles.arrow}>{"->"}</div>
+        <Link href={path} className={styles.hover}>
+          <div className={styles.arrow}>
+            <Image src={arrow} alt="arrow" />
+          </div>
           <p className={styles.description}>{description}</p>
         </Link>
       </div>

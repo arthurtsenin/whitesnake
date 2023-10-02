@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import styles from "@/shared/ui/SolutionContainer/SolutionContainer.module.scss";
+import styles from "@/shared/ui/SolutionContainer/SolutionContainer.module.css";
 
 import { SolutionItem } from "@/shared/ui/SolutionItem/SolutionItem";
 

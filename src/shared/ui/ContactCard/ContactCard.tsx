@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FC } from "react";
 
-import styles from "./ContactCard.module.scss";
+import styles from "./ContactCard.module.css";
 
 type ContactCardProps = {
   url: string;

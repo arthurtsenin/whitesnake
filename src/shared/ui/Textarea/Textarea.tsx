@@ -3,7 +3,7 @@
 import classNames from "classnames";
 import { FC, useId, useState } from "react";
 
-import styles from "./Textarea.module.scss";
+import styles from "./Textarea.module.css";
 
 type TextareaProps = {
   name?: string;

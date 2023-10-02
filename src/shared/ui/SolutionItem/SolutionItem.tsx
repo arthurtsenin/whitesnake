@@ -2,7 +2,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import { FC } from "react";
 
-import styles from "./SolutionItem.module.scss";
+import styles from "./SolutionItem.module.css";
 
 type SolutionItemProps = {
   text: Array<string>;

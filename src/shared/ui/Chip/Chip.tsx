@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import styles from "./Chip.module.scss";
+import styles from "./Chip.module.css";
 
 type ChipProps = {
   text: string;
