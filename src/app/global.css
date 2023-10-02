@@ -30,6 +30,7 @@
   --hiro-description-width: 677px;
   --gap-hero-text: 40px;
   --btn-width: 250px;
+  --btn-height: 80px;
   --fs-button-text: 20px;
   --fs-card-benefit-title: 32px;
   --fs-card-benefit-description: 20px;
@@ -76,17 +77,18 @@
   --clr-button-secondary-bg: #ee2020;
   --clr-button-transparent-gradient: linear-gradient(
     135deg,
-    #fff 30%,
-    rgb(255 255 255 / 38%) 100%
+    #ffffff 30%,
+    #ffffff00 100%
   );
   --clr-main-text: #fff;
-  --clr-secondary-text: rgb(255 255 255 / 50%);
+  --clr-secondary-text: rgb(255 255 255 / 60%);
   --clr-border: rgb(255 255 255 / 3%);
   --clr-title-gradient: linear-gradient(
     135deg,
     #fff 30%,
     rgb(255 255 255 / 38%) 100%
   );
+  --clr-contact-card-bg: #101010;
   --clr-tab-bg-gradient: radial-gradient(
       70.71% 70.71% at 50% 50%,
       rgb(238 32 32 / 50%) 0%,
@@ -118,6 +120,7 @@ h3,
 h4,
 h5,
 h6,
+button,
 ul,
 li,
 p {
@@ -130,7 +133,7 @@ body {
   color: var(--clr-main-text);
 }
 
-@media screen and (width <= 1200px) {
+@media screen and (max-width: 1200px) {
   :root {
     --gap-layout: 240px;
     --gap-widget: 64px;
@@ -145,6 +148,7 @@ body {
     --fs-card-benefit-title: 16px;
     --fs-card-benefit-description: 12px;
     --btn-width: 196px;
+    --btn-height: 50px;
     --fs-button-text: 16px;
     --fs-section-suptitle: 15px;
     --fs-section-title: 48px;
@@ -186,7 +190,7 @@ body {
   }
 }
 
-@media screen and (width <= 375px) {
+@media screen and (max-width: 375px) {
   :root {
     --gap-layout: 80px;
     --gap-widget: 40px;
@@ -199,6 +203,7 @@ body {
     --hiro-description-width: 288px;
     --gap-hero-text: 16px;
     --btn-width: 164px;
+    --btn-height: 50px;
     --fs-button-text: 16px;
     --fs-card-benefit-title: 16px;
     --fs-card-benefit-description: 12px;
@@ -246,7 +251,7 @@ body {
   }
 }
 
-@media screen and (width <= 320px) {
+@media screen and (max-width: 320px) {
   :root {
     --gap-layout: 80px;
     --gap-widget: 32px;
@@ -259,6 +264,7 @@ body {
     --hiro-description-width: 288px;
     --gap-hero-text: 16px;
     --btn-width: 140px;
+    --btn-height: 50px;
     --fs-button-text: 14px;
     --fs-card-benefit-title: 16px;
     --fs-card-benefit-description: 12px;
