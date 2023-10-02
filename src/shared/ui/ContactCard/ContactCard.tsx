@@ -17,7 +17,7 @@ export const ContactCard: FC<ContactCardProps> = ({
   return (
     <div className={styles.container}>
       <Link href={url} className={styles.text}>
-        <p className={styles.title}>{title}</p>
+        <p className={styles.title}>{title}fsdfsdf</p>
         <p className={styles.description}>{description}</p>
       </Link>
     </div>
