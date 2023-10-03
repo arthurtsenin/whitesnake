@@ -5,7 +5,7 @@ import { FC, useState } from "react";
 import styles from "./Accordion.module.css";
 
 import { AccordionType } from "./data";
-import { AccordionItem } from "./ui/AccodrionItem/AccordionItem";
+import { AccordionItem } from "./ui/AccordionItem/AccordionItem";
 
 export type AccordionProps = {
   accordions: Array<AccordionType>;
