@@ -1,19 +1,52 @@
+.container {
+  width: 90%;
+  margin-inline: auto;
+}
+
 .wrapper {
   height: 60vh;
-  min-height: 30px;
+  max-height: 320px;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 30px;
+  justify-content: flex-end;
+  padding: 16px;
+  border-radius: var(--radius-300);
   position: relative;
 }
 
 .wrapper img {
-  border-radius: 50px;
+  border-radius: var(--radius-300);
+  position: absolute;
+  object-fit: cover;
 }
 
 .text {
-  width: 50%;
   color: white;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-pannel-text);
+  width: 90%;
+}
+
+.title {
+  font-size: var(--fs-panel-title);
+  font-weight: var(--fw-bold);
+  color: var(--clr-main-text);
+}
+
+.description {
+  font-size: var(--fs-panel-subtitle);
+  color: var(--clr-secondary-text);
+}
+
+@media screen and (min-width: 1200px) {
+  .wrapper {
+    border: none;
+    max-height: 650px;
+  }
+  .text {
+    width: 40%;
+  }
 }
