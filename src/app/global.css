@@ -88,7 +88,7 @@
   );
   --clr-main-text: #fff;
   --clr-secondary-text: rgb(255 255 255 / 60%);
-  --clr-border: rgb(255 255 255 / 3%);
+  --clr-border: rgb(255 255 255 / 30%);
   --clr-title-gradient: linear-gradient(
     135deg,
     #fff 30%,
