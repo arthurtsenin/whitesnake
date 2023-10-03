@@ -22,7 +22,7 @@
   line-height: 130%;
 }
 
-.subtitle:first-letter {
+.subtitle::first-letter {
   text-transform: uppercase;
 }
 
@@ -31,13 +31,13 @@
   background: var(--clr-title-gradient);
   font-weight: var(--fw-bold);
   color: var(--clr-main-text);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   letter-spacing: -0.77px;
   word-wrap: break-word;
   line-height: 90%;
 }
 
-.title:first-letter {
+.title::first-letter {
   text-transform: uppercase;
 }
