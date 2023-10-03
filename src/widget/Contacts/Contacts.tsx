@@ -8,9 +8,9 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { ContactType } from "./data";
 
-export type ContactsProps = TitleProps & {
+export type ContactsProps = {
   contacts: Array<ContactType>;
-};
+} & TitleProps;
 
 export const Contacts: FC<ContactsProps> = ({ title, subtitle, contacts }) => {
   return (
