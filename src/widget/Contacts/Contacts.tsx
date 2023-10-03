@@ -2,9 +2,9 @@ import { FC } from "react";
 
 import styles from "./Contacts.module.css";
 
-import { Title } from '@/shared/ui/Title/Title';
-import { TitleProps } from "@/shared/ui/Title/Title";
 import { ContactCard } from "@/shared/ui/ContactCard/ContactCard";
+import { Title } from "@/shared/ui/Title/Title";
+import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { ContactType } from "./data";
 
@@ -15,10 +15,7 @@ export type ContactsProps = TitleProps & {
 export const Contacts: FC<ContactsProps> = ({ title, subtitle, contacts }) => {
   return (
     <section className={styles.container}>
-      <Title
-        title={title}
-        subtitle={subtitle}
-      />
+      <Title title={title} subtitle={subtitle} />
       <div className={styles.contactsWrapper}>
         {contacts.map((contact) => (
           <ContactCard
