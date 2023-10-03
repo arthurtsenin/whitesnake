@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import styles from "./Title.module.css";
 
-type TitleProps = {
+export type TitleProps = {
   title: string;
   subtitle?: string;
   suptitle?: string;
