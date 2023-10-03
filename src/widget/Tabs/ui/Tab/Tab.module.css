@@ -1,7 +1,27 @@
 .tab {
   cursor: pointer;
+  padding: 16px 24px;
+  font-size: var(--fs-tab);
+  font-weight: var(--fw-light);
+  line-height: 120%;
+  letter-spacing: -0.7px;
+  text-wrap: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: max-content;
+  height: 40px;
 }
 
 .active {
-  color: red;
+  color: var(--clr-main-text);
+  background: var(--clr-tab-bg-gradient);
+  border-radius: var(--radius-200);
+}
+
+@media screen and (min-width: 1200px) {
+  .tab {
+    height: 70px;
+    padding: 24px 46px;
+  }
 }
