@@ -1,25 +1,48 @@
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  width: 90%;
+  margin-inline: auto;
+  min-height: 524px;
+}
+
+.pannels {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-dynamic-pannel);
 }
 
 .item {
-  width: 30%;
-  min-width: 430px;
-  height: 430px;
-  background: #101010;
-  border-radius: 24px;
+  background: var(--clr-contact-card-bg);
+  border-radius: var(--radius-300);
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding-top: 32px;
+  padding-bottom: 8px;
+}
+
+.item img {
+  width: 50%;
+  aspect-ratio: 1/1;
+  height: fit-content;
+  object-fit: contain;
+}
+
+.django img {
+  width: 80%;
+  aspect-ratio: 16/9;
 }
 
 .name {
-  font-style: normal;
-  font-weight: 500;
-  color: #757575;
+  font-weight: var(--fw-regular);
+  color: var(--clr-secondary-text);
+  font-size: var(--gap-dynamic-pannel);
+  text-transform: capitalize;
+}
+
+@media screen and (width >= 960px) {
+  .pannels {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

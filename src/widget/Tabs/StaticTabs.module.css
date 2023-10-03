@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-
   position: relative;
 }
 
@@ -13,7 +12,6 @@
   top: -15%;
   right: -30%;
   z-index: -2;
-
   background-color: var(--clr-glow-left-bg);
   filter: blur(90px);
   border-radius: var(--radius-rounded);
@@ -29,7 +27,7 @@
   object-fit: cover;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (width >= 960px) {
   .glow {
     top: -10%;
     right: -30%;
@@ -44,7 +42,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (width >= 1200px) {
   .image {
     top: -60%;
     height: 2000px;
