@@ -1,8 +1,5 @@
-:root {
-  --container-padding: 16px;
-}
-
 .container {
+  --container-padding: 16px;
   position: relative;
   padding: var(--container-padding);
 
@@ -54,13 +51,13 @@
 }
 
 @media screen and (min-width: 744px) {
-  :root {
+  .container {
     --container-padding: 24px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  :root {
+  .container {
     --container-padding: 40px;
   }
 }
