@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { Dispatch, FC, SetStateAction } from "react";
 
-import styles from "./AccordionItem.module.scss";
+import styles from "./AccordionItem.module.css";
 
 import { AccordionType } from "@/widget/Accordion/data";
 

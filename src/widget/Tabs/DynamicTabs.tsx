@@ -2,7 +2,7 @@
 
 import { FC, useState } from "react";
 
-import styles from "./Tabs.module.scss";
+import styles from "./Tabs.module.css";
 
 import { DataType, TechnologieType } from "./data";
 import { DynamicPannel } from "./ui/DynamicPannel/DynamicPannel";

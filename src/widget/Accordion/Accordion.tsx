@@ -2,7 +2,7 @@
 
 import { FC, useState } from "react";
 
-import styles from "./Accordion.module.scss";
+import styles from "./Accordion.module.css";
 
 import { AccordionType } from "./data";
 import { AccordionItem } from "./ui/AccodrionItem/AccordionItem";

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FC } from "react";
 
-import styles from "./DynamicPannel.module.scss";
+import styles from "./DynamicPannel.module.css";
 
 import { TechnologieType } from "../../data";
 
