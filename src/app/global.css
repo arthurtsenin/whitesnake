@@ -40,13 +40,16 @@ body {
 /* ::-webkit-scrollbar {
   display: none; 
 } */
+
 .main {
   display: flex;
   flex-direction: column;
   gap: var(--gap-layout);
+
   /* overflow-x: hidden; */
 }
-@media screen and (min-width: 320px) {
+
+@media screen and (width >= 320px) {
   :root {
     --gap-layout: 80px;
     --gap-widget: 32px;
@@ -67,15 +70,14 @@ body {
     --fs-section-title: 24px;
     --fs-section-subtitle: 14px;
     --gap-section-title: 8px;
-
     --fs-case-card-title: 16px;
     --pl-case-card-title: 0px;
+
     /* change after design on hover */
     --fs-case-card-description: 12px;
     --gap-case-card: 16px;
     --gap-row-case-cards: 24px;
     --gap-column-case-cards: 0px;
-
     --fs-tab: 14px;
     --fs-panel-title: 16px;
     --fs-panel-subtitle: 12px;
@@ -112,7 +114,7 @@ body {
   }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (width >= 375px) {
   :root {
     --gap-layout: 80px;
     --gap-widget: 40px;
@@ -133,15 +135,14 @@ body {
     --fs-section-title: 24px;
     --fs-section-subtitle: 12px;
     --gap-section-title: 8px;
-
     --fs-case-card-title: 18px;
     --pl-case-card-title: 0px;
+
     /* change after design on hover */
     --fs-case-card-description: 14px;
     --gap-case-card: 16px;
     --gap-row-case-cards: 32px;
     --gap-column-case-cards: 0px;
-
     --fs-tab: 14px;
     --fs-panel-title: 18px;
     --fs-panel-subtitle: 12px;
@@ -149,6 +150,7 @@ body {
     --gap-pannel-text: 5px;
 
     /* unknown component */
+
     /* --fs-instruction-title:38px;
     --instruction-title-width: 356px;
     --gap-instruction-contanet:106px;
@@ -177,7 +179,7 @@ body {
   }
 }
 
-@media screen and (min-width: 744px) {
+@media screen and (width >= 744px) {
   :root {
     --gap-layout: 240px;
     --gap-widget: 64px;
@@ -198,15 +200,14 @@ body {
     --fs-section-title: 48px;
     --fs-section-subtitle: 20px;
     --gap-section-title: 24px;
-
     --fs-case-card-title: 24px;
     --pl-case-card-title: 36px;
+
     /* change after design on hover */
     --fs-case-card-description: 20px;
     --gap-case-card: 16px;
     --gap-row-case-cards: 40px;
     --gap-column-case-cards: 24px;
-
     --fs-tab: 18px;
     --fs-panel-title: 50px;
     --fs-panel-subtitle: 20px;
@@ -281,14 +282,12 @@ body {
     --fs-section-title: 70px;
     --fs-section-subtitle: 20px;
     --gap-section-title: 24px;
-
     --fs-case-card-title: 24px;
     --pl-case-card-title: 36px;
     --fs-case-card-description: 20px;
     --gap-case-card: 32px;
     --gap-row-case-cards: 40px;
     --gap-column-case-cards: 40px;
-
     --fs-tab: 18px;
     --fs-panel-title: 50px;
     --fs-panel-subtitle: 20px;
@@ -326,8 +325,8 @@ body {
     --clr-button-secondary-bg: #ee2020;
     --clr-button-transparent-gradient: linear-gradient(
       135deg,
-      #ffffff 30%,
-      #ffffff00 100%
+      #fff 30%,
+      #fff0 100%
     );
     --clr-main-text: #fff;
     --clr-secondary-text: rgb(255 255 255 / 60%);
@@ -337,11 +336,10 @@ body {
       #fff 30%,
       rgb(255 255 255 / 38%) 100%
     );
-
     --clr-border-gradient: linear-gradient(
       346deg,
-      rgba(255, 0, 0, 1) 40%,
-      rgba(255, 181, 181, 1) 100%
+      rgb(255 0 0 / 100%) 40%,
+      rgb(255 181 181 / 100%) 100%
     );
     --clr-contact-card-bg: #101010;
     --clr-tab-bg-gradient: radial-gradient(

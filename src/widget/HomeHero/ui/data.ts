@@ -10,7 +10,7 @@ import toyota from "&/images/main-hero/slider/toyota.png";
 import upstack from "&/images/main-hero/slider/UpStack.png";
 import yamaha from "&/images/main-hero/slider/yamaha.png";
 
-export const sliderImages = [
+export const SLIDER_IMAGES = [
   { id: 1, url: yamaha },
   { id: 2, url: toyota },
   { id: 3, url: ebay },

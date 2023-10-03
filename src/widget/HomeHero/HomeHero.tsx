@@ -16,8 +16,8 @@ export const HomeHero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.content}>
-        <div className={styles.textWrapper}>
-          <div className={styles.heroTextWrapper}>
+        <div className={styles.leftSide}>
+          <div className={styles.text}>
             <h1>
               Ваше видение, <br /> наша экспертиза:
             </h1>
@@ -25,19 +25,19 @@ export const HomeHero = () => {
               Воплощаем будущее в реальность с высшим качеством и инновациями!
             </p>
           </div>
-          <div className={styles.buttonWrapper}>
+          <div className={styles.buttons}>
             <Button variant="primary">Связаться с нами</Button>
             <Button variant="transparent">Карьера</Button>
           </div>
         </div>
-        <div className={styles.imageWrapper}>
-          <div className={styles.imgContainer}>
+        <div className={styles.rightSide}>
+          <div className={styles.imgWrapper}>
             <Image src={raindropUpper} alt="raindrop" priority />
           </div>
-          <div className={styles.imgContainer}>
+          <div className={styles.imgWrapper}>
             <Image src={raindropMiddle} alt="raindrop" priority />
           </div>
-          <div className={styles.imgContainer}>
+          <div className={styles.imgWrapper}>
             <Image src={raindropLower} alt="raindrop" priority />
           </div>
         </div>
