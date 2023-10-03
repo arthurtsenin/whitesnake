@@ -37,12 +37,20 @@
 .name {
   font-weight: var(--fw-regular);
   color: var(--clr-secondary-text);
-  font-size: var(--gap-dynamic-pannel);
+  font-size: 16px;
   text-transform: capitalize;
 }
 
 @media screen and (width >= 960px) {
   .pannels {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .item {
+    padding-bottom: 20px;
+  }
+
+  .name {
+    font-size: 20px;
   }
 }
