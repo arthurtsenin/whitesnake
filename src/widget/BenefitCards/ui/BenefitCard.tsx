@@ -31,13 +31,9 @@ export const BenefitCard: FC<BenefitCardProps> = ({
         </div>
       )}
       <div className={styles.cardContent}>
-        <p className={classNames(styles.cardTitle, styles[variant])}>
-          {cardTitle}
-        </p>
-        <p className={classNames(styles.cardDesc, styles[variant])}>
-          {cardDesc}
-        </p>
-        <div className={classNames(styles.cardButton, styles[variant])}>
+        <p className={styles.cardTitle}>{cardTitle}</p>
+        <p className={styles.cardDesc}>{cardDesc}</p>
+        <div className={styles.cardButton}>
           <Button variant="primary">{buttonText}</Button>
         </div>
       </div>

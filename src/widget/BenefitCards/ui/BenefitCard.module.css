@@ -17,20 +17,32 @@
   height: 185px;
 }
 
-.cardTitle.withIcon {
+.cardTitle {
+  line-height: 120%;
+  font-weight: var(--fw-semibold);
+  margin-bottom: 16px;
+}
+
+.cardDesc {
+  line-height: 120%;
+  font-weight: var(--fw-light);
+  white-space: break-spaces;
+}
+
+.card.withIcon .cardTitle {
   font-size: 24px;
 }
 
-.cardDesc.withIcon {
-  font-size: 16px;
-}
-
-.cardTitle.withoutIcon {
+.card.withoutIcon .cardTitle {
   font-size: 16px;
   margin-bottom: 8px;
 }
 
-.cardDesc.withoutIcon {
+.card.withIcon .cardDesc {
+  font-size: 16px;
+}
+
+.card.withoutIcon .cardDesc {
   font-size: 12px;
 }
 
@@ -49,7 +61,7 @@
   border-radius: 40px;
 }
 
-.cardButton.withoutIcon > button {
+.card.withoutIcon .cardButton > button {
   max-width: 125px;
   width: 100%;
   height: 40px;
@@ -59,18 +71,6 @@
 .cardContent {
   display: flex;
   flex-direction: column;
-}
-
-.cardTitle {
-  line-height: 120%;
-  font-weight: var(--fw-semibold);
-  margin-bottom: 16px;
-}
-
-.cardDesc {
-  line-height: 120%;
-  font-weight: var(--fw-light);
-  white-space: break-spaces;
 }
 
 @media (min-width: 375px) {
@@ -97,7 +97,7 @@
     gap: 40px;
   }
 
-  .cardDesc.withIcon {
+  .card.withIcon .cardDesc {
     font-size: 18px;
   }
 }
@@ -118,18 +118,18 @@
     height: 180px;
   }
 
-  .cardDesc.withIcon,
-  .cardDesc.withoutIcon {
+  .card.withIcon .cardDesc,
+  .card.withoutIcon .cardDesc {
     font-size: 20px;
   }
 
-  .cardTitle.withIcon,
-  .cardTitle.withoutIcon {
+  .card.withIcon .cardTitle,
+  .card.withoutIcon .cardTitle {
     font-size: 32px;
   }
 
-  .cardButton.withIcon > button,
-  .cardButton.withoutIcon > button {
+  .card.withIcon .cardButton > button,
+  .card.withoutIcon .cardButton > button {
     max-width: 250px;
     width: 100%;
     height: 80px;

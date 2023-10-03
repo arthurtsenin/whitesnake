@@ -1,7 +1,9 @@
-import cube from "../../../public/benefit-cards/cube.svg";
-import spiral from "../../../public/benefit-cards/spiral.svg";
+import { BenefitCardData } from "./types";
 
-export const benefitCardsTopData = [
+import cube from "&/benefit-cards/cube.svg";
+import spiral from "&/benefit-cards/spiral.svg";
+
+export const BENEFIT_CARD_WITH_ICON_DATA: BenefitCardData[] = [
   {
     cardTitle: "Для клиентов",
     cardDesc: `Мы реализуем проекты международного масштаба от первоначального анализа до запуска и поддержки.`,
@@ -16,7 +18,7 @@ export const benefitCardsTopData = [
   },
 ];
 
-export const benefitCardsBottomData = [
+export const BENEFIT_CARD_WITHOUT_ICON_DATA: BenefitCardData[] = [
   {
     cardTitle: "Для клиентов",
     cardDesc: `Мы реализуем проекты международного масштаба от первоначального анализа до запуска и поддержки.`,
