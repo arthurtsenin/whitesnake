@@ -1,6 +1,6 @@
-/* :root {
+:root {
   --container-padding: 16px;
-} */
+}
 
 .container {
   position: relative;
@@ -53,7 +53,7 @@
   }
 }
 
-/* @media screen and (min-width: 744px) {
+@media screen and (min-width: 744px) {
   :root {
     --container-padding: 24px;
   }
@@ -63,4 +63,4 @@
   :root {
     --container-padding: 40px;
   }
-} */
+}
