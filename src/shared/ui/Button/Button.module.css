@@ -1,21 +1,16 @@
 .basis {
   cursor: pointer;
-
   width: var(--btn-width);
   height: var(--btn-height);
-
   color: var(--clr-main-text);
   font-size: var(--fs-button-text);
   font-weight: var(--fw-light);
   border-radius: var(--radius-400);
   text-align: center;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
-
   transition: all ease-in-out 0.2s;
 }
 
@@ -34,10 +29,10 @@
   border-radius: var(--radius-400);
   padding: 1.5px;
   background: var(--clr-button-transparent-gradient);
-  -webkit-mask:
+  mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+  mask-composite: xor;
 }
 
 @media (hover: hover) {
