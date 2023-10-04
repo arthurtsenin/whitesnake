@@ -27,7 +27,7 @@
   position: absolute;
   inset: 0;
   border-radius: var(--radius-400);
-  padding: 1.5px;
+  padding: 1px;
   background: var(--clr-button-transparent-gradient);
   mask:
     linear-gradient(#fff 0 0) content-box,
