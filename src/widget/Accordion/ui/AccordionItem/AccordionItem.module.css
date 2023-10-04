@@ -81,12 +81,6 @@
 }
 
 @media screen and (width <=1000px) {
-  .title {
-    font-size: 18px;
-    letter-spacing: -1px;
-    width: 82%;
-  }
-
   .description > p {
     font-size: 12px;
     letter-spacing: -0.6px;
