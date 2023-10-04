@@ -2,7 +2,7 @@
   --icon-width: 20px;
 
   cursor: pointer;
-  background: none;
+  background: transparent;
   border: none;
   color: var(--clr-main-text);
   padding: 15px 10px 0;
