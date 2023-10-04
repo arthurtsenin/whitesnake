@@ -59,7 +59,7 @@
     font-weight: var(--fw-light);
     font-size: var(--fs-questions-description);
     line-height: 120%;
-    letter-spacing: -1px;
+    letter-spacing: -0.6px;
     padding-top: 15px;
     color: var(--clr-secondary-text);
     transition: all 0.5s;
@@ -80,8 +80,8 @@
   padding-bottom: 15px;
 }
 
-@media screen and (width <=1000px) {
-  .description > p {
-    letter-spacing: -0.6px;
+@media screen and (width >=1000px) {
+  .description {
+    letter-spacing: -0.9px;
   }
 }
