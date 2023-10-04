@@ -14,7 +14,7 @@
 }
 
 .bannerContent {
-  color: white;
+  color: var(--clr-main-text);
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,6 @@
   line-height: 130%;
   letter-spacing: -0.6px;
   max-width: var(--banner-text-width);
-  line-height: 130%;
   letter-spacing: -0.6px;
 }
 
