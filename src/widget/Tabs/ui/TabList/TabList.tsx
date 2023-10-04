@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import styles from "./TabList.module.scss";
+import styles from "./TabList.module.css";
 
 import { Tab } from "../Tab/Tab";
 import { TabType } from "../../data";
@@ -17,15 +17,17 @@ export const TabList: FC<TabListProps> = ({
   clickHandler,
 }) => {
   return (
-    <div className={styles.tabs}>
-      {Object.values(tabs).map((tab) => (
-        <Tab
-          key={tab.id}
-          name={tab.name}
-          active={currentTab === tab.name ? "active" : ""}
-          clickHandler={() => clickHandler(tab.name)}
-        />
-      ))}
+    <div className={styles.container}>
+      <div className={styles.tabs}>
+        {Object.values(tabs).map((tab) => (
+          <Tab
+            key={tab.id}
+            name={tab.name}
+            active={currentTab === tab.name ? "active" : ""}
+            clickHandler={() => clickHandler(tab.name)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

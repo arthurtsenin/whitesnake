@@ -1,0 +1,50 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+}
+
+.glow {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: -15%;
+  right: -30%;
+  z-index: -2;
+  background-color: var(--clr-glow-left-bg);
+  filter: blur(90px);
+  border-radius: var(--radius-rounded);
+}
+
+.image {
+  position: absolute;
+  z-index: -1;
+  top: -50%;
+  right: 0;
+  width: fit-content;
+  height: 1000px;
+  object-fit: cover;
+}
+
+@media screen and (width >= 960px) {
+  .glow {
+    top: -10%;
+    right: -30%;
+    width: 40%;
+    height: 40%;
+    filter: blur(100px);
+  }
+
+  .image {
+    top: -80%;
+    height: 1400px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .image {
+    top: -60%;
+    height: 2000px;
+  }
+}

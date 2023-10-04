@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { FC } from "react";
 
-import styles from "./Tab.module.scss";
+import styles from "./Tab.module.css";
 
 type TabProps = {
   name: string;
