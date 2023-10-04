@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { FC, useState } from "react";
 
-import styles from "./Tabs.module.css";
+import styles from "./StaticTabs.module.css";
 
 import { Title, TitleProps } from "@/shared/ui/Title/Title";
 
