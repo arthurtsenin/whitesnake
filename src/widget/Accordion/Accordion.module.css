@@ -5,3 +5,9 @@
   background: #000;
   margin: auto;
 }
+
+@media screen and (width>=1200px) {
+  .container {
+    max-width: 1199px;
+  }
+}
