@@ -4,14 +4,14 @@
 }
 
 .imgWrapper {
-  width: 463px;
-  height: 372px;
+  position: absolute;
+  z-index: -1;
   top: -36%;
   left: -58%;
-  position: absolute;
-  transform: rotate(-13.123deg);
   opacity: 0.5;
-  z-index: -1;
+  transform: rotate(-13.123deg);
+  width: 463px;
+  height: 372px;
 }
 
 .imgWrapper img {
@@ -22,8 +22,8 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: auto;
   margin: auto;
+  height: auto;
   background-color: transparent;
 }
 
