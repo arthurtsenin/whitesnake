@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  min-height: 340px;
+  min-height: 440px;
 }
 
 .imgWrapper {
@@ -29,7 +29,8 @@
 
 @media screen and (width>=450px) {
   .imgWrapper {
-    left: -30%;
+    top: -40%;
+    left: -40%;
   }
 }
 
@@ -45,8 +46,7 @@
   }
 
   .imgWrapper {
-    top: -80%;
-    left: -25%;
+    top: -60%;
     transform: rotate(0deg);
     width: 709px;
     height: 570px;
@@ -55,8 +55,7 @@
 
 @media screen and (width>=1440px) {
   .imgWrapper {
-    top: -100%;
-    left: -25%;
+    top: -80%;
     width: 852px;
     height: 684px;
   }
@@ -64,8 +63,7 @@
 
 @media screen and (width>=1920px) {
   .imgWrapper {
-    top: -140%;
-    left: -21%;
+    top: -110%;
     width: 1135px;
     height: 912px;
   }
