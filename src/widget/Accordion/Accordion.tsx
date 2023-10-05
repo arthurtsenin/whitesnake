@@ -1,11 +1,14 @@
 "use client";
 
+import Image from "next/image";
 import { FC, useState } from "react";
 
-import styles from "./Accordion.module.scss";
+import styles from "./Accordion.module.css";
 
 import { AccordionType } from "./data";
-import { AccordionItem } from "./ui/AccodrionItem/AccordionItem";
+import { AccordionItem } from "./ui/AccordionItem/AccordionItem";
+
+import bubble from "&/images/main-questions/bubble.png";
 
 export type AccordionProps = {
   accordions: Array<AccordionType>;
@@ -15,15 +18,20 @@ export const Accordion: FC<AccordionProps> = ({ accordions }) => {
   const [index, setIndex] = useState<number | null>(null);
 
   return (
-    <div className={styles.container}>
-      {accordions.map((item) => (
-        <AccordionItem
-          key={item.id}
-          item={item}
-          index={index}
-          setIndex={setIndex}
-        />
-      ))}
-    </div>
+    <section className={styles.section}>
+      <div className={styles.imgWrapper}>
+        <Image src={bubble} alt="" />
+      </div>
+      <div className={styles.container}>
+        {accordions.map((item) => (
+          <AccordionItem
+            key={item.id}
+            item={item}
+            index={index}
+            setIndex={setIndex}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
