@@ -9,36 +9,36 @@ export const ACCORDIONS_DATA: Array<AccordionType> = [
     id: 1,
     summary: "Где вы находитесь?",
     description:
-      "Все разработчики находятся в Минске. Удаленно никто не работает. Таким образом, мы можем поддерживать высокую производительность и можем предложить вам гарантии. Мы позаботимся о налогах, социальных выплатах, отпусках, больничных листах, инфраструктуре (ноутбуки, питание, спорт, занятия английским языком с личным учителем, страхование) - чтобы вам не пришлось.",
+      "Все разработчики находятся в Минске. Удаленно никто не работает. Таким образом, мы можем поддерживать высокую производительность и можем предложить вам гарантии. Мы позаботимся о налогах, социальных выплатах, отпусках, больничных листах, инфраструктуре (ноутбуки, питание, спорт, занятия английским языком с личным учителем, страхование) - чтобы вам не пришлось",
   },
   {
     id: 2,
     summary: "Есть ли у вас специалисты с опытом в нашей нише?",
     description:
-      "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. Pellentesque ipsum. Nulla non arcu lacinia neque faucibus fringilla. Nulla non lectus sed nisl molesti",
+      "Мы всегда держим специалистов на бенче для наших партнеров. Таким образом они могут всегда выбрать надежного Python-разработчика с опытом в таких нишах как InsurTech, Fintech, Ad/Mar Tech, IoT, Healthcare, E-comm, Big Data. Подайте заявку ниже, чтобы получить индивидуальное предложение, которое сэкономит вам время на поиск идеального кандидата",
   },
   {
     id: 3,
     summary: "У вас есть опыт с Blockchain?",
     description:
-      "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. Pellentesque ipsum. Nulla non arcu lacinia neque faucibus fringilla. Nulla non lectus sed nisl molesti",
+      "Найти Fullstack-разработчика с Python/Go/Web3.0 — непростая задача, но мы сделали это за вас. Подайте заявку ниже и вы получите индивидуальное предложение, адаптированное для ваших задач в нише блокчейна. Если наша команда не сможет решить вашу проблему, мы честно об этом скажем и поделимся контактами партнеров, которые смогут вам помочь",
   },
   {
     id: 4,
     summary: "Какие есть гарантии?",
     description:
-      "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. Pellentesque ipsum. Nulla non arcu lacinia neque faucibus fringilla. Nulla non lectus sed nisl molesti",
+      "Наша гарантия проста. Если результат работы вас не устраивает, вы не платите.Именно поэтому нас выбирают такие известные компании как Яндекс, Лента, X5 и др.",
   },
   {
     id: 5,
     summary: "Как быстро мы можем начать работу?",
     description:
-      "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. Pellentesque ipsum. Nulla non arcu lacinia neque faucibus fringilla. Nulla non lectus sed nisl molesti",
+      "ASAP. Мы выводим разработчиков оперативно. Всего за 3 часа мы можем провести собеседование с вашей командой и назначить звонок с клиентом",
   },
   {
     id: 6,
     summary: "Как мы поймем, что ваша компания — это то что нам нужно?",
     description:
-      "Nam quis nulla. Integer malesuada. In in enim a arcu imperdiet malesuada. Sed vel lectus. Donec odio urna, tempus molestie, porttitor ut, iaculis quis, sem. Phasellus rhoncus. Aenean id metus id velit ullamcorper pulvinar. Vestibulum fermentum tortor id mi. Pellentesque ipsum. Nulla non arcu lacinia neque faucibus fringilla. Nulla non lectus sed nisl molesti",
+      "Вы можете проводить собеседования/проверять знания разработчиков как захотите. Life coding, различные задачи — все что угодно. Главное, чтобы вы были уверены в кандидате. Хотели бы подчеркнуть еще раз, если результат работы вас не устраивает, вы не платите. Подайте заявку ниже и возьмите пробный период с нашим разработчиком уже сегодня",
   },
 ];
