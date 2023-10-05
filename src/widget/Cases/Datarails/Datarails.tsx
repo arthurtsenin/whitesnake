@@ -3,7 +3,8 @@ import { FC } from "react";
 
 import styles from "./Datarails.module.css";
 
-import { TitleProps } from "@/shared/ui/Title/Title";
+import { HeroTitle } from "@/shared";
+import { HeroTitleProps } from "@/shared/ui/HeroTitle/HeroTitle";
 
 import { Keyword } from "../ui/Keyword";
 
@@ -11,7 +12,7 @@ import heroBg from "&/cases-preview/datarails-case-image.png";
 
 export type DatarailsProps = {
   keywords: string[];
-} & TitleProps;
+} & HeroTitleProps;
 
 export const Datarails: FC<DatarailsProps> = ({
   title,
@@ -20,15 +21,16 @@ export const Datarails: FC<DatarailsProps> = ({
 }) => {
   return (
     <section className={styles.hero}>
-      <h1 className={styles.title}>{title}</h1>
-      <p className={styles.subtitle}>{subtitle}</p>
-      <div className={styles.imgWrapper}>
-        <Image src={heroBg} alt="" />
-      </div>
-      <div className={styles.keywords}>
-        {keywords.map((k, idx) => (
-          <Keyword key={idx} keyword={k} />
-        ))}
+      <div className={styles.content}>
+        <HeroTitle title={title} subtitle={subtitle} />
+        <div className={styles.imgWrapper}>
+          <Image src={heroBg} alt="" priority />
+        </div>
+        <div className={styles.keywords}>
+          {keywords.map((k, idx) => (
+            <Keyword key={idx} keyword={k} />
+          ))}
+        </div>
       </div>
     </section>
   );
