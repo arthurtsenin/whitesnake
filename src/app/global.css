@@ -80,22 +80,30 @@
   --clr-glow-right-bg: #cc0b0b;
   --clr-button-primary-bg: #191919;
   --clr-button-secondary-bg: #ee2020;
-  --clr-button-transparent-gradient: linear-gradient(135deg,
-      #fff 30%,
-      #fff0 100%);
+  --clr-button-transparent-gradient: linear-gradient(
+    135deg,
+    #fff 30%,
+    #fff0 100%
+  );
   --clr-main-text: #fff;
   --clr-secondary-text: rgb(255 255 255 / 60%);
   --clr-border: rgb(255 255 255 / 3%);
-  --clr-title-gradient: linear-gradient(135deg,
-      #fff 30%,
-      rgb(255 255 255 / 38%) 100%);
-  --clr-border-gradient: linear-gradient(346deg,
-      rgb(255 0 0 / 100%) 40%,
-      rgb(255 181 181 / 100%) 100%);
+  --clr-title-gradient: linear-gradient(
+    135deg,
+    #fff 30%,
+    rgb(255 255 255 / 38%) 100%
+  );
+  --clr-border-gradient: linear-gradient(
+    346deg,
+    rgb(255 0 0 / 100%) 40%,
+    rgb(255 181 181 / 100%) 100%
+  );
   --clr-contact-card-bg: #101010;
-  --clr-tab-bg-gradient: radial-gradient(70.71% 70.71% at 50% 50%,
+  --clr-tab-bg-gradient: radial-gradient(
+      70.71% 70.71% at 50% 50%,
       rgb(238 32 32 / 50%) 0%,
-      rgb(88 84 84 / 0%) 100%),
+      rgb(88 84 84 / 0%) 100%
+    ),
     linear-gradient(180deg, rgb(88 84 84 / 10%) 0%, rgb(88 84 84 / 0%) 100%);
   --clr-contact-card-border-gradient: #ffb5b5, #f00;
 }

@@ -1,0 +1,25 @@
+.container {
+  width: 94%;
+  height: 80vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  grid-template-rows: 0.3fr 1fr 1fr 1fr;
+  margin-inline: auto;
+
+  gap: 16px;
+}
+
+@media screen and (width > 744px) {
+  .container {
+    height: 100vh;
+    gap: 24px;
+  }
+}
+
+@media screen and (width > 1200px) {
+  .container {
+    height: 140vh;
+    gap: 40px;
+  }
+}
