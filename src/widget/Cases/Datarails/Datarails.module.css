@@ -1,0 +1,11 @@
+.hero {
+  /* position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; */
+  overflow-x: hidden;
+  width: 100vw;
+  height: calc(100vh - var(--header-height));
+  padding-block: var(--header-height);
+  background-color: var(--clr-main-bg);
+}
