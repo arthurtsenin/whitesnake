@@ -1,7 +1,7 @@
 import classNames from "classnames";
 import { Dispatch, FC, SetStateAction } from "react";
 
-import styles from "./AccordionItem.module.scss";
+import styles from "./AccordionItem.module.css";
 
 import { AccordionType } from "@/widget/Accordion/data";
 
@@ -21,16 +21,21 @@ export const AccordionItem: FC<AccordionItemProps> = ({
   };
 
   return (
-    <button type="button" className={styles.container} onClick={clickHandler}>
+    <button
+      type="button"
+      className={classNames(styles.container, {
+        [styles.open]: index === item.id,
+      })}
+      onClick={clickHandler}
+    >
       <div className={styles.text}>
         <p className={styles.summary}>{item.summary}</p>
-        <div className={styles.icon}>{index === item.id ? "-" : "+"}</div>
+        <div className={styles.icon}>
+          <span />
+          <span />
+        </div>
       </div>
-      <div
-        className={classNames(styles.description, {
-          [styles.open]: index === item.id,
-        })}
-      >
+      <div className={styles.description}>
         <p>{item.description}</p>
       </div>
     </button>
