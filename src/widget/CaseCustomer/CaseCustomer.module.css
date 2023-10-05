@@ -1,0 +1,24 @@
+.caseCustomer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+@media (min-width: 744px) {
+  .caseCustomer {
+    gap: 50px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .caseCustomer {
+    flex-direction: row;
+    gap: 80px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .caseCustomer {
+    gap: 120px;
+  }
+}
