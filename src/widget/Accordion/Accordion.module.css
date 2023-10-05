@@ -1,6 +1,6 @@
 .section {
   position: relative;
-  min-height: 500px;
+  min-height: 340px;
 }
 
 .imgWrapper {
@@ -29,13 +29,13 @@
 
 @media screen and (width>=450px) {
   .imgWrapper {
-    left: -48%;
+    left: -30%;
   }
 }
 
 @media screen and (width>=744px) {
   .imgWrapper {
-    left: -25%;
+    left: -20%;
   }
 }
 
@@ -45,8 +45,11 @@
   }
 
   .imgWrapper {
-    left: -20%;
+    top: -80%;
+    left: -25%;
     transform: rotate(0deg);
+    width: 709px;
+    height: 570px;
   }
 }
 
@@ -54,14 +57,16 @@
   .imgWrapper {
     top: -100%;
     left: -25%;
-    width: 1135px;
-    height: 912px;
+    width: 852px;
+    height: 684px;
   }
 }
 
 @media screen and (width>=1920px) {
   .imgWrapper {
-    top: -100%;
+    top: -140%;
     left: -21%;
+    width: 1135px;
+    height: 912px;
   }
 }
