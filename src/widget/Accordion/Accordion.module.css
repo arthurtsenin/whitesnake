@@ -27,8 +27,41 @@
   background-color: transparent;
 }
 
+@media screen and (width>=450px) {
+  .imgWrapper {
+    left: -48%;
+  }
+}
+
+@media screen and (width>=744px) {
+  .imgWrapper {
+    left: -25%;
+  }
+}
+
 @media screen and (width>=1200px) {
   .container {
     max-width: 1199px;
+  }
+
+  .imgWrapper {
+    left: -20%;
+    transform: rotate(0deg);
+  }
+}
+
+@media screen and (width>=1440px) {
+  .imgWrapper {
+    top: -100%;
+    left: -25%;
+    width: 1135px;
+    height: 912px;
+  }
+}
+
+@media screen and (width>=1920px) {
+  .imgWrapper {
+    top: -100%;
+    left: -21%;
   }
 }
