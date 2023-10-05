@@ -6,7 +6,6 @@
 .wrapper {
   height: 60vh;
   max-height: 320px;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -41,11 +40,12 @@
   color: var(--clr-secondary-text);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (width >= 1200px) {
   .wrapper {
     border: none;
     max-height: 650px;
   }
+
   .text {
     width: 40%;
   }
