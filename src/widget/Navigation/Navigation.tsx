@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FC } from "react";
 
-import styles from "./Navigatiom.module.css";
+import styles from "./Navigation.module.css";
 
 import { checkPath } from "@/shared/utils/checkPath";
 
