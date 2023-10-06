@@ -6,7 +6,7 @@ import styles from "./Datarails.module.css";
 import { HeroTitle, HeroTitleProps } from "../ui/HeroTitle/HeroTitle";
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroBg from "&/cases-preview/datarails-case-image.png";
+import heroBg from "&/cases/datarails.png";
 
 export type DatarailsProps = {
   keywords: string[];
