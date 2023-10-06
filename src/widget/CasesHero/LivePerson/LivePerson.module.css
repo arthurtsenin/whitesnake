@@ -19,6 +19,8 @@
 
 .imgWrapper {
   margin-block-start: 26.5px;
+  max-width: 70vw;
+  height: auto;
   opacity: 0.7;
 }
 
@@ -38,9 +40,6 @@
 }
 
 @media screen and (width >=768px) {
-}
-
-@media screen and (width >=1440px) {
   .hero {
     justify-content: center;
   }
@@ -53,12 +52,24 @@
 
   .imgWrapper {
     position: absolute;
-    top: 0;
+    top: 20%;
     right: 0;
     z-index: -1;
     margin: 0;
     width: 50vw;
-    height: 70vh;
+  }
+}
+
+@media screen and (width >=1440px) {
+  .content {
+    --gap-content: 32px;
+
+    width: 60%;
+  }
+
+  .imgWrapper {
+    top: 10%;
+    aspect-ratio: 1/1;
   }
 
   .keywords {
@@ -72,11 +83,6 @@
     --gap-content: 32px;
 
     width: 65%;
-  }
-
-  .imgWrapper {
-    width: 1155px;
-    height: 928px;
   }
 
   .keywords {
