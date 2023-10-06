@@ -4,7 +4,7 @@ import { FC } from "react";
 import styles from "./Datarails.module.css";
 
 import { HeroTitle } from "@/shared";
-import { HeroTitleProps } from "@/shared/ui/HeroTitle/HeroTitle";
+import { HeroTitleProps } from "@/widget/Cases/ui/HeroTitle/HeroTitle";
 
 import { Keyword } from "../ui/Keyword";
 
