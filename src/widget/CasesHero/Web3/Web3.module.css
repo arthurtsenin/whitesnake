@@ -38,6 +38,7 @@
   flex-wrap: wrap;
   column-gap: var(--gap-col-keywords);
   row-gap: var(--gap-row-keywords);
+  width: 80%;
 }
 
 @media screen and (width >=768px) {
