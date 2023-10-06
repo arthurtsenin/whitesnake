@@ -6,7 +6,7 @@ import styles from "./Web3.module.css";
 import { HeroTitle, HeroTitleProps } from "../ui/HeroTitle/HeroTitle";
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroBg from "&/cases/digital-asset-staking-service.png";
+import heroBg from "&/cases/digital-asset-staking-service.webp";
 
 export type Web3Props = {
   keywords: string[];
