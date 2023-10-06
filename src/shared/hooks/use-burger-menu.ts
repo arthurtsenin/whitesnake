@@ -8,7 +8,6 @@ export const useBurgerMenu = (
   isVisible: boolean;
   toggleVisibility: () => void;
   setInvisible: () => void;
-  setVisible: () => void;
 } => {
   const [isVisible, setIsVisible] = useState(initialState);
 
@@ -18,9 +17,8 @@ export const useBurgerMenu = (
       : document.body.classList.remove("lock");
   }, [isVisible]);
 
-  const setVisible = () => setIsVisible(true);
   const setInvisible = () => setIsVisible(false);
   const toggleVisibility = () => setIsVisible((prev) => !prev);
 
-  return { isVisible, toggleVisibility, setInvisible, setVisible } as const;
+  return { isVisible, toggleVisibility, setInvisible } as const;
 };
