@@ -6,7 +6,7 @@ import styles from "./Datarails.module.css";
 import { HeroTitle } from "@/shared";
 import { HeroTitleProps } from "@/widget/Cases/ui/HeroTitle/HeroTitle";
 
-import { Keyword } from "../ui/Keyword";
+import { Keyword } from "../ui/Keyword/Keyword";
 
 import heroBg from "&/cases-preview/datarails-case-image.png";
 
