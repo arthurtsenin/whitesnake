@@ -8,15 +8,11 @@ import { Keyword } from "../ui/Keyword/Keyword";
 
 import heroBg from "&/cases/digital-asset-staking-service.png";
 
-export type DatarailsProps = {
+export type Web3Props = {
   keywords: string[];
 } & HeroTitleProps;
 
-export const Datarails: FC<DatarailsProps> = ({
-  title,
-  subtitle,
-  keywords,
-}) => {
+export const Web3: FC<Web3Props> = ({ title, subtitle, keywords }) => {
   return (
     <section className={styles.hero}>
       <div className={styles.content}>
