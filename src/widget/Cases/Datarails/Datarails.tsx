@@ -3,9 +3,7 @@ import { FC } from "react";
 
 import styles from "./Datarails.module.css";
 
-import { HeroTitle } from "@/shared";
-import { HeroTitleProps } from "@/widget/Cases/ui/HeroTitle/HeroTitle";
-
+import { HeroTitle, HeroTitleProps } from "../ui/HeroTitle/HeroTitle";
 import { Keyword } from "../ui/Keyword/Keyword";
 
 import heroBg from "&/cases-preview/datarails-case-image.png";
