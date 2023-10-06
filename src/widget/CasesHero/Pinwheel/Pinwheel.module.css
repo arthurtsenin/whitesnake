@@ -49,7 +49,7 @@
 
 @media screen and (width >=1920px) {
   .content {
-    --gap-content: 32px;
+    --gap-content: 40px;
 
     width: 65%;
   }
