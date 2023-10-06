@@ -16,6 +16,5 @@ export const CASE_DATA: CASE = {
     "Сбор данных",
     "Python",
     "Backend разработка",
-    "",
   ],
 };
