@@ -1,4 +1,9 @@
 .hero {
+  /* Local variables */
+  --gap-content: 26px;
+  --gap-col-keyword: 4.8px;
+  --gap-row-keyword: 11.6px;
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -10,8 +15,6 @@
 }
 
 .content {
-  --gap-content: 26px;
-
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-content);
@@ -20,14 +23,18 @@
 .keywords {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 4.8px;
-  row-gap: 11.6px;
+  column-gap: var(--gap-col-keyword);
+  row-gap: var(--gap-row-keyword);
 }
 
 @media screen and (width >=768px) {
 }
 
 @media screen and (width >=1440px) {
+  .hero {
+    justify-content: center;
+  }
+
   .content {
     --gap-content: 32px;
 
@@ -36,10 +43,6 @@
 }
 
 @media screen and (width >=1920px) {
-  .hero {
-    justify-content: center;
-  }
-
   .content {
     --gap-content: 32px;
 
