@@ -19,6 +19,8 @@
 
 .imgWrapper {
   margin-block-start: 26.5px;
+  max-width: 60vw;
+  height: auto;
   opacity: 0.7;
 }
 
@@ -38,9 +40,12 @@
 }
 
 @media screen and (width >=768px) {
+  .imgWrapper {
+    max-width: 45vw;
+  }
 }
 
-@media screen and (width >=1440px) {
+@media screen and (width >=1200px) {
   .hero {
     justify-content: center;
   }
@@ -53,12 +58,11 @@
 
   .imgWrapper {
     position: absolute;
-    top: 0;
+    top: 20%;
     right: 0;
     z-index: -1;
     margin: 0;
     width: 50vw;
-    height: 70vh;
   }
 
   .keywords {
@@ -67,16 +71,19 @@
   }
 }
 
+@media screen and (width >=1440px) {
+  .imgWrapper {
+    top: 15%;
+    right: 3%;
+    width: 40vw;
+  }
+}
+
 @media screen and (width >=1920px) {
   .content {
     --gap-content: 40px;
 
     width: 65%;
-  }
-
-  .imgWrapper {
-    width: 1155px;
-    height: 928px;
   }
 
   .keywords {
