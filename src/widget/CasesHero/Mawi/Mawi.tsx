@@ -19,6 +19,13 @@ export const Mawi: FC<MawiProps> = ({ title, subtitle, keywords }) => {
         <HeroTitle title={title} subtitle={subtitle} />
         <div className={styles.imgWrapper}>
           <Image src={heroBg} alt="" priority />
+          <Image src={heroBg} alt="" priority />
+          <Image src={heroBg} alt="" priority />
+          <Image src={heroBg} alt="" priority />
+          <Image src={heroBg} alt="" priority />
+          <Image src={heroBg} alt="" priority />
+          <Image src={heroBg} alt="" priority />
+          <Image src={heroBg} alt="" priority />
         </div>
         <div className={styles.keywords}>
           {keywords.map((k, idx) => (
