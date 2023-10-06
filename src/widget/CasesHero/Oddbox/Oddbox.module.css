@@ -60,6 +60,11 @@
     width: 50vw;
     height: 70vh;
   }
+
+  .keywords {
+    --gap-col-keyword: 6px;
+    --gap-row-keyword: 16px;
+  }
 }
 
 @media screen and (width >=1920px) {
@@ -72,5 +77,9 @@
   .imgWrapper {
     width: 1155px;
     height: 928px;
+  }
+
+  .keywords {
+    --gap-row-keyword: 21px;
   }
 }
