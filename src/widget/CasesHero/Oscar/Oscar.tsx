@@ -6,7 +6,7 @@ import styles from "./Oscar.module.css";
 import { HeroTitle, HeroTitleProps } from "../ui/HeroTitle/HeroTitle";
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroBg from "&/cases/health-insurance-platform.png";
+import heroBg from "&/cases/health-insurance-platform.webp";
 
 export type OscarProps = {
   keywords: string[];
