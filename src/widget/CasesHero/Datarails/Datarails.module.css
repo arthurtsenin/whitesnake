@@ -38,6 +38,9 @@
 }
 
 @media screen and (width >=768px) {
+  .imgWrapper {
+    width: 70vw;
+  }
 }
 
 @media screen and (width >=1440px) {
@@ -53,7 +56,7 @@
 
   .imgWrapper {
     position: absolute;
-    top: 0;
+    top: 20%;
     right: 0;
     z-index: -1;
     margin: 0;
@@ -72,11 +75,6 @@
     --gap-content: 32px;
 
     width: 65%;
-  }
-
-  .imgWrapper {
-    width: 1155px;
-    height: 928px;
   }
 
   .keywords {
