@@ -1,9 +1,4 @@
 .hero {
-  /* Local variables */
-  --gap-content: 26px;
-  --gap-col-keywords: 4.8px;
-  --gap-row-keywords: 11.6px;
-
   position: relative;
   display: flex;
   flex-direction: column;
@@ -15,12 +10,17 @@
 }
 
 .content {
+  --gap-content: 26px;
+
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-content);
 }
 
 .keywords {
+  --gap-col-keywords: 4.8px;
+  --gap-row-keywords: 11.6px;
+
   display: flex;
   flex-wrap: wrap;
   column-gap: var(--gap-col-keywords);
