@@ -101,7 +101,6 @@
     rgb(255 0 0 / 100%) 40%,
     rgb(255 181 181 / 100%) 100%
   );
-
   --clr-contact-card-bg: #101010;
   --clr-tab-bg-gradient: radial-gradient(
       70.71% 70.71% at 50% 50%,
@@ -149,6 +148,10 @@ body {
   color: var(--clr-main-text);
   overflow-x: hidden;
   position: relative;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 /* ::-webkit-scrollbar {
@@ -351,28 +354,4 @@ body {
     --fs-questions-description: 14px;
     --fs-footer-navlink: 12px;
   }
-}
-
-.userW {
-  height: 90vh;
-  overflow: hidden;
-  position: sticky;
-  top: 0;
-}
-.userWContent {
-  display: flex;
-  flex-direction: column;
-}
-
-.card {
-  height: 50vh;
-  width: 100%;
-  background-color: rgba(0, 128, 0, 0.411);
-}
-
-.card:nth-child(2) {
-  background-color: rgba(110, 191, 12, 0.411);
-}
-.card:nth-child(3) {
-  background-color: rgba(12, 39, 191, 0.411);
 }
