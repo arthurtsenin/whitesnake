@@ -59,15 +59,15 @@ export type TechnologieType = TabType & {
 
 export type DataType<T> = Record<string, T>;
 
-const enum INDUSTRY {
-  ONE = "Финансы",
-  TWO = "Страхование",
-  THREE = "Здоровье",
-  FOUR = "E-commerce",
-  FIVE = "Web3",
-  SIX = "Логистика",
-  SEVEN = "Образование",
-}
+const INDUSTRY = {
+  ONE: "Финансы",
+  TWO: "Страхование",
+  THREE: "Здоровье",
+  FOUR: "E-commerce",
+  FIVE: "Web3",
+  SIX: "Логистика",
+  SEVEN: "Образование",
+};
 
 export const INDUSTRY_DATA: DataType<IndustryType> = {
   [INDUSTRY.ONE]: {
@@ -121,15 +121,15 @@ export const INDUSTRY_DATA: DataType<IndustryType> = {
   },
 };
 
-const enum TECHNOLOGIE {
-  ONE = "Web frameworks",
-  TWO = "Databases",
-  THREE = "Data Engineering",
-  FOUR = "DevOps",
-  FIVE = "Message brockers",
-  SIX = "Web3",
-  SEVEN = "Cloud services",
-}
+const TECHNOLOGIE = {
+  ONE: "Web frameworks",
+  TWO: "Databases",
+  THREE: "Data Engineering",
+  FOUR: "DevOps",
+  FIVE: "Message brockers",
+  SIX: "Web3",
+  SEVEN: "Cloud services",
+};
 
 export const TECHNOLOGIE_DATA: DataType<TechnologieType> = {
   [TECHNOLOGIE.ONE]: {

@@ -3,7 +3,5 @@ export { Chip } from "./ui/Chip/Chip";
 export { ContactCard } from "./ui/ContactCard/ContactCard";
 export { Container } from "./ui/Container/Container";
 export { Input } from "./ui/Input/Input";
-export { SolutionContainer } from "./ui/SolutionContainer/SolutionContainer";
-export { SolutionItem } from "./ui/SolutionItem/SolutionItem";
 export { Textarea } from "./ui/Textarea/Textarea";
 export { Title } from "./ui/Title/Title";

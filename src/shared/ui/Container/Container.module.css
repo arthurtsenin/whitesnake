@@ -1,0 +1,5 @@
+.container {
+  width: 90%;
+  margin-inline: auto;
+  max-width: var(--ui-desktop-medium-device-size);
+}
