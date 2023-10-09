@@ -7,6 +7,7 @@
   overflow: hidden;
   width: 90%;
   min-height: 900px;
+  height: auto;
   padding-block: var(--header-height);
   background-color: transparent;
 }
