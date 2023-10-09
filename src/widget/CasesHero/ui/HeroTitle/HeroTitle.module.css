@@ -23,7 +23,7 @@
 }
 
 .subtitle {
-  width: 90%;
+  width: 65%;
   font-size: var(--fs-hero-description);
   line-height: 130%;
   letter-spacing: -0.7px;
