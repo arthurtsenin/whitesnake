@@ -1,14 +1,22 @@
 .hero {
+  --clr-case-hero-bg: linear-gradient(
+    285.56deg,
+    #000 16.22%,
+    transparent 74.01%
+  );
+
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   overflow: hidden;
+  margin-inline: auto;
   width: 90%;
   min-height: 900px;
   height: auto;
   padding-block: var(--header-height);
-  background-color: transparent;
+  background-image: url("../../../../public/cases/silver-lines-bg.png");
+  background-color: var(--clr-case-hero-bg);
 }
 
 .content {
