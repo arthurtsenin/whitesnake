@@ -1,0 +1,24 @@
+.container,
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  gap: 100px;
+}
+
+.item {
+  gap: 50px;
+  flex-direction: column-reverse;
+}
+
+@media (width >= 1440px) {
+  .item {
+    flex-direction: row-reverse;
+  }
+
+  .reverse {
+    flex-direction: row;
+  }
+}
