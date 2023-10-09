@@ -20,8 +20,6 @@
   line-height: 90%;
   letter-spacing: -1.302px;
   font-weight: var(--fw-bold);
-  color: var(--clr-main-text);
-  /* text-wrap: nowrap; */
 }
 
 .subtitle {
