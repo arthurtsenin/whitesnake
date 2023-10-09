@@ -38,7 +38,7 @@
   text-transform: uppercase;
 }
 
-@media screen and (width >=768px) {
+@media screen and (width >=744px) {
   .text {
     --fs-hero-title: 70px;
     --fs-hero-description: 20px;
