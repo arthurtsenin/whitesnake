@@ -17,6 +17,8 @@
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-content);
+  justify-content: center;
+  padding-top: 170px;
 }
 
 .imgWrapper {
@@ -42,32 +44,32 @@
 }
 
 @media screen and (width >=744px) {
-  .hero {
-    height: auto;
-  }
-
   .imgWrapper {
     width: 70vw;
   }
 }
 
-@media screen and (width >=1440px) {
+@media screen and (width >=1200px) {
   .hero {
-    justify-content: center;
+    height: 100vh;
+    padding-block: 0;
   }
 
   .content {
     --gap-content: 32px;
 
+    flex-grow: 1;
     width: 60%;
+    padding-top: 100px;
   }
 
   .imgWrapper {
     position: absolute;
-    top: 25%;
-    right: 0;
+    bottom: 5%;
+    right: -5%;
     z-index: -1;
     margin: 0;
+    width: 90vh;
   }
 
   .keywords {
@@ -76,11 +78,10 @@
   }
 }
 
-@media screen and (width >=1920px) {
-  .imgWrapper {
-    width: 60vw;
-  }
+@media screen and (width >=1440px) {
+}
 
+@media screen and (width >=1920px) {
   .content {
     --gap-content: 40px;
 
