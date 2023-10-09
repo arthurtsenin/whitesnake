@@ -15,7 +15,7 @@
   min-height: 900px;
   height: auto;
   padding-block: var(--header-height);
-  background-image: url("../../../../public/cases/case-hero-bg.png");
+  background-image: url("../../../../public/cases/silver-lines-bg.png");
   background-color: var(--clr-case-hero-bg);
 }
 
