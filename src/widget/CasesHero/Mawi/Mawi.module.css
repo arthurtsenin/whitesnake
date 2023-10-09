@@ -30,9 +30,9 @@
   padding-top: 170px;
 }
 
-/* .heroTitleContainer {
+.heroTitleContainer {
   width: 80%;
-} */
+}
 
 .imgWrapper {
   display: flex;
@@ -82,9 +82,9 @@
 }
 
 @media screen and (width >=1440px) {
-  /* .heroTitleContainer {
+  .heroTitleContainer {
     width: 72%;
-  } */
+  }
 
   .imgWrapper {
     height: 85vh;

@@ -16,7 +16,9 @@ export const Mawi: FC<MawiProps> = ({ title, subtitle, keywords }) => {
   return (
     <section className={styles.hero}>
       <div className={styles.content}>
-        <HeroTitle title={title} subtitle={subtitle} />
+        <div className={styles.heroTitleContainer}>
+          <HeroTitle title={title} subtitle={subtitle} />
+        </div>
         <div className={styles.imgWrapper}>
           <Image src={heroBg} alt="" priority />
           <Image src={heroBg} alt="" priority />
