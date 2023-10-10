@@ -3,14 +3,15 @@ import { FC } from "react";
 
 import styles from "./LivePerson.module.css";
 
-import { HeroTitle, HeroTitleProps } from "../ui/HeroTitle/HeroTitle";
+import { TitleProps } from "@/shared/ui/Title/Title";
+
 import { Keyword } from "../ui/Keyword/Keyword";
 
 import heroBg from "&/cases/platform-for-customer-support.png";
 
 export type LivePersonProps = {
   keywords: string[];
-} & HeroTitleProps;
+} & TitleProps;
 
 export const LivePerson: FC<LivePersonProps> = ({
   title,
@@ -20,7 +21,10 @@ export const LivePerson: FC<LivePersonProps> = ({
   return (
     <section className={styles.hero}>
       <div className={styles.content}>
-        <HeroTitle title={title} subtitle={subtitle} />
+        <div className={styles.text}>
+          <h1 className={styles.title}>{title}</h1>
+          {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+        </div>
         <div className={styles.imgWrapper}>
           <Image src={heroBg} alt="" priority />
         </div>
