@@ -142,12 +142,16 @@
 }
 
 @media screen and (width >=1440px) {
+  .text {
+    --fs-hero-title: 70px;
+  }
+
   .content {
     width: 70%;
   }
 
   .keywords {
-    width: 70%;
+    width: 60%;
   }
 }
 
@@ -156,7 +160,18 @@
     --gap-content: 40px;
   }
 
+  .text {
+    --fs-hero-title: 100px;
+    --gap-hero-text: 51px;
+  }
+
+  .title {
+    line-height: 103.5%;
+  }
+
   .keywords {
     --gap-row-keywords: 21px;
+
+    width: 50%;
   }
 }
