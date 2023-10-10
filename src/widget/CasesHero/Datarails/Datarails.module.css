@@ -14,7 +14,7 @@
   margin-inline: auto;
   width: 100vw;
   min-height: 900px;
-  height: auto;
+  height: 100dvh;
   padding-block: var(--header-height);
   background-size: 100% 100%;
   background-image: url("../../../../public/cases/silver-lines-bg.png");
@@ -124,7 +124,6 @@
 
 @media screen and (width >=1200px) {
   .hero {
-    height: 100vh;
     padding-block: 0;
     justify-content: center;
   }
@@ -138,7 +137,7 @@
   .imgWrapper {
     position: absolute;
     bottom: 10%;
-    right: -5%;
+    right: 10%;
     z-index: -1;
     margin: 0;
     width: 90vh;
