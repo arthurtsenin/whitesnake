@@ -29,9 +29,6 @@
   flex-direction: column;
   justify-content: center;
   row-gap: var(--gap-content);
-  margin-inline: auto;
-  width: 90%;
-  max-width: var(--ui-desktop-medium-device-size);
 }
 
 .imgWrapper {
