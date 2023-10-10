@@ -7,7 +7,7 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroBg from "&/cases/health-insurance-platform.webp";
+import heroBg from "&/cases/health-insurance-platform.png";
 
 export type OscarProps = {
   keywords: string[];
