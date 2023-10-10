@@ -9,7 +9,7 @@
   z-index: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   overflow: hidden;
   margin-inline: auto;
   width: 90%;
@@ -27,7 +27,6 @@
   flex-direction: column;
   row-gap: var(--gap-content);
   justify-content: center;
-  padding-top: 170px;
 }
 
 .imgWrapper {
@@ -36,6 +35,7 @@
   width: 80%;
   height: auto;
   opacity: 0.7;
+  mix-blend-mode: difference;
 }
 
 .imgWrapper img {
@@ -88,7 +88,7 @@
   flex-wrap: wrap;
   column-gap: var(--gap-col-keywords);
   row-gap: var(--gap-row-keywords);
-  width: 80%;
+  width: 100%;
 }
 
 @media screen and (width >=744px) {
@@ -111,6 +111,10 @@
   .subtitle {
     width: 85%;
     letter-spacing: -1px;
+  }
+
+  .keywords {
+    width: 80%;
   }
 }
 
