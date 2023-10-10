@@ -135,9 +135,10 @@
   .imgWrapper {
     position: absolute;
     z-index: -1;
+    top: 19%;
+    right: 0;
     margin: 0;
-    right: -10%;
-    width: 60vh;
+    width: 45vh;
   }
 
   .title {
@@ -158,12 +159,6 @@
     --gap-content: 32px;
   }
 
-  .imgWrapper {
-    top: 10%;
-    right: -7%;
-    width: 75vh;
-  }
-
   .keywords {
     --gap-col-keywords: 6px;
     --gap-row-keywords: 16px;
@@ -176,7 +171,7 @@
   }
 
   .imgWrapper {
-    right: 0;
+    right: 5%;
   }
 
   .text {
