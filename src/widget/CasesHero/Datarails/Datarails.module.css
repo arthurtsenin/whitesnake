@@ -12,7 +12,7 @@
   justify-content: space-between;
   overflow: hidden;
   margin-inline: auto;
-  width: 90%;
+  width: 100vw;
   min-height: 900px;
   height: auto;
   padding-block: var(--header-height);
@@ -27,6 +27,8 @@
   flex-direction: column;
   row-gap: var(--gap-content);
   justify-content: center;
+  margin-inline: auto;
+  width: 90%;
 }
 
 .imgWrapper {

@@ -8,6 +8,11 @@
 }
 
 .header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   font-size: var(--fs-navlink);
@@ -47,7 +52,7 @@
   background-color: var(--clr-main-bg);
 }
 
-@media screen and (width >= 744px) {
+@media screen and (width >=744px) {
   .nav {
     display: flex;
     flex-direction: row;
