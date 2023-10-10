@@ -5,7 +5,6 @@
     transparent 74.01%
   );
 
-  position: relative;
   z-index: 0;
   display: flex;
   flex-direction: column;
@@ -24,6 +23,7 @@
 .content {
   --gap-content: 26px;
 
+  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-content);
@@ -133,8 +133,8 @@
 
   .imgWrapper {
     position: absolute;
-    bottom: 10%;
-    right: 10%;
+    top: -10%;
+    right: 0;
     z-index: -1;
     margin: 0;
     width: 90vh;
@@ -157,12 +157,16 @@
 }
 
 @media screen and (width >=1440px) {
+  .imgWrapper {
+    top: -25%;
+  }
+
   .text {
     --fs-hero-title: 70px;
   }
 
   .title {
-    width: 80%;
+    width: 75%;
   }
 
   .subtitle {
@@ -179,12 +183,18 @@
     --gap-content: 40px;
   }
 
+  .imgWrapper {
+    top: -10%;
+    width: 100vh;
+  }
+
   .text {
     --fs-hero-title: 100px;
     --gap-hero-text: 51px;
   }
 
   .title {
+    width: 70%;
     line-height: 103.5%;
   }
 
