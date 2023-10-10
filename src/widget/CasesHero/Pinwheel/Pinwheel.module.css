@@ -109,7 +109,6 @@
 @media screen and (width >=1200px) {
   .hero {
     padding-block: 0;
-    justify-content: center;
   }
 
   .content {
