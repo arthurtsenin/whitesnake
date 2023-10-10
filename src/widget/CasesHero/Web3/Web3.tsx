@@ -3,20 +3,24 @@ import { FC } from "react";
 
 import styles from "./Web3.module.css";
 
-import { HeroTitle, HeroTitleProps } from "../ui/HeroTitle/HeroTitle";
+import { TitleProps } from "@/shared/ui/Title/Title";
+
 import { Keyword } from "../ui/Keyword/Keyword";
 
 import heroBg from "&/cases/digital-asset-staking-service.webp";
 
 export type Web3Props = {
   keywords: string[];
-} & HeroTitleProps;
+} & TitleProps;
 
 export const Web3: FC<Web3Props> = ({ title, subtitle, keywords }) => {
   return (
     <section className={styles.hero}>
       <div className={styles.content}>
-        <HeroTitle title={title} subtitle={subtitle} />
+        <div className={styles.text}>
+          <h1 className={styles.title}>{title}</h1>
+          {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+        </div>
         <div className={styles.imgWrapper}>
           <Image src={heroBg} alt="" priority />
         </div>
