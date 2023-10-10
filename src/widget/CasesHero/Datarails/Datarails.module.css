@@ -122,7 +122,6 @@
   .content {
     --gap-content: 32px;
 
-    width: 90%;
     padding-top: 0;
   }
 
@@ -135,9 +134,19 @@
     width: 90vh;
   }
 
+  .title {
+    width: 80%;
+  }
+
+  .subtitle {
+    width: 60%;
+  }
+
   .keywords {
     --gap-col-keywords: 6px;
     --gap-row-keywords: 16px;
+
+    width: 50%;
   }
 }
 
@@ -146,12 +155,16 @@
     --fs-hero-title: 70px;
   }
 
-  .content {
-    width: 70%;
+  .title {
+    width: 80%;
+  }
+
+  .subtitle {
+    width: 60%;
   }
 
   .keywords {
-    width: 60%;
+    width: 40%;
   }
 }
 
@@ -171,7 +184,5 @@
 
   .keywords {
     --gap-row-keywords: 21px;
-
-    width: 50%;
   }
 }
