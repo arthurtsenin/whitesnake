@@ -1,32 +1,24 @@
-import classNames from "classnames";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
 
 import styles from "./SolutionItem.module.css";
 
 type SolutionItemProps = {
   text: Array<string>;
-  image: string;
-  direction?: string;
+  image: string | StaticImageData;
 };
 
-export const SolutionItem: FC<SolutionItemProps> = ({
-  text,
-  image,
-  direction,
-}) => {
+export const SolutionItem: FC<SolutionItemProps> = ({ text, image }) => {
   return (
-    <div
-      className={classNames([styles.container, styles[direction || ""]], {})}
-    >
+    <>
       <div className={styles.description}>
         {text.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
       <div className={styles.wrapper}>
-        <Image src={image} alt={image} />
+        <Image src={image} alt="" />
       </div>
-    </div>
+    </>
   );
 };

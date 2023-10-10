@@ -1,0 +1,18 @@
+.link {
+  font-size: var(--fs-navlink);
+  color: var(--clr-main-text);
+  font-weight: var(--fw-regular);
+  letter-spacing: -0.9px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.active {
+  color: var(--clr-secondary-text);
+}
+
+@media (hover: hover) {
+  .link:hover {
+    transform: scale(1.05);
+  }
+}

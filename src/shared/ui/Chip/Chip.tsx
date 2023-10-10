@@ -7,5 +7,5 @@ type ChipProps = {
 };
 
 export const Chip: FC<ChipProps> = ({ text }) => {
-  return <div className={styles.text}>{text}</div>;
+  return <div className={styles.chip}>{text}</div>;
 };

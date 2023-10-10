@@ -1,0 +1,62 @@
+.container {
+  width: 90%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-navlink);
+  font-weight: var(--fw-regular);
+  letter-spacing: -0.9px;
+  background-color: transparent;
+  min-height: var(--header-height);
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  height: 0;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.open {
+  position: absolute;
+  inset: var(--header-height) 0 0 0;
+  height: calc(100vh - var(--header-height));
+  z-index: 4;
+  pointer-events: all;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-header);
+  padding-top: var(--gap-header);
+  padding-left: 5%;
+  background-color: var(--clr-main-bg);
+}
+
+.burgerOpen {
+  background-color: var(--clr-main-bg);
+}
+
+@media screen and (width >= 744px) {
+  .nav {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-header);
+    position: static;
+    width: fit-content;
+    height: fit-content;
+    pointer-events: all;
+    opacity: 1;
+    overflow: visible;
+  }
+}

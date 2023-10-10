@@ -2,7 +2,6 @@
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-100);
   background-clip: padding-box;
-  -webkit-background-clip: padding-box;
   padding: 16px;
   display: flex;
   gap: 16px;
@@ -73,7 +72,7 @@
   flex-direction: column;
 }
 
-@media (min-width: 375px) {
+@media (width >= 375px) {
   .cardButton > button {
     width: 196px;
   }
@@ -84,14 +83,14 @@
   }
 }
 
-@media (min-width: 744px) {
+@media (width >= 744px) {
   .cardImage {
     width: 80px;
     height: 80px;
   }
 }
 
-@media (min-width: 960px) {
+@media (width >= 960px) {
   .card.withIcon {
     padding: 24px;
     gap: 40px;
@@ -102,7 +101,7 @@
   }
 }
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
   .card.withIcon {
     height: 375px;
     padding: 40px;
