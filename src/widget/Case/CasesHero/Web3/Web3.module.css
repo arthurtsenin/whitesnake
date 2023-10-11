@@ -12,12 +12,13 @@
   overflow: hidden;
   margin-inline: auto;
   width: 100vw;
-  min-height: 900px;
-  height: 100dvh;
+  min-height: max-content;
+  height: auto;
   padding-block: var(--header-height);
-  background-size: 100% 100%;
-  background-image: url("../../../../public/cases/hexagon-bg.png");
-  background-color: var(--clr-case-hero-bg);
+
+  background-image: url("/cases/hexagon-bg.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .content {
@@ -36,6 +37,8 @@
   max-width: 90%;
   height: auto;
   opacity: 0.7;
+  mix-blend-mode: lighten;
+  filter: blur(1px);
 }
 
 .imgWrapper img {
@@ -44,7 +47,7 @@
 }
 
 .text {
-  --fs-hero-title: 43px;
+  --fs-hero-title: 40px;
   --fs-hero-description: 14px;
   --gap-hero-text: 20px;
 
@@ -67,7 +70,7 @@
 }
 
 .subtitle {
-  width: 90%;
+  width: 95%;
   font-size: var(--fs-hero-description);
   line-height: 130%;
   letter-spacing: -0.7px;
@@ -99,7 +102,7 @@
   }
 
   .text {
-    --fs-hero-title: 70px;
+    --fs-hero-title: 55px;
     --fs-hero-description: 20px;
     --gap-hero-text: 32px;
   }
@@ -113,14 +116,19 @@
     letter-spacing: -1px;
   }
 
+  .imgWrapper {
+    max-width: 70%;
+  }
+
   .keywords {
-    width: 70%;
+    width: 90%;
   }
 }
 
 @media screen and (width >=1200px) {
   .hero {
     padding-block: 0;
+    height: 100dvh;
   }
 
   .content {
@@ -155,7 +163,6 @@
   }
 
   .imgWrapper {
-    top: -15%;
     width: 75vh;
   }
 
@@ -174,6 +181,7 @@
     top: 0;
     width: 60vh;
     opacity: 0.7;
+    z-index: 1;
   }
 
   .text {

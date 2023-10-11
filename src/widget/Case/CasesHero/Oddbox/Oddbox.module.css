@@ -8,16 +8,15 @@
   z-index: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   overflow: hidden;
   margin-inline: auto;
   width: 100vw;
-  min-height: 900px;
-  height: 100dvh;
+  min-height: max-content;
+  height: auto;
   padding-block: var(--header-height);
-  background-size: 100% 100%;
-  background-image: url("../../../../public/cases/hexagon-bg.png");
-  background-color: var(--clr-case-hero-bg);
+  background-image: url("/cases/silver-lines-bg.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .content {
@@ -28,13 +27,12 @@
   flex-direction: column;
   row-gap: var(--gap-content);
   justify-content: center;
-  padding-top: 30px;
 }
 
 .imgWrapper {
   margin-block-start: 26.5px;
   margin-inline: auto;
-  max-width: 70vw;
+  width: 80%;
   height: auto;
   opacity: 0.7;
 }
@@ -68,7 +66,7 @@
 }
 
 .subtitle {
-  width: 90%;
+  width: 70%;
   font-size: var(--fs-hero-description);
   line-height: 130%;
   letter-spacing: -0.7px;
@@ -95,10 +93,8 @@
 @media screen and (width >=744px) {
   .content {
     --gap-content: 32px;
-  }
 
-  .imgWrapper {
-    width: 40vh;
+    padding-top: 100px;
   }
 
   .text {
@@ -108,11 +104,12 @@
   }
 
   .title {
+    width: 90%;
     letter-spacing: -2px;
   }
 
   .subtitle {
-    width: 85%;
+    width: 65%;
     letter-spacing: -1px;
   }
 
@@ -123,45 +120,46 @@
 
 @media screen and (width >=1200px) {
   .hero {
+    justify-content: center;
     padding-block: 0;
+    height: 100vh;
   }
 
   .content {
     --gap-content: 32px;
-
-    padding-top: 0;
   }
 
   .imgWrapper {
     position: absolute;
-    z-index: -1;
-    top: -40%;
     right: 0;
+    z-index: -1;
     margin: 0;
-    width: 45vh;
+    width: 50vh;
   }
 
   .title {
-    width: 70%;
+    width: 50%;
   }
 
   .subtitle {
-    width: 55%;
-  }
-
-  .keywords {
-    width: 60%;
-  }
-}
-
-@media screen and (width >=1440px) {
-  .content {
-    --gap-content: 32px;
+    width: 45%;
   }
 
   .keywords {
     --gap-col-keywords: 6px;
     --gap-row-keywords: 16px;
+
+    width: 40%;
+  }
+}
+
+@media screen and (width >=1440px) {
+  .imgWrapper {
+    width: 70vh;
+  }
+
+  .keywords {
+    width: 30%;
   }
 }
 
@@ -171,8 +169,7 @@
   }
 
   .imgWrapper {
-    top: -20%;
-    right: 0;
+    z-index: 1;
   }
 
   .text {
@@ -184,9 +181,11 @@
     line-height: 103.5%;
   }
 
+  .subtitle {
+    width: 40%;
+  }
+
   .keywords {
     --gap-row-keywords: 21px;
-
-    width: 40%;
   }
 }

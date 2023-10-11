@@ -23,7 +23,6 @@ export const Navigation: FC<NavigationProps> = ({ clickHandler }) => {
       {Object.values(NAVIGATION_LINKS).map((link) => (
         <li key={link.id}>
           <Link
-            key={link.id}
             href={link.href}
             onClick={() => checkPath(pathname, link.href, clickHandler)}
             className={classNames(styles.link, {

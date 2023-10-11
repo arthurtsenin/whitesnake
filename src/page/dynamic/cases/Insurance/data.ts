@@ -5,6 +5,22 @@ import notes from "&/images/cases/healthInsurance/notes.webp";
 import subscriptionProcessing from "&/images/cases/healthInsurance/subscriptionProcessing.webp";
 
 export const INSURANCE_DATA: CaseDataType = {
+  hero: {
+    title: "Платформа медицинского страхования",
+    subtitle:
+      "Данная платформа для медицинского страхования — это инновационная система, предоставляющая медицинские услуги. Платформа работает в соответствии с индивидуальными предпочтениями пользователя, при этом способна быстро адаптироваться к меняющимся потребностям клиентов. Система представляет собой гибкий, технологичный и современный подход к здравоохранению.",
+    keywords: [
+      "Медицинское страхование",
+      "Здравоохранение",
+      "Страхование",
+      "Back-end разработка",
+      "Fullstack-разработка",
+      "Python",
+      "Go",
+      "React",
+    ],
+  },
+
   customer_title: "Клиент",
   customer_stats: {
     направление: "Здравоохранение, страхование",

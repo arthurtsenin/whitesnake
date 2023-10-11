@@ -5,6 +5,20 @@ import laptop2 from "&/images/cases/fp&aSolutions/laptop2.webp";
 import laptop3 from "&/images/cases/fp&aSolutions/laptop3.webp";
 
 export const FPA_DATA: CaseDataType = {
+  hero: {
+    title: "Автоматизированное решение FP&A на базе Excel",
+    subtitle:
+      "Платформа представляет собой инновационное решение для финансового планирования и анализа (FP&A), предназначенное для пользователей Excel, стремящихся автоматизировать свои финансовые процессы. Он оптимизирует сбор, анализ и отчетность данных, позволяя финансистам работать в привычной среде Excel.",
+    keywords: [
+      "Финансовое планирование",
+      "Анализы",
+      "Автоматизация",
+      "Excel",
+      "Сбор данных",
+      "Python",
+      "Backend разработка",
+    ],
+  },
   customer_title: "Клиент",
   customer_stats: {
     направление: "Финансы",

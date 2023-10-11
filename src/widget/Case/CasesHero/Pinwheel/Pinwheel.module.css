@@ -5,46 +5,33 @@
     transparent 74.01%
   );
 
+  position: relative;
   z-index: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   margin-inline: auto;
   width: 100vw;
-  min-height: 900px;
-  height: 100dvh;
+  min-height: max-content;
+  height: auto;
   padding-block: var(--header-height);
-  background-size: 100% 100%;
-  background-image: url("../../../../public/cases/silver-lines-bg.png");
-  background-color: var(--clr-case-hero-bg);
+  background-image: url("/cases/silver-lines-bg.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .content {
   --gap-content: 26px;
 
-  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-content);
   justify-content: center;
-}
-
-.imgWrapper {
-  margin-block-start: 26.5px;
-  margin-inline: auto;
-  width: 80%;
-  height: auto;
-  opacity: 0.7;
-  mix-blend-mode: difference;
-}
-
-.imgWrapper img {
-  width: 100%;
-  height: 100%;
+  text-wrap: balance;
 }
 
 .text {
-  --fs-hero-title: 43px;
+  --fs-hero-title: 36px;
   --fs-hero-description: 14px;
   --gap-hero-text: 20px;
 
@@ -67,7 +54,7 @@
 }
 
 .subtitle {
-  width: 80%;
+  width: 85%;
   font-size: var(--fs-hero-description);
   line-height: 130%;
   letter-spacing: -0.7px;
@@ -109,12 +96,11 @@
   }
 
   .subtitle {
-    width: 85%;
     letter-spacing: -1px;
   }
 
   .keywords {
-    width: 80%;
+    width: 75%;
   }
 }
 
@@ -122,36 +108,15 @@
   .hero {
     justify-content: center;
     padding-block: 0;
+    height: 100vh;
   }
 
   .content {
     --gap-content: 32px;
   }
 
-  .imgWrapper {
-    position: absolute;
-    z-index: -1;
-    top: 20%;
-    right: 0;
-    margin: 0;
-    width: 60vh;
-  }
-
-  .title {
-    width: 70%;
-  }
-
-  .subtitle {
-    width: 45%;
-  }
-
   .keywords {
     width: 60%;
-  }
-
-  .keywords {
-    --gap-col-keywords: 6px;
-    --gap-row-keywords: 16px;
   }
 }
 
@@ -160,21 +125,19 @@
     --gap-content: 32px;
   }
 
-  .imgWrapper {
-    top: 10%;
-    width: 75vh;
-  }
-
   .title {
-    width: 70%;
+    width: 80%;
   }
 
   .subtitle {
-    width: 50%;
+    width: 60%;
   }
 
   .keywords {
-    width: 40%;
+    --gap-col-keywords: 6px;
+    --gap-row-keywords: 16px;
+
+    width: 50%;
   }
 }
 
@@ -183,21 +146,22 @@
     --gap-content: 40px;
   }
 
-  .imgWrapper {
-    width: 85vh;
-  }
-
   .text {
     --fs-hero-title: 100px;
     --gap-hero-text: 51px;
   }
 
   .title {
-    width: 80%;
     line-height: 103.5%;
+  }
+
+  .subtitle {
+    width: 70%;
   }
 
   .keywords {
     --gap-row-keywords: 21px;
+
+    width: 40%;
   }
 }

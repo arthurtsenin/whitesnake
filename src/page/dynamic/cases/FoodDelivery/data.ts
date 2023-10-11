@@ -4,6 +4,20 @@ import aws from "&/images/cases/foodDelivery/aws.webp";
 import stack from "&/images/cases/foodDelivery/stack.webp";
 
 export const FOOD_DELIVERY_DATA: CaseDataType = {
+  hero: {
+    title: "Сервис доставки еды",
+    subtitle:
+      "Данная уникальная и инновационная платформа занимается поставкой свежих фермерских продуктов, которые остались в избыточном количестве. Служба помогает уменьшить количество пищевых отходов и пропагандирует привычки здорового питания.",
+    keywords: [
+      "Доставка",
+      "Serverless",
+      "AWS",
+      "Web",
+      "Backend-разработка",
+      "Python",
+      "API",
+    ],
+  },
   customer_title: "Клиент",
   customer_stats: {
     направление: "Электронная коммерция",

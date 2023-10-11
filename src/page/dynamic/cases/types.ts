@@ -1,6 +1,7 @@
 import { StaticImageData } from "next/image";
 
 export type CaseDataType = {
+  hero: Hero;
   customer_title: string;
   customer_stats: CustomerStats;
   customer_info: Array<string>;
@@ -15,6 +16,12 @@ export type CaseDataType = {
   team_info: Array<TeamInfo>;
   stack_title: string;
   stack_info: StackInfo;
+};
+
+export type Hero = {
+  title: string;
+  subtitle: string;
+  keywords: Array<string>;
 };
 
 export type CustomerStats = {

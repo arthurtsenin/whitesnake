@@ -5,19 +5,18 @@
     transparent 74.01%
   );
 
-  z-index: 0;
+  z-index: -1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   overflow: hidden;
   margin-inline: auto;
   width: 100vw;
-  min-height: 900px;
-  height: 100dvh;
+  min-height: max-content;
+  height: auto;
   padding-block: var(--header-height);
-  background-size: 100% 100%;
-  background-image: url("../../../../public/cases/silver-lines-bg.png");
-  background-color: var(--clr-case-hero-bg);
+  background-image: url("/cases/silver-lines-bg.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .content {
@@ -33,8 +32,10 @@
 .imgWrapper {
   margin-block-start: 26.5px;
   margin-inline: auto;
+  width: 80%;
   height: auto;
   opacity: 0.7;
+  mix-blend-mode: difference;
 }
 
 .imgWrapper img {
@@ -43,7 +44,7 @@
 }
 
 .text {
-  --fs-hero-title: 30px;
+  --fs-hero-title: 40px;
   --fs-hero-description: 14px;
   --gap-hero-text: 20px;
 
@@ -51,6 +52,7 @@
   flex-direction: column;
   row-gap: var(--gap-hero-text);
   word-break: break-word;
+  z-index: 999;
 }
 
 .title {
@@ -92,11 +94,9 @@
 
 @media screen and (width >=744px) {
   .content {
-    padding-top: 100px;
-  }
+    --gap-content: 32px;
 
-  .imgWrapper {
-    width: 70vw;
+    padding-top: 100px;
   }
 
   .text {
@@ -114,6 +114,10 @@
     letter-spacing: -1px;
   }
 
+  .imgWrapper {
+    width: 100%;
+  }
+
   .keywords {
     width: 80%;
   }
@@ -121,56 +125,53 @@
 
 @media screen and (width >=1200px) {
   .hero {
-    padding-block: 0;
     justify-content: center;
+    padding-block: 0;
+    height: 100vh;
   }
 
   .content {
     --gap-content: 32px;
-
-    padding-top: 0;
   }
 
   .imgWrapper {
     position: absolute;
-    top: -10%;
+    z-index: 1;
+    /* top: 10%; */
     right: 0;
-    z-index: -1;
     margin: 0;
     width: 90vh;
   }
 
   .title {
-    width: 80%;
+    width: 70%;
   }
 
   .subtitle {
+    width: 45%;
+  }
+
+  .keywords {
     width: 60%;
   }
 
   .keywords {
     --gap-col-keywords: 6px;
     --gap-row-keywords: 16px;
-
-    width: 50%;
   }
 }
 
 @media screen and (width >=1440px) {
-  .imgWrapper {
-    top: -25%;
-  }
-
-  .text {
-    --fs-hero-title: 70px;
+  .content {
+    --gap-content: 32px;
   }
 
   .title {
-    width: 75%;
+    width: 70%;
   }
 
   .subtitle {
-    width: 60%;
+    width: 50%;
   }
 
   .keywords {
@@ -184,8 +185,9 @@
   }
 
   .imgWrapper {
+    width: 85vh;
     top: -10%;
-    width: 100vh;
+    z-index: 1;
   }
 
   .text {
@@ -194,7 +196,7 @@
   }
 
   .title {
-    width: 70%;
+    width: 80%;
     line-height: 103.5%;
   }
 
