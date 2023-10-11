@@ -6,8 +6,9 @@
 
 .title {
   padding-left: 36px;
+  padding-block: 4px;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 30px;
   line-height: 100%;
   display: flex;
   align-items: center;

@@ -2,36 +2,18 @@ import Image from "next/image";
 
 import styles from "./HealhMonitoring.module.css";
 
-import { Container } from "@/shared";
-import { CaseChallenge } from "@/widget/Case/CaseChallenge/CaseChallenge";
-import { CaseCustomer } from "@/widget/Case/CaseCustomer/CaseCustomer";
-import { CaseResults } from "@/widget/Case/CaseResults/CaseResults";
 import { CaseSolution } from "@/widget/Case/CaseSolution/CaseSolution";
-// import { SolutionItem } from "@/widget/Case/CaseSolution/ui/CaseItem/SolutionItem";
-import { CaseTeam } from "@/widget/Case/CaseTeam/CaseTeam";
-import { CaseTechnologyStack } from "@/widget/Case/CaseTechnologyStack/CaseTecnologyStack";
-import { Divider } from "@/widget/Case/ui/Divider/Divider";
 
 import { HEALTH_MONITORING_DATA } from "./data";
+import { CasePageLayout } from "../CasePageLayout";
 
 import dashboardService from "&/images/cases/healthMonitoring/dashboardService.webp";
 import dataProcessing from "&/images/cases/healthMonitoring/dataProcessing.webp";
 import deviceService from "&/images/cases/healthMonitoring/deviceService.webp";
 
-export const HealthMonitoring = () => {
+export const HealthMonitoringPage = () => {
   return (
-    <Container>
-      <CaseCustomer
-        title={HEALTH_MONITORING_DATA.customer_title}
-        stats={HEALTH_MONITORING_DATA.customer_stats}
-        info={HEALTH_MONITORING_DATA.customer_info}
-      />
-      <Divider />
-      <CaseChallenge
-        title={HEALTH_MONITORING_DATA.challenge_title}
-        info={HEALTH_MONITORING_DATA.challenge_info}
-      />
-      <Divider />
+    <CasePageLayout data={HEALTH_MONITORING_DATA}>
       <CaseSolution
         title={HEALTH_MONITORING_DATA.solution_title}
         subtitle={HEALTH_MONITORING_DATA.solution_info.subtitle}
@@ -117,22 +99,6 @@ export const HealthMonitoring = () => {
           </div>
         </div>
       </CaseSolution>
-      <Divider />
-      <CaseResults
-        title={HEALTH_MONITORING_DATA.results_title}
-        text={HEALTH_MONITORING_DATA.results_info.summary}
-        cubes={HEALTH_MONITORING_DATA.results_cubes}
-      />
-      <Divider />
-      <CaseTeam
-        title={HEALTH_MONITORING_DATA.team_title}
-        data={HEALTH_MONITORING_DATA.team_info}
-      />
-      <Divider />
-      <CaseTechnologyStack
-        title={HEALTH_MONITORING_DATA.stack_title}
-        stack={HEALTH_MONITORING_DATA.stack_info}
-      />
-    </Container>
+    </CasePageLayout>
   );
 };
