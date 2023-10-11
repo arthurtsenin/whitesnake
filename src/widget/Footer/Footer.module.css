@@ -1,12 +1,22 @@
 .container {
-  width: 90%;
+  margin-top: var(--gap-layout);
   margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 32px;
   position: relative;
+  margin-bottom: 40px;
 }
-
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.buttons {
+  margin-top: auto;
+  margin-inline: auto;
+}
 .nav {
   display: flex;
   flex-direction: column;
@@ -31,7 +41,7 @@
   position: absolute;
   z-index: -1;
   top: -70%;
-  right: -5.5%;
+  right: 0%;
   width: fit-content;
   height: 320px;
   object-fit: cover;
@@ -40,25 +50,44 @@
 .glow:nth-of-type(1) {
   position: absolute;
   z-index: -1;
-  top: -30%;
-  right: -5%;
-  width: 320px;
-  height: 200px;
-  background-color: var(--clr-glow-right-bg);
+  width: 80vw;
+  bottom: 60%;
+  right: 0;
+  aspect-ratio: 1/1;
   border-radius: 50%;
-  filter: blur(200px);
+  background: rgba(204, 11, 11, 0.5);
+  filter: blur(150px);
 }
 
 .glow:nth-of-type(2) {
   position: absolute;
   z-index: -1;
-  bottom: 30%;
-  left: -20%;
+
   width: 30%;
-  height: 60%;
-  background-color: var(--clr-glow-left-bg);
-  border-radius: 50%;
-  filter: blur(170px);
+  aspect-ratio: 1/1;
+}
+
+@media screen and (width >= 450px) {
+  .glow:nth-of-type(1) {
+    width: 50vw;
+  }
+}
+
+@media screen and (width >= 744px) {
+  .glow:nth-of-type(2) {
+    top: -20%;
+    left: -50%;
+    background: rgba(124, 254, 253, 0.4);
+
+    filter: blur(345.20001220703125px);
+  }
+  .glow:nth-of-type(1) {
+    width: 40vw;
+    bottom: 60%;
+    right: 0;
+    background: rgba(204, 11, 11, 0);
+    filter: blur(250px);
+  }
 }
 
 @media screen and (width >= 1200px) {
@@ -82,15 +111,26 @@
     justify-content: space-between;
     max-width: 990px;
   }
+  .glow:nth-of-type(1) {
+    width: 40vw;
+    bottom: 20%;
+    right: 0;
+
+    background: rgba(204, 11, 11, 0.3);
+    filter: blur(350px);
+  }
+  .glow:nth-of-type(2) {
+    top: -30%;
+    left: -20%;
+    background: rgba(124, 254, 253, 0.4);
+
+    filter: blur(345.20001220703125px);
+  }
 }
 
 @media screen and (width >= 1400px) {
   .image {
     height: 600px;
     top: -80%;
-  }
-
-  .glow:nth-of-type(1) {
-    top: -10%;
   }
 }

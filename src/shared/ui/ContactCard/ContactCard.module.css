@@ -2,7 +2,11 @@
   --container-padding: 16px;
   position: relative;
   padding: var(--container-padding);
-  aspect-ratio: 1/1;
+
+
+  height: 170px;
+
+
   background: #101010;
   border-radius: var(--radius-200);
   border: 1px solid rgb(255 255 255 / 15%);
@@ -46,12 +50,19 @@
 
 @media screen and (width >= 744px) {
   .container {
+    height: 200px;
     --container-padding: 24px;
   }
 }
 
 @media screen and (width >= 1200px) {
   .container {
+    height: 360px;
     --container-padding: 40px;
+  }
+}
+@media screen and (1200px < width < 1400px) {
+  .title {
+    font-size: 26px;
   }
 }

@@ -1,6 +1,7 @@
 .tab {
   cursor: pointer;
-  padding: 16px 24px;
+  flex: 1;
+  padding-inline: 8px;
   font-size: var(--fs-tab);
   font-weight: var(--fw-light);
   line-height: 120%;
@@ -10,7 +11,7 @@
   align-items: center;
   justify-content: center;
   min-width: max-content;
-  height: 40px;
+  height: 56px;
 }
 
 .active {
@@ -19,9 +20,9 @@
   border-radius: var(--radius-200);
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (width >= 744px) {
   .tab {
     height: 70px;
-    padding: 24px 46px;
+    padding-inline: 12px;
   }
 }

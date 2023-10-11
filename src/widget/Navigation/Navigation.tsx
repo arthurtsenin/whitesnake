@@ -21,18 +21,16 @@ export const Navigation: FC<NavigationProps> = ({ clickHandler }) => {
   return (
     <>
       {Object.values(NAVIGATION_LINKS).map((link) => (
-        <li key={link.id}>
-          <Link
-            key={link.id}
-            href={link.href}
-            onClick={() => checkPath(pathname, link.href, clickHandler)}
-            className={classNames(styles.link, {
-              [styles.active]: pathname.includes(link.href),
-            })}
-          >
-            {link.label}
-          </Link>
-        </li>
+        <Link
+          key={link.id}
+          href={link.href}
+          onClick={() => checkPath(pathname, link.href, clickHandler)}
+          className={classNames(styles.link, {
+            [styles.active]: pathname?.includes(link.href),
+          })}
+        >
+          {link.label}
+        </Link>
       ))}
     </>
   );

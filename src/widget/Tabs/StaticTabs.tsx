@@ -10,6 +10,7 @@ import { Title, TitleProps } from "@/shared/ui/Title/Title";
 import { DataType, IndustryType } from "./data";
 import { StaticPannel } from "./ui/StaticPannel/StaticPannel";
 import { TabList } from "./ui/TabList/TabList";
+import { Container } from "../../shared";
 
 import bubbles from "&/pannels/bubbles.png";
 
@@ -28,15 +29,22 @@ export const StaticTabs: FC<StaticTabsProps> = ({
   return (
     <section className={styles.section}>
       <div className={styles.glow} />
-      <Image alt="design image" src={bubbles} className={styles.image} />
-      <Title suptitle={suptitle} title={title} subtitle={subtitle} />
+      <div className={styles.image}>
+        <Image alt="design image" src={bubbles} />
+      </div>
+      <div className={styles.titleContainer}>
+        <Title suptitle={suptitle} title={title} subtitle={subtitle} />
+      </div>
       <div className={styles.container}>
         <TabList
           tabs={Object.values(data)}
           currentTab={currentTab}
           clickHandler={setCurrentTab}
         />
-        <StaticPannel panel={data[currentTab]} />
+
+        <Container>
+          <StaticPannel panel={data[currentTab]} />
+        </Container>
       </div>
     </section>
   );

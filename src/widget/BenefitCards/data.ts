@@ -1,18 +1,18 @@
 import { BenefitCardData } from "./types";
 
-import cube from "&/benefit-cards/cube.svg";
-import spiral from "&/benefit-cards/spiral.svg";
+import cube from "&/benefit-cards/cube.png";
+import spiral from "&/benefit-cards/spiral.png";
 
 export const BENEFIT_CARD_WITH_ICON_DATA: BenefitCardData[] = [
   {
     cardTitle: "Для клиентов",
-    cardDesc: `Мы реализуем проекты международного масштаба от первоначального анализа до запуска и поддержки.`,
+    cardDesc: `Реализация проектов под ключ, расширение вашей команды опытными разработчиками, экспертный консалтинг.`,
     buttonText: "Связаться с нами",
     icon: cube,
   },
   {
     cardTitle: "Работа в Whitesnake",
-    cardDesc: `Если ты разработчик, мы с радостью с тобой пообщаемся и рассмотрим возможность работать с нами.`,
+    cardDesc: `Мы всегда рады новым членам команды! Выбирай вакансию и расти вместе с нами!`,
     buttonText: "Вакансии",
     icon: spiral,
   },

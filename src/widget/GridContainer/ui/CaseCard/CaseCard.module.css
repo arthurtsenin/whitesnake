@@ -10,6 +10,8 @@
   border-radius: var(--radius-300);
   overflow: hidden;
   position: relative;
+
+  z-index: 0;
 }
 
 .wrapper img {

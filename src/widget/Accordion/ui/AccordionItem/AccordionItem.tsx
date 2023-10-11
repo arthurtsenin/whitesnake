@@ -38,6 +38,7 @@ export const AccordionItem: FC<AccordionItemProps> = ({
       <div className={styles.description}>
         <p>{item.description}</p>
       </div>
+      <div className={styles.line} />
     </button>
   );
 };

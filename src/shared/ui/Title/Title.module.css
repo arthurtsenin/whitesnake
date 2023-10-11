@@ -3,6 +3,8 @@
   flex-direction: column;
   text-align: center;
   gap: var(--gap-section-title);
+  position: relative;
+  z-index: 1;
 }
 
 .suptitle {
@@ -36,6 +38,8 @@
   letter-spacing: -0.77px;
   word-wrap: break-word;
   line-height: 90%;
+  padding-block: 8px;
+  text-wrap: balance;
 }
 
 .title::first-letter {

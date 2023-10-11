@@ -1,13 +1,13 @@
 .hero {
   width: 100vw;
-  height: calc(100vh - var(--header-height));
-  padding-block: var(--header-height);
+  height: 100dvh;
+  /* padding-top: 10px; */
   background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  overflow-x: hidden;
   position: relative;
+  max-width: 1920px;
 }
 
 .content {
@@ -15,6 +15,7 @@
   flex-direction: column-reverse;
   height: 100%;
   padding-inline: 4%;
+  padding-block: 4%;
 }
 
 .slider {
@@ -28,7 +29,11 @@
   flex-direction: column;
   gap: 32px;
 }
-
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 .leftSide h1 {
   font-size: var(--fs-hero-title);
   font-weight: 700;
@@ -40,8 +45,9 @@
     linear-gradient(135deg, #fff 30%, rgb(255 255 255 / 38%) 100%)
   );
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: fit-content;
+
+  -webkit-text-background-clip: text;
+
 }
 
 .leftSide p {
@@ -142,6 +148,14 @@
 }
 
 @media screen and (width >= 744px) {
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .hero {
+    /* padding-block: 30px; */
+  }
   .sphere {
     width: 50%;
     right: 0;
@@ -202,12 +216,20 @@
 }
 
 @media screen and (1590px > width > 1200px) {
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
   .leftSide h1 {
     font-size: calc(var(--fs-hero-title) - 22px);
   }
 }
 
 @media screen and (width >= 1200px) {
+  .hero {
+    /* padding-top: 40px; */
+  }
   .sphere {
     width: 40%;
     bottom: -6%;
