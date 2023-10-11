@@ -8,7 +8,6 @@
   z-index: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   overflow: hidden;
   margin-inline: auto;
   width: 100vw;
@@ -121,6 +120,7 @@
 
 @media screen and (width >=1200px) {
   .hero {
+    justify-content: center;
     padding-block: 0;
   }
 
