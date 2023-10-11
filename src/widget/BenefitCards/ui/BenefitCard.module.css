@@ -6,20 +6,23 @@
   display: flex;
   gap: 16px;
   box-sizing: border-box;
+  flex: 1;
+  /* aspect-ratio: 2.5/1; */
+  min-height: max-content;
+  position: relative;
+  /* transition: all 3s ease-in-out; */
 }
 
 .card.withIcon {
-  height: 285px;
 }
 
 .card.withoutIcon {
-  height: 185px;
 }
 
 .cardTitle {
+  padding-top: 4%;
   line-height: 120%;
   font-weight: var(--fw-semibold);
-  margin-bottom: 16px;
 }
 
 .cardDesc {
@@ -47,10 +50,14 @@
 
 .cardImage {
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+  width: 25%;
+  align-self: start;
 }
-
+.cardImage img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
 .cardButton {
   margin-top: auto;
 }
@@ -58,6 +65,8 @@
 .cardButton > button {
   width: 100%;
   border-radius: 40px;
+  margin-top: 16px;
+  min-height: 60px;
 }
 
 .card.withoutIcon .cardButton > button {
@@ -70,23 +79,45 @@
 .cardContent {
   display: flex;
   flex-direction: column;
+  gap: 8px;
+}
+@media (hover: hover) {
+  .card:hover button {
+    background-color: var(--clr-button-secondary-bg);
+  }
+  .card:hover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius-200);
+    padding: 1px;
+    background: var(--clr-border-gradient);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    mask-composite: exclude;
+
+    z-index: 1;
+  }
+  .card:hover {
+    border: 1px solid #ffffff00;
+  }
 }
 
 @media (width >= 375px) {
   .cardButton > button {
-    width: 196px;
   }
 
   .cardImage {
-    width: 60px;
-    height: 60px;
   }
 }
 
 @media (width >= 744px) {
   .cardImage {
-    width: 80px;
-    height: 80px;
+  }
+  .cardButton > button {
+    margin-top: 24px;
   }
 }
 
@@ -103,18 +134,15 @@
 
 @media (width >= 1200px) {
   .card.withIcon {
-    height: 375px;
-    padding: 40px;
   }
 
   .card.withoutIcon {
-    height: 360px;
     padding: 40px;
   }
-
+  .cardButton > button {
+    margin-top: 36px;
+  }
   .cardImage {
-    width: 180px;
-    height: 180px;
   }
 
   .card.withIcon .cardDesc,
@@ -133,5 +161,11 @@
     width: 100%;
     height: 80px;
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card.withoutIcon {
+    padding: 24px;
   }
 }

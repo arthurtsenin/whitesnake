@@ -1,5 +1,6 @@
 .container {
-  width: 90%;
+  width: 94%;
+
   margin-inline: auto;
   max-width: var(--ui-desktop-medium-device-size);
 }

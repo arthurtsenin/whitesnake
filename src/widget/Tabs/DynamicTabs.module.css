@@ -3,66 +3,66 @@
   flex-direction: column;
   gap: 40px;
   position: relative;
+
+  width: 100%;
 }
 
 .glow {
   position: absolute;
-  width: 400px;
-  height: 400px;
-  top: -40%;
-  right: -10%;
+  width: 90vw;
+  aspect-ratio: 1/1;
+  top: -40vw;
+  right: -30%;
   z-index: -2;
-  background-color: var(--clr-glow-right-bg);
-  filter: blur(100px);
+  background: rgba(204, 11, 11, 0.5);
+  filter: blur(150px);
   border-radius: var(--radius-rounded);
 }
 
 .image {
   position: absolute;
   z-index: -1;
-  top: -25%;
-  right: 0;
-  width: fit-content;
-  height: 600px;
-  object-fit: cover;
+  top: -25vw;
+  right: -35%;
+
+  height: 70vw;
+  width: auto;
+
+  opacity: 0.4;
 }
 
 @media screen and (width >= 750px) {
   .glow {
-    top: -50%;
-    width: 40%;
-    height: 40%;
-    filter: blur(400px);
-  }
-
-  .image {
-    top: -45%;
-    height: 1000px;
-  }
-}
-
-@media screen and (width >= 960px) {
-  .glow {
-    top: -40%;
-    right: -30%;
-    width: 400px;
-    height: 400px;
+    width: 40vw;
+    top: -25vw;
+    background: rgba(204, 11, 11, 0.5);
     filter: blur(200px);
   }
 
   .image {
-    top: -35%;
-    height: 1000px;
+    top: -20vw;
+    right: -30%;
+    height: 55vw;
+    width: auto;
+  }
+}
+
+@media screen and (width >= 960px) {
+  .image {
   }
 }
 
 @media screen and (width >= 1200px) {
   .glow {
-    top: -50%;
-    filter: blur(400px);
+    width: 40vw;
+    background: rgba(204, 11, 11, 0.5);
+    filter: blur(350px);
   }
 
   .image {
-    height: 900px;
+    top: -20vw;
+    right: -20%;
+    height: 40vw;
+    width: auto;
   }
 }

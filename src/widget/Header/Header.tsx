@@ -11,6 +11,7 @@ import { useBurgerMenu } from "@/shared/hooks/use-burger-menu";
 import { Burger } from "./ui/Burger/Burger";
 import { Navigation } from "../Navigation/Navigation";
 import { Logo } from "../Navigation/ui/Logo/Logo";
+import { Container } from "../../shared";
 
 export const Header = () => {
   const { isVisible, setInvisible, toggleVisibility } = useBurgerMenu();
@@ -25,17 +26,19 @@ export const Header = () => {
         [styles.burgerOpen]: isVisible,
       })}
     >
-      <nav className={styles.container}>
-        <Logo variant="header" clickHandler={setInvisible} />
-        <Burger onClick={toggleVisibility} open={isVisible} />
-        <ul
-          className={classNames(styles.nav, {
-            [styles.open]: isVisible,
-          })}
-        >
-          <Navigation clickHandler={setInvisible} />
-        </ul>
-      </nav>
+      <Container>
+        <nav className={styles.container}>
+          <Logo variant="header" clickHandler={setInvisible} />
+          <Burger onClick={toggleVisibility} open={isVisible} />
+          <ul
+            className={classNames(styles.nav, {
+              [styles.open]: isVisible,
+            })}
+          >
+            <Navigation clickHandler={setInvisible} />
+          </ul>
+        </nav>
+      </Container>
     </header>
   );
 };

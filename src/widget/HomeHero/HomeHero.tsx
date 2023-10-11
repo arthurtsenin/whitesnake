@@ -15,6 +15,8 @@ import sphere from "&/images/main-hero/sphere.png";
 export const HomeHero = () => {
   return (
     <section className={styles.hero}>
+      {/* <Container> */}
+
       <div className={styles.content}>
         <div className={styles.leftSide}>
           <div className={styles.text}>
@@ -50,6 +52,7 @@ export const HomeHero = () => {
       <div className={styles.slider}>
         <Scroller />
       </div>
+      {/* </Container> */}
     </section>
   );
 };

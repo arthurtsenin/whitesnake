@@ -1,5 +1,4 @@
 .container {
-  width: 90%;
   margin-inline: auto;
 }
 
@@ -36,7 +35,8 @@
 }
 
 .description {
-  font-size: var(--fs-panel-subtitle);
+  /* text-shadow: #000 0.5px 1px; */
+  font-size: calc(var(--fs-panel-subtitle) + 4px);
   color: var(--clr-secondary-text);
 }
 

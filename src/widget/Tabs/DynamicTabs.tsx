@@ -10,6 +10,7 @@ import { Title, TitleProps } from "@/shared/ui/Title/Title";
 import { DataType, TechnologieType } from "./data";
 import { DynamicPannel } from "./ui/DynamicPannel/DynamicPannel";
 import { TabList } from "./ui/TabList/TabList";
+import { Container } from "../../shared";
 
 import bubble from "&/pannels/bubble.png";
 
@@ -36,7 +37,10 @@ export const DynamicTabs: FC<DynamicTabsProps> = ({
           currentTab={currentTab}
           clickHandler={setCurrentTab}
         />
-        <DynamicPannel cards={data[currentTab]} />
+
+        <Container>
+          <DynamicPannel cards={data[currentTab]} />
+        </Container>
       </div>
     </section>
   );

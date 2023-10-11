@@ -1,0 +1,15 @@
+.jopa {
+  height: 300vh;
+  background-color: lightpink;
+  width: 100%;
+
+  padding-block: 5%;
+  /* 
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.jopa > div {
+  position: sticky;
+  top: 100px;
+}

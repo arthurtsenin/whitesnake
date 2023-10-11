@@ -22,12 +22,8 @@ export const BenefitCard: FC<BenefitCardProps> = ({
   return (
     <div className={classNames(styles.card, styles[variant])}>
       {icon && (
-        <div>
-          <Image
-            src={icon}
-            alt="benefit card icon"
-            className={styles.cardImage}
-          />
+        <div className={styles.cardImage}>
+          <Image src={icon} alt="benefit card icon" />
         </div>
       )}
       <div className={styles.cardContent}>

@@ -2,6 +2,8 @@ import { FC } from "react";
 
 import styles from "./Title.module.css";
 
+import { Container } from "../Container/Container";
+
 export type TitleProps = {
   title: string;
   subtitle?: string;
@@ -10,10 +12,12 @@ export type TitleProps = {
 
 export const Title: FC<TitleProps> = ({ title, subtitle, suptitle }) => {
   return (
-    <div className={styles.text}>
-      {suptitle && <p className={styles.suptitle}>{suptitle}</p>}
-      <h2 className={styles.title}>{title}</h2>
-      {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
-    </div>
+    <Container>
+      <div className={styles.text}>
+        {suptitle && <p className={styles.suptitle}>{suptitle}</p>}
+        <h2 className={styles.title}>{title}</h2>
+        {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+      </div>
+    </Container>
   );
 };
