@@ -1,6 +1,5 @@
 .container {
   width: 90%;
-  max-width: 1920px;
   margin-inline: auto;
   display: flex;
   justify-content: space-between;
@@ -9,11 +8,6 @@
 }
 
 .header {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
   display: flex;
   align-items: center;
   font-size: var(--fs-navlink);
