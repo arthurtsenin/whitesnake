@@ -47,7 +47,7 @@
   background-color: var(--clr-main-bg);
 }
 
-@media screen and (width >= 744px) {
+@media screen and (width >=744px) {
   .nav {
     display: flex;
     flex-direction: row;
