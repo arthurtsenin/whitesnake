@@ -45,9 +45,9 @@
     linear-gradient(135deg, #fff 30%, rgb(255 255 255 / 38%) 100%)
   );
   background-clip: text;
+
   -webkit-text-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: fit-content;
+
 }
 
 .leftSide p {

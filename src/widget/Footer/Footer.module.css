@@ -1,11 +1,9 @@
 .container {
   margin-top: var(--gap-layout);
   margin-inline: auto;
-
   display: flex;
   flex-direction: column;
   gap: 32px;
-
   position: relative;
   margin-bottom: 40px;
 }

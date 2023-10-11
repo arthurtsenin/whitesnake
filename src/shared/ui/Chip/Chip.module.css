@@ -11,7 +11,7 @@
   letter-spacing: -0.4px;
 }
 
-@media (min-width: 744px) {
+@media (width >= 744px) {
   .chip {
     font-size: 25px;
     letter-spacing: -0.5px;

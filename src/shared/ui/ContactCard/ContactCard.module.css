@@ -1,10 +1,11 @@
 .container {
   --container-padding: 16px;
-
   position: relative;
   padding: var(--container-padding);
 
+
   height: 170px;
+
 
   background: #101010;
   border-radius: var(--radius-200);

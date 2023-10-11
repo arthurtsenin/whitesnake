@@ -3,7 +3,6 @@
   color: var(--clr-main-text);
   font-weight: var(--fw-regular);
   letter-spacing: -0.9px;
-
   width: fit-content;
   cursor: pointer;
 }

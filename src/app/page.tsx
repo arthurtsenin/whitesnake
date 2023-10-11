@@ -1,3 +1,4 @@
+
 import { Accordion, DynamicTabs, StaticTabs } from "../widget";
 import { ACCORDIONS_DATA } from "../widget/Accordion/data";
 import { Banner } from "../widget/Banner/Banner";
@@ -12,10 +13,12 @@ import { ScrollCarousel } from "../widget/ScrollCarousel/ScrollCarousel";
 import { Statistic } from "../widget/Statistic/Statistic";
 import { INDUSTRY_DATA, TECHNOLOGIE_DATA } from "../widget/Tabs/data";
 
+
 export default function Home() {
   return (
     <main className="main">
       <HomeHero />
+
 
       <BenefitCards data={BENEFIT_CARD_WITH_ICON_DATA} variant="withIcon" />
       <GridContainer
@@ -46,6 +49,7 @@ export default function Home() {
         contacts={CONTACTS_DATA}
         title="Связаться с нами"
         subtitle="Book a free strategy session to get a custom offer tailored for your business needs "
+
       />
       <Accordion accordions={ACCORDIONS_DATA} />
     </main>

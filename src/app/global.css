@@ -95,7 +95,6 @@
     #fff 30%,
     rgb(255 255 255 / 38%) 100%
   );
-
   --clr-border-gradient: linear-gradient(
     346deg,
     rgb(255 0 0 / 100%) 40%,
@@ -199,6 +198,7 @@ body.lock {
     --gap-section-title: 8px;
     --fs-case-card-title: 16px;
     --pl-case-card-title: 0px;
+
     /* change after design on hover */
     --fs-case-card-description: 12px;
     --gap-case-card: 16px;
@@ -328,6 +328,7 @@ body.lock {
     --gap-section-title: 24px;
     --fs-case-card-title: 24px;
     --pl-case-card-title: 36px;
+
     /* change after design on hover */
     --fs-case-card-description: 20px;
     --gap-case-card: 16px;

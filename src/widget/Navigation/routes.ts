@@ -20,6 +20,16 @@ const ROUTES = {
   FIVE: { label: "Вакансии", href: "vacancies" },
 };
 
+export const DYNAMIC_ROUTES: Record<string, string> = {
+  INSURANCE: "health-insurance-platform",
+  FPA_SOLUTION: "fpa-solution",
+  DIGITAL_ASSET: "digital-asset-staking-service",
+  FOOD_DELIVERY: "food-delivery-service",
+  HEALTH_MONITORING: "health-monitoring-service",
+  AI_CHATBOTS: "ai-powered-chatbots-building-platform",
+  INTEGRATION_SDK: "payroll-integration-sdk",
+};
+
 export const NAVIGATION_LINKS: LinksType = {
   [ROUTES.ONE.href]: {
     id: 1,

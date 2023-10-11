@@ -1,5 +1,7 @@
 .container {
+
   --icon-width: 24px;
+
   border: none;
   background-color: transparent;
   cursor: pointer;

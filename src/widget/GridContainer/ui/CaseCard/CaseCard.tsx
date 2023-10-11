@@ -4,6 +4,8 @@ import { FC } from "react";
 
 import styles from "./CaseCard.module.css";
 
+import { NAVIGATION_LINKS } from "@/widget/Navigation/routes";
+
 import arrow from "&/arrow-right.svg";
 
 type CaseCardProps = {
@@ -23,7 +25,10 @@ export const CaseCard: FC<CaseCardProps> = ({
     <figure className={styles.container}>
       <div className={styles.wrapper}>
         <Image src={image} alt={caption} />
-        <Link href={path} className={styles.hover}>
+        <Link
+          href={`${NAVIGATION_LINKS.portfolio.href}/${path}`}
+          className={styles.hover}
+        >
           <div className={styles.arrow}>
             <Image src={arrow} alt="arrow" />
           </div>
