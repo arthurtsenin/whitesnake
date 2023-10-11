@@ -18,6 +18,10 @@ export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
           src={panel.image}
           placeholder="blur"
           quality={100}
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
           priority
           fill
         />

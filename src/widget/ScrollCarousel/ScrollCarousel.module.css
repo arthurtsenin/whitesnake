@@ -3,7 +3,7 @@
   height: auto;
   padding-block: 40px;
 
-  width: 100vw;
+  width: 100%;
 }
 
 .sticker {
@@ -12,7 +12,6 @@
 
   margin-inline: auto;
   height: auto;
-  width: 90%;
 
   display: flex;
   flex-direction: column;
@@ -20,16 +19,14 @@
   justify-content: space-around;
   align-content: flex-start;
   flex-wrap: wrap;
-  gap: 188px;
+  gap: 42px;
 
-  overflow: hidden;
+  /* overflow: hidden; */
 
   z-index: 2;
 }
 
 .info {
-  flex: 1;
-
   color: #fff;
   font-size: 24px;
   font-style: normal;
@@ -39,31 +36,23 @@
 
   display: flex;
   align-items: center;
-
-  height: 100%;
-
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
 }
 .info br {
   display: none;
 }
 .motionContainer {
-  display: none;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  flex: 2;
-
-  gap: 200px;
-}
-.motionMobileContainer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  flex: 2;
+  align-items: flex-end;
+
+  width: 80%;
+  margin-left: auto;
 
   gap: 40px;
+
+  transition: all ease-in-out 1s linear;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .glowBlue,
@@ -94,6 +83,7 @@
   right: 0;
   top: 0;
   height: 100%;
+  width: 46%;
 }
 .raindop {
   position: absolute;
@@ -103,6 +93,7 @@
   height: 80vw;
   width: auto;
   rotate: 86.083deg;
+  z-index: -1;
 }
 
 .raindop img,
@@ -113,29 +104,40 @@
 }
 .raindrops {
   position: absolute;
-  top: 60%;
-  right: 0;
-  width: 70vw;
+  top: 65%;
+  right: -70%;
+  width: 150vw;
+  rotate: -60deg;
+}
+
+@media screen and (width > 500px) {
+  .raindop {
+    height: 50vw;
+  }
+  .raindrops {
+    position: absolute;
+    top: 65%;
+    right: -25%;
+    width: 70vw;
+    rotate: -60deg;
+  }
 }
 
 @media screen and (width > 744px) {
   .container {
-    overflow: clip;
   }
   .sticker {
     gap: 50px;
+    justify-content: flex-end;
   }
-  .motionMobileContainer {
-    display: none;
-  }
-  .motionContainer {
-    display: flex;
-    gap: 100px;
-  }
+
   .info {
-    height: 100vh;
+    height: 60vh;
     font-size: 37.267px;
     letter-spacing: -1.065px;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .sticker {
     flex-direction: row;
@@ -146,44 +148,44 @@
     right: -80%;
   }
   .glowRed {
-    top: -45%;
-    left: -55%;
+    top: -25%;
+    left: -75%;
   }
   .raindrops {
     top: 30%;
-    right: 0;
-    width: 30vw;
+    right: -30%;
+    width: 60vw;
   }
   .raindop {
     left: -20%;
-    top: -40%;
+    top: -25%;
 
     height: 50vw;
     width: auto;
     rotate: 86.083deg;
   }
+  .info br {
+    display: block;
+  }
+  .motionContainer {
+    padding-bottom: 20vh;
+    width: 50%;
+  }
 }
 
 @media screen and (width > 1200px) {
   .motionContainer {
+    width: 60%;
+    display: flex;
+    align-items: center;
     gap: 200px;
   }
+
   .info {
-    height: 100%;
-    font-size: 70px;
+    font-size: 50px;
     letter-spacing: -2px;
   }
-  .info br {
-    display: block;
-  }
-  .container {
-    height: 100vh;
-  }
 
-  .sticker {
-    position: sticky;
-    height: 100vh;
-  }
   .glowBlue {
     bottom: -50%;
     right: -85%;
@@ -194,7 +196,7 @@
 
   .glowRed {
     top: -60%;
-    left: -70%;
+    left: -80%;
     border-radius: 921px;
     background: rgba(204, 11, 11, 0.5);
     filter: blur(350px);
@@ -202,16 +204,27 @@
   .raindop {
     position: absolute;
     left: -10%;
-    top: -40%;
+    top: -25%;
 
-    height: 800px;
+    height: 500px;
     width: auto;
     rotate: 72deg;
   }
   .raindrops {
     position: absolute;
-    top: 30%;
-    right: 0;
-    width: 50vh;
+    top: 60%;
+    right: -25%;
+    width: 70vh;
+  }
+}
+@media screen and (width > 1600px) {
+  .info {
+    font-size: 70px;
+    letter-spacing: -2px;
+  }
+}
+@media screen and (width > 1920px) {
+  .info {
+    height: 40vh;
   }
 }

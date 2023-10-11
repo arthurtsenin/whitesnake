@@ -1,17 +1,14 @@
 .section {
   position: relative;
-  min-height: 440px;
+  min-height: max-content;
 }
 
 .imgWrapper {
   position: absolute;
-  z-index: -1;
-  top: -36%;
-  left: -58%;
-  opacity: 0.5;
-  transform: rotate(-13.123deg);
-  width: 463px;
-  height: 372px;
+  top: -10%;
+  left: -27%;
+  width: 70vw;
+  aspect-ratio: 1/1;
 }
 
 .imgWrapper img {
@@ -20,11 +17,15 @@
 }
 
 .container {
+  width: 100%;
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: auto;
   height: auto;
   background-color: transparent;
+  z-index: 1;
+  contain: content;
 }
 
 @media screen and (width>=450px) {
@@ -36,35 +37,27 @@
 
 @media screen and (width>=744px) {
   .imgWrapper {
-    left: -20%;
+    top: -20%;
+    left: -10%;
+    width: 30vw;
+    aspect-ratio: 1/1;
   }
 }
 
 @media screen and (width>=1200px) {
   .container {
-    max-width: 1199px;
-  }
-
-  .imgWrapper {
-    top: -60%;
-    transform: rotate(0deg);
-    width: 709px;
-    height: 570px;
+    width: 80%;
   }
 }
 
 @media screen and (width>=1440px) {
   .imgWrapper {
-    top: -80%;
-    width: 852px;
-    height: 684px;
+    top: -20%;
+    left: -10%;
+    width: 30vw;
+    aspect-ratio: 1/1;
   }
 }
 
 @media screen and (width>=1920px) {
-  .imgWrapper {
-    top: -110%;
-    width: 1135px;
-    height: 912px;
-  }
 }

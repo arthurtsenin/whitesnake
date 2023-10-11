@@ -1,5 +1,5 @@
 export const checkPath = (
-  pathname: string,
+  pathname: string | null,
   href: string,
   handler?: () => void,
 ) => {

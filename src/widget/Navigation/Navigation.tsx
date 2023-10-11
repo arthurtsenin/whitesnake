@@ -26,7 +26,7 @@ export const Navigation: FC<NavigationProps> = ({ clickHandler }) => {
           href={link.href}
           onClick={() => checkPath(pathname, link.href, clickHandler)}
           className={classNames(styles.link, {
-            [styles.active]: pathname.includes(link.href),
+            [styles.active]: pathname?.includes(link.href),
           })}
         >
           {link.label}

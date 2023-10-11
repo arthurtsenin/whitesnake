@@ -1,5 +1,4 @@
 .container {
-  width: 90%;
   margin-inline: auto;
 
   display: flex;
@@ -10,6 +9,7 @@
 
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 
   font-size: var(--fs-navlink);
@@ -17,9 +17,14 @@
   letter-spacing: -0.9px;
   background-color: transparent;
 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+
   min-height: var(--header-height);
 }
-
 .nav {
   position: absolute;
   top: 0;
@@ -71,5 +76,9 @@
     pointer-events: all;
     opacity: 1;
     overflow: visible;
+    padding-inline: 4px;
+  }
+  .nav a {
+    transition: all ease-in-out 0.4s;
   }
 }

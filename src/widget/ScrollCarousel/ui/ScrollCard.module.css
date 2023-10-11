@@ -1,5 +1,5 @@
 .container {
-  width: 100%;
+  width: 80%;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -11,6 +11,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.imageWrapper {
+  width: fit-content;
 }
 
 .text mark {
@@ -51,7 +55,7 @@
 @media screen and (width > 744px) {
   .container {
     gap: 21px;
-    height: 200px;
+    width: 80%;
   }
   .text mark {
     font-size: 8px;
@@ -73,7 +77,6 @@
 @media screen and (width > 1200px) {
   .container {
     gap: 40px;
-    height: 240px;
   }
   .text mark {
     font-size: 40px;

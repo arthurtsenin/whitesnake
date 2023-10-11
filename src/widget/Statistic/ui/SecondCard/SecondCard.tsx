@@ -1,5 +1,5 @@
 import styles from "./SecondCard.module.css";
-// import jopa from './lala.svg'
+
 export const SecondCard = () => {
   return (
     <div className={styles.card}>

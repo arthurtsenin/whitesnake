@@ -77,7 +77,7 @@
     flex-direction: row;
   }
   .text {
-    gap: 16px;
+    gap: 10px;
 
     margin-top: 26px;
     margin-left: 26px;
@@ -106,8 +106,6 @@
     grid-template-rows: repeat(8, 100px);
   }
   .text {
-    gap: 40px;
-
     margin-top: 50px;
     margin-left: 50px;
   }

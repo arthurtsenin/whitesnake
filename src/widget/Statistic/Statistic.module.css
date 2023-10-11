@@ -1,6 +1,5 @@
 .container {
-  width: 94%;
-  height: 80vh;
+  height: 80dvh;
 
   display: grid;
   grid-template-columns: 1fr 1.3fr;
@@ -12,14 +11,15 @@
 
 @media screen and (width > 744px) {
   .container {
-    height: 100vh;
+    height: 100dvh;
     gap: 24px;
   }
 }
 
 @media screen and (width > 1200px) {
   .container {
-    height: 140vh;
+    height: 140dvh;
     gap: 40px;
+    min-height: 1100px;
   }
 }

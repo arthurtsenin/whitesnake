@@ -59,7 +59,7 @@
 .textContainer {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 4px;
 
   z-index: 2;
 }
@@ -129,7 +129,7 @@
 
 @media screen and (width > 744px) {
   .textContainer {
-    gap: 16px;
+    gap: 10px;
   }
   .textContainer h5 {
     font-size: 64px;
@@ -142,9 +142,6 @@
 }
 
 @media screen and (width > 1200px) {
-  .textContainer {
-    gap: 8px;
-  }
   .textContainer h5 {
     font-size: 160px;
     letter-spacing: -0.8px;

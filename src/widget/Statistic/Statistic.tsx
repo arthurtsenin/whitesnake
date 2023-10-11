@@ -5,15 +5,18 @@ import { FirstCard } from "./ui/FirstCard/FirstCard";
 import { FourthCard } from "./ui/FourthCard/FourthCard";
 import { SecondCard } from "./ui/SecondCard/SecondCard";
 import { ThirdCard } from "./ui/ThirdCard/ThirdCard";
+import { Container } from "../../shared";
 
 export const Statistic = () => {
   return (
-    <div className={styles.container}>
-      <FirstCard />
-      <SecondCard />
-      <ThirdCard />
-      <FourthCard />
-      <FifthCard />
-    </div>
+    <Container>
+      <div className={styles.container}>
+        <FirstCard />
+        <SecondCard />
+        <ThirdCard />
+        <FourthCard />
+        <FifthCard />
+      </div>
+    </Container>
   );
 };
