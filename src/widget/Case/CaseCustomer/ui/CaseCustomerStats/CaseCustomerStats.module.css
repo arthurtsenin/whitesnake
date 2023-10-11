@@ -5,7 +5,6 @@
   min-height: 210px;
   box-sizing: border-box;
   flex: 1;
-
   display: grid;
   row-gap: 30px;
   grid-template-columns: 8fr 1fr;

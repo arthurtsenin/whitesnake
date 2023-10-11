@@ -3,7 +3,7 @@ import { FC } from "react";
 
 import styles from "./CaseResults.module.css";
 
-import { ResultsCube, ResultsInfo } from "@/app/portfolio/[case]/cases/types";
+import { ResultsCube, ResultsInfo } from "@/page/dynamic/cases/types";
 
 import { CaseTitle } from "../ui/Title/CaseTitle";
 

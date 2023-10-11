@@ -7,5 +7,5 @@ type CaseTitleProps = {
 };
 
 export const CaseTitle: FC<CaseTitleProps> = ({ title }) => {
-  return <h2 className={styles.title}> {title}</h2>;
+  return <h2 className={styles.title}>{title}</h2>;
 };
