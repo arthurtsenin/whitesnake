@@ -10,7 +10,6 @@
   min-height: max-content;
   height: auto;
   padding-block: var(--header-height);
-  background-position: center;
 }
 
 .hero::before {
