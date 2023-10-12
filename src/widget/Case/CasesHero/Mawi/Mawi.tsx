@@ -9,6 +9,7 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 import { Keyword } from "../ui/Keyword/Keyword";
 
 import heroImage from "&/cases/health-monitoring.png";
+import heroBg from "&/cases/hexagon-bg.png";
 
 export type MawiProps = {
   keywords: string[];
@@ -17,6 +18,18 @@ export type MawiProps = {
 export const Mawi: FC<MawiProps> = ({ title, subtitle, keywords }) => {
   return (
     <section className={styles.hero}>
+      <Image
+        alt=""
+        src={heroBg}
+        placeholder="blur"
+        quality={100}
+        fill
+        priority
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+        }}
+      />
       <Container>
         <div className={styles.content}>
           <div className={styles.text}>
