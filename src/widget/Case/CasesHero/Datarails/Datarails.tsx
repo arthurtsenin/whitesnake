@@ -8,7 +8,8 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroBg from "&/cases/datarails.png";
+import heroImage from "&/cases/datarails.png";
+import heroBg from "&/cases/silver-lines-bg.png";
 
 export type DatarailsProps = {
   keywords: string[];
@@ -21,6 +22,18 @@ export const Datarails: FC<DatarailsProps> = ({
 }) => {
   return (
     <section className={styles.hero}>
+      <Image
+        alt=""
+        src={heroBg}
+        placeholder="blur"
+        quality={100}
+        fill
+        priority
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+        }}
+      />
       <Container>
         <div className={styles.content}>
           <div className={styles.text}>
@@ -28,7 +41,7 @@ export const Datarails: FC<DatarailsProps> = ({
             {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={heroBg} alt="" priority />
+            <Image src={heroImage} alt="" priority />
           </div>
           <div className={styles.keywords}>
             {keywords.map((k, idx) => (

@@ -1,10 +1,5 @@
 .hero {
-  --clr-case-hero-bg: linear-gradient(
-    285.56deg,
-    #000 16.22%,
-    transparent 74.01%
-  );
-
+  position: relative;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -14,11 +9,6 @@
   min-height: max-content;
   height: auto;
   padding-block: var(--header-height);
-  background-image: url("/cases/silver-lines-bg.png");
-  background-size: cover;
-  background-position: center;
-
-  position: relative;
 }
 
 .hero::before {
@@ -153,7 +143,7 @@
     --gap-col-keywords: 6px;
     --gap-row-keywords: 16px;
 
-    width: 50%;
+    width: 45%;
   }
 }
 
