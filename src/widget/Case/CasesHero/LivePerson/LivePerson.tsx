@@ -8,6 +8,7 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { Keyword } from "../ui/Keyword/Keyword";
 
+import heroBg from "&/cases/hexagon-bg.png";
 import heroImage from "&/cases/platform-for-customer-support.png";
 
 export type LivePersonProps = {
@@ -21,6 +22,18 @@ export const LivePerson: FC<LivePersonProps> = ({
 }) => {
   return (
     <section className={styles.hero}>
+      <Image
+        alt=""
+        src={heroBg}
+        placeholder="blur"
+        quality={100}
+        fill
+        priority
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+        }}
+      />
       <Container>
         <div className={styles.content}>
           <div className={styles.text}>
