@@ -8,7 +8,7 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroBg from "&/cases/health-monitoring.png";
+import heroImage from "&/cases/health-monitoring.png";
 
 export type MawiProps = {
   keywords: string[];
@@ -24,14 +24,14 @@ export const Mawi: FC<MawiProps> = ({ title, subtitle, keywords }) => {
             {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={heroBg} alt="" priority />
-            <Image src={heroBg} alt="" priority />
-            <Image src={heroBg} alt="" priority />
-            <Image src={heroBg} alt="" priority />
-            <Image src={heroBg} alt="" priority />
-            <Image src={heroBg} alt="" priority />
-            <Image src={heroBg} alt="" priority />
-            <Image src={heroBg} alt="" priority />
+            <Image src={heroImage} alt="" priority />
+            <Image src={heroImage} alt="" priority />
+            <Image src={heroImage} alt="" priority />
+            <Image src={heroImage} alt="" priority />
+            <Image src={heroImage} alt="" priority />
+            <Image src={heroImage} alt="" priority />
+            <Image src={heroImage} alt="" priority />
+            <Image src={heroImage} alt="" priority />
           </div>
           <div className={styles.keywords}>
             {keywords.map((k, idx) => (

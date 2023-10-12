@@ -8,7 +8,7 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroBg from "&/cases/platform-for-customer-support.png";
+import heroImage from "&/cases/platform-for-customer-support.png";
 
 export type LivePersonProps = {
   keywords: string[];
@@ -28,7 +28,7 @@ export const LivePerson: FC<LivePersonProps> = ({
             {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={heroBg} alt="" priority />
+            <Image src={heroImage} alt="" priority />
           </div>
           <div className={styles.keywords}>
             {keywords.map((k, idx) => (
