@@ -25,6 +25,10 @@
   background: linear-gradient(360deg, #000000 16.22%, rgba(0, 0, 0, 0) 74.01%);
 }
 
+.bgWrapper {
+  z-index: -2;
+}
+
 .content {
   --gap-content: 26px;
 

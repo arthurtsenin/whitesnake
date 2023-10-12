@@ -18,18 +18,20 @@ export type OddboxProps = {
 export const Oddbox: FC<OddboxProps> = ({ title, subtitle, keywords }) => {
   return (
     <section className={styles.hero}>
-      <Image
-        alt=""
-        src={heroBg}
-        placeholder="blur"
-        quality={100}
-        fill
-        priority
-        sizes="100vw"
-        style={{
-          objectFit: "cover",
-        }}
-      />
+      <div className={styles.bgWrapper}>
+        <Image
+          alt=""
+          src={heroBg}
+          placeholder="blur"
+          quality={100}
+          fill
+          priority
+          sizes="100vw"
+          style={{
+            objectFit: "cover",
+          }}
+        />
+      </div>
       <Container>
         <div className={styles.content}>
           <div className={styles.text}>
