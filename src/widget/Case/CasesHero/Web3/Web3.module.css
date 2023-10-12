@@ -19,6 +19,20 @@
   background-image: url("/cases/hexagon-bg.png");
   background-position: center;
   background-size: cover;
+  position: relative;
+}
+
+.hero::before {
+  position: absolute;
+
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: auto;
+  background: linear-gradient(360deg, #000000 16.22%, rgba(0, 0, 0, 0) 74.01%);
 }
 
 .content {

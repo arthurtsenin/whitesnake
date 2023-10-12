@@ -18,6 +18,21 @@
   background-size: 100% 100%;
   background-image: url("/cases/silver-lines-bg.png");
   background-color: var(--clr-case-hero-bg);
+
+  position: relative;
+}
+
+.hero::before {
+  position: absolute;
+
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: auto;
+  background: linear-gradient(330deg, #000000 16.22%, rgba(0, 0, 0, 0) 74.01%);
 }
 
 .content {
@@ -35,6 +50,7 @@
   margin-inline: auto;
   height: auto;
   opacity: 0.7;
+  z-index: 3;
 }
 
 .imgWrapper img {
@@ -107,6 +123,7 @@
 
   .title {
     letter-spacing: -2px;
+    z-index: 2;
   }
 
   .subtitle {
@@ -135,7 +152,7 @@
   .imgWrapper {
     position: absolute;
     right: 0;
-    z-index: -1;
+    z-index: 1;
     margin: 0;
     width: 90vh;
   }
