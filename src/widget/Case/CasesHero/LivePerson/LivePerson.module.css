@@ -168,6 +168,10 @@
     --gap-col-keywords: 6px;
     --gap-row-keywords: 16px;
   }
+
+  .keywords {
+    width: 45%;
+  }
 }
 
 @media screen and (width >=1920px) {
