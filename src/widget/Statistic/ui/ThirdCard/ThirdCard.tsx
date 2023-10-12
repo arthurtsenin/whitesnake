@@ -22,7 +22,7 @@ export const ThirdCard = () => {
             </defs>
 
             <circle
-              stroke-width="2"
+              strokeWidth="2"
               cx="50%"
               cy="50%"
               r="48%"
