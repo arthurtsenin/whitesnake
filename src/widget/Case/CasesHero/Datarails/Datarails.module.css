@@ -15,9 +15,9 @@
   min-height: max-content;
   height: auto;
   padding-block: var(--header-height);
-  background-size: 100% 100%;
   background-image: url("/cases/silver-lines-bg.png");
-  background-color: var(--clr-case-hero-bg);
+  background-size: cover;
+  background-position: center;
 
   position: relative;
 }
