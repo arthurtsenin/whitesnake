@@ -1,10 +1,5 @@
 .hero {
-  --clr-case-hero-bg: linear-gradient(
-    285.56deg,
-    #000 16.22%,
-    transparent 74.01%
-  );
-
+  position: relative;
   z-index: 0;
   display: flex;
   flex-direction: column;
@@ -15,11 +10,7 @@
   min-height: max-content;
   height: auto;
   padding-block: var(--header-height);
-
-  background-image: url("/cases/hexagon-bg.png");
   background-position: center;
-  background-size: cover;
-  position: relative;
 }
 
 .hero::before {
@@ -151,7 +142,7 @@
 
   .imgWrapper {
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     top: 0;
     right: 0;
     width: 70vh;
