@@ -26,7 +26,6 @@
 .content {
   --gap-content: 26px;
 
-  position: relative;
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-content);
