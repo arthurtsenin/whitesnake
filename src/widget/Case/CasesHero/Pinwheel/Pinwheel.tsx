@@ -17,20 +17,18 @@ export type PinwheelProps = {
 export const Pinwheel: FC<PinwheelProps> = ({ title, subtitle, keywords }) => {
   return (
     <section className={styles.hero}>
-      <div className={styles.bgWrapper}>
-        <Image
-          alt=""
-          src={heroBg}
-          placeholder="blur"
-          quality={100}
-          fill
-          priority
-          sizes="100vw"
-          style={{
-            objectFit: "cover",
-          }}
-        />
-      </div>
+      <Image
+        alt=""
+        src={heroBg}
+        placeholder="blur"
+        quality={100}
+        fill
+        priority
+        sizes="100vw"
+        style={{
+          objectFit: "cover",
+        }}
+      />
       <Container>
         <div className={styles.content}>
           <div className={styles.text}>

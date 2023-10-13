@@ -14,7 +14,7 @@
 
 .hero::before {
   position: absolute;
-
+  z-index: 1;
   content: "";
   top: 0;
   left: 0;
@@ -23,10 +23,6 @@
   width: 100vw;
   height: auto;
   background: linear-gradient(360deg, #000000 16.22%, rgba(0, 0, 0, 0) 74.01%);
-}
-
-.bgWrapper {
-  z-index: -2;
 }
 
 .content {
@@ -58,6 +54,8 @@
   --fs-hero-description: 14px;
   --gap-hero-text: 20px;
 
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-hero-text);
@@ -94,6 +92,8 @@
   --gap-col-keywords: 4.8px;
   --gap-row-keywords: 11.6px;
 
+  position: relative;
+  z-index: 3;
   display: flex;
   flex-wrap: wrap;
   column-gap: var(--gap-col-keywords);
@@ -144,7 +144,7 @@
 
   .imgWrapper {
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     right: 0;
     margin: 0;
     width: 45vh;
@@ -185,7 +185,6 @@
 
   .imgWrapper {
     right: 0;
-    z-index: 1;
   }
 
   .text {
