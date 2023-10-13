@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  z-index: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -24,10 +23,6 @@
   background: linear-gradient(330deg, #000000 16.22%, rgba(0, 0, 0, 0) 74.01%);
 }
 
-.bgWrapper {
-  z-index: -2;
-}
-
 .content {
   --gap-content: 26px;
 
@@ -39,6 +34,7 @@
 }
 
 .imgWrapper {
+  z-index: 2;
   margin-block-start: 26.5px;
   margin-inline: auto;
   width: 80%;
@@ -56,7 +52,6 @@
   --fs-hero-description: 14px;
   --gap-hero-text: 20px;
 
-  position: relative;
   z-index: 3;
   display: flex;
   flex-direction: column;
@@ -94,7 +89,6 @@
   --gap-col-keywords: 4.8px;
   --gap-row-keywords: 11.6px;
 
-  position: relative;
   z-index: 3;
   display: flex;
   flex-wrap: wrap;
@@ -145,7 +139,6 @@
   .imgWrapper {
     position: absolute;
     right: 0;
-    z-index: 2;
     margin: 0;
     width: 50vh;
   }
