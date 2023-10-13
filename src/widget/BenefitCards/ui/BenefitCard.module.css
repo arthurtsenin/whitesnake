@@ -7,10 +7,8 @@
   gap: 16px;
   box-sizing: border-box;
   flex: 1;
-  /* aspect-ratio: 2.5/1; */
   min-height: max-content;
   position: relative;
-  /* transition: all 3s ease-in-out; */
 }
 
 .card.withIcon {
@@ -110,6 +108,11 @@
   }
 
   .cardImage {
+  }
+
+  .card.withIcon .cardButton > button,
+  .card.withoutIcon .cardButton > button {
+    max-width: 250px;
   }
 }
 

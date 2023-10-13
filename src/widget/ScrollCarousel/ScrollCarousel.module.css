@@ -45,12 +45,9 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
-
   width: 80%;
-  margin-left: auto;
-
+  margin-left: initial;
   gap: 40px;
-
   transition: all ease-in-out 1s linear;
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -111,6 +108,10 @@
 }
 
 @media screen and (width > 500px) {
+  .motionContainer {
+    margin-left: auto;
+  }
+
   .raindop {
     height: 50vw;
   }

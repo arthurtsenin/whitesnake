@@ -96,6 +96,10 @@
     justify-content: space-between;
   }
 
+  .navContainer {
+    flex-wrap: nowrap;
+  }
+
   .image {
     height: 430px;
     top: -60%;

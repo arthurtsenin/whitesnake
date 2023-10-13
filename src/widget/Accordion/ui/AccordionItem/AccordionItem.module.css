@@ -67,8 +67,7 @@
   font-weight: var(--fw-light);
   letter-spacing: -0.6px;
   color: var(--clr-secondary-text);
-
-  width: 60%;
+  width: initial;
   transition: all 0.4s;
 }
 
@@ -101,5 +100,9 @@
   }
   .line {
     margin-block: 50px;
+  }
+
+  .description {
+    width: 60%;
   }
 }
