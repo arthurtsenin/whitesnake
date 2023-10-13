@@ -11,7 +11,7 @@ import { CasePageLayout } from "../CasePageLayout";
 
 export const InsurancePage = () => {
   return (
-    <section className={styles.section}>
+    <>
       <Oscar {...INSURANCE_DATA.hero} />
       <CasePageLayout data={INSURANCE_DATA}>
         <CaseSolution title={INSURANCE_DATA.solution_title}>
@@ -29,6 +29,6 @@ export const InsurancePage = () => {
           </div>
         </CaseSolution>
       </CasePageLayout>
-    </section>
+    </>
   );
 };
