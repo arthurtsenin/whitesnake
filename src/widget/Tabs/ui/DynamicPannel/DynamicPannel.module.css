@@ -1,6 +1,7 @@
 .container {
   width: 100%;
   margin-inline: auto;
+
   min-height: 524px;
 }
 
@@ -11,20 +12,22 @@
 }
 
 .item {
-  background: var(--clr-contact-card-bg);
-  border-radius: var(--radius-300);
   display: flex;
   flex-direction: column;
+  gap: 30px;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
   padding-top: 32px;
   padding-bottom: 8px;
+  border-radius: var(--radius-300);
+
+  background: var(--clr-contact-card-bg);
 }
 
 .item img {
   width: 50%;
   aspect-ratio: 1/1;
+
   height: fit-content;
   object-fit: contain;
 }
@@ -35,13 +38,13 @@
 }
 
 .name {
-  font-weight: var(--fw-regular);
   color: var(--clr-secondary-text);
+  font-weight: var(--fw-regular);
   font-size: 16px;
   text-transform: capitalize;
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (width >= 960px) {
   .pannels {
     grid-template-columns: repeat(3, 1fr);
   }

@@ -5,14 +5,15 @@
 }
 
 .subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  color: hsl(0deg 0% 100% / 60%);
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
   letter-spacing: -0.05em;
-  color: hsl(0deg 0% 100% / 60%);
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
 }
 
 @media (width >= 1200px) {

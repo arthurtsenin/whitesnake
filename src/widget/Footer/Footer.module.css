@@ -1,22 +1,26 @@
 .container {
-  margin-top: var(--gap-layout);
-  margin-inline: auto;
+  position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 32px;
-  position: relative;
+  margin-top: var(--gap-layout);
   margin-bottom: 40px;
+  margin-inline: auto;
 }
+
 .navContainer {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 40px;
+  justify-content: space-between;
 }
+
 .buttons {
   margin-top: auto;
   margin-inline: auto;
 }
+
 .nav {
   display: flex;
   flex-direction: column;
@@ -28,9 +32,9 @@
 }
 
 .buttons {
-  align-self: center;
   display: flex;
   gap: 16px;
+  align-self: center;
 }
 
 .cards {
@@ -39,9 +43,10 @@
 
 .image {
   position: absolute;
-  z-index: -1;
   top: -70%;
   right: 0%;
+  z-index: -1;
+
   width: fit-content;
   height: 320px;
   object-fit: cover;
@@ -49,14 +54,16 @@
 
 .glow:nth-of-type(1) {
   position: absolute;
-  z-index: -1;
-  width: 80vw;
-  bottom: 60%;
   right: 0;
-  aspect-ratio: 1/1;
+  bottom: 60%;
+  z-index: -1;
+
+  width: 80vw;
   border-radius: 50%;
-  background: rgba(204, 11, 11, 0.5);
+
+  background: rgb(204 11 11 / 50%);
   filter: blur(150px);
+  aspect-ratio: 1/1;
 }
 
 .glow:nth-of-type(2) {
@@ -77,15 +84,18 @@
   .glow:nth-of-type(2) {
     top: -20%;
     left: -50%;
-    background: rgba(124, 254, 253, 0.4);
 
+    background: rgb(124 254 253 / 40%);
     filter: blur(345.20001220703125px);
   }
+
   .glow:nth-of-type(1) {
-    width: 40vw;
-    bottom: 60%;
     right: 0;
-    background: rgba(204, 11, 11, 0);
+    bottom: 60%;
+
+    width: 40vw;
+
+    background: rgb(204 11 11 / 0%);
     filter: blur(250px);
   }
 }
@@ -97,8 +107,9 @@
   }
 
   .image {
-    height: 430px;
     top: -60%;
+
+    height: 430px;
   }
 
   .buttons {
@@ -111,26 +122,30 @@
     justify-content: space-between;
     max-width: 990px;
   }
-  .glow:nth-of-type(1) {
-    width: 40vw;
-    bottom: 20%;
-    right: 0;
 
-    background: rgba(204, 11, 11, 0.3);
+  .glow:nth-of-type(1) {
+    right: 0;
+    bottom: 20%;
+
+    width: 40vw;
+
+    background: rgb(204 11 11 / 30%);
     filter: blur(350px);
   }
+
   .glow:nth-of-type(2) {
     top: -30%;
     left: -20%;
-    background: rgba(124, 254, 253, 0.4);
 
+    background: rgb(124 254 253 / 40%);
     filter: blur(345.20001220703125px);
   }
 }
 
 @media screen and (width >= 1400px) {
   .image {
-    height: 600px;
     top: -80%;
+
+    height: 600px;
   }
 }

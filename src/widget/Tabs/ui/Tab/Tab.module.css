@@ -1,26 +1,30 @@
 .tab {
-  cursor: pointer;
-  flex: 1;
-  padding-inline: 8px;
-  font-size: var(--fs-tab);
-  font-weight: var(--fw-light);
-  line-height: 120%;
-  letter-spacing: -0.7px;
-  text-wrap: nowrap;
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
   min-width: max-content;
   height: 56px;
+
+  font-weight: var(--fw-light);
+  font-size: var(--fs-tab);
+  line-height: 120%;
+  letter-spacing: -0.7px;
+  text-wrap: nowrap;
+
+  cursor: pointer;
+  padding-inline: 8px;
 }
 
 .active {
-  color: var(--clr-main-text);
-  background: var(--clr-tab-bg-gradient);
   border-radius: var(--radius-200);
+
+  color: var(--clr-main-text);
+
+  background: var(--clr-tab-bg-gradient);
 }
 
-@media screen and (min-width: 744px) {
+@media screen and (width >= 744px) {
   .tab {
     height: 70px;
     padding-inline: 12px;
