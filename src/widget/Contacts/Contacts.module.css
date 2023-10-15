@@ -14,7 +14,7 @@
   width: 100%;
 }
 
-@media screen and (width > 1200px) {
+@media screen and (min-width: 1200px) {
   .contactsWrapper {
     grid-template: 1fr / repeat(4, 1fr);
   }

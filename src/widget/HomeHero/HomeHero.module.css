@@ -1,7 +1,6 @@
 .hero {
   width: 100vw;
   height: 100dvh;
-  /* padding-top: 10px; */
   background-color: #000;
   display: flex;
   flex-direction: column;
@@ -136,7 +135,6 @@
   position: absolute;
   width: 140%;
 
-  /* aspect-ratio: 1/1; */
   bottom: -10%;
   right: -50%;
 }
@@ -146,15 +144,13 @@
   width: 100%;
 }
 
-@media screen and (width >= 744px) {
+@media screen and (min-width: 744px) {
   .text {
     display: flex;
     flex-direction: column;
     gap: 24px;
   }
-  .hero {
-    /* padding-block: 30px; */
-  }
+
   .sphere {
     width: 50%;
     right: 0;
@@ -214,7 +210,7 @@
   }
 }
 
-@media screen and (1590px > width > 1200px) {
+@media screen and (min-width: 1200px) and (max-width: 1590px) {
   .text {
     display: flex;
     flex-direction: column;
@@ -225,15 +221,10 @@
   }
 }
 
-@media screen and (width >= 1200px) {
-  .hero {
-    /* padding-top: 40px; */
-  }
+@media screen and (min-width: 1200px) {
   .sphere {
     width: 40%;
     bottom: -6%;
-
-    /* transform: translateY(20%); */
   }
 
   .buttons {
