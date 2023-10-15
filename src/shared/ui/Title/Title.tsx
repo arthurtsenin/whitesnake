@@ -1,19 +1,23 @@
 import { FC } from "react";
 
-import styles from "./Title.module.scss";
+import styles from "./Title.module.css";
 
-type TitleProps = {
+import { Container } from "../Container/Container";
+
+export type TitleProps = {
   title: string;
-  substitle: string;
-  description: string;
+  subtitle?: string;
+  suptitle?: string;
 };
 
-export const Title: FC<TitleProps> = ({ title, substitle, description }) => {
+export const Title: FC<TitleProps> = ({ title, subtitle, suptitle }) => {
   return (
-    <div className={styles.text}>
-      <h2 className={styles.title}>{title}</h2>
-      <p className={styles.substitle}>{substitle}</p>
-      <p className={styles.description}>{description}</p>
-    </div>
+    <Container>
+      <div className={styles.text}>
+        {suptitle && <p className={styles.suptitle}>{suptitle}</p>}
+        <h2 className={styles.title}>{title}</h2>
+        {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
+      </div>
+    </Container>
   );
 };

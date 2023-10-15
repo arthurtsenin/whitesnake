@@ -3,7 +3,7 @@
 import classNames from "classnames";
 import { FC, useId, useState } from "react";
 
-import styles from "./Input.module.scss";
+import styles from "./Input.module.css";
 
 type InputProps = {
   name?: string;

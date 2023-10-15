@@ -1,13 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    remotePatterns: [
+  async headers() {
+    return [
       {
-        protocol: "https",
-        hostname: "*",
+        source: "/(.*)",
+        headers: [
+          {
+            key: "Strict-Transport-Security",
+            value: "max-age=31536000; includeSubDomains; preload",
+          },
+        ],
       },
-    ],
-    domains: ["images.unsplash.com"],
+    ];
+  },
+  eslint: {
+    dirs: ["src"],
+  },
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    formats: ["image/avif", "image/webp"],
   },
 };
 

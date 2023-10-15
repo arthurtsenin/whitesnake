@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  margin-inline: auto;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: var(--header-height);
+
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-navlink);
+  letter-spacing: -0.9px;
+
+  background-color: transparent;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 5%;
+
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  overflow: hidden;
+
+  opacity: 1;
+
+  pointer-events: none;
+}
+
+.open {
+  position: absolute;
+  z-index: 4;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-header);
+  height: calc(100vh - var(--header-height));
+  padding-top: var(--gap-header);
+  padding-left: 5%;
+
+  background-color: var(--clr-main-bg);
+
+  pointer-events: all;
+  inset: var(--header-height) 0 0 0;
+}
+
+.burgerOpen {
+  background-color: var(--clr-main-bg);
+}
+
+@media screen and (width >=744px) {
+  .nav {
+    position: static;
+
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-header);
+    width: fit-content;
+    height: fit-content;
+    overflow: visible;
+
+    opacity: 1;
+
+    pointer-events: all;
+    padding-inline: 4px;
+  }
+
+  .nav a {
+    transition: all ease-in-out 0.4s;
+  }
+}

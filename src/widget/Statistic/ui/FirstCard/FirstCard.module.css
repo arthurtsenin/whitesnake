@@ -1,0 +1,165 @@
+.card {
+  border-radius: 24px;
+
+  background: #101010;
+  contain: content;
+}
+
+.card:nth-child(1) {
+  position: relative;
+
+  display: flex;
+  grid-row: 1/3;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card:nth-child(1) .glowBlue {
+  position: absolute;
+  top: -120%;
+  left: -55%;
+
+  height: 100%;
+  border-radius: 458px;
+
+  background: rgb(124 254 253 / 70%);
+  filter: blur(345.20001220703125px);
+
+  transition: all 0.7s;
+  aspect-ratio: 1/1;
+  scale: 1.2;
+}
+
+.card:nth-child(1) .glowRed {
+  position: absolute;
+  right: -80%;
+  bottom: -100%;
+
+  height: 100%;
+  border-radius: 458px;
+
+  background: #cc0b0b;
+  filter: blur(345.20001220703125px);
+
+  transition: all 0.7s;
+  aspect-ratio: 1/1;
+  scale: 1.2;
+}
+
+.card:nth-child(1):hover .glowRed {
+  right: -40%;
+  bottom: -90%;
+
+  background: #f70303;
+}
+
+.card:nth-child(1):hover .glowBlue {
+  top: -120%;
+  left: -35%;
+
+  background: rgb(0 255 255 / 100%);
+}
+
+.textContainer {
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.textContainer h5 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.16px;
+  text-align: center;
+}
+
+.textContainer p {
+  color: #fff;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: -0.7px;
+  text-align: center;
+}
+
+.raindropB img,
+.raindropY img {
+  width: 100%;
+  height: 100%;
+}
+
+.raindropB,
+.raindropY {
+  position: absolute;
+  z-index: 1;
+
+  height: 100%;
+
+  background-color: transparent;
+
+  transition: all linear 5s;
+}
+
+.raindropY {
+  top: -56%;
+  right: -41%;
+  rotate: 15deg;
+}
+
+.raindropB {
+  bottom: -76%;
+  left: -33%;
+  rotate: 356deg;
+}
+
+.card:nth-child(1):hover .raindropY {
+  transform: translate(-100px) rotate(-25deg);
+}
+
+.card:nth-child(1):hover .raindropB {
+  transform: translate(100px) rotate(-30deg);
+}
+
+@keyframes yellow {
+  50% {
+    transform: translateX(-100px) rotate(-30deg) scale(1.1);
+  }
+}
+
+@keyframes blue {
+  50% {
+    transform: translateX(100px) rotate(-30deg) scale(1.1);
+  }
+}
+
+@media screen and (width >= 744px) {
+  .textContainer {
+    gap: 10px;
+  }
+
+  .textContainer h5 {
+    font-size: 64px;
+    letter-spacing: -0.32px;
+  }
+
+  .textContainer p {
+    font-size: 24px;
+    letter-spacing: -1.2px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .textContainer h5 {
+    font-size: 160px;
+    letter-spacing: -0.8px;
+  }
+
+  .textContainer p {
+    font-size: 50px;
+  }
+}

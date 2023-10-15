@@ -1,0 +1,458 @@
+:root {
+  --ui-mobile-small-device-size: 320px;
+  --ui-mobile-medium-device-size: 450px;
+  --ui-tablet-small-device-size: 744px;
+  --ui-tablet-medium-device-size: 1200px;
+  --ui-desktop-small-device-size: 1440px;
+  --ui-desktop-medium-device-size: 1920px;
+  --container-base-width: 90%;
+  --gap-layout: 240px;
+  --gap-widget: 100px;
+  --index-100: 1;
+  --index-200: 2;
+  --index-300: 3;
+  --index-400: 4;
+  --index-500: 5;
+  --fw-light: 400;
+  --fw-regular: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --radius-100: 8px;
+  --radius-200: 12px;
+  --radius-300: 24px;
+  --radius-400: 50px;
+  --radius-rounded: 50%;
+  --header-height: 112px;
+  --gap-header: 40px;
+  --fs-navlink: 18px;
+  --fs-hero-title: 100px;
+  --fs-hero-description: 24px;
+  --hiro-title-width: 962px;
+  --hiro-description-width: 677px;
+  --gap-hero-text: 40px;
+  --btn-width: 250px;
+  --btn-height: 80px;
+  --fs-button-text: 20px;
+  --fs-card-benefit-title: 32px;
+  --fs-card-benefit-description: 20px;
+  --fs-section-suptitle: 15px;
+  --fs-section-title: 70px;
+  --fs-section-subtitle: 20px;
+  --gap-section-title: 24px;
+  --fs-case-card-title: 24px;
+  --pl-case-card-title: 36px;
+  --fs-case-card-description: 20px;
+  --gap-case-card: 32px;
+  --gap-row-case-cards: 40px;
+  --gap-column-case-cards: 40px;
+  --fs-tab: 18px;
+  --fs-panel-title: 50px;
+  --fs-panel-subtitle: 20px;
+  --pannel-text-width: 496px;
+  --gap-pannel-text: 24px;
+  --fs-instruction-title: 70px;
+  --instruction-title-width: 670px;
+  --gap-instruction-contanet: 200px;
+  --fs-instruction-contanet-title: 40px;
+  --fs-instruction-contanet-description: 20px;
+  --instruction-text-width: 750px;
+  --gap-instruction-card: 40px;
+  --gap-instruction-text: 24px;
+  --fs-statistic-text-100: 160px;
+  --fs-statistic-text-200: 80px;
+  --fs-statistic-text-300: 50px;
+  --gap-statistic: 40px;
+  --fs-banner-title: 70px;
+  --fs-banner-description: 24px;
+  --banner-text-width: 905px;
+  --gap-banner-text: 40px;
+  --gap-dynamic-pannel: 20px;
+  --fs-contacts-title: 32px;
+  --fs-contacts-description: 20px;
+  --gap-contacts-text: 16px;
+  --gap-contacts: 20px;
+  --fs-questions-title: 32px;
+  --fs-questions-description: 18px;
+  --fs-footer-navlink: 20px;
+  --clr-main-bg: #000;
+  --clr-secondary-bg: #191919;
+  --clr-glow-left-bg: #7cfefd80;
+  --clr-glow-right-bg: #cc0b0b;
+  --clr-button-primary-bg: #191919;
+  --clr-button-secondary-bg: #ee2020;
+  --clr-button-transparent-gradient: linear-gradient(
+    135deg,
+    #fff 30%,
+    #fff0 100%
+  );
+  --clr-main-text: #fff;
+  --clr-secondary-text: rgb(255 255 255 / 60%);
+  --clr-border: rgb(255 255 255 / 30%);
+  --clr-title-gradient: linear-gradient(
+    135deg,
+    #fff 30%,
+    rgb(255 255 255 / 38%) 100%
+  );
+  --clr-border-gradient: linear-gradient(
+    346deg,
+    rgb(255 0 0 / 100%) 40%,
+    rgb(255 181 181 / 100%) 100%
+  );
+  --clr-contact-card-bg: #101010;
+  --clr-tab-bg-gradient: radial-gradient(
+      70.71% 70.71% at 50% 50%,
+      rgb(238 32 32 / 50%) 0%,
+      rgb(88 84 84 / 0%) 100%
+    ),
+    linear-gradient(180deg, rgb(88 84 84 / 10%) 0%, rgb(88 84 84 / 0%) 100%);
+  --clr-contact-card-border-gradient: #ffb5b5, #f00;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+figure,
+a,
+ul,
+li,
+p {
+  all: unset;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+figure,
+ul,
+li,
+p {
+  display: block;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+
+  width: 100vw;
+  overflow-x: hidden;
+
+  color: var(--clr-main-text);
+
+  background-color: var(--clr-main-bg);
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-layout);
+  align-items: center;
+}
+
+@media screen and (width < 7440px) {
+  .main {
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (width >= 320px) {
+  :root {
+    --radius-300: var(--radius-100);
+    --gap-layout: 80px;
+    --gap-widget: 32px;
+    --header-height: 72px;
+    --gap-header: 32px;
+    --fs-navlink: 16px;
+    --fs-hero-title: 32px;
+    --fs-hero-description: 14px;
+    --hiro-title-width: 288px;
+    --hiro-description-width: 288px;
+    --gap-hero-text: 16px;
+    --btn-width: 140px;
+    --btn-height: 50px;
+    --fs-button-text: 14px;
+    --fs-card-benefit-title: 16px;
+    --fs-card-benefit-description: 12px;
+    --fs-section-suptitle: 8px;
+    --fs-section-title: 24px;
+    --fs-section-subtitle: 14px;
+    --gap-section-title: 8px;
+    --fs-case-card-title: 16px;
+    --pl-case-card-title: 0px;
+    --fs-case-card-description: 12px;
+    --gap-case-card: 16px;
+    --gap-row-case-cards: 24px;
+    --gap-column-case-cards: 0px;
+    --fs-tab: 14px;
+    --fs-panel-title: 16px;
+    --fs-panel-subtitle: 12px;
+    --pannel-text-width: 256px;
+    --gap-pannel-text: 4px;
+    --fs-statistic-text-100: 28px;
+    --fs-statistic-text-200: 20px;
+    --fs-statistic-text-300: 12px;
+    --gap-statistic: 16px;
+    --fs-banner-title: 16px;
+    --fs-banner-description: 12px;
+    --banner-text-width: 210px;
+    --gap-banner-text: 8px;
+    --gap-dynamic-pannel: 16px;
+    --fs-contacts-title: 12px;
+    --fs-contacts-description: 10px;
+    --gap-contacts-text: 16px;
+    --gap-contacts: 16px;
+    --fs-questions-title: 18px;
+    --fs-questions-description: 12px;
+    --fs-footer-navlink: 20px;
+  }
+}
+
+@media screen and (width >= 375px) {
+  :root {
+    --gap-layout: 80px;
+    --gap-widget: 40px;
+    --header-height: 80px;
+    --gap-header: 32px;
+    --fs-navlink: 16px;
+    --fs-hero-title: 32px;
+    --fs-hero-description: 14px;
+    --hiro-title-width: 288px;
+    --hiro-description-width: 288px;
+    --gap-hero-text: 16px;
+    --btn-width: 164px;
+    --btn-height: 50px;
+    --fs-button-text: 16px;
+    --fs-card-benefit-title: 16px;
+    --fs-card-benefit-description: 12px;
+    --fs-section-suptitle: 8px;
+    --fs-section-title: 24px;
+    --fs-section-subtitle: 12px;
+    --gap-section-title: 8px;
+    --fs-case-card-title: 18px;
+    --pl-case-card-title: 0px;
+    --fs-case-card-description: 14px;
+    --gap-case-card: 16px;
+    --gap-row-case-cards: 32px;
+    --gap-column-case-cards: 0px;
+    --fs-tab: 14px;
+    --fs-panel-title: 18px;
+    --fs-panel-subtitle: 12px;
+    --pannel-text-width: 311px;
+    --gap-pannel-text: 5px;
+    --fs-statistic-text-100: 32px;
+    --fs-statistic-text-200: 24px;
+    --fs-statistic-text-300: 14px;
+    --gap-statistic: 16px;
+    --fs-banner-title: 18px;
+    --fs-banner-description: 12px;
+    --banner-text-width: 236px;
+    --gap-banner-text: 16px;
+    --gap-dynamic-pannel: 16px;
+    --fs-contacts-title: 14px;
+    --fs-contacts-description: 12px;
+    --gap-contacts-text: 16px;
+    --gap-contacts: 16px;
+    --fs-questions-title: 18px;
+    --fs-questions-description: 12px;
+    --fs-footer-navlink: 20px;
+  }
+}
+
+@media screen and (width >= 744px) {
+  :root {
+    --gap-layout: 160px;
+    --gap-widget: 64px;
+    --header-height: 88px;
+    --gap-header: 32px;
+    --fs-navlink: 16px;
+    --fs-hero-title: 56px;
+    --fs-hero-description: 18px;
+    --hiro-title-width: 521px;
+    --hiro-description-width: 481px;
+    --gap-hero-text: 24px;
+    --fs-card-benefit-title: 16px;
+    --fs-card-benefit-description: 12px;
+    --btn-width: 196px;
+    --btn-height: 50px;
+    --fs-button-text: 16px;
+    --fs-section-suptitle: 15px;
+    --fs-section-title: 48px;
+    --fs-section-subtitle: 20px;
+    --gap-section-title: 24px;
+    --fs-case-card-title: 24px;
+    --pl-case-card-title: 36px;
+    --fs-case-card-description: 20px;
+    --gap-case-card: 16px;
+    --gap-row-case-cards: 40px;
+    --gap-column-case-cards: 24px;
+    --fs-tab: 18px;
+    --fs-panel-title: 50px;
+    --fs-panel-subtitle: 20px;
+    --pannel-text-width: 496px;
+    --gap-pannel-text: 24px;
+    --fs-instruction-title: 38px;
+    --instruction-title-width: 356px;
+    --gap-instruction-contanet: 106px;
+    --fs-instruction-contanet-title: 22px;
+    --fs-instruction-contanet-description: 12px;
+    --instruction-text-width: 400px;
+    --gap-instruction-card: 22px;
+    --gap-instruction-text: 12px;
+    --fs-statistic-text-100: 64px;
+    --fs-statistic-text-200: 40px;
+    --fs-statistic-text-300: 24px;
+    --gap-statistic: 24px;
+    --fs-banner-title: 32px;
+    --fs-banner-description: 14px;
+    --banner-text-width: 413px;
+    --gap-banner-text: 16px;
+    --gap-dynamic-pannel: 16px;
+    --fs-contacts-title: 18px;
+    --fs-contacts-description: 14px;
+    --gap-contacts-text: 16px;
+    --gap-contacts: 24px;
+    --fs-questions-title: 24px;
+    --fs-questions-description: 14px;
+    --fs-footer-navlink: 12px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  :root {
+    --ui-mobile-small-device-size: 320px;
+    --ui-mobile-medium-device-size: 450px;
+    --ui-tablet-small-device-size: 744px;
+    --ui-tablet-medium-device-size: 1200px;
+    --ui-desktop-small-device-size: 1440px;
+    --ui-desktop-medium-device-size: 1920px;
+    --container-base-width: 90%;
+    --gap-layout: 240px;
+    --gap-widget: 100px;
+    --index-100: 1;
+    --index-200: 2;
+    --index-300: 3;
+    --index-400: 4;
+    --index-500: 5;
+    --fw-light: 400;
+    --fw-regular: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+    --radius-100: 8px;
+    --radius-200: 12px;
+    --radius-300: 24px;
+    --radius-400: 50px;
+    --radius-rounded: 50%;
+    --header-height: 112px;
+    --gap-header: 40px;
+    --fs-navlink: 18px;
+    --fs-hero-title: 100px;
+    --fs-hero-description: 24px;
+    --hiro-title-width: 962px;
+    --hiro-description-width: 677px;
+    --gap-hero-text: 40px;
+    --btn-width: 250px;
+    --btn-height: 80px;
+    --fs-button-text: 20px;
+    --fs-card-benefit-title: 32px;
+    --fs-card-benefit-description: 20px;
+    --fs-section-suptitle: 15px;
+    --fs-section-title: 70px;
+    --fs-section-subtitle: 20px;
+    --gap-section-title: 24px;
+    --fs-case-card-title: 24px;
+    --pl-case-card-title: 36px;
+    --fs-case-card-description: 20px;
+    --gap-case-card: 32px;
+    --gap-row-case-cards: 40px;
+    --gap-column-case-cards: 40px;
+    --fs-tab: 18px;
+    --fs-panel-title: 50px;
+    --fs-panel-subtitle: 20px;
+    --pannel-text-width: 496px;
+    --gap-pannel-text: 24px;
+    --fs-instruction-title: 70px;
+    --instruction-title-width: 670px;
+    --gap-instruction-contanet: 200px;
+    --fs-instruction-contanet-title: 40px;
+    --fs-instruction-contanet-description: 20px;
+    --instruction-text-width: 750px;
+    --gap-instruction-card: 40px;
+    --gap-instruction-text: 24px;
+    --fs-statistic-text-100: 160px;
+    --fs-statistic-text-200: 80px;
+    --fs-statistic-text-300: 50px;
+    --gap-statistic: 40px;
+    --fs-banner-title: 70px;
+    --fs-banner-description: 24px;
+    --banner-text-width: 905px;
+    --gap-banner-text: 40px;
+    --gap-dynamic-pannel: 20px;
+    --fs-contacts-title: 32px;
+    --fs-contacts-description: 20px;
+    --gap-contacts-text: 16px;
+    --gap-contacts: 20px;
+    --fs-questions-title: 32px;
+    --fs-questions-description: 18px;
+    --fs-footer-navlink: 20px;
+    --clr-main-bg: #000;
+    --clr-secondary-bg: #191919;
+    --clr-glow-left-bg: #7cfefd80;
+    --clr-glow-right-bg: #cc0b0b;
+    --clr-button-primary-bg: #191919;
+    --clr-button-secondary-bg: #ee2020;
+    --clr-button-transparent-gradient: linear-gradient(
+      135deg,
+      #fff 30%,
+      #fff0 100%
+    );
+    --clr-main-text: #fff;
+    --clr-secondary-text: rgb(255 255 255 / 60%);
+    --clr-border: rgb(255 255 255 / 30%);
+    --clr-title-gradient: linear-gradient(
+      135deg,
+      #fff 30%,
+      rgb(255 255 255 / 38%) 100%
+    );
+    --clr-border-gradient: linear-gradient(
+      346deg,
+      rgb(255 0 0 / 100%) 40%,
+      rgb(255 181 181 / 100%) 100%
+    );
+    --clr-contact-card-bg: #101010;
+    --clr-tab-bg-gradient: radial-gradient(
+        70.71% 70.71% at 50% 50%,
+        rgb(238 32 32 / 50%) 0%,
+        rgb(88 84 84 / 0%) 100%
+      ),
+      linear-gradient(180deg, rgb(88 84 84 / 10%) 0%, rgb(88 84 84 / 0%) 100%);
+    --clr-contact-card-border-gradient: #ffb5b5, #f00;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f11d;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+
+  background: #e14a4a68;
+}

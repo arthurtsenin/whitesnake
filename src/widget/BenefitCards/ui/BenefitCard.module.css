@@ -1,0 +1,185 @@
+.card {
+  position: relative;
+
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  box-sizing: border-box;
+  min-height: max-content;
+  padding: 16px;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-100);
+
+  background-clip: padding-box;
+}
+
+.card.withIcon {
+}
+
+.card.withoutIcon {
+}
+
+.cardTitle {
+  padding-top: 4%;
+
+  font-weight: var(--fw-semibold);
+  line-height: 120%;
+}
+
+.cardDesc {
+  font-weight: var(--fw-light);
+  line-height: 120%;
+  white-space: break-spaces;
+}
+
+.card.withIcon .cardTitle {
+  font-size: 24px;
+}
+
+.card.withoutIcon .cardTitle {
+  margin-bottom: 8px;
+
+  font-size: 16px;
+}
+
+.card.withIcon .cardDesc {
+  font-size: 16px;
+}
+
+.card.withoutIcon .cardDesc {
+  font-size: 12px;
+}
+
+.cardImage {
+  flex-shrink: 0;
+  align-self: start;
+  width: 25%;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cardButton {
+  margin-top: auto;
+}
+
+.cardButton > button {
+  width: 100%;
+  min-height: 60px;
+  margin-top: 16px;
+  border-radius: 40px;
+}
+
+.card.withoutIcon .cardButton > button {
+  width: 100%;
+  max-width: 125px;
+  height: 40px;
+
+  font-size: 10px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (hover: hover) {
+  .card:hover button {
+    background-color: var(--clr-button-secondary-bg);
+  }
+
+  .card:hover::before {
+    position: absolute;
+    z-index: 1;
+
+    padding: 1px;
+    border-radius: var(--radius-200);
+
+    background: var(--clr-border-gradient);
+
+    content: "";
+    inset: 0;
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .card:hover {
+    border: 1px solid #fff0;
+  }
+}
+
+@media (width >= 375px) {
+  .cardButton > button {
+  }
+
+  .cardImage {
+  }
+}
+
+@media (width >= 744px) {
+  .cardImage {
+  }
+
+  .cardButton > button {
+    margin-top: 24px;
+  }
+}
+
+@media (width >= 960px) {
+  .card.withIcon {
+    gap: 40px;
+    padding: 24px;
+  }
+
+  .card.withIcon .cardDesc {
+    font-size: 18px;
+  }
+}
+
+@media (width >= 1200px) {
+  .card.withIcon {
+  }
+
+  .card.withoutIcon {
+    padding: 40px;
+  }
+
+  .cardButton > button {
+    margin-top: 36px;
+  }
+
+  .cardImage {
+  }
+
+  .card.withIcon .cardDesc,
+  .card.withoutIcon .cardDesc {
+    font-size: 20px;
+  }
+
+  .card.withIcon .cardTitle,
+  .card.withoutIcon .cardTitle {
+    font-size: 32px;
+  }
+
+  .card.withIcon .cardButton > button,
+  .card.withoutIcon .cardButton > button {
+    width: 100%;
+    max-width: 250px;
+    height: 80px;
+
+    font-size: 20px;
+  }
+}
+
+@media (width >= 1200px) {
+  .card.withoutIcon {
+    padding: 24px;
+  }
+}
