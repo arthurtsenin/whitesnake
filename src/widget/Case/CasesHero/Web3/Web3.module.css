@@ -166,10 +166,6 @@
     --gap-content: 32px;
   }
 
-  .imgWrapper {
-    width: 75vh;
-  }
-
   .keywords {
     --gap-col-keywords: 6px;
     --gap-row-keywords: 16px;
