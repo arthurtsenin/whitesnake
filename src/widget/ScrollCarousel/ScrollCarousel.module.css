@@ -21,8 +21,6 @@
   flex-wrap: wrap;
   gap: 42px;
 
-  /* overflow: hidden; */
-
   z-index: 2;
 }
 
@@ -91,7 +89,7 @@
   top: -10%;
 
   height: 80vw;
-  width: auto;
+  aspect-ratio: 1/1;
   rotate: 86.083deg;
   z-index: -1;
 }
@@ -161,7 +159,6 @@
     top: -25%;
 
     height: 50vw;
-    width: auto;
     rotate: 86.083deg;
   }
   .info br {
@@ -207,7 +204,7 @@
     top: -25%;
 
     height: 500px;
-    width: auto;
+
     rotate: 72deg;
   }
   .raindrops {
