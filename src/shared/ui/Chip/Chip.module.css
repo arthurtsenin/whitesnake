@@ -1,0 +1,20 @@
+.chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border: 0.8px solid #363636;
+  border-radius: 40px;
+
+  font-weight: var(--fw-regular);
+  font-size: 16px;
+  line-height: 90%;
+  letter-spacing: -0.4px;
+}
+
+@media (width >= 744px) {
+  .chip {
+    font-size: 25px;
+    letter-spacing: -0.5px;
+  }
+}

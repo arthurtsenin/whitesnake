@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  color: var(--clr-secondary-text);
+  font-weight: var(--fw-light);
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -0.8px;
+}
+
+@media (width >= 744px) {
+  .content {
+    letter-spacing: -1.25px;
+  }
+}
+
+@media (width >= 1200px) {
+  .container {
+    align-items: flex-end;
+
+    text-align: end;
+  }
+
+  .content {
+    max-width: 70%;
+
+    font-size: 25px;
+  }
+}

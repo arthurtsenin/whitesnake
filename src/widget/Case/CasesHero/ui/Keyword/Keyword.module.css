@@ -1,0 +1,15 @@
+.keyword {
+  --fs-case-keyword: 12.8px;
+  --clr-border-case-keyword: #383838;
+
+  display: inline-flex;
+  padding: 9.6px 20px;
+  border: 0.8px solid var(--clr-border-case-keyword);
+  border-radius: 40px;
+
+  color: var(--clr-main-text);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-case-keyword);
+  line-height: 90%;
+  letter-spacing: -0.4px;
+}

@@ -1,0 +1,283 @@
+.hero {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100vw;
+  max-width: 1920px;
+  height: 100dvh;
+
+  background-color: #000;
+}
+
+.content {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  padding-inline: 4%;
+  padding-block: 4%;
+}
+
+.slider {
+  width: 100%;
+  height: 80px;
+}
+
+.leftSide {
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.leftSide h1 {
+  font-weight: 700;
+  font-size: var(--fs-hero-title);
+  line-height: 90%;
+  letter-spacing: -2px;
+
+  background: var(
+    --gradient-title,
+    linear-gradient(135deg, #fff 30%, rgb(255 255 255 / 38%) 100%)
+  );
+  background-clip: text;
+  padding-block: 6px;
+  -webkit-text-background-clip: text;
+}
+
+.leftSide p {
+  width: 80%;
+
+  color: #fff;
+  font-weight: 400;
+  font-size: var(--fs-hero-description);
+  line-height: calc(var(--fs-hero-description) + 4px);
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.heroTextWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-hero-text);
+}
+
+.rightSide {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.imgWrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.rightSide .imgWrapper:nth-child(1),
+.rightSide .imgWrapper:nth-child(3) {
+  position: absolute;
+  aspect-ratio: 1/1;
+}
+
+.rightSide .imgWrapper:nth-child(1) {
+  top: -12%;
+  right: -10%;
+  z-index: 1;
+
+  width: 60%;
+}
+
+.rightSide .imgWrapper:nth-child(2) {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  aspect-ratio: 1/1.1;
+}
+
+.rightSide .imgWrapper:nth-child(3) {
+  bottom: -10%;
+  left: -15%;
+
+  width: 60%;
+  rotate: -10deg;
+}
+
+.glowBlue,
+.glowRed {
+  position: absolute;
+
+  width: 60%;
+  height: 40vh;
+}
+
+.glowRed {
+  top: 30%;
+  right: -10%;
+
+  border-radius: 345px;
+
+  background: rgb(204 11 11 / 40%);
+  filter: blur(100px);
+}
+
+.glowBlue {
+  top: 0%;
+  left: -30%;
+
+  border-radius: 303px;
+
+  background: rgb(124 254 253 / 50%);
+  filter: blur(100px);
+}
+
+.sphere {
+  position: absolute;
+  right: -50%;
+  bottom: -10%;
+
+  width: 140%;
+}
+
+.sphere img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (width >= 744px) {
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .sphere {
+    right: 0;
+    bottom: 0;
+
+    width: 50%;
+  }
+
+  .slider {
+    width: 65%;
+  }
+
+  .content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .leftSide {
+    gap: 40px;
+    justify-content: center;
+    width: 60%;
+  }
+
+  .rightSide {
+    width: 40%;
+    height: fit-content;
+  }
+
+  .glowBlue {
+    top: -10%;
+    left: -35%;
+
+    border-radius: 581px;
+
+    background: rgb(124 254 253 / 50%);
+    filter: blur(345.20001220703125px);
+  }
+
+  .glowRed {
+    height: 60vh;
+    border-radius: 921px;
+
+    background: rgb(204 11 11 / 50%);
+    filter: blur(350px);
+  }
+
+  .rightSide .imgWrapper:nth-child(1) {
+    top: -50%;
+    right: -15%;
+    scale: 1.4;
+  }
+
+  .rightSide .imgWrapper:nth-child(2) {
+    scale: 1.3;
+
+    transform: translateX(5%);
+  }
+
+  .rightSide .imgWrapper:nth-child(3) {
+    bottom: -30%;
+
+    width: 50%;
+  }
+}
+
+@media screen and (width >= 1200px) and (width <= 1590px) {
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .leftSide h1 {
+    font-size: calc(var(--fs-hero-title) - 22px);
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .sphere {
+    bottom: -6%;
+
+    width: 40%;
+  }
+
+  .buttons {
+    gap: 24px;
+  }
+
+  .rightSide {
+    width: 33%;
+    height: fit-content;
+  }
+
+  .rightSide .imgWrapper:nth-child(1) {
+    top: -20%;
+    right: -15%;
+    scale: 1;
+  }
+
+  .rightSide .imgWrapper:nth-child(2) {
+    scale: 1;
+
+    transform: translateX(0%);
+  }
+
+  .rightSide .imgWrapper:nth-child(3) {
+    bottom: -15%;
+
+    width: 50%;
+  }
+
+  .leftSide {
+    gap: 80px;
+  }
+}

@@ -1,19 +1,14 @@
-:root {
-  --container-padding: 16px;
-}
-
 .container {
+  --container-padding: 16px;
+
   position: relative;
+
+  height: 170px;
   padding: var(--container-padding);
-
-  width: 25%;
-
-  aspect-ratio: 1/1;
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: var(--radius-200);
 
   background: #101010;
-
-  border-radius: var(--radius-200);
-  border: 1px solid rgba(255, 255, 255, 0.15);
 
   transition: all ease-in-out 0.3s;
 }
@@ -23,44 +18,58 @@
   flex-direction: column;
   gap: var(--gap-contacts-text);
 }
+
 .title {
+  color: var(--clr-main-text);
   font-weight: var(--fw-bold);
   font-size: var(--fs-contacts-title);
-
-  color: var(--clr-main-text);
 }
 
 .description {
+  color: var(--clr-secondary-text);
   font-weight: var(--fw-regular);
   font-size: var(--fs-contacts-description);
-  color: var(--clr-secondary-text);
 }
 
 @media (hover: hover) {
   .container:hover::before {
-    content: "";
     position: absolute;
-    inset: 0;
-    border-radius: var(--radius-200);
+
     padding: 1px;
+    border-radius: var(--radius-200);
+
     background: var(--clr-border-gradient);
-    -webkit-mask:
+
+    transition: all 3s ease-in-out;
+
+    content: "";
+    inset: 0;
+    mask:
       linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
+    mask-composite: xor;
     mask-composite: exclude;
-    transition: all 3s ease-in-out;
   }
 }
 
-@media screen and (min-width: 744px) {
-  :root {
+@media screen and (width >= 744px) {
+  .container {
+    height: 200px;
+
     --container-padding: 24px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  :root {
+@media screen and (width >= 1200px) {
+  .container {
+    height: 360px;
+
     --container-padding: 40px;
+  }
+}
+
+@media screen and (1200px < width < 1400px) {
+  .title {
+    font-size: 26px;
   }
 }

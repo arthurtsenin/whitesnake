@@ -1,0 +1,78 @@
+.card {
+  position: relative;
+
+  display: flex;
+  grid-row: 3/4;
+  grid-column: 1/2;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+
+  background: #101010;
+}
+
+.cover {
+  width: 90%;
+  max-height: 90%;
+}
+
+.text {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  text-align: center;
+}
+
+.text p:first-child {
+  color: #fff;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.16px;
+}
+
+.text p:last-child {
+  color: #fff;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: -0.7px;
+}
+
+@media screen and (width >= 744px) {
+  .card {
+    grid-row: 3/5;
+    grid-column: 1/2;
+  }
+
+  .text {
+    gap: 10px;
+
+    font-size: 80px;
+  }
+
+  .text p:first-child {
+    font-size: 64px;
+    letter-spacing: -0.32px;
+  }
+
+  .text p:last-child {
+    font-size: 24px;
+    letter-spacing: -1.2px;
+  }
+}
+
+@media screen and (width >= 1200px) {
+  .text p:first-child {
+    font-size: 160px;
+    letter-spacing: -0.4px;
+  }
+
+  .text p:last-child {
+    font-size: 50px;
+    letter-spacing: -2.5px;
+  }
+}
