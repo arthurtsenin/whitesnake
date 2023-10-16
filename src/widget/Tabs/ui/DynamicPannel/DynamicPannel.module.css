@@ -7,8 +7,8 @@
 
 .pannels {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-dynamic-pannel);
 }
 
@@ -20,16 +20,17 @@
   justify-content: space-around;
   padding: 32px 0 8px;
   border-radius: var(--radius-300);
+
   background: var(--clr-contact-card-bg);
 }
 
 .item img {
-  width: 40%;
   justify-content: space-between;
-  padding-top: 32px;
-  padding-bottom: 8px;
+  width: 40%;
 
   height: fit-content;
+  padding-top: 32px;
+  padding-bottom: 8px;
   object-fit: contain;
 }
 
@@ -61,9 +62,9 @@
   }
 
   .item {
-    padding: 32px 0 16px;
     gap: 40px;
     justify-content: space-between;
+    padding: 32px 0 16px;
   }
 
   .name {

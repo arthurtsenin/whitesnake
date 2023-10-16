@@ -1,15 +1,16 @@
 .card {
   position: relative;
+  position: relative;
 
   display: flex;
   flex: 1;
   gap: 16px;
   box-sizing: border-box;
   min-height: max-content;
-  position: relative;
   padding: 16px;
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-100);
+
   background-clip: padding-box;
 }
 
