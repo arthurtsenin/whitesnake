@@ -1,12 +1,12 @@
 import { StaticImageData } from "next/image";
 
-import commerce from "&/pannels/commerce.webp";
-import finance from "&/pannels/finance.webp";
-import healthcare from "&/pannels/healthcare.webp";
-import insurance from "&/pannels/insurance.webp";
-import learning from "&/pannels/learning.webp";
-import logistics from "&/pannels/logistics.webp";
-import web3 from "&/pannels/web3.webp";
+import commerce from "&/pannels/commerce.png";
+import finance from "&/pannels/finance.png";
+import healthcare from "&/pannels/healthcare.png";
+import insurance from "&/pannels/insurance.png";
+import learning from "&/pannels/learning.png";
+import logistics from "&/pannels/logistics.png";
+import web3 from "&/pannels/web3.png";
 import aiohttpLogo from "&/tech-stack/aiohttp-logo.png";
 import airFlow from "&/tech-stack/airflow-icon.png";
 import auroradb from "&/tech-stack/auroradb-icon.png";
