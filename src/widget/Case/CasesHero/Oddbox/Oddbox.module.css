@@ -57,6 +57,7 @@
   --gap-hero-text: 20px;
 
   z-index: 3;
+
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-hero-text);
@@ -98,6 +99,7 @@
   --gap-row-keywords: 11.6px;
 
   z-index: 3;
+
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -151,6 +153,7 @@
   .imgWrapper {
     position: absolute;
     right: 0;
+
     width: 50vh;
     margin: 0;
   }
