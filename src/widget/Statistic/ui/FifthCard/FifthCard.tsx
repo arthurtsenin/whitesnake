@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import styles from "./FifthCard.module.css";
 
+import semiRaindrop from "&/images/statistic/raindrop.png";
 import greenRaindrop from "&/images/statistic/raindrop-green.png";
-import semiRaindrop from "&/images/statistic/raindrop-semi.png";
 
 export const FifthCard = () => {
   return (
