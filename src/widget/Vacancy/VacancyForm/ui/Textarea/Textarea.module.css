@@ -1,0 +1,55 @@
+.textarea {
+  font-family: arial;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  background-color: transparent;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 49px 0px 12px 0px;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  resize: none;
+  width: 100%;
+}
+
+.textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: -0.8px;
+  text-align: left;
+  transform: translateY(100%);
+  transition: 0.5s;
+}
+
+.textarea::-webkit-scrollbar {
+  width: 3px;
+}
+
+.textarea::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.textarea::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+.textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #cc0b0b;
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+.textarea:focus.textarea::placeholder {
+  opacity: 0;
+}
+
+@media screen and (min-width: 960px) {
+  .textarea {
+    font-size: 18px;
+    padding: 42px 0px 16px 0px;
+  }
+}

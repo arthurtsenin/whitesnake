@@ -1,4 +1,6 @@
+"use client";
 import classNames from "classnames";
+import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch, FC, SetStateAction } from "react";
 
 import styles from "./AccordionItem.module.css";
@@ -35,9 +37,25 @@ export const AccordionItem: FC<AccordionItemProps> = ({
           <span />
         </div>
       </div>
-      <div className={styles.description}>
-        <p>{item.description}</p>
-      </div>
+      <AnimatePresence initial={false}>
+        {index === item.id && (
+          <motion.section
+            className={classNames(styles.description)}
+            key="content"
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: { opacity: 1, height: "auto" },
+              collapsed: { opacity: 0, height: 0 },
+            }}
+            transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+          >
+            <p>{item.description}</p>
+          </motion.section>
+        )}
+      </AnimatePresence>
+
       <div className={styles.line} />
     </button>
   );

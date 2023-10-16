@@ -21,7 +21,8 @@
   margin-inline: auto;
 }
 
-.nav {
+.nav,
+.navList {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -74,13 +75,13 @@
   aspect-ratio: 1/1;
 }
 
-@media screen and (width >= 450px) {
+@media screen and (min-width: 450px) {
   .glow:nth-of-type(1) {
     width: 50vw;
   }
 }
 
-@media screen and (width >= 744px) {
+@media screen and (min-width: 744px) {
   .glow:nth-of-type(2) {
     top: -20%;
     left: -50%;
@@ -89,31 +90,25 @@
     filter: blur(345.20001220703125px);
   }
 
+  .image {
+    top: -35%;
+  }
+
   .glow:nth-of-type(1) {
     right: 0;
-    bottom: 60%;
-
+    bottom: 50%;
     width: 40vw;
-
-    background: rgb(204 11 11 / 0%);
+    background: rgb(204 11 11 / 80%);
     filter: blur(250px);
   }
-}
 
-@media screen and (width >= 1200px) {
-  .container {
+  .nav {
+    align-items: center;
+    margin-inline: auto;
+  }
+
+  .navList {
     flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .image {
-    top: -60%;
-
-    height: 430px;
-  }
-
-  .buttons {
-    display: none;
   }
 
   .cards {
@@ -121,6 +116,34 @@
     flex-direction: row;
     justify-content: space-between;
     max-width: 990px;
+  }
+
+  .buttons {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navContainer {
+    flex-wrap: nowrap;
+  }
+
+  .nav {
+    align-items: flex-start;
+  }
+
+  .navList {
+    flex-direction: column;
+  }
+
+  .image {
+    top: -60%;
+    height: 430px;
   }
 
   .glow:nth-of-type(1) {
@@ -142,7 +165,7 @@
   }
 }
 
-@media screen and (width >= 1400px) {
+@media screen and (min-width: 1400px) {
   .image {
     top: -80%;
 

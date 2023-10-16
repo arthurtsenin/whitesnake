@@ -11,7 +11,7 @@ import { CasePageLayout } from "../CasePageLayout";
 
 export const IntegrationSDKPage = () => {
   return (
-    <section className={styles.section}>
+    <>
       <Pinwheel {...INTEGRATION_SDK_DATA.hero} />
       <CasePageLayout data={INTEGRATION_SDK_DATA}>
         <CaseSolution
@@ -32,6 +32,6 @@ export const IntegrationSDKPage = () => {
           </div>
         </CaseSolution>
       </CasePageLayout>
-    </section>
+    </>
   );
 };

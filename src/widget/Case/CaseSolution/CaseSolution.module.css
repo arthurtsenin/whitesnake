@@ -16,7 +16,7 @@
   letter-spacing: -0.05em;
 }
 
-@media (width >= 1200px) {
+@media (min-width: 1200px) {
   .subtitle {
     font-size: 25px;
   }

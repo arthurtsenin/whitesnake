@@ -29,7 +29,7 @@
   font-weight: var(--fw-reqular);
 }
 
-@media (width >= 744px) {
+@media (min-width: 744px) {
   .stats {
     gap: 70px;
     min-height: 270px;
@@ -43,7 +43,7 @@
   }
 }
 
-@media (width >= 1200px) {
+@media (min-width: 1200px) {
   .stats {
     align-self: flex-start;
   }

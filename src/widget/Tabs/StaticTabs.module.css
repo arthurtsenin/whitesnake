@@ -41,7 +41,7 @@
   height: 100%;
 }
 
-@media screen and (width >= 744px) {
+@media screen and (min-width: 744px) {
   .glow {
     top: -30%;
     right: -20%;
@@ -60,10 +60,10 @@
   }
 }
 
-@media screen and (width >= 960px) {
+@media screen and (min-width: 960px) {
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   .titleContainer {
     width: 70%;
   }

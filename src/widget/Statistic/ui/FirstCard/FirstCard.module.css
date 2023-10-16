@@ -137,7 +137,7 @@
   }
 }
 
-@media screen and (width >= 744px) {
+@media screen and (min-width: 744px) {
   .textContainer {
     gap: 10px;
   }
@@ -153,7 +153,7 @@
   }
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   .textContainer h5 {
     font-size: 160px;
     letter-spacing: -0.8px;

@@ -11,7 +11,7 @@ import { CasePageLayout } from "../CasePageLayout";
 
 export const DigitalAssetPage = () => {
   return (
-    <section className={styles.section}>
+    <>
       <Web3 {...DIGITAL_ASSET_DATA.hero} />
       <CasePageLayout data={DIGITAL_ASSET_DATA}>
         <CaseSolution
@@ -32,6 +32,6 @@ export const DigitalAssetPage = () => {
           </div>
         </CaseSolution>
       </CasePageLayout>
-    </section>
+    </>
   );
 };

@@ -33,7 +33,7 @@
   opacity: 0.4;
 }
 
-@media screen and (width >= 750px) {
+@media screen and (min-width: 750px) {
   .glow {
     top: -25vw;
 
@@ -51,12 +51,12 @@
   }
 }
 
-@media screen and (width >= 960px) {
+@media screen and (min-width: 960px) {
   .image {
   }
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   .glow {
     width: 40vw;
 

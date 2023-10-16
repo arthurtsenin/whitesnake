@@ -11,7 +11,7 @@ import { CasePageLayout } from "../CasePageLayout";
 
 export const FoodDeliveryPage = () => {
   return (
-    <section className={styles.section}>
+    <>
       <Oddbox {...FOOD_DELIVERY_DATA.hero} />
       <CasePageLayout data={FOOD_DELIVERY_DATA}>
         <CaseSolution
@@ -32,6 +32,6 @@ export const FoodDeliveryPage = () => {
           </div>
         </CaseSolution>
       </CasePageLayout>
-    </section>
+    </>
   );
 };

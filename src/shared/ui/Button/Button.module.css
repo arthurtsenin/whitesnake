@@ -42,6 +42,11 @@
   mask-composite: xor;
 }
 
+.basis:disabled {
+  pointer-events: none;
+  background: #191919;
+}
+
 @media (hover: hover) {
   .basis:hover {
     transform: scale(1.01);

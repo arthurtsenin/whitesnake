@@ -87,7 +87,7 @@
   text-wrap: balance;
 }
 
-@media (width >= 744px) {
+@media (min-width: 744px) {
   .text {
     font-size: 25px;
   }
@@ -105,7 +105,7 @@
   }
 }
 
-@media (width >= 1200px) {
+@media (min-width: 1200px) {
   .text {
     font-size: 25px;
   }
@@ -128,7 +128,7 @@
   }
 }
 
-@media (width >= 1440px) {
+@media (min-width: 1440px) {
   .content {
     flex-direction: row;
     gap: 40px;

@@ -25,7 +25,7 @@ export const GridContainer: FC<GridContainerProps> = ({
       <section className={styles.section}>
         <div className={styles.glowRed} />
         <div className={styles.raindropWrapper}>
-          <Image src={raindrop} alt="background raindrop" />
+          <Image src={raindrop} alt="background raindrop" priority />
         </div>
         <Title suptitle={suptitle} title={title} subtitle={subtitle} />
         <div className={styles.container}>

@@ -1,0 +1,125 @@
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.form {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 90%;
+  height: 100%;
+  max-width: 987px;
+  margin-inline: auto;
+  padding-bottom: 1px;
+  margin-bottom: 1px;
+}
+
+.glowBlue {
+  position: absolute;
+  aspect-ratio: 1/1;
+  width: 100%;
+  top: -40%;
+  left: -50%;
+  border-radius: 263px;
+  background: rgba(124, 254, 253, 0.5);
+  filter: blur(170px);
+  z-index: -2;
+}
+
+.raindrops {
+  position: absolute;
+  top: -15%;
+  left: -70%;
+  width: 90vw;
+  z-index: -1;
+
+  rotate: -60deg;
+}
+
+.raindrops img {
+  width: 100%;
+  height: 100%;
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form button {
+  align-self: center;
+}
+
+@media screen and (min-width: 960px) {
+  .glowBlue {
+    width: 50%;
+    top: -60%;
+    left: -10%;
+    filter: blur(350px);
+  }
+
+  .raindrops {
+    top: -40%;
+    left: -62%;
+    width: 70vw;
+  }
+
+  .inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .fields {
+    gap: 40px;
+  }
+
+  .inputs input[name="telegram"] {
+    grid-row: 2/3;
+  }
+
+  .inputs input[name="phone"] {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+
+  .inputs input[name="email"] {
+    grid-column: 2/3;
+  }
+
+  .inputs input[name="linkedIn"] {
+    grid-row: 3/4;
+  }
+
+  .form textarea,
+  .form div,
+  .form button {
+    grid-column: 1/3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .glowBlue {
+    width: 40%;
+    top: -100%;
+    left: -30%;
+    filter: blur(370px);
+  }
+
+  .raindrops {
+    top: -100%;
+    left: -25%;
+    width: 40vw;
+  }
+}

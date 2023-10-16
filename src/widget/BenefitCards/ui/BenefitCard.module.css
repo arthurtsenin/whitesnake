@@ -1,5 +1,6 @@
 .card {
   position: relative;
+  position: relative;
 
   display: flex;
   flex: 1;
@@ -115,15 +116,20 @@
   }
 }
 
-@media (width >= 375px) {
+@media (min-width: 375px) {
   .cardButton > button {
   }
 
   .cardImage {
   }
+
+  .card.withIcon .cardButton > button,
+  .card.withoutIcon .cardButton > button {
+    max-width: 250px;
+  }
 }
 
-@media (width >= 744px) {
+@media (min-width: 744px) {
   .cardImage {
   }
 
@@ -132,7 +138,7 @@
   }
 }
 
-@media (width >= 960px) {
+@media (min-width: 960px) {
   .card.withIcon {
     gap: 40px;
     padding: 24px;
@@ -143,7 +149,7 @@
   }
 }
 
-@media (width >= 1200px) {
+@media (min-width: 1200px) {
   .card.withIcon {
   }
 
@@ -178,7 +184,7 @@
   }
 }
 
-@media (width >= 1200px) {
+@media (min-width: 1200px) {
   .card.withoutIcon {
     padding: 24px;
   }

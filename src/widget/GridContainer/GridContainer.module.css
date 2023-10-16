@@ -47,7 +47,7 @@
   aspect-ratio: 1/1;
 }
 
-@media screen and (width >= 744px) {
+@media screen and (min-width: 744px) {
   .raindropWrapper {
     position: absolute;
     top: 2%;
@@ -62,7 +62,7 @@
   }
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   .glowRed {
     top: -10%;
     left: -70%;
