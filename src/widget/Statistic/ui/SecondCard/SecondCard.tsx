@@ -8,7 +8,6 @@ export const SecondCard = () => {
         <p>успешных проектов</p>
       </div>
       <div className={styles.graphic}>
-        {/* <Image src={jopa} alt='lalala' /> */}
         <svg width="18%" height="25%" className={styles.rectangle}>
           <defs>
             <linearGradient id="linear" x1="0%" y1="0%" x2="10%" y2="100%">

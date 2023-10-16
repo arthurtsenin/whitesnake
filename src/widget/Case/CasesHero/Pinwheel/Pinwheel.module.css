@@ -1,49 +1,42 @@
 .hero {
-  --clr-case-hero-bg: linear-gradient(
-    285.56deg,
-    #000 16.22%,
-    transparent 74.01%
-  );
-
   position: relative;
+
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  height: auto;
+  min-height: max-content;
   overflow: hidden;
   margin-inline: auto;
-  width: 100vw;
-  min-height: max-content;
-  height: auto;
   padding-block: var(--header-height);
-  background-image: url("/cases/silver-lines-bg.png");
-  background-size: cover;
-  background-position: center;
-
-  position: relative;
 }
 
 .hero::before {
   position: absolute;
+  inset: 0;
+
   z-index: 0;
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+
   width: 100vw;
   height: auto;
-  background: linear-gradient(360deg, #000000 10%, rgba(0, 0, 0, 0) 90%);
+
+  background: linear-gradient(360deg, #000 10%, rgb(0 0 0 / 0%) 90%);
+
+  content: "";
 }
 
 .content {
   --gap-content: 26px;
 
-  display: flex;
-  flex-direction: column;
-  row-gap: var(--gap-content);
-  justify-content: center;
-  text-wrap: balance;
   position: relative;
   z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  text-wrap: balance;
+  row-gap: var(--gap-content);
 }
 
 .text {
@@ -54,28 +47,32 @@
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-hero-text);
+
   word-break: break-word;
 }
 
 .title {
   width: fit-content;
-  background: var(--clr-title-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+  font-weight: var(--fw-bold);
   font-size: var(--fs-hero-title);
   line-height: 90%;
   letter-spacing: -1.302px;
-  font-weight: var(--fw-bold);
+
+  background: var(--clr-title-gradient);
+  background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
   width: 85%;
+
+  color: var(--clr-secondary-text);
+  font-weight: var(--fw-light);
   font-size: var(--fs-hero-description);
   line-height: 130%;
   letter-spacing: -0.7px;
-  font-weight: var(--fw-light);
-  color: var(--clr-secondary-text);
 }
 
 .title::first-letter,
@@ -89,9 +86,10 @@
 
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+
   column-gap: var(--gap-col-keywords);
   row-gap: var(--gap-row-keywords);
-  width: 100%;
 }
 
 @media screen and (width >=744px) {
@@ -124,6 +122,7 @@
   .hero {
     justify-content: center;
     padding-block: 0;
+
     height: 100vh;
   }
 
@@ -153,7 +152,7 @@
     --gap-col-keywords: 6px;
     --gap-row-keywords: 16px;
 
-    width: 50%;
+    width: 45%;
   }
 }
 

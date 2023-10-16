@@ -1,14 +1,16 @@
 .card {
+  position: relative;
+
+  display: flex;
+  flex: 1;
+  gap: 16px;
+  box-sizing: border-box;
+  min-height: max-content;
+  position: relative;
+  padding: 16px;
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-100);
   background-clip: padding-box;
-  padding: 16px;
-  display: flex;
-  gap: 16px;
-  box-sizing: border-box;
-  flex: 1;
-  min-height: max-content;
-  position: relative;
 }
 
 .card.withIcon {
@@ -19,13 +21,14 @@
 
 .cardTitle {
   padding-top: 4%;
-  line-height: 120%;
+
   font-weight: var(--fw-semibold);
+  line-height: 120%;
 }
 
 .cardDesc {
-  line-height: 120%;
   font-weight: var(--fw-light);
+  line-height: 120%;
   white-space: break-spaces;
 }
 
@@ -34,8 +37,9 @@
 }
 
 .card.withoutIcon .cardTitle {
-  font-size: 16px;
   margin-bottom: 8px;
+
+  font-size: 16px;
 }
 
 .card.withIcon .cardDesc {
@@ -48,29 +52,32 @@
 
 .cardImage {
   flex-shrink: 0;
-  width: 25%;
   align-self: start;
+  width: 25%;
 }
+
 .cardImage img {
-  object-fit: contain;
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
+
 .cardButton {
   margin-top: auto;
 }
 
 .cardButton > button {
   width: 100%;
-  border-radius: 40px;
-  margin-top: 16px;
   min-height: 60px;
+  margin-top: 16px;
+  border-radius: 40px;
 }
 
 .card.withoutIcon .cardButton > button {
-  max-width: 125px;
   width: 100%;
+  max-width: 125px;
   height: 40px;
+
   font-size: 10px;
 }
 
@@ -79,27 +86,32 @@
   flex-direction: column;
   gap: 8px;
 }
+
 @media (hover: hover) {
   .card:hover button {
     background-color: var(--clr-button-secondary-bg);
   }
+
   .card:hover::before {
-    content: "";
     position: absolute;
-    inset: 0;
-    border-radius: var(--radius-200);
+    z-index: 1;
+
     padding: 1px;
+    border-radius: var(--radius-200);
+
     background: var(--clr-border-gradient);
+
+    content: "";
+    inset: 0;
     mask:
       linear-gradient(#fff 0 0) content-box,
       linear-gradient(#fff 0 0);
     mask-composite: xor;
     mask-composite: exclude;
-
-    z-index: 1;
   }
+
   .card:hover {
-    border: 1px solid #ffffff00;
+    border: 1px solid #fff0;
   }
 }
 
@@ -119,6 +131,7 @@
 @media (width >= 744px) {
   .cardImage {
   }
+
   .cardButton > button {
     margin-top: 24px;
   }
@@ -126,8 +139,8 @@
 
 @media (width >= 960px) {
   .card.withIcon {
-    padding: 24px;
     gap: 40px;
+    padding: 24px;
   }
 
   .card.withIcon .cardDesc {
@@ -142,9 +155,11 @@
   .card.withoutIcon {
     padding: 40px;
   }
+
   .cardButton > button {
     margin-top: 36px;
   }
+
   .cardImage {
   }
 
@@ -160,14 +175,15 @@
 
   .card.withIcon .cardButton > button,
   .card.withoutIcon .cardButton > button {
-    max-width: 250px;
     width: 100%;
+    max-width: 250px;
     height: 80px;
+
     font-size: 20px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (width >= 1200px) {
   .card.withoutIcon {
     padding: 24px;
   }

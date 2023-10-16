@@ -16,11 +16,12 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  color: hsl(0deg 0% 100% / 60%);
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
   letter-spacing: -0.05em;
-  color: hsl(0deg 0% 100% / 60%);
 }
 
 .list {
@@ -28,6 +29,7 @@
   flex-direction: column;
   gap: 20px;
   padding-left: 20px;
+
   list-style-position: outside;
   list-style-type: disc;
 }
@@ -37,48 +39,51 @@
 }
 
 .mark {
+  color: #fff;
   font-weight: 600;
   letter-spacing: -1.25px;
-  color: #fff;
+
   background-color: transparent;
 }
 
 .cubes {
   display: grid;
-  gap: 12px;
   grid-template-columns: 1fr;
+  gap: 12px;
   width: 100%;
   height: 100%;
 }
 
 .cube {
-  aspect-ratio: 1.4/1;
-  background: #101010;
-  border: 1px solid #363636;
-  border-radius: 12px;
-  padding: 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #363636;
+  border-radius: 12px;
+
+  background: #101010;
+  aspect-ratio: 1.4/1;
 }
 
 .cube p:first-child {
+  color: #fff;
   font-weight: 700;
   font-size: 70px;
   line-height: 120%;
   letter-spacing: -0.005em;
-  color: #fff;
 }
 
 .cube p:last-child {
   width: 90%;
-  text-align: center;
+
+  color: hsl(0deg 0% 100% / 50%);
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
   letter-spacing: -0.6px;
-  color: hsl(0deg 0% 100% / 50%);
+  text-align: center;
   text-wrap: balance;
 }
 
@@ -126,18 +131,19 @@
 @media (width >= 1440px) {
   .content {
     flex-direction: row;
-    justify-content: space-between;
     gap: 40px;
+    justify-content: space-between;
   }
 
   .text {
-    font-size: 25px;
     width: 100%;
+
+    font-size: 25px;
   }
 
   .cubes {
-    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     align-self: flex-end;
   }
 
