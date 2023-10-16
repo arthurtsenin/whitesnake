@@ -15,9 +15,6 @@
 .hero::before {
   position: absolute;
   z-index: 1;
-  content: "";
-
-  inset: 0;
 
   width: 100vw;
   height: auto;
@@ -25,6 +22,10 @@
   background: linear-gradient(360deg, #000 16.22%, rgb(0 0 0 / 0%) 74.01%);
 
   content: "";
+
+  content: "";
+
+  inset: 0;
 }
 
 .content {
@@ -61,6 +62,7 @@
   --gap-hero-text: 20px;
 
   z-index: 3;
+
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-hero-text);
@@ -102,6 +104,7 @@
   --gap-row-keywords: 11.6px;
 
   z-index: 3;
+
   display: flex;
   flex-wrap: wrap;
   width: 100%;
