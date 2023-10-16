@@ -1,6 +1,7 @@
+"use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
-import { useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 import styles from "./ScrollCard.module.css";
 type ScrollCardProps = {
@@ -25,29 +26,44 @@ export const ScrollCard = ({
   title,
   description,
 }: ScrollCardProps) => {
+  const [isMobile, setIsMobile] = useState<number>(0);
   const ref = useRef<HTMLDivElement>(null);
 
+  useLayoutEffect(() => {
+    if (window) {
+      setIsMobile(window.innerWidth);
+    }
+  }, []);
+  const isMobileDevice = isMobile < 1000;
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],
   });
 
-  const opacityParentContainer = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
-  // const orderTextPosition = useTransform(scrollYProgress, [0.5, 1], ['60%', '0%']);
+  const opacityParentContainer = useTransform(
+    scrollYProgress,
+    [0, 1],
+    !isMobileDevice ? [0, 1] : [1, 1],
+  );
 
   const iconRotateProgress = useTransform(
     scrollYProgress,
     [0, 1],
     ["-15deg", "0deg"],
   );
-
-  const markOpacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  const markPosition = useTransform(scrollYProgress, [0.6, 1], ["-40%", "0%"]);
-
+  const markOpacity = useTransform(
+    scrollYProgress,
+    [0, 1],
+    !isMobileDevice ? [0, 1] : [1, 1],
+  );
+  const markPosition = useTransform(
+    scrollYProgress,
+    [0.6, 1],
+    !isMobileDevice ? ["-40%", "0%"] : ["0%", "0%"],
+  );
   return (
     <motion.div
-      initial="hidden"
+      initial={!isMobileDevice ? "hidden" : "visible"}
       animate="show"
       ref={ref}
       variants={container}
@@ -61,13 +77,28 @@ export const ScrollCard = ({
         <Image src={image} alt="marker" />
       </motion.div>
       <div className={styles.text}>
-        <motion.mark style={{ translateY: markPosition, opacity: markOpacity }}>
+        <motion.mark
+          style={{
+            translateY: markPosition,
+            opacity: markOpacity,
+          }}
+        >
           {order}
         </motion.mark>
-        <motion.p style={{ translateY: markPosition, opacity: markOpacity }}>
+        <motion.p
+          style={{
+            translateY: markPosition,
+            opacity: markOpacity,
+          }}
+        >
           {title}
         </motion.p>
-        <motion.p style={{ translateY: markPosition, opacity: markOpacity }}>
+        <motion.p
+          style={{
+            translateY: markPosition,
+            opacity: markOpacity,
+          }}
+        >
           {description}
         </motion.p>
       </div>
