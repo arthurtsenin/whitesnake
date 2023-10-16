@@ -114,7 +114,7 @@
   rotate: -60deg;
 }
 
-@media screen and (width > 500px) {
+@media screen and (min-width: 500px) {
   .motionContainer {
     margin-left: auto;
   }
@@ -133,7 +133,7 @@
   }
 }
 
-@media screen and (width > 744px) {
+@media screen and (min-width: 744px) {
   .container {
   }
 
@@ -194,7 +194,7 @@
   }
 }
 
-@media screen and (width > 1200px) {
+@media screen and (min-width: 1200px) {
   .motionContainer {
     display: flex;
     gap: 200px;
@@ -245,14 +245,14 @@
   }
 }
 
-@media screen and (width > 1600px) {
+@media screen and (min-width: 1600px) {
   .info {
     font-size: 70px;
     letter-spacing: -2px;
   }
 }
 
-@media screen and (width > 1920px) {
+@media screen and (min-width: 1920px) {
   .info {
     height: 40vh;
   }
