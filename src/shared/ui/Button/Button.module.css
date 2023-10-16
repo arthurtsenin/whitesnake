@@ -43,8 +43,9 @@
 }
 
 .basis:disabled {
-  pointer-events: none;
   background: #191919;
+
+  pointer-events: none;
 }
 
 @media (hover: hover) {

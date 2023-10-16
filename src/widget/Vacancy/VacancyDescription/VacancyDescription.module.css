@@ -1,38 +1,38 @@
 .container {
-  width: 90%;
-  max-width: 987px;
-  margin-inline: auto;
-
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: 90%;
+  max-width: 987px;
+  margin-inline: auto;
 }
 
 .title {
-  font-size: 24px;
   font-weight: 600;
+  font-size: 24px;
   letter-spacing: -2px;
 
   background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.38) 100%);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .item {
   color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
   line-height: 130%;
   letter-spacing: -0.8px;
 }
 
 .divider {
-  height: 2px;
   width: 100%;
-  opacity: 0.2;
+  height: 2px;
+
   background: #fff;
+  opacity: 0.2;
 }
 
 .list {
@@ -40,6 +40,7 @@
   flex-direction: column;
   gap: 10px;
   padding-left: 25px;
+
   list-style-position: outside;
   list-style-type: disc;
 }

@@ -1,32 +1,37 @@
 .hero {
-  width: 100%;
-  height: 100vh;
+  position: relative;
 
   display: flex;
-  justify-content: center;
   align-items: center;
-  position: relative;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
 }
 
 .glowBlue,
 .glowRed {
   position: absolute;
   aspect-ratio: 1/1;
+
   width: 80%;
 }
 
 .glowBlue {
   top: 30%;
   left: -45%;
+
   border-radius: 263px;
+
   background: rgba(124, 254, 253, 0.5);
   filter: blur(180px);
 }
 
 .glowRed {
-  bottom: 0;
   right: -55%;
+  bottom: 0;
+
   border-radius: 330px;
+
   background: rgba(204, 11, 11, 0.5);
   filter: blur(150px);
 }
@@ -34,9 +39,10 @@
 .raindop2,
 .raindop3,
 .raindop4 {
-  height: 80vw;
-  width: auto;
   z-index: -1;
+
+  width: auto;
+  height: 80vw;
 }
 
 .raindrop1 {
@@ -54,12 +60,13 @@
 
 .raindrop3 {
   position: absolute;
-  bottom: -10%;
   right: -60%;
+  bottom: -10%;
 }
 
 .raindrop4 {
   position: absolute;
+
   opacity: 0;
 }
 
@@ -73,40 +80,44 @@
 }
 
 .content {
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   gap: 16px;
-  z-index: 1;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
 }
 
 .back {
   display: none;
+
   cursor: pointer;
 }
 
 .title {
-  font-size: 40px;
   font-weight: 700;
-  line-height: 104.023%;
+  font-size: 40px;
   letter-spacing: -1.707px;
+
   background: var(
     --gradient-title,
     linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.38) 100%)
   );
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 120%;
   max-width: 288px;
+
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
 }
 
 .buttons {
@@ -134,18 +145,20 @@
 
   .raindrop3 {
     position: absolute;
-    bottom: -10%;
     right: -15%;
+    bottom: -10%;
   }
 
   .title {
+    max-width: 500px;
+
     font-size: 56px;
     letter-spacing: -2px;
-    max-width: 500px;
   }
 
   .subtitle {
     max-width: 500px;
+
     font-size: 18px;
   }
 }
@@ -154,13 +167,15 @@
   .glowBlue {
     top: -45%;
     left: -70%;
+
     background: rgba(124, 254, 253, 0.5);
     filter: blur(345px);
   }
 
   .glowRed {
-    bottom: 0;
     right: -45%;
+    bottom: 0;
+
     background: rgba(204, 11, 11, 0.5);
     filter: blur(350px);
   }
@@ -178,8 +193,8 @@
 
   .raindrop3 {
     position: absolute;
-    bottom: -10%;
     right: -15%;
+    bottom: -10%;
   }
 
   .back {
@@ -188,8 +203,8 @@
     align-items: center;
 
     color: #fff;
-    font-size: 18px;
     font-weight: 400;
+    font-size: 18px;
   }
 
   .back img {
@@ -203,8 +218,8 @@
 
   @keyframes arrow-slider-anim {
     0% {
-      opacity: 1;
       transform: translateX(0);
+      opacity: 1;
     }
     50% {
       transform: translateX(-5px);
@@ -216,13 +231,15 @@
   }
 
   .title {
+    max-width: 500px;
+
     font-size: 56px;
     letter-spacing: -2px;
-    max-width: 500px;
   }
 
   .subtitle {
     max-width: 500px;
+
     font-size: 18px;
   }
 
@@ -238,6 +255,7 @@
   .glowBlue {
     top: -100%;
     left: -70%;
+
     background: rgba(124, 254, 253, 0.5);
     filter: blur(345px);
   }
@@ -245,16 +263,19 @@
   .glowRed {
     top: 20%;
     right: -55%;
+
     border-radius: 330px;
+
     background: rgba(204, 11, 11, 0.5);
     filter: blur(350px);
   }
 
   .raindrop1 {
-    opacity: 1;
     position: absolute;
     top: 60%;
     right: 10%;
+
+    opacity: 1;
     rotate: 19deg;
   }
 
@@ -272,10 +293,11 @@
   }
 
   .raindrop4 {
-    opacity: 1;
     position: absolute;
-    left: -10%;
     top: 20%;
+    left: -10%;
+
+    opacity: 1;
     rotate: 110deg;
   }
 
@@ -284,13 +306,15 @@
   }
 
   .title {
+    max-width: 962px;
+
     font-size: 100px;
     letter-spacing: -2px;
-    max-width: 962px;
   }
 
   .subtitle {
     max-width: 758px;
+
     font-size: 24px;
   }
 

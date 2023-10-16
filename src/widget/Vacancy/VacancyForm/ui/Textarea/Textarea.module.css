@@ -1,24 +1,29 @@
 .textarea {
-  font-family: arial;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
-  background-color: transparent;
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
+  width: 100%;
   padding: 49px 0px 12px 0px;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  font-family: arial;
+
+  background-color: transparent;
+
   resize: none;
-  width: 100%;
 }
 
 .textarea::placeholder {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   letter-spacing: -0.8px;
   text-align: left;
+
   transform: translateY(100%);
+
   transition: 0.5s;
 }
 
@@ -31,8 +36,9 @@
 }
 
 .textarea::-webkit-scrollbar-thumb {
-  background: #555;
   border-radius: 10px;
+
+  background: #555;
 }
 
 .textarea::-webkit-scrollbar-thumb:hover {
@@ -49,7 +55,8 @@
 
 @media screen and (min-width: 960px) {
   .textarea {
-    font-size: 18px;
     padding: 42px 0px 16px 0px;
+
+    font-size: 18px;
   }
 }
