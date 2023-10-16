@@ -7,7 +7,6 @@
 
 .pannels {
   display: grid;
-  grid-auto-rows: 1fr;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-dynamic-pannel);
 }
@@ -17,26 +16,25 @@
   flex-direction: column;
   gap: 30px;
   align-items: center;
-  justify-content: space-around;
-  padding: 32px 0 8px;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 8px;
   border-radius: var(--radius-300);
 
   background: var(--clr-contact-card-bg);
 }
 
 .item img {
-  justify-content: space-between;
-  width: 40%;
+  width: 50%;
+  aspect-ratio: 1/1;
 
   height: fit-content;
-  padding-top: 32px;
-  padding-bottom: 8px;
   object-fit: contain;
 }
 
 .django img {
-  width: 70%;
-  aspect-ratio: unset;
+  width: 80%;
+  aspect-ratio: 16/9;
 }
 
 .name {
@@ -46,34 +44,16 @@
   text-transform: capitalize;
 }
 
-@media screen and (min-width: 450px) {
-  .item img {
-    width: 25%;
-  }
-
-  .django img {
-    width: 60%;
-  }
-}
-
-@media screen and (min-width: 960px) {
+@media screen and (width >= 960px) {
   .pannels {
     grid-template-columns: repeat(3, 1fr);
   }
 
   .item {
-    gap: 40px;
-    justify-content: space-between;
-    padding: 32px 0 16px;
+    padding-bottom: 20px;
   }
 
   .name {
     font-size: 20px;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .item {
-    padding: 59px 0 20px;
   }
 }

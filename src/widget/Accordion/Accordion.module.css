@@ -29,7 +29,7 @@
 
   background-color: transparent;
   contain: content;
-  height: 750px;
+  height: 1000px;
 }
 
 @media screen and (width>=450px) {
