@@ -52,7 +52,7 @@
   }
 }
 
-@media screen and (width >= 744px) {
+@media screen and (min-width: 744px) {
   .container {
     height: 200px;
 
@@ -60,15 +60,14 @@
   }
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     height: 360px;
 
     --container-padding: 40px;
   }
 }
-
-@media screen and (1200px < width < 1400px) {
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
   .title {
     font-size: 26px;
   }

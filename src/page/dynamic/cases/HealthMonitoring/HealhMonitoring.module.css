@@ -71,7 +71,7 @@
   height: 100%;
 }
 
-@media (width >= 744px) {
+@media (min-width: 744px) {
   .description {
     width: 100%;
     margin-bottom: 20px;
@@ -83,7 +83,7 @@
   }
 }
 
-@media (width >= 1440px) {
+@media (min-width: 1440px) {
   .container {
     display: grid;
     grid-template-areas:

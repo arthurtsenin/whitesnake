@@ -162,13 +162,7 @@ body.lock {
   align-items: center;
 }
 
-@media screen and (width < 7440px) {
-  .main {
-    overflow-x: hidden;
-  }
-}
-
-@media screen and (width >= 320px) {
+@media screen and (min-width: 320px) {
   :root {
     --radius-300: var(--radius-100);
     --gap-layout: 80px;
@@ -220,7 +214,7 @@ body.lock {
   }
 }
 
-@media screen and (width >= 375px) {
+@media screen and (min-width: 375px) {
   :root {
     --gap-layout: 80px;
     --gap-widget: 40px;
@@ -271,7 +265,7 @@ body.lock {
   }
 }
 
-@media screen and (width >= 744px) {
+@media screen and (min-width: 744px) {
   :root {
     --gap-layout: 160px;
     --gap-widget: 64px;
@@ -330,7 +324,7 @@ body.lock {
   }
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   :root {
     --ui-mobile-small-device-size: 320px;
     --ui-mobile-medium-device-size: 450px;

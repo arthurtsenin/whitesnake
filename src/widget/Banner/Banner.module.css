@@ -52,13 +52,13 @@
   margin-top: auto;
 }
 
-@media (width >= 375px) {
+@media (min-width: 375px) {
   .bannerDesc {
     max-width: 250px;
   }
 }
 
-@media (width >= 744px) {
+@media (min-width: 744px) {
   .wrapper {
     min-height: 345px;
     padding: 24px;
@@ -77,7 +77,7 @@
   }
 }
 
-@media (width >= 1200px) {
+@media (min-width: 1200px) {
   .bannerDesc {
     max-width: 645px;
   }

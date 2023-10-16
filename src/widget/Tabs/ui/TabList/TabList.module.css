@@ -36,7 +36,7 @@
   display: none;
 }
 
-@media screen and (width >= 960px) {
+@media screen and (min-width: 960px) {
   .container {
     justify-content: center;
   }
@@ -51,7 +51,7 @@
   }
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     margin-left: 0;
   }
@@ -61,7 +61,7 @@
   }
 }
 
-@media screen and (width >= 1400px) {
+@media screen and (min-width: 1400px) {
   .container {
     margin-inline: auto;
 

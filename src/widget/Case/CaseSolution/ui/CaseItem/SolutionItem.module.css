@@ -21,7 +21,7 @@
   object-fit: cover;
 }
 
-@media (width >= 744px) {
+@media (min-width: 744px) {
   .description {
     width: 100%;
     margin-bottom: 20px;
@@ -33,7 +33,7 @@
   }
 }
 
-@media (width >= 1200px) {
+@media (min-width: 1200px) {
   .description {
     font-size: 25px;
   }

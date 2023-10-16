@@ -74,13 +74,13 @@
   aspect-ratio: 1/1;
 }
 
-@media screen and (width >= 450px) {
+@media screen and (min-width: 450px) {
   .glow:nth-of-type(1) {
     width: 50vw;
   }
 }
 
-@media screen and (width >= 744px) {
+@media screen and (min-width: 744px) {
   .glow:nth-of-type(2) {
     top: -20%;
     left: -50%;
@@ -100,7 +100,7 @@
   }
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     flex-direction: row;
     justify-content: space-between;
@@ -146,7 +146,7 @@
   }
 }
 
-@media screen and (width >= 1400px) {
+@media screen and (min-width: 1400px) {
   .image {
     top: -80%;
 

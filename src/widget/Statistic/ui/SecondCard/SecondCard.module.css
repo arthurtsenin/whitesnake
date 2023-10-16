@@ -98,7 +98,7 @@
   }
 }
 
-@media screen and (width >= 744px) {
+@media screen and (min-width: 744px) {
   .text {
     top: 26px;
     left: 26px;
@@ -121,7 +121,7 @@
   }
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   .text {
     top: 50px;
     left: 50px;

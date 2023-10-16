@@ -98,19 +98,19 @@
   grid-template-rows: 1fr;
 }
 
-@media screen and (width >=744px) {
+@media screen and (min-width: 744px) {
   .line {
     margin-block: 32px;
   }
 }
 
-@media screen and (width >=1000px) {
+@media screen and (min-width: 1000px) {
   .description {
     letter-spacing: -0.9px;
   }
 }
 
-@media screen and (width >=1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     --icon-width: 38px;
   }
