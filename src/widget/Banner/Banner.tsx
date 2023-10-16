@@ -5,7 +5,7 @@ import styles from "./Banner.module.css";
 
 import { Button, Container } from "@/shared";
 
-import bannerBg from "&/banner/banner.png";
+import bannerBg from "&/banner/banner.webp";
 
 export const Banner: FC = () => {
   return (
