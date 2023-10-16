@@ -1,0 +1,300 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.glowBlue,
+.glowRed {
+  position: absolute;
+  aspect-ratio: 1/1;
+  width: 80%;
+}
+
+.glowBlue {
+  top: 30%;
+  left: -45%;
+  border-radius: 263px;
+  background: rgba(124, 254, 253, 0.5);
+  filter: blur(180px);
+}
+
+.glowRed {
+  bottom: 0;
+  right: -55%;
+  border-radius: 330px;
+  background: rgba(204, 11, 11, 0.5);
+  filter: blur(150px);
+}
+.raindop1,
+.raindop2,
+.raindop3,
+.raindop4 {
+  height: 80vw;
+  width: auto;
+  z-index: -1;
+}
+
+.raindrop1 {
+  position: absolute;
+  top: -20%;
+  right: -40%;
+}
+
+.raindrop2 {
+  position: absolute;
+  top: 30%;
+  left: -50%;
+  rotate: 113.29deg;
+}
+
+.raindrop3 {
+  position: absolute;
+  bottom: -10%;
+  right: -60%;
+}
+
+.raindrop4 {
+  position: absolute;
+  opacity: 0;
+}
+
+.raindop1 img,
+.raindop2 img,
+.raindop3 img,
+.net img,
+.raindrops img {
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  z-index: 1;
+}
+
+.back {
+  display: none;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 104.023%;
+  letter-spacing: -1.707px;
+  background: var(
+    --gradient-title,
+    linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.38) 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  max-width: 288px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.buttons button {
+  width: 220px;
+}
+
+@media screen and (min-width: 540px) {
+  .raindrop1 {
+    opacity: 1;
+  }
+
+  .raindrop2 {
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    rotate: 19deg;
+  }
+
+  .raindrop3 {
+    position: absolute;
+    bottom: -10%;
+    right: -15%;
+  }
+
+  .title {
+    font-size: 56px;
+    letter-spacing: -2px;
+    max-width: 500px;
+  }
+
+  .subtitle {
+    max-width: 500px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .glowBlue {
+    top: -45%;
+    left: -70%;
+    background: rgba(124, 254, 253, 0.5);
+    filter: blur(345px);
+  }
+
+  .glowRed {
+    bottom: 0;
+    right: -45%;
+    background: rgba(204, 11, 11, 0.5);
+    filter: blur(350px);
+  }
+
+  .raindrop1 {
+    opacity: 0;
+  }
+
+  .raindrop2 {
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    rotate: 19deg;
+  }
+
+  .raindrop3 {
+    position: absolute;
+    bottom: -10%;
+    right: -15%;
+  }
+
+  .back {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .back img {
+    width: 6px;
+    height: 16px;
+  }
+
+  .back:hover img {
+    animation: arrow-slider-anim 1.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+  }
+
+  @keyframes arrow-slider-anim {
+    0% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-5px);
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+  }
+
+  .title {
+    font-size: 56px;
+    letter-spacing: -2px;
+    max-width: 500px;
+  }
+
+  .subtitle {
+    max-width: 500px;
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: row;
+  }
+  .buttons button {
+    width: 220px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .glowBlue {
+    top: -100%;
+    left: -70%;
+    background: rgba(124, 254, 253, 0.5);
+    filter: blur(345px);
+  }
+
+  .glowRed {
+    top: 20%;
+    right: -55%;
+    border-radius: 330px;
+    background: rgba(204, 11, 11, 0.5);
+    filter: blur(350px);
+  }
+
+  .raindrop1 {
+    opacity: 1;
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    rotate: 19deg;
+  }
+
+  .raindrop2 {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    rotate: 180deg;
+  }
+
+  .raindrop3 {
+    position: absolute;
+    top: 10%;
+    right: -14%;
+  }
+
+  .raindrop4 {
+    opacity: 1;
+    position: absolute;
+    left: -10%;
+    top: 20%;
+    rotate: 110deg;
+  }
+
+  .back {
+    font-size: 24px;
+  }
+
+  .title {
+    font-size: 100px;
+    letter-spacing: -2px;
+    max-width: 962px;
+  }
+
+  .subtitle {
+    max-width: 758px;
+    font-size: 24px;
+  }
+
+  .buttons button {
+    width: 268px;
+  }
+}

@@ -1,0 +1,22 @@
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.38) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (min-width: 960px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 70px;
+  }
+}

@@ -12,7 +12,7 @@ export const HOME_LINK: LinkType = {
   label: "WhiteSnake",
 };
 
-const ROUTES = {
+export const ROUTES = {
   ONE: { label: "Стажировка", href: "internship" },
   TWO: { label: "Портфолио", href: "portfolio" },
   THREE: { label: "Услуги", href: "services" },
