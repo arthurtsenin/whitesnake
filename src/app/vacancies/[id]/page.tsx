@@ -81,7 +81,7 @@ export type VacancyType = {
 };
 
 async function getData(id: string): Promise<VacancyType> {
-  const url = `https://api.hh.ru/vacancies/?text=%D0%A3%D0%B0%D0%B9%D1%82%D0%A1%D0%BD%D0%B5%D0%B9%D0%BA${id}?host=rabota.by`;
+  const url = `https://api.hh.ru/vacancies/${id}?host=rabota.by`;
   const res = await fetch(`${url}`, {
     cache: "no-store",
   });
@@ -106,6 +106,7 @@ export default async function VacancyPage({
     <VacancyPageLayout
       vacancy={vacancy.professional_roles[0].name}
       path={vacancy.alternate_url}
+      title={vacancy.name}
       titles={titles}
       lists={lists}
     />
