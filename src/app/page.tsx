@@ -14,7 +14,7 @@ import { INDUSTRY_DATA, TECHNOLOGIE_DATA } from "../widget/Tabs/data";
 
 export default function Home() {
   return (
-    <main className="main">
+    <>
       <HomeHero />
 
       <BenefitCards data={BENEFIT_CARD_WITH_ICON_DATA} variant="withIcon" />
@@ -49,6 +49,6 @@ export default function Home() {
         subtitle="Book a free strategy session to get a custom offer tailored for your business needs "
       />
       <Accordion accordions={ACCORDIONS_DATA} />
-    </main>
+    </>
   );
 }
