@@ -142,7 +142,6 @@ p {
 
 body {
   position: relative;
-
   width: 100vw;
   overflow-x: hidden;
 
@@ -150,9 +149,14 @@ body {
 
   background-color: var(--clr-main-bg);
 }
-
+body {
+  scrollbar-gutter: stable;
+}
 body.lock {
   overflow: hidden;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
 }
 
 .main {
@@ -449,4 +453,9 @@ body.lock {
   border-radius: 10px;
 
   background: #e14a4a68;
+}
+.layout {
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
 }
