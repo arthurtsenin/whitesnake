@@ -14,8 +14,9 @@
 }
 
 .scroller[data-animated="true"] .scroller__inner {
-  width: max-content;
   flex-wrap: nowrap;
+  width: max-content;
+
   animation: scroll var(--_animation-duration, 40s)
     var(--_animation-direction, forwards) linear infinite;
 }
@@ -53,7 +54,7 @@
   height: 100%;
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   .scroller li {
     width: 100px;
     height: 100px;

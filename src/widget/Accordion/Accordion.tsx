@@ -22,7 +22,7 @@ export const Accordion: FC<AccordionProps> = ({ accordions }) => {
     <Container>
       <section className={styles.section}>
         <div className={styles.imgWrapper}>
-          <Image src={bubble} alt="bubble image" />
+          <Image src={bubble} alt="bubble image" priority />
         </div>
         <div className={styles.container}>
           {accordions.map((item) => (

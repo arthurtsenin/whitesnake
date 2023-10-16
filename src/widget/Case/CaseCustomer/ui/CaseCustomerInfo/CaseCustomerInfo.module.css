@@ -1,19 +1,19 @@
 .infoWrapper {
   display: flex;
+  flex: 1.5;
   flex-direction: column;
   gap: 40px;
-  flex: 1.5;
 }
 
 .infoParagraph {
   color: var(--clr-secondary-text);
-  font-size: 16px;
   font-weight: var(--fw-light);
+  font-size: 16px;
   line-height: 130%;
   letter-spacing: -0.8px;
 }
 
-@media (width >= 744px) {
+@media (min-width: 744px) {
   .infoParagraph {
     font-size: 25px;
     letter-spacing: -1.25px;

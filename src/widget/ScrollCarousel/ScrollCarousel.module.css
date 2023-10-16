@@ -1,99 +1,101 @@
 .container {
   position: relative;
-  height: auto;
-  padding-block: 40px;
 
   width: 100%;
+  height: auto;
+  padding-block: 40px;
 }
 
 .sticker {
   position: relative;
   top: 0;
-
-  margin-inline: auto;
-  height: auto;
+  z-index: 2;
 
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
+  gap: 42px;
+  align-content: flex-start;
   align-items: flex-start;
   justify-content: space-around;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  gap: 42px;
-
-  /* overflow: hidden; */
-
-  z-index: 2;
+  height: auto;
+  margin-inline: auto;
 }
 
 .info {
-  color: #fff;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 90%;
-  letter-spacing: -0.771px;
-
   display: flex;
   align-items: center;
+
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+  font-style: normal;
+  line-height: 90%;
+  letter-spacing: -0.771px;
 }
+
 .info br {
   display: none;
 }
+
 .motionContainer {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  gap: 40px;
   align-items: flex-end;
-
+  justify-content: flex-start;
   width: 80%;
   margin-left: auto;
-
-  gap: 40px;
+  border-left: 1px solid rgb(255 255 255 / 20%);
 
   transition: all ease-in-out 1s linear;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .glowBlue,
 .glowRed {
   position: absolute;
   aspect-ratio: 1/1;
+
   width: 90%;
 }
 
 .glowBlue {
-  bottom: 5%;
   right: -55%;
+  bottom: 5%;
+
   border-radius: 263px;
-  background: rgba(124, 254, 253, 0.5);
+
+  background: rgb(124 254 253 / 50%);
   filter: blur(150px);
 }
 
 .glowRed {
   top: -5%;
   left: -25%;
+
   border-radius: 330px;
-  background: rgba(204, 11, 11, 0.5);
+
+  background: rgb(204 11 11 / 50%);
   filter: blur(150px);
 }
 
 .net {
   position: absolute;
-  right: 0;
   top: 0;
-  height: 100%;
+  right: 0;
+
   width: 46%;
+  height: 100%;
 }
+
 .raindop {
   position: absolute;
-  left: -20%;
   top: -10%;
+  left: -20%;
+  z-index: -1;
 
   height: 80vw;
-  width: auto;
+  aspect-ratio: 1/1;
   rotate: 86.083deg;
-  z-index: -1;
 }
 
 .raindop img,
@@ -102,83 +104,102 @@
   width: 100%;
   height: 100%;
 }
+
 .raindrops {
   position: absolute;
   top: 65%;
   right: -70%;
+
   width: 150vw;
   rotate: -60deg;
 }
 
-@media screen and (width > 500px) {
+@media screen and (min-width: 500px) {
+  .motionContainer {
+    margin-left: auto;
+  }
+
   .raindop {
     height: 50vw;
   }
+
   .raindrops {
     position: absolute;
     top: 65%;
     right: -25%;
+
     width: 70vw;
     rotate: -60deg;
   }
 }
 
-@media screen and (width > 744px) {
+@media screen and (min-width: 744px) {
   .container {
   }
+
   .sticker {
     gap: 50px;
     justify-content: flex-end;
   }
 
   .info {
-    height: 60vh;
-    font-size: 37.267px;
-    letter-spacing: -1.065px;
     position: absolute;
     top: 0;
     left: 0;
+
+    height: 60vh;
+
+    font-size: 37.267px;
+    letter-spacing: -1.065px;
   }
+
   .sticker {
-    flex-direction: row;
     position: sticky;
     top: 0;
+
+    flex-direction: row;
   }
+
   .glowBlue {
     right: -80%;
   }
+
   .glowRed {
     top: -25%;
     left: -75%;
   }
+
   .raindrops {
     top: 30%;
     right: -30%;
+
     width: 60vw;
   }
+
   .raindop {
-    left: -20%;
     top: -25%;
+    left: -20%;
 
     height: 50vw;
-    width: auto;
     rotate: 86.083deg;
   }
+
   .info br {
     display: block;
   }
+
   .motionContainer {
-    padding-bottom: 20vh;
     width: 50%;
+    padding-bottom: 20vh;
   }
 }
 
-@media screen and (width > 1200px) {
+@media screen and (min-width: 1200px) {
   .motionContainer {
-    width: 60%;
     display: flex;
-    align-items: center;
     gap: 200px;
+    align-items: center;
+    width: 60%;
   }
 
   .info {
@@ -187,43 +208,51 @@
   }
 
   .glowBlue {
-    bottom: -50%;
     right: -85%;
+    bottom: -50%;
+
     border-radius: 581px;
-    background: rgba(124, 254, 253, 0.5);
+
+    background: rgb(124 254 253 / 50%);
     filter: blur(345.20001220703125px);
   }
 
   .glowRed {
     top: -60%;
     left: -80%;
+
     border-radius: 921px;
-    background: rgba(204, 11, 11, 0.5);
+
+    background: rgb(204 11 11 / 50%);
     filter: blur(350px);
   }
+
   .raindop {
     position: absolute;
-    left: -10%;
     top: -25%;
+    left: -10%;
 
     height: 500px;
-    width: auto;
     rotate: 72deg;
   }
+
   .raindrops {
     position: absolute;
     top: 60%;
     right: -25%;
+
     width: 70vh;
   }
 }
-@media screen and (width > 1600px) {
+
+@media screen and (min-width: 1600px) {
   .info {
     font-size: 70px;
     letter-spacing: -2px;
   }
 }
-@media screen and (width > 1920px) {
+
+@media screen and (min-width: 1920px) {
   .info {
     height: 40vh;
   }

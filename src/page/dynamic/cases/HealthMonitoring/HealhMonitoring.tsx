@@ -14,7 +14,7 @@ import deviceService from "&/images/cases/healthMonitoring/deviceService.webp";
 
 export const HealthMonitoringPage = () => {
   return (
-    <section className={styles.section}>
+    <>
       <Mawi {...HEALTH_MONITORING_DATA.hero} />
       <CasePageLayout data={HEALTH_MONITORING_DATA}>
         <CaseSolution
@@ -103,6 +103,6 @@ export const HealthMonitoringPage = () => {
           </div>
         </CaseSolution>
       </CasePageLayout>
-    </section>
+    </>
   );
 };

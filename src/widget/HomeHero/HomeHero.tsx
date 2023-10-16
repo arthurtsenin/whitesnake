@@ -10,13 +10,9 @@ import raindropMiddle from "&/images/main-hero/raindrop-middle.png";
 import raindropUpper from "&/images/main-hero/raindrop-upper.png";
 import sphere from "&/images/main-hero/sphere.png";
 
-// type HomeHeroProps = {}
-
 export const HomeHero = () => {
   return (
     <section className={styles.hero}>
-      {/* <Container> */}
-
       <div className={styles.content}>
         <div className={styles.leftSide}>
           <div className={styles.text}>
@@ -52,7 +48,6 @@ export const HomeHero = () => {
       <div className={styles.slider}>
         <Scroller />
       </div>
-      {/* </Container> */}
     </section>
   );
 };

@@ -3,12 +3,13 @@
   --clr-border-case-keyword: #383838;
 
   display: inline-flex;
-  border-radius: 40px;
-  border: 0.8px solid var(--clr-border-case-keyword);
   padding: 9.6px 20px;
-  font-size: var(--fs-case-keyword);
-  letter-spacing: -0.4px;
-  line-height: 90%;
-  font-weight: var(--fw-regular);
+  border: 0.8px solid var(--clr-border-case-keyword);
+  border-radius: 40px;
+
   color: var(--clr-main-text);
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-case-keyword);
+  line-height: 90%;
+  letter-spacing: -0.4px;
 }

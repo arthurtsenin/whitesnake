@@ -1,9 +1,11 @@
 .link {
-  font-size: var(--fs-navlink);
+  width: fit-content;
+
   color: var(--clr-main-text);
   font-weight: var(--fw-regular);
+  font-size: var(--fs-navlink);
   letter-spacing: -0.9px;
-  width: fit-content;
+
   cursor: pointer;
 }
 

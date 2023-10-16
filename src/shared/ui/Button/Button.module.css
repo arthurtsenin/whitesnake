@@ -1,16 +1,20 @@
 .basis {
-  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: var(--btn-width);
   height: var(--btn-height);
-  color: var(--clr-main-text);
-  font-size: var(--fs-button-text);
-  font-weight: var(--fw-light);
   border-radius: var(--radius-400);
+
+  color: var(--clr-main-text);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-button-text);
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+
+  cursor: pointer;
+
   transition: all ease-in-out 0.2s;
 }
 
@@ -23,12 +27,15 @@
 }
 
 .transparent::before {
-  content: "";
   position: absolute;
-  inset: 0;
-  border-radius: var(--radius-400);
+
   padding: 1px;
+  border-radius: var(--radius-400);
+
   background: var(--clr-button-transparent-gradient);
+
+  content: "";
+  inset: 0;
   mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -42,6 +49,6 @@
 
 @media (hover: hover) {
   .basis:hover {
-    transform: scale(1.05);
+    transform: scale(1.01);
   }
 }

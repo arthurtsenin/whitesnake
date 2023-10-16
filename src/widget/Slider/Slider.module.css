@@ -4,16 +4,16 @@
 
 .barContainer {
   display: flex;
+  gap: 15px;
   align-items: center;
   justify-content: center;
-  gap: 15px;
 }
 
 .slidesContainer {
-  margin: 0 auto;
-  overflow: hidden;
   height: 400px;
+  margin: 0 auto;
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .slides {
