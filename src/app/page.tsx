@@ -42,6 +42,7 @@ export default function Home() {
         suptitle="технологии"
         data={TECHNOLOGIE_DATA}
       />
+
       <Contacts
         contacts={CONTACTS_DATA}
         title="Связаться с нами"

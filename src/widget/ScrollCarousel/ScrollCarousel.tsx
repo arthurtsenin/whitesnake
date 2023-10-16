@@ -14,15 +14,10 @@ import raindrops from "&/images/scroll-carousel/green-raindrops.png";
 import net from "&/images/scroll-carousel/net.png";
 import raindrop from "&/images/scroll-carousel/raindrop.png";
 export const ScrollCarousel = () => {
-  // const [_, setContainerHeight] = useState<number | null>(null);
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-
-  // const setter = (element: HTMLDivElement) => {
-  //   setContainerHeight(element.clientHeight);
-  // };
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", `64%`]);
 
@@ -45,10 +40,10 @@ export const ScrollCarousel = () => {
           <Image src={net} alt="net" />
         </div>
         <div className={styles.raindop}>
-          <Image src={raindrop} alt="raindrop" />
+          <Image src={raindrop} alt="raindrop" priority />
         </div>
         <div className={styles.raindrops}>
-          <Image src={raindrops} alt="raindrops" />
+          <Image src={raindrops} alt="raindrops" priority />
         </div>
       </div>
     </Container>
