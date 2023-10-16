@@ -13,8 +13,9 @@ import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
 
 type VacancyHeroProps = {
   path: string;
+  title: string;
 };
-export const VacancyHero: FC<VacancyHeroProps> = ({ path }) => {
+export const VacancyHero: FC<VacancyHeroProps> = ({ path, title }) => {
   return (
     <div className={styles.hero}>
       <div className={styles.glowRed} />
@@ -42,11 +43,11 @@ export const VacancyHero: FC<VacancyHeroProps> = ({ path }) => {
           <span className={styles.link}>Назад к вакансиям</span>
         </Link>
 
-        <h1 className={styles.title}>Trainee Python Developer</h1>
+        <h1 className={styles.title}>{title}</h1>
         <p className={styles.subtitle}>
-          Мы ищем ответственного Trainee Python Developer в нашу команду. Мы
-          ценим энтузиазм, стремление к развитию и готовы поддерживать вас на
-          этом пути. Присоединяйтесь!
+          Мы ищем ответственного {title} в нашу команду. Мы ценим энтузиазм,
+          стремление к развитию и готовы поддерживать вас на этом пути.
+          Присоединяйтесь!
         </p>
 
         <div className={styles.buttons}>

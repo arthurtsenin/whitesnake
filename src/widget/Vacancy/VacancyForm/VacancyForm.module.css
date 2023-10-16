@@ -1,39 +1,44 @@
 .container {
   position: relative;
+
   width: 100%;
 }
 
 .form {
-  background-color: transparent;
   display: flex;
   flex-direction: column;
   gap: 40px;
   width: 90%;
-  height: 100%;
   max-width: 987px;
-  margin-inline: auto;
-  padding-bottom: 1px;
+  height: 100%;
   margin-bottom: 1px;
+  padding-bottom: 1px;
+
+  background-color: transparent;
+  margin-inline: auto;
 }
 
 .glowBlue {
   position: absolute;
-  aspect-ratio: 1/1;
-  width: 100%;
   top: -40%;
   left: -50%;
+  z-index: -2;
+
+  width: 100%;
   border-radius: 263px;
+
   background: rgba(124, 254, 253, 0.5);
   filter: blur(170px);
-  z-index: -2;
+  aspect-ratio: 1/1;
 }
 
 .raindrops {
   position: absolute;
   top: -15%;
   left: -70%;
-  width: 90vw;
   z-index: -1;
+
+  width: 90vw;
 
   rotate: -60deg;
 }
@@ -61,22 +66,25 @@
 
 @media screen and (min-width: 960px) {
   .glowBlue {
-    width: 50%;
     top: -60%;
     left: -10%;
+
+    width: 50%;
+
     filter: blur(350px);
   }
 
   .raindrops {
     top: -40%;
     left: -62%;
+
     width: 70vw;
   }
 
   .inputs {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     justify-items: center;
   }
@@ -90,8 +98,8 @@
   }
 
   .inputs input[name="phone"] {
-    grid-column: 2/3;
     grid-row: 2/3;
+    grid-column: 2/3;
   }
 
   .inputs input[name="email"] {
@@ -111,15 +119,18 @@
 
 @media screen and (min-width: 1200px) {
   .glowBlue {
-    width: 40%;
     top: -100%;
     left: -30%;
+
+    width: 40%;
+
     filter: blur(370px);
   }
 
   .raindrops {
     top: -100%;
     left: -25%;
+
     width: 40vw;
   }
 }
