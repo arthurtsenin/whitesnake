@@ -23,7 +23,7 @@ jobs:
       - name: Run install
         uses: borales/actions-yarn@v4
         with:
-          cmd: yarn cache clean && install # will run yarn install command
+          cmd: install # will run yarn install command
 
       - name: Build develop bundle
         uses: borales/actions-yarn@v4
