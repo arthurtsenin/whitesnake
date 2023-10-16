@@ -1,12 +1,14 @@
 {
-  "extends": ["stylelint-config-standard"],
+  "extends": [],
+  "plugins": ["stylelint-order", "stylelint-config-rational-order/plugin"],
   "rules": {
-    "rule-empty-line-before": [
-      "always",
+    "order/properties-order": [],
+    "plugin/rational-order": [
+      true,
       {
-        "except": ["first-nested"]
+        "border-in-box-model": true,
+        "empty-line-between-groups": true
       }
-    ],
-    "declaration-empty-line-before": "never"
+    ]
   }
 }

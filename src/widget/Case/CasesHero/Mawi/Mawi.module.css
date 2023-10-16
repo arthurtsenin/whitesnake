@@ -1,33 +1,35 @@
 .hero {
   position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100vw;
+  height: auto;
+  min-height: max-content;
   overflow: hidden;
   margin-inline: auto;
-  width: 100vw;
-  min-height: max-content;
-  height: auto;
   padding-block: var(--header-height);
 }
 
 .hero::before {
   position: absolute;
   z-index: 1;
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  inset: 0;
+
   width: 100vw;
   height: auto;
-  background: linear-gradient(360deg, #000000 10%, rgba(0, 0, 0, 0) 90%);
+
+  background: linear-gradient(360deg, #000 10%, rgb(0 0 0 / 0%) 90%);
+
+  content: "";
 }
 
 .content {
   --gap-content: 26px;
 
   position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,9 +39,10 @@
 .imgWrapper {
   z-index: 2;
   display: flex;
-  opacity: 0.7;
   width: 100%;
   height: auto;
+
+  opacity: 0.7;
 }
 
 .imgWrapper img {
@@ -56,28 +59,32 @@
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-hero-text);
+
   word-break: break-word;
 }
 
 .title {
   width: fit-content;
-  background: var(--clr-title-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+  font-weight: var(--fw-bold);
   font-size: var(--fs-hero-title);
   line-height: 90%;
   letter-spacing: -1.302px;
-  font-weight: var(--fw-bold);
+
+  background: var(--clr-title-gradient);
+  background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .subtitle {
   width: 90%;
+
+  color: var(--clr-secondary-text);
+  font-weight: var(--fw-light);
   font-size: var(--fs-hero-description);
   line-height: 130%;
   letter-spacing: -0.7px;
-  font-weight: var(--fw-light);
-  color: var(--clr-secondary-text);
 }
 
 .title::first-letter,
@@ -92,12 +99,13 @@
   z-index: 3;
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+
   column-gap: var(--gap-col-keywords);
   row-gap: var(--gap-row-keywords);
-  width: 100%;
 }
 
-@media screen and (width >=744px) {
+@media screen and (min-width: 744px) {
   .content {
     --gap-content: 32px;
 
@@ -120,6 +128,7 @@
 
   .subtitle {
     width: 80%;
+
     letter-spacing: -1px;
   }
 
@@ -128,9 +137,10 @@
   }
 }
 
-@media screen and (width >=1200px) {
+@media screen and (min-width: 1200px) {
   .hero {
     padding-block: 0;
+
     height: 100vh;
   }
 
@@ -143,6 +153,7 @@
   .imgWrapper {
     position: absolute;
     right: 0;
+
     width: 40vh;
     height: 82vh;
   }
@@ -160,12 +171,13 @@
   }
 }
 
-@media screen and (width >=1440px) {
+@media screen and (min-width: 1440px) {
   .imgWrapper {
-    transform: translateX(-280px);
-    opacity: 1;
     width: 35vh;
     height: 85vh;
+
+    transform: translateX(-280px);
+    opacity: 1;
   }
 
   .title {
@@ -181,7 +193,7 @@
   }
 }
 
-@media screen and (width >=1920px) {
+@media screen and (min-width: 1920px) {
   .content {
     --gap-content: 40px;
   }

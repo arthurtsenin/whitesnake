@@ -29,23 +29,16 @@ export const ScrollCarousel = () => {
   return (
     <Container>
       <div ref={targetRef} className={styles.container}>
-        {/* <Container> */}
-
         <div className={styles.sticker}>
           <motion.div className={styles.info} style={{ top: y }}>
             Как начать <br /> работать с нами
           </motion.div>
-          <div
-            // style={{ y }}
-            // ref={setter}
-            className={styles.motionContainer}
-          >
+          <div className={styles.motionContainer}>
             {WORKFLOW_CARDS.map((card) => {
               return <ScrollCard {...card} key={card.order} />;
             })}
           </div>
         </div>
-        {/* </Container> */}
         <div className={styles.glowRed} />
         <div className={styles.glowBlue} />
         <div className={styles.net}>

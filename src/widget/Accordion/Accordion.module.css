@@ -1,5 +1,6 @@
 .section {
   position: relative;
+
   min-height: max-content;
 }
 
@@ -7,6 +8,7 @@
   position: absolute;
   top: -10%;
   left: -27%;
+
   width: 70vw;
   aspect-ratio: 1/1;
 }
@@ -17,14 +19,16 @@
 }
 
 .container {
-  width: 100%;
   position: relative;
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
-  margin: auto;
+  width: 100%;
   height: auto;
+  margin: auto;
+
   background-color: transparent;
-  z-index: 1;
   contain: content;
 }
 
@@ -39,6 +43,7 @@
   .imgWrapper {
     top: -20%;
     left: -10%;
+
     width: 30vw;
     aspect-ratio: 1/1;
   }
@@ -54,6 +59,7 @@
   .imgWrapper {
     top: -20%;
     left: -10%;
+
     width: 30vw;
     aspect-ratio: 1/1;
   }

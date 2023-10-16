@@ -1,59 +1,57 @@
 .container {
-  width: 98%;
   display: flex;
   justify-content: flex-start;
-  /* border-radius: var(--radius-300); */
+  width: 98%;
   margin-bottom: var(--gap-widget);
-  overflow: hidden;
   margin-left: 2%;
+  overflow: hidden;
   padding-inline: 5px;
 }
 
 .tabs {
   width: 100%;
+  width: fit-content;
   padding: 8px;
+  border: 1px solid rgb(255 255 255 / 15%);
+  border-radius: var(--radius-300);
+  overflow-x: auto;
+
+  color: var(--clr-secondary-text);
   font-weight: var(--fw-light);
   font-size: var(--fs-tab);
+
   background-color: var(--clr-main-bg);
-  color: var(--clr-secondary-text);
-  border-radius: var(--radius-300);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  overflow-x: auto;
-  /* margin-left: 5%; */
-  width: fit-content;
 }
 
 .tabsInner {
   display: flex;
+  gap: 20px;
+  width: fit-content;
   overflow-x: auto;
   margin-inline: 5px;
-  width: fit-content;
-  gap: 20px;
 }
 
 .tabs::-webkit-scrollbar,
 .tabsInner::-webkit-scrollbar {
   display: none;
 }
-@media screen and (width >= 700px) {
-  .container {
-    /* margin-left: 0; */
-  }
-}
-@media screen and (width >= 960px) {
+
+@media screen and (min-width: 960px) {
   .container {
     justify-content: center;
   }
+
   .tabsInner {
     width: auto;
   }
+
   .tabs {
     gap: 10px;
     padding: 10px;
   }
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     margin-left: 0;
   }
@@ -63,9 +61,10 @@
   }
 }
 
-@media screen and (width >= 1400px) {
+@media screen and (min-width: 1400px) {
   .container {
     margin-inline: auto;
+
     max-width: 1920px;
   }
 }
