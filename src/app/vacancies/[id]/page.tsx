@@ -81,12 +81,10 @@ export type VacancyType = {
 };
 
 async function getData(id: string): Promise<VacancyType> {
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_VACANCY_URL}${id}${process.env.NEXT_PUBLIC_VACANCY_HOST}`,
-    {
-      cache: "no-store",
-    },
-  );
+  const url = `https://api.hh.ru/vacancies/?text=%D0%A3%D0%B0%D0%B9%D1%82%D0%A1%D0%BD%D0%B5%D0%B9%D0%BA${id}?host=rabota.by`;
+  const res = await fetch(`${url}`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
