@@ -6,10 +6,10 @@
   gap: 16px;
   box-sizing: border-box;
   min-height: max-content;
+  position: relative;
   padding: 16px;
   border: 1px solid var(--clr-border);
   border-radius: var(--radius-100);
-
   background-clip: padding-box;
 }
 
@@ -120,6 +120,11 @@
   }
 
   .cardImage {
+  }
+
+  .card.withIcon .cardButton > button,
+  .card.withoutIcon .cardButton > button {
+    max-width: 250px;
   }
 }
 

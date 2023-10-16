@@ -74,15 +74,13 @@
 .description {
   display: grid;
   grid-template-rows: 0fr;
-  width: 60%;
   padding-top: 15px;
-
   color: var(--clr-secondary-text);
   font-weight: var(--fw-light);
   font-size: var(--fs-questions-description);
   line-height: 120%;
   letter-spacing: -0.6px;
-
+  width: 90%;
   transition: all 0.4s;
 }
 
@@ -119,5 +117,9 @@
 
   .line {
     margin-block: 50px;
+  }
+
+  .description {
+    width: 60%;
   }
 }

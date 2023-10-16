@@ -14,13 +14,14 @@
 
 .circles {
   display: grid;
-  grid-template-rows: repeat(2, 37px);
-  grid-template-columns: repeat(8, 37px);
-  align-self: center;
   height: max-content;
+  grid-template-columns: repeat(8, 30px);
+  grid-template-rows: repeat(2, 30px);
+  /* overflow: hidden; */
+  transform: translateY(-5%) translateX(-10%);
+  align-self: center;
   margin-bottom: 8px;
   margin-left: 8px;
-
   transform: translateY(-5%) translateX(-10%);
 }
 
@@ -29,7 +30,7 @@
   flex-direction: column;
   gap: 4px;
   margin-top: 8px;
-  margin-left: 8px;
+  margin-inline: 8px;
 }
 
 .text p:first-child {

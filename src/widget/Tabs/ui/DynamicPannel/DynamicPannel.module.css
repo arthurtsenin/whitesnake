@@ -8,6 +8,7 @@
 .pannels {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
   gap: var(--gap-dynamic-pannel);
 }
 
@@ -16,25 +17,24 @@
   flex-direction: column;
   gap: 30px;
   align-items: center;
+  justify-content: space-around;
+  padding: 32px 0 8px;
+}
+
+.item img {
+  width: 40%;
   justify-content: space-between;
   padding-top: 32px;
   padding-bottom: 8px;
   border-radius: var(--radius-300);
-
   background: var(--clr-contact-card-bg);
-}
-
-.item img {
-  width: 50%;
-  aspect-ratio: 1/1;
-
   height: fit-content;
   object-fit: contain;
 }
 
 .django img {
-  width: 80%;
-  aspect-ratio: 16/9;
+  width: 70%;
+  aspect-ratio: unset;
 }
 
 .name {
@@ -44,16 +44,34 @@
   text-transform: capitalize;
 }
 
+@media screen and (width >= 450px) {
+  .item img {
+    width: 25%;
+  }
+
+  .django img {
+    width: 60%;
+  }
+}
+
 @media screen and (width >= 960px) {
   .pannels {
     grid-template-columns: repeat(3, 1fr);
   }
 
   .item {
-    padding-bottom: 20px;
+    padding: 32px 0 16px;
+    gap: 40px;
+    justify-content: space-between;
   }
 
   .name {
     font-size: 20px;
+  }
+}
+
+@media screen and (width >= 1440px) {
+  .item {
+    padding: 59px 0 20px;
   }
 }
