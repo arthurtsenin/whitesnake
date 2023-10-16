@@ -11,7 +11,7 @@ import { CasePageLayout } from "../CasePageLayout";
 
 export const AiChatbotsPage = () => {
   return (
-    <section className={styles.section}>
+    <>
       <LivePerson {...AI_CHATBOTS_DATA.hero} />
       <CasePageLayout data={AI_CHATBOTS_DATA}>
         <CaseSolution title={AI_CHATBOTS_DATA.solution_title}>
@@ -29,6 +29,6 @@ export const AiChatbotsPage = () => {
           </div>
         </CaseSolution>
       </CasePageLayout>
-    </section>
+    </>
   );
 };
