@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import styles from "./FirstCard.module.css";
 
-import raindropBlue from "&/images/statistic/raindrop-blue.png";
-import raindropYellow from "&/images/statistic/raindrop-yellow.png";
+import raindropBlue from "&/images/statistic/raindrop.png";
+import raindropYellow from "&/images/statistic/raindrop.png";
 
 export const FirstCard = () => {
   return (
