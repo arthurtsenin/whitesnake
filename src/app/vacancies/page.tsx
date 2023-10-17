@@ -1,6 +1,4 @@
-// 'use client'
-
-import Link from "next/link";
+import { VacanciesPageLayout } from "@/page/Vacancies.page";
 
 export type VacancyType = {
   id: string;
@@ -71,37 +69,21 @@ async function getData(): Promise<Record<string, Array<VacancyType>>> {
 
 export default async function VacanciesPage() {
   const data = await getData();
+  const vacancies = data.items;
 
-  // console.log(data.ite, [0]);
+  const employerPath =
+    vacancies?.at(0)?.employer.alternate_url ||
+    "https://rabota.by/employer/5674346";
+  const titles = vacancies.map((vacancy) => vacancy.name);
+  const locations = vacancies.map((vacancy) => vacancy.area.name);
+  const urls = vacancies.map((vacancy) => vacancy.alternate_url);
 
   return (
-    <section style={{ paddingBlock: "200px" }}>
-      Vacancies Page
-      <ol>
-        {data &&
-          data?.items.map((vacancy) => (
-            <li
-              key={vacancy.id}
-              style={{ marginBlock: "20px", backgroundColor: "gray" }}
-            >
-              <Link
-                href={`/vacancies/${vacancy.id}`}
-                style={{ marginBottom: "15px" }}
-              >
-                <p>{vacancy.name}</p>
-                <p>ООО {vacancy.employer.name}</p>
-                <p>Минск</p>
-                <p>{vacancy.experience.name}</p>
-              </Link>
-            </li>
-          ))}
-      </ol>
-    </section>
+    <VacanciesPageLayout
+      path={employerPath}
+      titles={titles}
+      locations={locations}
+      urls={urls}
+    />
   );
-}
-
-{
-  /* <a target="_blank" href={vacancy.alternate_url}>
-Ссылка на HH.ru : {vacancy.name}
-</a> */
 }
