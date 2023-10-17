@@ -80,7 +80,12 @@ export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
       <div className={styles.raindrops}>
         <Image src={raindrops} alt="raindrops" priority />
       </div>
-      <form className={styles.form} action={actionHandler} autoComplete="off">
+      <form
+        className={styles.form}
+        action={actionHandler}
+        autoComplete="off"
+        id="leave-request"
+      >
         <FormTitle title="Оставить заявку" />
 
         <div className={styles.fields}>

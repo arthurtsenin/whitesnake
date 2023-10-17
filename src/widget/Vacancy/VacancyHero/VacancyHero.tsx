@@ -51,7 +51,9 @@ export const VacancyHero: FC<VacancyHeroProps> = ({ path, title }) => {
         </p>
 
         <div className={styles.buttons}>
-          <Button variant="primary">Откликнуться</Button>
+          <Link href="#leave-request">
+            <Button variant="primary">Откликнуться</Button>
+          </Link>
 
           <Link target="_blank" href={path}>
             <Button variant="transparent">Перейти на rabota.by</Button>
