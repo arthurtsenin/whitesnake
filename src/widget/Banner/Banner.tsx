@@ -18,7 +18,6 @@ export const Banner: FC = () => {
             placeholder="blur"
             quality={100}
             fill
-            priority
             sizes="100vw"
             style={{
               objectFit: "cover",

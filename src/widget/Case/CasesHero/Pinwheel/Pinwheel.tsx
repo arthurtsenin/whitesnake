@@ -20,7 +20,6 @@ export const Pinwheel: FC<PinwheelProps> = ({ title, subtitle, keywords }) => {
       <Image
         alt=""
         src={heroBg}
-        placeholder="blur"
         quality={100}
         fill
         priority

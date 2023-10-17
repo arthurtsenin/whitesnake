@@ -19,14 +19,14 @@ export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
           placeholder="blur"
           quality={100}
           sizes="100vw"
+          // priority
           style={{
             objectFit: "cover",
           }}
-          priority
           fill
         />
         <div className={styles.text}>
-          <h2 className={styles.title}>{panel.name}</h2>
+          <h3 className={styles.title}>{panel.name}</h3>
           <p className={styles.description}>{panel.description}</p>
         </div>
       </div>

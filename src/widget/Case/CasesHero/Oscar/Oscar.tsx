@@ -21,7 +21,6 @@ export const Oscar: FC<OscarProps> = ({ title, subtitle, keywords }) => {
       <Image
         alt=""
         src={heroBg}
-        placeholder="blur"
         quality={100}
         fill
         priority

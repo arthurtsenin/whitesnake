@@ -25,7 +25,6 @@ export const Datarails: FC<DatarailsProps> = ({
       <Image
         alt=""
         src={heroBg}
-        placeholder="blur"
         quality={100}
         fill
         priority

@@ -78,7 +78,7 @@ export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
       <div className={styles.glowBlue} />
 
       <div className={styles.raindrops}>
-        <Image src={raindrops} alt="raindrops" />
+        <Image src={raindrops} alt="raindrops" priority />
       </div>
       <form className={styles.form} action={actionHandler} autoComplete="off">
         <FormTitle title="Оставить заявку" />

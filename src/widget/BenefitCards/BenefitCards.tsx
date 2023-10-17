@@ -6,7 +6,7 @@ import { BenefitCardData } from "./types";
 import { BenefitCard } from "./ui/BenefitCard";
 import { Container } from "../../shared";
 
-type BenefitCardsProps = {
+export type BenefitCardsProps = {
   variant: "withIcon" | "withoutIcon";
   data: BenefitCardData[];
 };

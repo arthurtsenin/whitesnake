@@ -11,7 +11,7 @@ export const FirstCard = () => {
       <div className={styles.glowBlue}></div>
       <div className={styles.glowRed}></div>
       <div className={styles.textContainer}>
-        <h5>340</h5>
+        <h4>340</h4>
         <p>
           лет опыта в сумме <br /> у всех разработчиков
         </p>
