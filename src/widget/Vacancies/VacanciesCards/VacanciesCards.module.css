@@ -2,7 +2,8 @@
   --gap-vacancies-cards: 8px;
 
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--gap-vacancies-cards);
   width: 100%;
 }
@@ -15,7 +16,8 @@
 
 @media screen and (min-width: 1200px) {
   .container {
-    grid-template: 1fr / repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     --gap-vacancies-cards: 40px;
   }
 }
