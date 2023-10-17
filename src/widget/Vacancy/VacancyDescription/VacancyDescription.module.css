@@ -5,6 +5,8 @@
   width: 90%;
   max-width: 987px;
   margin-inline: auto;
+
+  position: relative;
 }
 
 .title {
@@ -19,6 +21,7 @@
 }
 
 .item {
+  z-index: 1;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
   font-size: 16px;
@@ -54,6 +57,23 @@
     gap: 36px;
   }
 
+  .glowRed {
+    position: absolute;
+    aspect-ratio: 1/1;
+
+    width: 80%;
+  }
+
+  .glowRed {
+    right: -65%;
+    top: 20%;
+
+    border-radius: 330px;
+
+    background: rgba(204, 11, 11, 0.5);
+    filter: blur(245px);
+  }
+
   .title {
     font-size: 36px;
   }
@@ -67,6 +87,10 @@
 @media screen and (min-width: 1200px) {
   .container {
     gap: 48px;
+  }
+
+  .glowRed {
+    display: none;
   }
 
   .title {
