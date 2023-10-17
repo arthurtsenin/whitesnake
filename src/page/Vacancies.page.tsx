@@ -1,26 +1,29 @@
 import { FC } from "react";
 
+import { VacancyType } from "@/app/vacancies/page";
+import { VacanciesCards } from "@/widget/Vacancies/VacanciesCards/VacanciesCards";
 // import { VacanciesForm } from "@/widget/Vacancies/VacanciesForm/VacanciesForm";
 import { VacanciesHero } from "@/widget/Vacancies/VacanciesHero/VacanciesHero";
-import { VacanciesCards } from "@/widget/Vacancies/VacancyCards/VacancyCards";
 
 type VacanciesPageLayoutProps = {
   path: string;
-  titles: Array<string>;
-  locations: Array<string>;
-  urls: Array<string>;
+  vacancies: Array<VacancyType>;
 };
 
 export const VacanciesPageLayout: FC<VacanciesPageLayoutProps> = ({
   path,
-  titles,
-  locations,
-  urls,
+  vacancies,
 }) => {
+  const cards = vacancies.map((card) => ({
+    title: card.name,
+    location: card.area.name,
+    url: card.alternate_url,
+  }));
+
   return (
     <>
       <VacanciesHero path={path} />
-      <VacanciesCards titles={titles} locations={locations} urls={urls} />
+      <VacanciesCards cards={cards} />
       {/* <VacanciesForm /> */}
     </>
   );

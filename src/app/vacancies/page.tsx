@@ -73,16 +73,6 @@ export default async function VacanciesPage() {
   const employerPath =
     vacancies?.at(0)?.employer.alternate_url ||
     "https://rabota.by/employer/5674346";
-  const titles = vacancies.map((vacancy) => vacancy.name);
-  const locations = vacancies.map((vacancy) => vacancy.area.name);
-  const urls = vacancies.map((vacancy) => vacancy.alternate_url);
 
-  return (
-    <VacanciesPageLayout
-      path={employerPath}
-      titles={titles}
-      locations={locations}
-      urls={urls}
-    />
-  );
+  return <VacanciesPageLayout path={employerPath} vacancies={vacancies} />;
 }
