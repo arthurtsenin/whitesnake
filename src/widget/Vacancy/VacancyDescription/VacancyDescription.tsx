@@ -12,6 +12,7 @@ export const VacancyDescription: FC<VacancyDescriptionProps> = ({
 }) => {
   return (
     <div className={styles.container}>
+      <div className={styles.glowRed} />
       {titles?.map((title, index) => (
         <React.Fragment key={title}>
           <h3 className={styles.title}>{title}</h3>
