@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 
 import styles from "./BenefitCard.module.css";
@@ -18,9 +19,10 @@ export const BenefitCard: FC<BenefitCardProps> = ({
   buttonText,
   icon,
   variant,
+  link,
 }) => {
   return (
-    <div className={classNames(styles.card, styles[variant])}>
+    <Link href={link} className={classNames(styles.card, styles[variant])}>
       {icon && (
         <div className={styles.cardImage}>
           <Image src={icon} alt="benefit card icon" />
@@ -33,6 +35,6 @@ export const BenefitCard: FC<BenefitCardProps> = ({
           <Button variant="primary">{buttonText}</Button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };

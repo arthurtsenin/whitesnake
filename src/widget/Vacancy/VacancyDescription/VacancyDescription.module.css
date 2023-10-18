@@ -1,12 +1,12 @@
 .container {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
   width: 90%;
   max-width: 987px;
   margin-inline: auto;
-
-  position: relative;
 }
 
 .title {
@@ -22,6 +22,7 @@
 
 .item {
   z-index: 1;
+
   color: rgba(255, 255, 255, 0.6);
   font-weight: 400;
   font-size: 16px;
@@ -65,8 +66,8 @@
   }
 
   .glowRed {
-    right: -65%;
     top: 20%;
+    right: -65%;
 
     border-radius: 330px;
 

@@ -23,6 +23,7 @@ export const BenefitCards: FC<BenefitCardsProps> = ({ variant, data }) => {
             buttonText={item.buttonText}
             variant={variant}
             icon={item.icon}
+            link={item.link}
           />
         ))}
       </div>
