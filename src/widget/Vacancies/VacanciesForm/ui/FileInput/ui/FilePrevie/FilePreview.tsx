@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FC } from "react";
 
-import styles from "./FilePrevie.module.css";
+import styles from "./FilePreview.module.css";
 
 import complete from "&/images/vacancies/complete.png";
 
