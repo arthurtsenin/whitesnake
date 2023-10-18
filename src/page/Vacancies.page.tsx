@@ -15,9 +15,9 @@ export const VacanciesPageLayout: FC<VacanciesPageLayoutProps> = ({
   vacancies,
 }) => {
   const cards = vacancies.map((card) => ({
+    id: card.id,
     title: card.name,
     location: card.area.name,
-    url: card.alternate_url,
   }));
 
   return (

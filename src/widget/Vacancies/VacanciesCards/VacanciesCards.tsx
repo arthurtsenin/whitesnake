@@ -14,12 +14,12 @@ export const VacanciesCards: FC<VacanciesCardsProps> = ({ cards }) => {
   return (
     <Container>
       <section className={styles.container}>
-        {cards.map((card, idx) => (
+        {cards.map((card) => (
           <VacancyCard
-            key={idx}
+            key={card.id}
+            id={card.id}
             title={card.title}
             location={card.location}
-            url={card.url}
           />
         ))}
       </section>
