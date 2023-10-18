@@ -1,3 +1,4 @@
+import cn from "classnames";
 import { FC } from "react";
 
 import styles from "./VacanciesCards.module.css";
@@ -13,7 +14,11 @@ type VacanciesCardsProps = {
 export const VacanciesCards: FC<VacanciesCardsProps> = ({ cards }) => {
   return (
     <Container>
-      <section className={styles.container}>
+      <section
+        className={cn(styles.container, {
+          [styles.gridCol2]: cards.length < 6,
+        })}
+      >
         {cards.map((card) => (
           <VacancyCard
             key={card.id}
