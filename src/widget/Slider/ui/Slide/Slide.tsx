@@ -15,7 +15,6 @@ export const Slide: FC<SliderItemProps> = ({ slide }) => {
       <Image
         alt="Slide image"
         src={slide?.image || ""}
-        quality={100}
         fill
         sizes="100vw"
         style={{

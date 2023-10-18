@@ -21,7 +21,6 @@ export const Web3: FC<Web3Props> = ({ title, subtitle, keywords }) => {
       <Image
         alt=""
         src={heroBg}
-        quality={100}
         fill
         priority
         sizes="100vw"

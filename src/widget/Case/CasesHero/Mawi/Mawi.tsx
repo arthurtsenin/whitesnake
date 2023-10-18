@@ -21,7 +21,6 @@ export const Mawi: FC<MawiProps> = ({ title, subtitle, keywords }) => {
       <Image
         alt=""
         src={heroBg}
-        quality={100}
         fill
         priority
         sizes="100vw"

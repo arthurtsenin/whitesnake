@@ -25,7 +25,6 @@ export const LivePerson: FC<LivePersonProps> = ({
       <Image
         alt=""
         src={heroBg}
-        quality={100}
         fill
         priority
         sizes="100vw"

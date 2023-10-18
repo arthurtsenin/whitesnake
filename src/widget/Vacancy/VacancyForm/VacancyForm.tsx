@@ -1,10 +1,12 @@
 "use client";
 
 import { yupResolver } from "@hookform/resolvers/yup";
+import classNames from "classnames";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import Image from "next/image";
 import { FC } from "react";
 import { ChangeEvent, useState } from "react";
+import { flushSync } from "react-dom";
 import { useForm } from "react-hook-form";
 
 import styles from "./VacancyForm.module.css";
@@ -16,19 +18,28 @@ import { FORM_KEYS, VacancyFormType } from "./formKeys";
 import { FileInput } from "./ui/FileInput/FileInput";
 import { FormTitle } from "./ui/FormTitle/FormTitle";
 import { Input } from "./ui/Input/Input";
+import { Loader } from "./ui/Loader/Loader";
 import { Textarea } from "./ui/Textarea/Textarea";
 import { FORM_VACANCY_SCHEMA } from "./validation";
 import { storage } from "../../../../firestore";
 
+import close from "&/images/vacancies/form/close.png";
 import raindrops from "&/images/vacancies/form/green-raindrops.png";
 
 type VacancyFormProps = {
   vacancy: string;
 };
+type FormStatusType = "pending" | "error" | "success" | "loading";
 
 export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
   const [selectedFileName, setSelectedFileName] = useState<string>("");
   const [downloadUrl, setDownloadUrl] = useState<string>("");
+
+  const [isToastOpen, setIsToastOpen] = useState<boolean>(false);
+  const [toastType, setToastType] = useState<string>("");
+  const [toastText, setToastText] = useState<string>("");
+
+  const [formStatus, setFormStatus] = useState<FormStatusType>("pending");
 
   const {
     reset,
@@ -64,10 +75,28 @@ export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
   };
 
   const actionHandler = async (FormData: FormData) => {
+    flushSync(() => setFormStatus("loading"));
+
     FormData.append(FORM_KEYS.url, downloadUrl);
     FormData.append(FORM_KEYS.vacancy, vacancy);
 
-    await sendEmail(FormData);
+    const result = await sendEmail(FormData);
+
+    if (result.success) {
+      setIsToastOpen(true);
+      setToastType("success");
+      setToastText(result.success);
+
+      setFormStatus("success");
+    }
+
+    if (result.error) {
+      setIsToastOpen(true);
+      setToastType("error");
+      setToastText(result.error);
+
+      setFormStatus("error");
+    }
 
     setSelectedFileName("");
     reset();
@@ -83,11 +112,10 @@ export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
       <form
         className={styles.form}
         action={actionHandler}
-        autoComplete="off"
+        // autoComplete="off"
         id="leave-request"
       >
         <FormTitle title="Оставить заявку" />
-
         <div className={styles.fields}>
           <div className={styles.inputs}>
             <Input
@@ -143,12 +171,29 @@ export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
             selectedName={selectedFileName}
             handleFileChange={handleFileChange}
           />
-
-          <Button variant="secondary" disabled={!isValid}>
-            Отправить
-          </Button>
+          <div className={styles.button}>
+            <Button variant="secondary" disabled={!isValid} type="submit">
+              <div className={styles.text}>
+                <p>Отправить</p>
+                {formStatus === "loading" ? <Loader /> : ""}
+              </div>
+            </Button>
+            <p className={styles.privacy}>
+              Нажимая на кнопку, вы даете согласие на обработку персональных
+              данных и соглашаетесь c политикой конфиденциальности.
+            </p>
+          </div>
         </div>
       </form>
+      {isToastOpen && (
+        <div
+          onClick={() => setIsToastOpen(false)}
+          className={classNames(styles.basic, styles[toastType])}
+        >
+          <p>{toastText}</p>
+          <Image src={close} alt="close icon" />
+        </div>
+      )}
     </section>
   );
 };

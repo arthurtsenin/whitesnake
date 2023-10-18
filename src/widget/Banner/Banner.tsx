@@ -16,7 +16,6 @@ export const Banner: FC = () => {
             alt="banner"
             src={bannerBg}
             placeholder="blur"
-            quality={100}
             fill
             sizes="100vw"
             style={{

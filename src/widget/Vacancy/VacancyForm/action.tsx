@@ -38,8 +38,12 @@ export const sendEmail = async (formData: FormData) => {
         />
       ),
     });
-    return { message: "success" };
+    return { success: "Заявка отправлена!" };
   } catch (error) {
-    return { message: "error" };
+    if (error instanceof Error) {
+      return { error: error.message };
+    } else {
+      return { error: "Что-то пошло не так" };
+    }
   }
 };
