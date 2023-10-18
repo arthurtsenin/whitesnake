@@ -65,6 +65,11 @@
   color: var(--clr-error);
 }
 
+.open .arrow {
+  rotate: 180deg;
+  transition: 0.3s ease-in-out;
+}
+
 @media (hover: hover) {
   .dropdownItem:hover {
     color: var(--clr-select-dropdown-text-active);

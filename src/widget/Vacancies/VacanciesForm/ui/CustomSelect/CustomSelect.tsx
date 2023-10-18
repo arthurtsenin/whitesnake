@@ -58,6 +58,7 @@ export const CustomSelect: FC<CustomSelectProps> = ({
         <button
           type="button"
           className={cn(styles.select, {
+            [styles.open]: open,
             [styles.invalid]: error,
           })}
           onClick={toggleVisibility}
