@@ -2,7 +2,8 @@ import { FC } from "react";
 
 import { VacancyType } from "@/app/vacancies/page";
 import { VacanciesCards } from "@/widget/Vacancies/VacanciesCards/VacanciesCards";
-// import { VacanciesForm } from "@/widget/Vacancies/VacanciesForm/VacanciesForm";
+import { JOB_TITLES } from "@/widget/Vacancies/VacanciesForm/data";
+import { VacanciesForm } from "@/widget/Vacancies/VacanciesForm/VacanciesForm";
 import { VacanciesHero } from "@/widget/Vacancies/VacanciesHero/VacanciesHero";
 
 type VacanciesPageLayoutProps = {
@@ -24,7 +25,7 @@ export const VacanciesPageLayout: FC<VacanciesPageLayoutProps> = ({
     <>
       <VacanciesHero path={path} />
       <VacanciesCards cards={cards} />
-      {/* <VacanciesForm /> */}
+      <VacanciesForm jobTitles={JOB_TITLES} />
     </>
   );
 };
