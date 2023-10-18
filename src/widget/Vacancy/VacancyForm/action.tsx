@@ -16,7 +16,7 @@ export const sendEmail = async (formData: FormData) => {
   const linkedIn = formData.get(FORM_KEYS.linkedIn);
   const message = formData.get(FORM_KEYS.message);
   const url = formData.get(FORM_KEYS.url);
-  const vacancy = formData.get(FORM_KEYS.vacancy);
+  const jobTitle = formData.get(FORM_KEYS.jobTitle);
 
   try {
     await resend.emails.send({
@@ -34,7 +34,7 @@ export const sendEmail = async (formData: FormData) => {
           linkedIn={linkedIn as string}
           message={message as string}
           url={url as string}
-          vacancy={vacancy as string}
+          jobTitle={jobTitle as string}
         />
       ),
     });

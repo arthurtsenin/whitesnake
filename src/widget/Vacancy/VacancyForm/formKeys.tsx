@@ -9,5 +9,5 @@ export const FORM_KEYS: VacancyFormType = {
   linkedIn: "linkedIn",
   message: "message",
   url: "url",
-  vacancy: "vacancy",
+  jobTitle: "jobTitle",
 };

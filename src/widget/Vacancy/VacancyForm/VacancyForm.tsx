@@ -23,10 +23,10 @@ import { storage } from "../../../../firestore";
 import raindrops from "&/images/vacancies/form/green-raindrops.png";
 
 type VacancyFormProps = {
-  vacancy: string;
+  jobTitle: string;
 };
 
-export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
+export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
   const [selectedFileName, setSelectedFileName] = useState<string>("");
   const [downloadUrl, setDownloadUrl] = useState<string>("");
 
@@ -65,7 +65,7 @@ export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
 
   const actionHandler = async (FormData: FormData) => {
     FormData.append(FORM_KEYS.url, downloadUrl);
-    FormData.append(FORM_KEYS.vacancy, vacancy);
+    FormData.append(FORM_KEYS.jobTitle, jobTitle);
 
     await sendEmail(FormData);
 

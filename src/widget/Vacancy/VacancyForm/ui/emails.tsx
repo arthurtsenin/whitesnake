@@ -20,7 +20,7 @@ type LeaveRequestProps = {
   linkedIn: string;
   message: string;
   url?: string;
-  vacancy: string;
+  jobTitle: string;
 };
 
 export const LeaveRequest: FC<LeaveRequestProps> = ({
@@ -32,7 +32,7 @@ export const LeaveRequest: FC<LeaveRequestProps> = ({
   linkedIn,
   message,
   url,
-  vacancy,
+  jobTitle,
 }) => {
   return (
     <Html>
@@ -43,7 +43,7 @@ export const LeaveRequest: FC<LeaveRequestProps> = ({
             <Section className="bg-white borderBlack my-10 px-10 py-4 rounded-md">
               <Heading className="leading-tight">
                 Вы получили данное письмо от формы "Оставить заявку" по
-                должности: {vacancy}
+                должности: {jobTitle}
               </Heading>
               <Text>
                 Кандидат: {name} {surname}
