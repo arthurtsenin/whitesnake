@@ -57,7 +57,7 @@
   align-items: center;
   justify-content: center;
   width: 70px;
-  border-radius: var(--radius-400);
+  border-radius: 50%;
   overflow: hidden;
 
   color: var(--clr-main-text);
@@ -128,6 +128,12 @@
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .container {
+    aspect-ratio: 1.5/1;
+  }
+}
+
 @media screen and (min-width: 1920px) {
   .container {
     --gap-vacancy-card-text: 294px;
@@ -137,6 +143,6 @@
   }
 
   .arrow {
-    width: 100px;
+    width: 150px;
   }
 }
