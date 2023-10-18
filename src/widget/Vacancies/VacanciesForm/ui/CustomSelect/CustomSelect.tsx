@@ -40,7 +40,11 @@ export const CustomSelect: FC<CustomSelectProps> = ({
   const toggleVisibility = () => setOpen((prev) => !prev);
 
   const handleClickItem = (item: string) => {
-    setValue(label, item);
+    setValue(label, item, {
+      shouldTouch: true,
+      shouldValidate: true,
+    });
+
     setOpen(false);
   };
 
