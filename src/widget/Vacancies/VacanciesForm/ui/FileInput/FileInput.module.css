@@ -78,6 +78,10 @@
     min-height: 64px;
   }
 
+  .placeholder {
+    font-size: 18px;
+  }
+
   .placeholder .short {
     display: none;
   }
