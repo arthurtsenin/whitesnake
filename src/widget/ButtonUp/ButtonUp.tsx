@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { FC, MutableRefObject, useEffect, useMemo, useState } from "react";
+import { FC, MutableRefObject, useEffect, useState } from "react";
 
 import styles from "./ButtonUp.module.css";
 
@@ -10,12 +10,6 @@ type ButtonUpProps = {
 export const ButtonUp: FC<ButtonUpProps> = ({ elementRef }) => {
   const [isInView, setIsInView] = useState<boolean>(false);
 
-  const observer = useMemo(
-    () =>
-      new IntersectionObserver(([entry]) => setIsInView(entry.isIntersecting)),
-    [],
-  );
-
   const handleClick = () => {
     window.scrollTo({
       top: 0,
@@ -24,6 +18,10 @@ export const ButtonUp: FC<ButtonUpProps> = ({ elementRef }) => {
   };
 
   useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) =>
+      setIsInView(entry.isIntersecting),
+    );
+
     if (elementRef.current) {
       observer.observe(elementRef?.current);
     }
@@ -31,7 +29,7 @@ export const ButtonUp: FC<ButtonUpProps> = ({ elementRef }) => {
     return () => {
       observer.disconnect();
     };
-  }, [elementRef, observer]);
+  }, [elementRef]);
 
   return (
     <AnimatePresence>
