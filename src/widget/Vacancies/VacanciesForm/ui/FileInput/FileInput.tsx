@@ -4,7 +4,7 @@ import { ChangeEvent, FC } from "react";
 
 import styles from "./FileInput.module.css";
 
-import { FilePreview } from "./ui/FilePrevie/FilePreview";
+import { FilePreview } from "./ui/FilePreview/FilePreview";
 
 import clip from "&/images/vacancies/clip.png";
 
