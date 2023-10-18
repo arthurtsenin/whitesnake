@@ -3,7 +3,10 @@ import * as yup from "yup";
 import { FORM_KEYS } from "./formKeys";
 
 export const FORM_VACANCY_SCHEMA = yup.object({
-  [FORM_KEYS.jobTitle]: yup.string().required("Job title is a required field"),
+  [FORM_KEYS.jobTitle]: yup
+    .string()
+    .min(1)
+    .required("Job title is a required field"),
   [FORM_KEYS.name]: yup
     .string()
     .matches(/^([^0-9]*)$/, "Name should not contain numbers")
