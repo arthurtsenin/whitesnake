@@ -53,7 +53,7 @@
   letter-spacing: -1px;
 }
 
-@media screen and (width > 744px) {
+@media screen and (min-width: 744px) {
   .container {
     gap: 21px;
     width: 80%;
@@ -79,7 +79,7 @@
   }
 }
 
-@media screen and (width > 1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     gap: 40px;
   }

@@ -12,7 +12,7 @@ export const Scroller = () => {
       <ul className={styles.scroller__inner}>
         {SLIDER_IMAGES.map((el) => (
           <li key={el.id}>
-            <Image src={el.url} alt="partner" />
+            <Image src={el.url} alt="partner" priority />
           </li>
         ))}
       </ul>

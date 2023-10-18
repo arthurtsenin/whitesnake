@@ -5,7 +5,10 @@ import "./global.css";
 import { Footer } from "@/widget/Footer/Footer";
 import { Header } from "@/widget/Header/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export default function RootLayout({
   children,
@@ -15,10 +18,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-
-        {children}
-        <Footer />
+        <div className="layout">
+          <Header />
+          <main className="main">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

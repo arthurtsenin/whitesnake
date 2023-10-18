@@ -24,7 +24,7 @@
   background: var(--clr-tab-bg-gradient);
 }
 
-@media screen and (width >= 744px) {
+@media screen and (min-width: 744px) {
   .tab {
     height: 70px;
     padding-inline: 12px;

@@ -10,6 +10,8 @@ type BurgerProps = ComponentPropsWithoutRef<"button"> & {
 export const Burger: FC<BurgerProps> = ({ open, ...props }) => {
   return (
     <button
+      title="Burger menu"
+      aria-label="Toggle menu"
       className={classNames(styles.burger, {
         [styles.open]: open,
       })}

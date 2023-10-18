@@ -42,7 +42,7 @@
   letter-spacing: -0.7px;
 }
 
-@media screen and (width >= 744px) {
+@media screen and (min-width: 744px) {
   .card {
     grid-row: 3/5;
     grid-column: 1/2;
@@ -65,7 +65,7 @@
   }
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   .text p:first-child {
     font-size: 160px;
     letter-spacing: -0.4px;

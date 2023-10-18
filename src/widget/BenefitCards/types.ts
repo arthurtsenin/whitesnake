@@ -5,4 +5,5 @@ export type BenefitCardData = {
   cardDesc: string;
   buttonText: string;
   icon?: StaticImageData;
+  link: string;
 };

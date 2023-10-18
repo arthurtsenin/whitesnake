@@ -24,7 +24,9 @@ export const Footer = () => {
         <div className={styles.navContainer}>
           <nav className={styles.nav}>
             <Logo variant="footer" />
-            <Navigation />
+            <ul className={styles.navList}>
+              <Navigation />
+            </ul>
           </nav>
           <div className={styles.buttons}>
             <Button variant="primary">Связаться с нами</Button>

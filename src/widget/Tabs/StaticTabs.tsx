@@ -18,7 +18,7 @@ type StaticTabsProps = {
   data: DataType<IndustryType>;
 } & TitleProps;
 
-export const StaticTabs: FC<StaticTabsProps> = ({
+const StaticTabs: FC<StaticTabsProps> = ({
   data,
   suptitle,
   title,
@@ -30,7 +30,7 @@ export const StaticTabs: FC<StaticTabsProps> = ({
     <section className={styles.section}>
       <div className={styles.glow} />
       <div className={styles.image}>
-        <Image alt="design image" src={bubbles} />
+        <Image alt="design image" src={bubbles} priority />
       </div>
       <div className={styles.titleContainer}>
         <Title suptitle={suptitle} title={title} subtitle={subtitle} />
@@ -49,3 +49,5 @@ export const StaticTabs: FC<StaticTabsProps> = ({
     </section>
   );
 };
+
+export default StaticTabs;

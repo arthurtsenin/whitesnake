@@ -9,7 +9,7 @@ import { CasePageLayout } from "../CasePageLayout";
 
 export const FpaPage = () => {
   return (
-    <section className={styles.section}>
+    <>
       <Datarails {...FPA_DATA.hero} />
       <CasePageLayout data={FPA_DATA}>
         <CaseSolution
@@ -25,6 +25,6 @@ export const FpaPage = () => {
           </div>
         </CaseSolution>
       </CasePageLayout>
-    </section>
+    </>
   );
 };

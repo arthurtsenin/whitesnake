@@ -33,13 +33,13 @@
   width: 100%;
 }
 
-@media (width >= 744px) {
+@media (min-width: 744px) {
   .stackItem {
     max-width: 70%;
   }
 }
 
-@media (width >= 1200px) {
+@media (min-width: 1200px) {
   .stack {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -49,7 +49,7 @@
   }
 }
 
-@media (width >= 1440px) {
+@media (min-width: 1440px) {
   .stack {
     grid-template-columns: repeat(3, 1fr);
   }

@@ -81,7 +81,7 @@
   height: 100%;
 }
 
-@media screen and (width >= 744px) {
+@media screen and (min-width: 744px) {
   .card {
     grid-row: 4/5;
     grid-column: 2/3;
@@ -104,7 +104,7 @@
   }
 }
 
-@media screen and (width <= 890px) and (width >= 744px) {
+@media screen and (max-width: 890px) and (min-width: 744px) {
   .images img:nth-child(1) {
     top: 0;
 
@@ -112,7 +112,7 @@
   }
 }
 
-@media screen and (width >= 1200px) {
+@media screen and (min-width: 1200px) {
   .text {
     margin-top: 50px;
     margin-left: 50px;

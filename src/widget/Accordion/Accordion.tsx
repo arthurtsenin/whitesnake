@@ -15,14 +15,14 @@ export type AccordionProps = {
   accordions: Array<AccordionType>;
 };
 
-export const Accordion: FC<AccordionProps> = ({ accordions }) => {
+const Accordion: FC<AccordionProps> = ({ accordions }) => {
   const [index, setIndex] = useState<number | null>(1);
 
   return (
     <Container>
       <section className={styles.section}>
         <div className={styles.imgWrapper}>
-          <Image src={bubble} alt="bubble image" />
+          <Image src={bubble} alt="design image" priority />
         </div>
         <div className={styles.container}>
           {accordions.map((item) => (
@@ -38,3 +38,5 @@ export const Accordion: FC<AccordionProps> = ({ accordions }) => {
     </Container>
   );
 };
+
+export default Accordion;

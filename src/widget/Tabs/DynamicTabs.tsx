@@ -18,7 +18,7 @@ type DynamicTabsProps = {
   data: DataType<TechnologieType>;
 } & TitleProps;
 
-export const DynamicTabs: FC<DynamicTabsProps> = ({
+const DynamicTabs: FC<DynamicTabsProps> = ({
   data,
   suptitle,
   title,
@@ -29,7 +29,12 @@ export const DynamicTabs: FC<DynamicTabsProps> = ({
   return (
     <section className={styles.section}>
       <div className={styles.glow} />
-      <Image alt="design image" src={bubble} className={styles.image} />
+      <Image
+        alt="design image"
+        src={bubble}
+        className={styles.image}
+        priority
+      />
       <Title suptitle={suptitle} title={title} subtitle={subtitle} />
       <div className={styles.container}>
         <TabList
@@ -45,3 +50,5 @@ export const DynamicTabs: FC<DynamicTabsProps> = ({
     </section>
   );
 };
+
+export default DynamicTabs;
