@@ -1,10 +1,9 @@
 "use client";
 
 import { yupResolver } from "@hookform/resolvers/yup";
-import classNames from "classnames";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import Image from "next/image";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { ChangeEvent, useState } from "react";
 import { flushSync } from "react-dom";
 import { useForm } from "react-hook-form";
@@ -20,10 +19,10 @@ import { FormTitle } from "./ui/FormTitle/FormTitle";
 import { Input } from "./ui/Input/Input";
 import { Loader } from "./ui/Loader/Loader";
 import { Textarea } from "./ui/Textarea/Textarea";
+import { Toast } from "./ui/Toast/Toast";
 import { FORM_VACANCY_SCHEMA } from "./validation";
 import { storage } from "../../../../firestore";
 
-import close from "&/images/vacancies/form/close.png";
 import raindrops from "&/images/vacancies/form/green-raindrops.png";
 
 type VacancyFormProps = {
@@ -102,6 +101,15 @@ export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
     reset();
   };
 
+  useEffect(() => {
+    if (isToastOpen) {
+      const timeout = setTimeout(() => {
+        setIsToastOpen(false);
+        clearTimeout(timeout);
+      }, 3000);
+    }
+  }, [isToastOpen]);
+
   return (
     <section className={styles.container}>
       <div className={styles.glowBlue} />
@@ -112,7 +120,7 @@ export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
       <form
         className={styles.form}
         action={actionHandler}
-        // autoComplete="off"
+        autoComplete="off"
         id="leave-request"
       >
         <FormTitle title="Оставить заявку" />
@@ -174,8 +182,7 @@ export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
           <div className={styles.button}>
             <Button variant="secondary" disabled={!isValid} type="submit">
               <div className={styles.text}>
-                <p>Отправить</p>
-                {formStatus === "loading" ? <Loader /> : ""}
+                {formStatus === "loading" ? <Loader /> : <p>Отправить</p>}
               </div>
             </Button>
             <p className={styles.privacy}>
@@ -186,13 +193,11 @@ export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
         </div>
       </form>
       {isToastOpen && (
-        <div
-          onClick={() => setIsToastOpen(false)}
-          className={classNames(styles.basic, styles[toastType])}
-        >
-          <p>{toastText}</p>
-          <Image src={close} alt="close icon" />
-        </div>
+        <Toast
+          handleClick={() => setIsToastOpen(false)}
+          toastType={toastType}
+          toastText={toastText}
+        />
       )}
     </section>
   );

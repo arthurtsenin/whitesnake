@@ -85,56 +85,6 @@
   text-align: center;
 }
 
-.basic {
-  position: fixed;
-  right: 0;
-  bottom: 5px;
-  left: 0;
-  z-index: 1;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-
-  width: 94%;
-  max-width: 335px;
-  height: 70px;
-  padding: 16px;
-
-  border-radius: 8px;
-
-  color: rgba(255, 255, 255, 0.7);
-
-  font-weight: 600;
-
-  font-size: 16px;
-  line-height: 120%;
-  letter-spacing: -0.8px;
-
-  background: rgba(124, 254, 253, 0.4);
-
-  cursor: pointer;
-  backdrop-filter: blur(20px);
-  margin-inline: auto;
-}
-
-.basic p {
-  max-width: 130px;
-}
-
-.basic img {
-  width: 20px;
-  height: 20px;
-}
-
-.success {
-  background: rgba(124, 254, 253, 0.4);
-}
-.error {
-  background: rgba(204, 11, 11, 0.5);
-}
-
 @media screen and (min-width: 960px) {
   .glowBlue {
     top: -60%;

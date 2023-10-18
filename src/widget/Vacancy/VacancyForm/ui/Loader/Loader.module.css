@@ -1,35 +1,19 @@
-.ring {
-  position: relative;
-
-  width: 15px;
-  height: 15px;
+.spinner {
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  box-shadow:
+    20px 0px 0 0 rgba(246, 246, 247, 0.2),
+    16.2px 11.8px 0 0 rgba(186, 186, 191, 0.4),
+    6.2px 19px 0 0 rgba(194, 194, 203, 0.6),
+    -6.2px 19px 0 0 rgba(203, 203, 211, 0.8),
+    -16.2px 11.8px 0 0 #fefeff,
+    -20px 0px 0 0 rgb(246, 246, 247);
+  animation: spinner 1s infinite linear;
 }
 
-.ring div {
-  position: absolute;
-
-  width: 100%;
-  height: 100%;
-  border: 1px solid white;
-  border-color: white transparent transparent transparent;
-  border-radius: 50%;
-
-  animation: ldsRing 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-}
-.ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-@keyframes ldsRing {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
+@keyframes spinner {
+  to {
     transform: rotate(360deg);
   }
 }
