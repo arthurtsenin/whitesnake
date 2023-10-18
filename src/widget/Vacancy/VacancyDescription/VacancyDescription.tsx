@@ -12,9 +12,10 @@ export const VacancyDescription: FC<VacancyDescriptionProps> = ({
 }) => {
   return (
     <div className={styles.container}>
+      <div className={styles.glowRed} />
       {titles?.map((title, index) => (
         <React.Fragment key={title}>
-          <h3 className={styles.title}>{title}</h3>
+          <h2 className={styles.title}>{title}</h2>
           <ul className={styles.list}>
             {lists &&
               lists[index]?.map((item) => (

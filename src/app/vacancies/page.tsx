@@ -72,8 +72,6 @@ async function getData(): Promise<Record<string, Array<VacancyType>>> {
 export default async function VacanciesPage() {
   const data = await getData();
 
-  // console.log(data.ite, [0]);
-
   return (
     <section style={{ paddingBlock: "200px" }}>
       Vacancies Page

@@ -15,15 +15,13 @@ export const Slide: FC<SliderItemProps> = ({ slide }) => {
       <Image
         alt="Slide image"
         src={slide?.image || ""}
-        quality={100}
         fill
-        priority
         sizes="100vw"
         style={{
           objectFit: "cover",
         }}
       />
-      <h2 className={styles.text}>{slide?.text}</h2>
+      <h3 className={styles.text}>{slide?.text}</h3>
     </div>
   );
 };

@@ -1,9 +1,11 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 import styles from "./ScrollCard.module.css";
+
+import { useMobileScreen } from "../../../shared/hooks/use-mobile-screen";
 type ScrollCardProps = {
   image: StaticImageData;
   order: string;
@@ -26,15 +28,10 @@ export const ScrollCard = ({
   title,
   description,
 }: ScrollCardProps) => {
-  const [isMobile, setIsMobile] = useState<number>(0);
   const ref = useRef<HTMLDivElement>(null);
 
-  useLayoutEffect(() => {
-    if (window) {
-      setIsMobile(window.innerWidth);
-    }
-  }, []);
-  const isMobileDevice = isMobile < 1000;
+  const isMobileDevice = useMobileScreen();
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1"],

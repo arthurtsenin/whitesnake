@@ -1,5 +1,6 @@
 import { VacancyPageLayout } from "@/page/dynamic/vacancy/Vacancy.page";
 import { getLists } from "@/shared/utils/getVacancyLists";
+import { getSubtitle } from "@/shared/utils/getVacancySubtitle";
 import { getTitles } from "@/shared/utils/getVacancyTitles";
 
 export type VacancyType = {
@@ -81,7 +82,7 @@ export type VacancyType = {
 };
 
 async function getData(id: string): Promise<VacancyType> {
-  const url = `https://api.hh.ru/vacancies/?text=%D0%A3%D0%B0%D0%B9%D1%82%D0%A1%D0%BD%D0%B5%D0%B9%D0%BA${id}?host=rabota.by`;
+  const url = `https://api.hh.ru/vacancies/${id}?host=rabota.by`;
   const res = await fetch(`${url}`, {
     cache: "no-store",
   });
@@ -99,6 +100,7 @@ export default async function VacancyPage({
   params: { id: string };
 }) {
   const vacancy = await getData(params.id);
+  const subtitle = getSubtitle(vacancy.description, vacancy.name) || [""];
   const titles = getTitles(vacancy.description);
   const lists = getLists(vacancy.description);
 
@@ -106,6 +108,8 @@ export default async function VacancyPage({
     <VacancyPageLayout
       vacancy={vacancy.professional_roles[0].name}
       path={vacancy.alternate_url}
+      title={vacancy.name}
+      subtitle={subtitle[0]}
       titles={titles}
       lists={lists}
     />

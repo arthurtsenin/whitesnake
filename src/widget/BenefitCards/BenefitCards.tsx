@@ -6,7 +6,7 @@ import { BenefitCardData } from "./types";
 import { BenefitCard } from "./ui/BenefitCard";
 import { Container } from "../../shared";
 
-type BenefitCardsProps = {
+export type BenefitCardsProps = {
   variant: "withIcon" | "withoutIcon";
   data: BenefitCardData[];
 };
@@ -23,6 +23,7 @@ export const BenefitCards: FC<BenefitCardsProps> = ({ variant, data }) => {
             buttonText={item.buttonText}
             variant={variant}
             icon={item.icon}
+            link={item.link}
           />
         ))}
       </div>

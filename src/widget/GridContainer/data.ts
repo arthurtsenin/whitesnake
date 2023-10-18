@@ -2,13 +2,13 @@ import { StaticImageData } from "next/image";
 
 import { DYNAMIC_ROUTES } from "../Navigation/routes";
 
-import ai from "&/cases-preview/ai-case-image.png";
-import fp_a from "&/cases-preview/datarails-case-image.png";
-import digital_asset from "&/cases-preview/digital-case-image.png";
-import food_delivery from "&/cases-preview/food-case-image.png";
-import healt_monitoring from "&/cases-preview/health-monitoring-case-image.png";
-import healt_insurance from "&/cases-preview/healthcare-case-image.png";
-import sdk from "&/cases-preview/sdk-case-image.png";
+import ai from "&/cases-preview/ai-case-image.webp";
+import fp_a from "&/cases-preview/datarails-case-image.webp";
+import digital_asset from "&/cases-preview/digital-case-image.webp";
+import food_delivery from "&/cases-preview/food-case-image.webp";
+import healt_monitoring from "&/cases-preview/health-monitoring-case-image.webp";
+import healt_insurance from "&/cases-preview/healthcare-case-image.webp";
+import sdk from "&/cases-preview/sdk-case-image.webp";
 
 export type CasePreviewType = {
   id: number;

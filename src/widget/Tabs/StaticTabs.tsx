@@ -18,7 +18,7 @@ type StaticTabsProps = {
   data: DataType<IndustryType>;
 } & TitleProps;
 
-export const StaticTabs: FC<StaticTabsProps> = ({
+const StaticTabs: FC<StaticTabsProps> = ({
   data,
   suptitle,
   title,
@@ -49,3 +49,5 @@ export const StaticTabs: FC<StaticTabsProps> = ({
     </section>
   );
 };
+
+export default StaticTabs;

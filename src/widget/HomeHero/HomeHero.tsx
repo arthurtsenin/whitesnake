@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./HomeHero.module.css";
 
 import { Scroller } from "./ui/Scroller";
+import { ROUTES } from "../Navigation/routes";
 import { Button } from "../../shared";
 
 import raindropLower from "&/images/main-hero/raindrop-lower.png";
@@ -25,23 +27,35 @@ export const HomeHero = () => {
           </div>
           <div className={styles.buttons}>
             <Button variant="primary">Связаться с нами</Button>
-            <Button variant="transparent">Карьера</Button>
+            <Link href={`${ROUTES.FIVE.href}/#vacancies-form`}>
+              <Button variant="transparent">Хочу в команду</Button>
+            </Link>
           </div>
         </div>
         <div className={styles.rightSide}>
           <div className={styles.imgWrapper}>
-            <Image src={raindropUpper} alt="raindrop" priority />
+            <Image
+              src={raindropUpper}
+              alt="raindrop"
+              loading="lazy"
+              placeholder="blur"
+            />
           </div>
           <div className={styles.imgWrapper}>
             <Image src={raindropMiddle} alt="raindrop" priority />
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={raindropLower} alt="raindrop" priority />
+            <Image
+              src={raindropLower}
+              alt="raindrop"
+              loading="lazy"
+              placeholder="blur"
+            />
           </div>
         </div>
       </div>
       <div className={styles.sphere}>
-        <Image src={sphere} alt="sphere" priority />
+        <Image src={sphere} alt="sphere" loading="lazy" placeholder="blur" />
       </div>
       <div className={styles.glowRed}></div>
       <div className={styles.glowBlue}></div>

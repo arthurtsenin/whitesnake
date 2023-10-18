@@ -1,24 +1,33 @@
 .input {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
-  background-color: transparent;
-  width: 100%;
+  all: unset;
+  display: block;
+
   box-sizing: border-box;
+  width: 100%;
+  height: fit-content;
+
+  height: 56px;
   padding: 21px 0px 12px 0px;
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-  height: fit-content;
+
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+
+  background-color: transparent;
 }
 
 .input::placeholder {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
   font-weight: 400;
+  font-size: 16px;
   letter-spacing: -0.8px;
+
   transition: 0.5s;
 }
 
 .input:focus {
+  background-color: transparent;
   outline: none;
 }
 
@@ -27,17 +36,28 @@
 }
 
 .invalid {
-  color: #cc0b0b;
   border-bottom: 1px solid #cc0b0b;
+
+  color: #cc0b0b;
 }
 
 .invalid::placeholder {
   color: #cc0b0b;
 }
 
+.input:-webkit-autofill,
+.input:-webkit-autofill:hover,
+.input:-webkit-autofill:focus,
+.input:-webkit-autofill:active {
+  background-color: transparent;
+
+  transition: background-color 5000s ease-in-out 0s;
+}
+
 @media screen and (min-width: 960px) {
   .input {
-    font-size: 18px;
     padding: 41px 0px 16px 0px;
+
+    font-size: 18px;
   }
 }
