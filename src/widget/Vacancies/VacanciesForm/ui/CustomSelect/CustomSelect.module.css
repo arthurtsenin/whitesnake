@@ -5,6 +5,7 @@
 .select {
   --clr-select-text: rgba(255, 255, 255, 0.7);
   --fs-select-text: 16px;
+  --clr-error: #cc0b0b;
 
   display: flex;
   align-items: center;
@@ -56,6 +57,12 @@
 
 .hidden {
   display: none;
+}
+
+.invalid {
+  border-color: var(--clr-error);
+
+  color: var(--clr-error);
 }
 
 @media (hover: hover) {

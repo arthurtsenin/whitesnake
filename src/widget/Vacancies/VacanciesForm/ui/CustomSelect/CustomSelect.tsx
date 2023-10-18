@@ -1,4 +1,6 @@
 "use client";
+
+import cn from "classnames";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { FC, useState } from "react";
@@ -12,6 +14,7 @@ import styles from "./CustomSelect.module.css";
 
 import { VacancyFormType } from "../../formKeys";
 
+import arrowRed from "&/arrow-down-red.svg";
 import arrow from "&/arrow-down-white.svg";
 
 type CustomSelectProps = {
@@ -19,10 +22,10 @@ type CustomSelectProps = {
   label: string;
   options: Array<string>;
   helperText?: string;
+  error?: boolean;
   register: UseFormRegister<VacancyFormType>;
   getValues: UseFormGetValues<VacancyFormType>;
   setValue: UseFormSetValue<VacancyFormType>;
-  error?: boolean;
 };
 
 export const CustomSelect: FC<CustomSelectProps> = ({
@@ -30,10 +33,11 @@ export const CustomSelect: FC<CustomSelectProps> = ({
   placeholder,
   options,
   helperText,
+  error,
   register,
   getValues,
   setValue,
-  // ...props
+  ...props
 }) => {
   const [open, setOpen] = useState<boolean>(false);
 
@@ -53,13 +57,15 @@ export const CustomSelect: FC<CustomSelectProps> = ({
       <div className={styles.container} data-custom-select>
         <button
           type="button"
-          className={styles.select}
+          className={cn(styles.select, {
+            [styles.invalid]: error,
+          })}
           onClick={toggleVisibility}
         >
           <span>{getValues(label) || placeholder}</span>
           <div className={styles.arrow}>
             <Image
-              src={arrow}
+              src={error ? arrowRed : arrow}
               alt="arrow which opens dropdown in order to choose job title"
             />
           </div>
@@ -91,7 +97,12 @@ export const CustomSelect: FC<CustomSelectProps> = ({
           )}
         </AnimatePresence>
 
-        <input type="text" className={styles.hidden} {...register(label)} />
+        <input
+          type="text"
+          className={styles.hidden}
+          {...register(label)}
+          {...props}
+        />
       </div>
 
       {helperText && <p className={styles.helperText}>{helperText}</p>}
