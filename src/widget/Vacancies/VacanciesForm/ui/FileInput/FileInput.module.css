@@ -24,7 +24,6 @@
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: -0.8px;
 
   content: "";
 }
@@ -44,7 +43,6 @@
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
   font-size: 16px;
-  letter-spacing: -0.8px;
 
   cursor: pointer;
 
