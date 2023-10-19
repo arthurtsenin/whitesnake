@@ -12,6 +12,8 @@ import {
 
 import styles from "./CustomSelect.module.css";
 
+import { useOutsideClick } from "@/shared/hooks/use-outside-click";
+
 import { VacancyFormType } from "../../formKeys";
 
 import arrowRed from "&/arrow-down-red.svg";
@@ -52,9 +54,20 @@ export const CustomSelect: FC<CustomSelectProps> = ({
     setOpen(false);
   };
 
+  const handleOutsideClick = () => {
+    setValue(label, "", {
+      shouldTouch: true,
+      shouldValidate: true,
+    });
+
+    setOpen(false);
+  };
+
+  const divOutsideRef = useOutsideClick(handleOutsideClick);
+
   return (
     <>
-      <div className={styles.container} data-custom-select>
+      <div className={styles.container} data-custom-select ref={divOutsideRef}>
         <button
           type="button"
           className={cn(styles.select, {
