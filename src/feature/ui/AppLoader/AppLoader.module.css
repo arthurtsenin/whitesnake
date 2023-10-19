@@ -128,8 +128,10 @@
   }
   .container span::after {
     width: 14%;
-    border-bottom-width: 8px;
-    left: 0;
+    border-bottom-width: 10px;
+    left: -2px;
+    bottom: 0%;
+    height: 50px;
   }
   .glowRed {
     right: -5%;
@@ -147,7 +149,11 @@
     font-size: 140px;
   }
   .container span::after {
+    width: 12%;
+    height: 50px;
     border-bottom-width: 12px;
+    left: 1%;
+    bottom: 12%;
   }
 
   .glowRed {
