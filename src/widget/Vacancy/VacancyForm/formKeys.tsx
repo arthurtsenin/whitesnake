@@ -11,6 +11,7 @@ export const FORM_KEYS: VacancyFormType = {
   url: "url",
   vacancy: "vacancy",
 };
+
 export const formTemplate = [
   {
     id: 1,
