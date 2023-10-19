@@ -11,6 +11,7 @@ import styles from "./VacanciesForm.module.css";
 
 import { Button } from "@/shared";
 
+import { sendEmail } from "./action";
 import { FORM_KEYS, VacancyFormType } from "./formKeys";
 import { CustomSelect } from "./ui/CustomSelect/CustomSelect";
 import { FileInput } from "./ui/FileInput/FileInput";
@@ -69,7 +70,6 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
   const actionHandler = async (FormData: FormData) => {
     FormData.append(FORM_KEYS.url, downloadUrl);
 
-    // console.log(...FormData.entries());
     await sendEmail(FormData);
 
     setSelectedFileName("");
