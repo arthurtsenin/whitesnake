@@ -1,0 +1,43 @@
+.buttonContainer {
+  position: fixed;
+  right: 16px;
+  bottom: 115px;
+}
+
+.buttonUp {
+  z-index: 99999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+
+  background-color: var(--clr-secondary-bg);
+  cursor: pointer;
+}
+
+.arrowUp {
+  display: inline-block;
+  padding: 7px;
+  border: solid var(--clr-secondary-text);
+  border-width: 0 2px 2px 0;
+  border-radius: 1px;
+
+  transform: rotate(-135deg);
+}
+
+.arrowUp:first-child {
+  border: solid var(--clr-main-text);
+  border-width: 0 2px 2px 0;
+
+  transform: rotate(-135deg) translate(-5px, -5px);
+}
+
+@media screen and (min-width: 744px) {
+  .buttonUp {
+    display: none;
+  }
+}

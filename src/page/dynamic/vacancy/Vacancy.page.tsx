@@ -6,15 +6,15 @@ import { VacancyHero } from "@/widget/Vacancy/VacancyHero/VacancyHero";
 
 type VacancyPageLayoutProps = {
   path: string;
+  jobTitle: string;
   title: string;
   subtitle: string;
-  vacancy: string;
   titles?: Array<string>;
   lists?: Array<Array<string> | undefined>;
 };
 
 export const VacancyPageLayout: FC<VacancyPageLayoutProps> = ({
-  vacancy,
+  jobTitle,
   path,
   title,
   subtitle,
@@ -25,7 +25,7 @@ export const VacancyPageLayout: FC<VacancyPageLayoutProps> = ({
     <>
       <VacancyHero path={path} title={title} subtitle={subtitle} />
       <VacancyDescription titles={titles} lists={lists} />
-      <VacancyForm vacancy={vacancy} />
+      <VacancyForm jobTitle={jobTitle} />
     </>
   );
 };

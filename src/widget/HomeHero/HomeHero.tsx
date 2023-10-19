@@ -34,23 +34,13 @@ export const HomeHero = () => {
         </div>
         <div className={styles.rightSide}>
           <div className={styles.imgWrapper}>
-            <Image
-              src={raindropUpper}
-              alt="raindrop"
-              loading="lazy"
-              placeholder="blur"
-            />
+            <Image src={raindropUpper} alt="raindrop" priority />
           </div>
           <div className={styles.imgWrapper}>
             <Image src={raindropMiddle} alt="raindrop" priority />
           </div>
           <div className={styles.imgWrapper}>
-            <Image
-              src={raindropLower}
-              alt="raindrop"
-              loading="lazy"
-              placeholder="blur"
-            />
+            <Image src={raindropLower} alt="raindrop" priority />
           </div>
         </div>
       </div>

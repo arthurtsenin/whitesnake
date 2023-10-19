@@ -18,7 +18,6 @@
 
 .buttons {
   margin-top: auto;
-  margin-inline: auto;
 }
 
 .nav,
@@ -36,6 +35,7 @@
   display: flex;
   gap: 16px;
   align-self: center;
+  margin-inline: auto;
 }
 
 .cards {
@@ -90,6 +90,16 @@
     filter: blur(345.20001220703125px);
   }
 
+  .nav {
+    gap: unset;
+  }
+
+  .nav a {
+    margin-bottom: 32px;
+
+    font-size: 20px;
+  }
+
   .image {
     top: -35%;
   }
@@ -117,7 +127,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    max-width: 990px;
+    max-width: 750px;
+    margin-inline: auto;
   }
 
   .buttons {
@@ -135,8 +146,22 @@
     flex-wrap: nowrap;
   }
 
+  .cards {
+    margin-inline: unset;
+
+    max-width: 990px;
+  }
+
   .nav {
+    gap: 24px;
     align-items: flex-start;
+    margin-inline: unset;
+  }
+
+  .nav a {
+    margin-bottom: unset;
+
+    font-size: 20px;
   }
 
   .navList {

@@ -1,0 +1,55 @@
+.container {
+  position: fixed;
+  z-index: 3;
+  /* 
+  width: 100%;
+  height: 100%; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.121);
+  backdrop-filter: blur(20px);
+  inset: 0;
+}
+
+.ring {
+  position: relative;
+
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.ring div {
+  position: absolute;
+
+  display: block;
+  box-sizing: border-box;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid rgba(204, 11, 11, 0.5);
+  border-color: rgba(204, 11, 11, 1) transparent transparent transparent;
+  border-radius: 50%;
+
+  animation: ldsRing 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+.ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes ldsRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

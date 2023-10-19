@@ -26,12 +26,12 @@ import { storage } from "../../../../firestore";
 import raindrops from "&/images/vacancies/form/green-raindrops.png";
 
 type VacancyFormProps = {
-  vacancy: string;
+  jobTitle: string;
 };
 type FormStatusType = "pending" | "error" | "success" | "loading";
 type ToastType = "error" | "success" | "pending";
 
-export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
+export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
   const [selectedFileName, setSelectedFileName] = useState<string>("");
   const [downloadUrl, setDownloadUrl] = useState<string>("");
 
@@ -78,7 +78,7 @@ export const VacancyForm: FC<VacancyFormProps> = ({ vacancy }) => {
     flushSync(() => setFormStatus("loading"));
 
     FormData.append(FORM_KEYS.url, downloadUrl);
-    FormData.append(FORM_KEYS.vacancy, vacancy);
+    FormData.append(FORM_KEYS.jobTitle, jobTitle);
 
     const result = await sendEmail(FormData);
 

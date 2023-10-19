@@ -23,6 +23,7 @@ export default function Home() {
   return (
     <>
       <HomeHero />
+
       <BenefitCards data={BENEFIT_CARD_WITH_ICON_DATA} variant="withIcon" />
       <GridContainer
         title="Наши проекты"
@@ -47,7 +48,7 @@ export default function Home() {
       <Contacts
         contacts={CONTACTS_DATA}
         title="Связаться с нами"
-        subtitle="Book a free strategy session to get a custom offer tailored for your business needs "
+        subtitle="Закажите бесплатную консультацию, чтобы получить индивидуальное предложение в соответствии с вашими требованиями"
       />
       <Accordion accordions={ACCORDIONS_DATA} />
     </>

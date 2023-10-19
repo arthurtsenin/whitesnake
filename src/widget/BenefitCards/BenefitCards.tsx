@@ -2,9 +2,10 @@ import { FC } from "react";
 
 import styles from "./BenefitCards.module.css";
 
+import { Container } from "@/shared";
+
 import { BenefitCardData } from "./types";
 import { BenefitCard } from "./ui/BenefitCard";
-import { Container } from "../../shared";
 
 export type BenefitCardsProps = {
   variant: "withIcon" | "withoutIcon";

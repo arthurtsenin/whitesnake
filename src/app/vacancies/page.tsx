@@ -1,6 +1,4 @@
-// 'use client'
-
-import Link from "next/link";
+import { VacanciesPageLayout } from "@/page/Vacancies.page";
 
 export type VacancyType = {
   id: string;
@@ -54,13 +52,12 @@ export type VacancyType = {
   is_adv_vacancy: boolean;
 };
 
+const vacanciesApiPath = `https://api.hh.ru/vacancies/?text=%D0%A3%D0%B0%D0%B9%D1%82%D0%A1%D0%BD%D0%B5%D0%B9%D0%BA&host=rabota.by`;
+
 async function getData(): Promise<Record<string, Array<VacancyType>>> {
-  const res = await fetch(
-    `https://api.hh.ru/vacancies/?text=%D0%A3%D0%B0%D0%B9%D1%82%D0%A1%D0%BD%D0%B5%D0%B9%D0%BA`,
-    {
-      cache: "no-store",
-    },
-  );
+  const res = await fetch(vacanciesApiPath, {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -71,35 +68,11 @@ async function getData(): Promise<Record<string, Array<VacancyType>>> {
 
 export default async function VacanciesPage() {
   const data = await getData();
+  const vacancies = data.items;
 
-  return (
-    <section style={{ paddingBlock: "200px" }}>
-      Vacancies Page
-      <ol>
-        {data &&
-          data?.items.map((vacancy) => (
-            <li
-              key={vacancy.id}
-              style={{ marginBlock: "20px", backgroundColor: "gray" }}
-            >
-              <Link
-                href={`/vacancies/${vacancy.id}`}
-                style={{ marginBottom: "15px" }}
-              >
-                <p>{vacancy.name}</p>
-                <p>ООО {vacancy.employer.name}</p>
-                <p>Минск</p>
-                <p>{vacancy.experience.name}</p>
-              </Link>
-            </li>
-          ))}
-      </ol>
-    </section>
-  );
-}
+  const employerPath =
+    vacancies?.at(0)?.employer.alternate_url ||
+    "https://rabota.by/employer/5674346";
 
-{
-  /* <a target="_blank" href={vacancy.alternate_url}>
-Ссылка на HH.ru : {vacancy.name}
-</a> */
+  return <VacanciesPageLayout path={employerPath} vacancies={vacancies} />;
 }
