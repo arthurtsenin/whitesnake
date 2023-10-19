@@ -1,6 +1,7 @@
 export type VacancyFormType = Record<string, string>;
 
 export const FORM_KEYS: VacancyFormType = {
+  jobTitle: "jobTitle",
   name: "name",
   surname: "surname",
   email: "email",
@@ -9,7 +10,6 @@ export const FORM_KEYS: VacancyFormType = {
   linkedIn: "linkedIn",
   message: "message",
   url: "url",
-  jobTitle: "jobTitle",
 };
 
 export const formTemplate = [

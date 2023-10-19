@@ -10,7 +10,7 @@ export const BENEFIT_CARD_WITH_ICON_DATA: BenefitCardData[] = [
     cardDesc: `Реализация проектов под ключ, расширение вашей команды опытными разработчиками, экспертный консалтинг.`,
     buttonText: "Связаться с нами",
     icon: cube,
-    link: "",
+    link: "#",
   },
   {
     cardTitle: "Работа в Whitesnake",
@@ -26,7 +26,7 @@ export const BENEFIT_CARD_WITHOUT_ICON_DATA: BenefitCardData[] = [
     cardTitle: "Для клиентов",
     cardDesc: `Мы реализуем проекты международного масштаба от первоначального анализа до запуска и поддержки.`,
     buttonText: "Оставить заявку",
-    link: "",
+    link: "#",
   },
   {
     cardTitle: "Работа в Whitesnake",
