@@ -74,61 +74,61 @@ export const INDUSTRY_DATA: DataType<IndustryType> = {
     id: 1,
     name: INDUSTRY.ONE,
     description:
-      "At Pynest, we bring our expertise to the finance industry, enabling us to develop customized applications that cater to your specific financial needs. Whether you require robust accounting software, comprehensive budgeting tools, advanced risk management solutions, or insightful financial reporting systems, our team can create tailored applications that optimize your financial processes and drive your business forward.",
+      "Большой опыт в финансовой отрасли позволяет нам разрабатывать  приложения в соответствии с вашими требованиями. Надежное бухгалтерское ПО, комплексные инструменты планирования бюджета, передовые решения по управлению рисками или эффективные системы финансовой отчетности — наша команда может создать индивидуальные решения, которые помогут оптимизировать ваши финансовые процессы и будут способствовать развитию вашего бизнеса.",
     image: finance,
   },
   [INDUSTRY.TWO]: {
     id: 2,
     name: INDUSTRY.TWO,
     description:
-      "Pynest has extensive experience in the insurance sector, enabling us to develop versatile applications that address the complex requirements of insurance companies. Our custom solutions cover policy administration, claims processing, underwriting, and risk assessment, empowering you to streamline your operations, enhance customer experiences, and remain competitive in the insurance market.",
+      "Большой опыт в сфере страхования позволяет нам разрабатывать универсальные приложения, которые отвечают сложным требованиям страховых компаний. Наши решения: администрирование договоров страхования, обработка претензий, андеррайтинг и оценивание рисков. Мы помогаем оптимизировать работу, улучшить качество обслуживания клиентов и оставаться конкурентоспособными на страховом рынке.",
     image: insurance,
   },
   [INDUSTRY.THREE]: {
     id: 3,
     name: INDUSTRY.THREE,
     description:
-      "Pynest brings innovative solutions to healthcare. We can help with creation of applications redefine patient care, from efficient appointment scheduling to managing electronic health records securely. Embrace an era of advanced patient-centric care with Pynest’s expertise.",
+      "Мы предлагаем инновационные решения в сфере здравоохранения. Наша команда может помочь в создании приложений, позволяющих по-новому взглянуть на проблему контроля за пациентами: от эффективного планирования приема до безопасного управления электронными медицинскими записями.",
     image: healthcare,
   },
   [INDUSTRY.FOUR]: {
     id: 4,
     name: INDUSTRY.FOUR,
     description:
-      "Pynest understands the dynamics of the e-commerce industry and can develop tailored applications to propel your online business. Whether you require robust inventory management systems, seamless order processing platforms, customer relationship management (CRM) software, or secure payment gateways, our team can create scalable and user-friendly applications that enhance your e-commerce operations and drive customer satisfaction.",
+      "Мы понимаем динамику индустрии электронной коммерции и можем разработать индивидуальные приложения для продвижения вашего онлайн-бизнеса. Надежные системы управления запасами, бесперебойные платформы обработки заказов, системы CRM или безопасные платежные шлюзы — наша команда может создать масштабируемые и удобные в использовании приложения, которые улучшат ваши электронные операции и повысят качество обслуживания клиентов.",
     image: commerce,
   },
   [INDUSTRY.FIVE]: {
     id: 5,
     name: INDUSTRY.FIVE,
     description:
-      "At Pynest, we are at the forefront of Web3 technology, allowing us to develop cutting-edge applications that leverage the power of decentralized networks and blockchain solutions. Whether you need decentralized app (dApp) development, smart contract implementation, or secure data storage solutions, our team has the expertise to create innovative applications that harness the advantages of Web3, such as transparency, security, and decentralization.",
+      "Важнейшим направлением для Pynest является создание инновационных технологий в сфере Web3. Наш энтузиазм и большой опыт позволяет разрабатывать передовые приложения, использующие возможности децентрализованных сетей и блокчейн-решений. Если надо разработать децентрализованные приложения (DApp), внедрить смарт-контракты или найти прозрачные решения для безопасного хранения данных, наша команда готова создать уникальные приложения, использующие преимущества Web3.",
     image: web3,
   },
   [INDUSTRY.SIX]: {
     id: 6,
     name: INDUSTRY.SIX,
     description:
-      "Pynest’s specialized knowledge in the logistics industry enables us to develop tailored applications that cater to the unique demands of logistics and transportation management. Whether you need solutions to optimize employee performance, streamline vehicle maintenance, improve freight management, or boost overall business revenue, our team can design custom logistics software that integrates seamlessly with your existing systems.",
+      "Профессиональные знания в области логистики позволяют нам разрабатывать индивидуальные приложения, удовлетворяющие уникальным требованиям управления перевозками. Если вам нужны решения для оптимизации работы сотрудников, модернизирования технического обслуживания транспортных средств, улучшения управления перевозками или увеличения общего дохода бизнеса, наша команда может разработать индивидуальное ПО, которое легко интегрируется с вашими текущими системами.",
     image: logistics,
   },
   [INDUSTRY.SEVEN]: {
     id: 7,
     name: INDUSTRY.SEVEN,
     description:
-      "With our expertise in e-learning technologies, we can develop transformative applications that revolutionize education and training. From comprehensive learning management systems to content authoring tools, assessment platforms, and analytics solutions, our applications empower educational institutions and corporate training providers to deliver engaging, personalized learning experiences while ensuring compliance with industry standards and regulations.",
+      "Благодаря нашему опыту в сфере онлайн-образования, мы можем разрабатывать передовые приложения, которые могут кардинально изменить эту область. Комплексные системы управления в процессе обучения, инструменты для создания контента, платформы для оценивания — наши приложения обеспечивают образовательные учреждения и корпоративные тренинги увлекательным, персонализированным обучением, учитывая отраслевые стандарты и нормативные акты.",
     image: learning,
   },
 };
 
 const TECHNOLOGIE = {
-  ONE: "Web frameworks",
-  TWO: "Databases",
-  THREE: "Data Engineering",
-  FOUR: "DevOps",
-  FIVE: "Message brockers",
+  ONE: "Фреймворки",
+  TWO: "Базы данных",
+  THREE: "Дата Инжиниринг",
+  FOUR: "ДевОпс",
+  FIVE: "Брокер сообщений",
   SIX: "Web3",
-  SEVEN: "Cloud services",
+  SEVEN: "Облачные сервисы",
 };
 
 export const TECHNOLOGIE_DATA: DataType<TechnologieType> = {
