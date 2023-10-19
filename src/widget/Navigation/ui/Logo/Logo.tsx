@@ -25,7 +25,12 @@ export const Logo: FC<LogoProps> = ({ variant, clickHandler }) => {
       className={styles.logo}
       onClick={() => checkPath(pathname, HOME_LINK.href, clickHandler)}
     >
-      <Image src={logo} alt="WhiteSnake logo" className={styles[variant]} />
+      <Image
+        src={logo}
+        alt="WhiteSnake logo"
+        className={styles[variant]}
+        priority
+      />
     </Link>
   );
 };
