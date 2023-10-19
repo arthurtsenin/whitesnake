@@ -67,6 +67,7 @@
 
 .open .arrow {
   rotate: 180deg;
+
   transition: 0.3s ease-in-out;
 }
 
