@@ -1,5 +1,6 @@
 .container {
   position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -46,6 +47,7 @@
   top: -70%;
   right: 0%;
   z-index: -1;
+
   width: fit-content;
   height: 320px;
   object-fit: cover;
@@ -93,8 +95,9 @@
   }
 
   .nav a {
-    font-size: 20px;
     margin-bottom: 32px;
+
+    font-size: 20px;
   }
 
   .image {
@@ -145,18 +148,20 @@
 
   .cards {
     margin-inline: unset;
+
     max-width: 990px;
   }
 
   .nav {
+    gap: 24px;
     align-items: flex-start;
     margin-inline: unset;
-    gap: 24px;
   }
 
   .nav a {
-    font-size: 20px;
     margin-bottom: unset;
+
+    font-size: 20px;
   }
 
   .navList {
