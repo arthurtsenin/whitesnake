@@ -1,5 +1,5 @@
 .container {
-  --gap-vacancies-cards: 16px;
+  --gap-vacancies-cards: 8px;
 
   display: grid;
   grid-auto-rows: 1fr;
