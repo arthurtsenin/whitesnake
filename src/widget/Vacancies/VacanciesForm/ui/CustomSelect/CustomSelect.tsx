@@ -55,11 +55,6 @@ export const CustomSelect: FC<CustomSelectProps> = ({
   };
 
   const handleOutsideClick = () => {
-    setValue(label, "", {
-      shouldTouch: true,
-      shouldValidate: true,
-    });
-
     setOpen(false);
   };
 
