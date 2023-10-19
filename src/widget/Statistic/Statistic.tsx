@@ -1,3 +1,5 @@
+import { FC } from "react";
+
 import styles from "./Statistic.module.css";
 
 import { FifthCard } from "./ui/FifthCard/FifthCard";
@@ -7,7 +9,7 @@ import { SecondCard } from "./ui/SecondCard/SecondCard";
 import { ThirdCard } from "./ui/ThirdCard/ThirdCard";
 import { Container } from "../../shared";
 
-export const Statistic = () => {
+export const Statistic: FC = () => {
   return (
     <Container>
       <div className={styles.container}>

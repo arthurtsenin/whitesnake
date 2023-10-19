@@ -24,7 +24,7 @@ export const CaseCard: FC<CaseCardProps> = ({
   return (
     <figure className={styles.container}>
       <div className={styles.wrapper}>
-        <Image src={image} alt={caption} />
+        <Image src={image} alt={caption} placeholder="blur" />
         <Link
           href={`${NAVIGATION_LINKS.portfolio.href}/${path}`}
           className={styles.hover}

@@ -18,7 +18,7 @@ type DynamicTabsProps = {
   data: DataType<TechnologieType>;
 } & TitleProps;
 
-export const DynamicTabs: FC<DynamicTabsProps> = ({
+const DynamicTabs: FC<DynamicTabsProps> = ({
   data,
   suptitle,
   title,
@@ -50,3 +50,5 @@ export const DynamicTabs: FC<DynamicTabsProps> = ({
     </section>
   );
 };
+
+export default DynamicTabs;

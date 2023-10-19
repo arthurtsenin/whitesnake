@@ -1,5 +1,6 @@
 import { VacancyPageLayout } from "@/page/dynamic/vacancy/Vacancy.page";
 import { getLists } from "@/shared/utils/getVacancyLists";
+import { getSubtitle } from "@/shared/utils/getVacancySubtitle";
 import { getTitles } from "@/shared/utils/getVacancyTitles";
 
 export type VacancyType = {
@@ -99,6 +100,7 @@ export default async function VacancyPage({
   params: { id: string };
 }) {
   const vacancy = await getData(params.id);
+  const subtitle = getSubtitle(vacancy.description, vacancy.name) || [""];
   const titles = getTitles(vacancy.description);
   const lists = getLists(vacancy.description);
 
@@ -107,6 +109,7 @@ export default async function VacancyPage({
       jobTitle={vacancy.name}
       path={vacancy.alternate_url}
       title={vacancy.name}
+      subtitle={subtitle[0]}
       titles={titles}
       lists={lists}
     />
