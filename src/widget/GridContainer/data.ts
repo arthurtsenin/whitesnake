@@ -2,13 +2,13 @@ import { StaticImageData } from "next/image";
 
 import { DYNAMIC_ROUTES } from "../Navigation/routes";
 
-import ai from "&/cases-preview/ai-case-image.png";
-import fp_a from "&/cases-preview/datarails-case-image.png";
-import digital_asset from "&/cases-preview/digital-case-image.png";
-import food_delivery from "&/cases-preview/food-case-image.png";
-import healt_monitoring from "&/cases-preview/health-monitoring-case-image.png";
-import healt_insurance from "&/cases-preview/healthcare-case-image.png";
-import sdk from "&/cases-preview/sdk-case-image.png";
+import ai from "&/cases-preview/ai-case-image.webp";
+import fp_a from "&/cases-preview/datarails-case-image.webp";
+import digital_asset from "&/cases-preview/digital-case-image.webp";
+import food_delivery from "&/cases-preview/food-case-image.webp";
+import healt_monitoring from "&/cases-preview/health-monitoring-case-image.webp";
+import healt_insurance from "&/cases-preview/healthcare-case-image.webp";
+import sdk from "&/cases-preview/sdk-case-image.webp";
 
 export type CasePreviewType = {
   id: number;
@@ -21,57 +21,58 @@ export type CasePreviewType = {
 export const CASES_PREVIEW_CARDS: Array<CasePreviewType> = [
   {
     id: 0,
-    caption: "Health Insurance Platform",
+    caption: "Платформа для медицинского страхования",
     description:
-      "The platform is an innovative health insurance system that leverages full-stack technology to deliver accessible and cost-effective healthcare services. Designed to offer personalized experiences, the platform aims to provide member-focused services while adapting swiftly to evolving needs. With an emphasis on engagement and personalized guidance, it embodies a flexible, technology-driven approach to healthcare.",
+      "Данная платформа для медицинского страхования — это инновационная система, предоставляющая медицинские услуги. Платформа работает в соответствии с индивидуальными предпочтениями пользователя, при этом способна быстро адаптироваться к меняющимся потребностям клиентов. Система предлагает гибкий, технологичный и современный подход к здравоохранению.",
     path: DYNAMIC_ROUTES.INSURANCE,
     image: healt_insurance,
   },
   {
     id: 1,
-    caption: "Automated Excel-Based FP&A Solution",
+    caption: "Автоматизированное решение FP&A на основе Excel",
     description:
-      "The platform is an innovative financial planning and analysis (FP&A) solution designed for Excel users seeking to leverage automation in their financial processes. It streamlines data collection, analysis, and reporting while allowing finance professionals to work within their familiar Excel environment.",
+      "Платформа представляет собой инновационное решение для FP&A (финансовое планирование и анализ), разработанное для пользователей Excel, стремящихся внедрить автоматизацию в свои финансовые процессы. Это упрощает сбор, анализ и предоставление данных, позволяя финансовым специалистам работать в привычной среде Excel.",
     path: DYNAMIC_ROUTES.FPA_SOLUTION,
     image: fp_a,
   },
   {
     id: 2,
-    caption: "Digital Asset Staking service",
+    caption: "Сервис для стейкинга цифровых активов",
     description:
-      "The service offers a secure and user-friendly interface, enabling users to stake their cryptocurrencies, contribute to blockchain networks, and earn rewards. With a focus on security, transparency, and a seamless user experience, the aims to provide a rewarding staking experience for users.",
+      "Сервис предлагает безопасный и удобный интерфейс, позволяющий пользователям держать свои криптовалюты, вкладываться в блокчейн-сети и получать прибыль. Большое внимание уделяется безопасности, прозрачности и удобству работы, а также этот сервис позволяет пользователю получить полезный опыт стейкинга.",
     path: DYNAMIC_ROUTES.DIGITAL_ASSET,
     image: digital_asset,
   },
   {
     id: 3,
-    caption: "Food Delivery Service",
+    caption: "Сервис доставки еды",
     description:
-      "The platform serves as a unique and innovative food delivery service that provides customers with fresh produce boxes, filled with surplus farm products. The service aims to tackle food waste while promoting healthy nutrition habits.",
+      "Данная уникальная и инновационная платформа занимается поставкой свежих фермерских продуктов, которые остались в избыточном количестве. Служба помогает уменьшить количество пищевых отходов и пропагандирует привычки здорового питания.",
     path: DYNAMIC_ROUTES.FOOD_DELIVERY,
     image: food_delivery,
   },
   {
     id: 4,
-    caption: "Health Monitoring Service",
+    caption: "Сервис для мониторинга состояния здоровья",
     description:
-      "An innovative health monitoring service that collects real-time health metrics from wearable devices, analyzes the data and alerts users to potential health issues. By enabling early detection of pathologies, the platform helps users receive timely medical assistance and supports preventive care.",
+      "Инновационный сервис мониторинга здоровья отслеживает самочувствие пациентов в режиме реального времени с носимых устройств, анализирует данные и предупреждает пользователей о потенциальных проблемах со здоровьем. Платформа учитывает ранее выявленные патологии и помогает пользователям получать своевременную медицинскую помощь.",
     path: DYNAMIC_ROUTES.HEALTH_MONITORING,
     image: healt_monitoring,
   },
   {
     id: 5,
-    caption: "Platform for Customer Support with AI-Powered Chatbots",
+    caption:
+      "Платформа с чат-ботами на базе искусственного интеллекта для поддержки клиентов",
     description:
-      "An advanced system for creating AI-powered chatbots that automate customer support, with a visual bot constructor to design bots using blocks. It employs robust technologies and tools to handle massive data streams in real-time and analyze bot performance.",
+      "Продвинутая система с визуальным конструктором чат-ботов на базе искусственного интеллекта, которая автоматизирует поддержку клиентов. Платформа использует надежные технологии и инструменты для обработки больших потоков данных в режиме реального времени и для анализа производительности ботов.",
     path: DYNAMIC_ROUTES.AI_CHATBOTS,
     image: ai,
   },
   {
     id: 6,
-    caption: "Payroll Integration Multifunctional SDK",
+    caption: "Многофункциональный SDK для интеграции расчета заработной платы",
     description:
-      "The platform offers a secure and multifunctional SDK for bank account users, ensuring the safe exchange of sensitive information between banks and clients. By encrypting data, the platform significantly reduces the risk of data leaks during transactions.",
+      "Платформа предлагает безопасный и многофункциональный SDK (комплект для разработки программного обеспечения) для владельцев банковских счетов, обеспечивая надежный обмен конфиденциальной информацией между банком и клиентом. Платформа шифрует данные и значительно снижает риск утечки информации во время транзакций.",
     path: DYNAMIC_ROUTES.INTEGRATION_SDK,
     image: sdk,
   },

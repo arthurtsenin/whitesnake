@@ -13,7 +13,8 @@ import { Container } from "../../shared";
 import raindrops from "&/images/scroll-carousel/green-raindrops.png";
 import net from "&/images/scroll-carousel/net.png";
 import raindrop from "&/images/scroll-carousel/raindrop.png";
-export const ScrollCarousel = () => {
+
+const ScrollCarousel = () => {
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -49,3 +50,5 @@ export const ScrollCarousel = () => {
     </Container>
   );
 };
+
+export default ScrollCarousel;

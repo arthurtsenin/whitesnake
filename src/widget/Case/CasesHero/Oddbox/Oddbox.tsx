@@ -21,8 +21,6 @@ export const Oddbox: FC<OddboxProps> = ({ title, subtitle, keywords }) => {
       <Image
         alt=""
         src={heroBg}
-        placeholder="blur"
-        quality={100}
         fill
         priority
         sizes="100vw"

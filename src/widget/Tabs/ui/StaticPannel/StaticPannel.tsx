@@ -13,20 +13,9 @@ export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <Image
-          alt={panel.name}
-          src={panel.image}
-          placeholder="blur"
-          quality={100}
-          sizes="100vw"
-          style={{
-            objectFit: "cover",
-          }}
-          priority
-          fill
-        />
+        <Image alt={panel.name} src={panel.image} placeholder="blur" fill />
         <div className={styles.text}>
-          <h2 className={styles.title}>{panel.name}</h2>
+          <h3 className={styles.title}>{panel.name}</h3>
           <p className={styles.description}>{panel.description}</p>
         </div>
       </div>
