@@ -1,6 +1,6 @@
 .container {
   --container-padding: 16px;
-  --gap-vacancy-card-text: 64px;
+  --gap-vacancy-card-text: 32px;
   --clr-vacancy-card-bg: #101010;
   --fs-vacancy-card-title: 18px;
   --fs-vacancy-card-description: 12px;
