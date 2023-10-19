@@ -19,7 +19,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const [mystate, setMystate] = useState(true);
-  const myLocalStorageData = useRef(sessionStorage.getItem("jopa"));
+
+  let lala = null;
+  if (typeof window !== "undefined") {
+    lala = sessionStorage.getItem("jopa");
+  }
+
+  const myLocalStorageData = useRef(null || lala);
 
   useLayoutEffect(() => {
     if (myLocalStorageData.current === null) {
