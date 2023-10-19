@@ -21,7 +21,7 @@
 
 .glowRed {
   position: absolute;
-  right: -15%;
+  right: -5%;
   bottom: -15%;
 
   width: 40%;
@@ -31,12 +31,12 @@
 
   background: rgba(204, 11, 11, 0.5);
 
-  filter: blur(250px);
+  filter: blur(150px);
 }
 .glowBlue {
   position: absolute;
   top: -15%;
-  left: -20%;
+  left: -5%;
 
   width: 40%;
   height: 40%;
@@ -45,17 +45,17 @@
 
   background: rgba(124, 254, 253, 0.5);
 
-  filter: blur(250px);
+  filter: blur(150px);
 }
 
 .container span::after {
   position: absolute;
-  bottom: 10%;
-  left: 0;
+  bottom: 0%;
+  left: -1%;
 
   width: 12%;
   height: 10px;
-  border: 12px solid;
+  border: 5px solid;
   border-color: transparent;
   border-bottom-color: #e20f0f;
 
@@ -68,15 +68,14 @@
 .container h1 {
   position: relative;
 
-  height: 175px;
+  height: 32px;
   margin: 0 0;
-  /* clip-path: polygon(0 0, 100% 0, 100% 83%, 100% 100%, 0 100%, 0 83%); */
   font-family: "Govno";
 }
 .container {
 }
 .container h1 {
-  font-size: 140px;
+  font-size: 28px;
 
   animation: identifier 3.5s linear forwards infinite;
 }
@@ -119,5 +118,70 @@
   }
   100% {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .container h1 {
+    height: 94px;
+    font-size: 80px;
+  }
+  .container span::after {
+    width: 14%;
+    border-bottom-width: 10px;
+    left: -2px;
+    bottom: 0%;
+    height: 50px;
+  }
+  .glowRed {
+    right: -5%;
+    bottom: -15%;
+  }
+  .glowBlue {
+    top: -15%;
+    left: -15%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container h1 {
+    height: 175px;
+    font-size: 140px;
+  }
+  .container span::after {
+    width: 12%;
+    height: 50px;
+    border-bottom-width: 12px;
+    left: 1%;
+    bottom: 12%;
+  }
+
+  .glowRed {
+    position: absolute;
+    right: -15%;
+    bottom: -15%;
+
+    width: 40%;
+    height: 40%;
+
+    border-radius: 706px;
+
+    background: rgba(204, 11, 11, 0.5);
+
+    filter: blur(250px);
+  }
+  .glowBlue {
+    position: absolute;
+    top: -15%;
+    left: -20%;
+
+    width: 40%;
+    height: 40%;
+
+    border-radius: 581px;
+
+    background: rgba(124, 254, 253, 0.5);
+
+    filter: blur(250px);
   }
 }
