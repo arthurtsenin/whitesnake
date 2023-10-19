@@ -146,11 +146,6 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
               label={FORM_KEYS.message}
               register={register}
             />
-            <Textarea
-              placeholder="Расскажи немного о себе"
-              label={FORM_KEYS.message}
-              register={register}
-            />
           </div>
 
           <FileInput
