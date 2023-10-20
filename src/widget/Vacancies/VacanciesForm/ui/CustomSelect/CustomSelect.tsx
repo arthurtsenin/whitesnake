@@ -30,6 +30,21 @@ type CustomSelectProps = {
   setValue: UseFormSetValue<VacancyFormType>;
 };
 
+type SpanProps = {
+  placeholder: string;
+  value: string;
+};
+
+const Span: FC<SpanProps> = ({ placeholder, value }) => (
+  <span
+    className={cn({
+      [styles.placeholder]: !value,
+    })}
+  >
+    {!value ? placeholder : value}
+  </span>
+);
+
 export const CustomSelect: FC<CustomSelectProps> = ({
   label,
   placeholder,
@@ -73,11 +88,7 @@ export const CustomSelect: FC<CustomSelectProps> = ({
           })}
           onClick={toggleVisibility}
         >
-          {!chosenValue ? (
-            <span className={styles.placeholder}>{placeholder}</span>
-          ) : (
-            <span>{chosenValue}</span>
-          )}
+          <Span value={chosenValue} placeholder={placeholder} />
           <div className={styles.arrow}>
             <Image
               src={error ? arrowRed : arrow}
