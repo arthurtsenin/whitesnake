@@ -52,7 +52,7 @@ export type VacancyType = {
   is_adv_vacancy: boolean;
 };
 
-const vacanciesApiPath = `https://api.hh.ru/vacancies/?text=%D0%A3%D0%B0%D0%B9%D1%82%D0%A1%D0%BD%D0%B5%D0%B9%D0%BA`;
+const vacanciesApiPath = `https://api.hh.ru/vacancies/?text=%D0%A3%D0%B0%D0%B9%D1%82%D0%A1%D0%BD%D0%B5%D0%B9%D0%BA&host=rabota.by`;
 
 async function getData(): Promise<Record<string, Array<VacancyType>>> {
   const res = await fetch(vacanciesApiPath, {

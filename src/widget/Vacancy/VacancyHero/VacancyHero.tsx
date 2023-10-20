@@ -66,7 +66,10 @@ export const VacancyHero: FC<VacancyHeroProps> = ({
           <Link target="_blank" href={path}>
             <Image src={rabotaby} alt="Rabota.by icon" />
           </Link>
-          <Link target="_blank" href={path}>
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/company/whitesnake/"
+          >
             <Image src={linkedin} alt="LinkedIn  icon" />
           </Link>
         </div>

@@ -1,0 +1,192 @@
+@font-face {
+  font-weight: 700;
+  font-family: "Govno";
+  font-style: normal;
+  src: url("../../../../public/fonts/Mark-Pro-Bold.ttf");
+}
+.wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+}
+
+.glowRed {
+  position: absolute;
+  right: -5%;
+  bottom: -15%;
+
+  width: 40%;
+  height: 40%;
+
+  border-radius: 706px;
+
+  background: rgba(204, 11, 11, 0.5);
+
+  filter: blur(150px);
+}
+.glowBlue {
+  position: absolute;
+  top: -15%;
+  left: -5%;
+
+  width: 40%;
+  height: 40%;
+
+  border-radius: 581px;
+
+  background: rgba(124, 254, 253, 0.5);
+
+  filter: blur(150px);
+}
+
+.container span::after {
+  position: absolute;
+  bottom: -12%;
+  left: -1.5%;
+
+  width: 12%;
+  height: 10px;
+  border: 5px solid;
+  border-color: transparent;
+  border-bottom-color: #e20f0f;
+
+  border-radius: 50%;
+
+  content: "";
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+}
+
+.container h1 {
+  position: relative;
+
+  height: 32px;
+  margin: 0 0;
+
+  font-family: "Govno";
+}
+.container {
+}
+.container h1 {
+  font-size: 28px;
+
+  animation: identifier 3.5s linear forwards infinite;
+}
+.container span:after {
+  animation: identifier2 3.5s linear forwards infinite;
+}
+@keyframes identifier {
+  0% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  85% {
+    opacity: 1;
+  }
+  90% {
+  }
+  100% {
+  }
+}
+
+@keyframes identifier2 {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  52% {
+    clip-path: polygon(0 0, 66% 0, 3% 100%, 0 100%);
+  }
+  60% {
+    opacity: 1;
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .container h1 {
+    height: 94px;
+
+    font-size: 80px;
+  }
+  .container span::after {
+    bottom: 0%;
+    left: -2px;
+
+    width: 14%;
+    height: 50px;
+    border-bottom-width: 10px;
+  }
+  .glowRed {
+    right: -5%;
+    bottom: -15%;
+  }
+  .glowBlue {
+    top: -15%;
+    left: -15%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container h1 {
+    height: 175px;
+
+    font-size: 140px;
+  }
+  .container span::after {
+    bottom: 12%;
+    left: 1%;
+
+    width: 12%;
+    height: 50px;
+    border-bottom-width: 12px;
+  }
+
+  .glowRed {
+    position: absolute;
+    right: -15%;
+    bottom: -15%;
+
+    width: 40%;
+    height: 40%;
+
+    border-radius: 706px;
+
+    background: rgba(204, 11, 11, 0.5);
+
+    filter: blur(250px);
+  }
+  .glowBlue {
+    position: absolute;
+    top: -15%;
+    left: -20%;
+
+    width: 40%;
+    height: 40%;
+
+    border-radius: 581px;
+
+    background: rgba(124, 254, 253, 0.5);
+
+    filter: blur(250px);
+  }
+}
