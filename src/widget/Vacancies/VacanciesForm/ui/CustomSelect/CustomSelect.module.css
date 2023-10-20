@@ -3,7 +3,8 @@
 }
 
 .select {
-  --clr-select-text: rgba(255, 255, 255, 0.7);
+  --clr-select-text: #fff;
+  --clr-select-placeholder: rgba(255, 255, 255, 0.7);
   --fs-select-text: 16px;
   --clr-error: #cc0b0b;
 
@@ -20,6 +21,10 @@
 
   background-color: transparent;
   cursor: pointer;
+}
+
+.placeholder {
+  color: var(--clr-select-placeholder);
 }
 
 .dropdown {

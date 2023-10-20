@@ -1,4 +1,6 @@
 .input {
+  --clr-valid-input-text: #fff;
+
   all: unset;
 
   display: block;
@@ -12,7 +14,7 @@
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--clr-valid-input-text);
   font-size: 16px;
 
   background-color: transparent;
