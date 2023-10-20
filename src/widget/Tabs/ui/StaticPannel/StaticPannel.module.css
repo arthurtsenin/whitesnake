@@ -9,8 +9,8 @@
   flex-direction: column;
   justify-content: flex-end;
   height: 60vh;
-  max-height: 500px;
-  padding: 40px;
+  max-height: 320px;
+  padding: 16px;
   border-radius: var(--radius-300);
 }
 
@@ -60,16 +60,26 @@
 
 .description {
   color: var(--clr-secondary-text);
-  font-size: calc(var(--fs-panel-subtitle) + 4px);
+  font-size: var(--fs-panel-subtitle);
+}
+
+@media screen and (min-width: 960px) {
+  .wrapper {
+    max-height: 650px;
+    padding: 40px;
+  }
+
+  .description {
+    max-width: 60%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .wrapper {
-    max-height: 650px;
-    border: none;
+    padding: 50px;
   }
 
-  .text {
-    width: 50%;
+  .description {
+    max-width: 40%;
   }
 }
