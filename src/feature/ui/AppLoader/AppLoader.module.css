@@ -70,6 +70,7 @@
 
   height: 32px;
   margin: 0 0;
+
   font-family: "Govno";
 }
 .container {
@@ -124,14 +125,16 @@
 @media screen and (min-width: 744px) {
   .container h1 {
     height: 94px;
+
     font-size: 80px;
   }
   .container span::after {
-    width: 14%;
-    border-bottom-width: 10px;
-    left: -2px;
     bottom: 0%;
+    left: -2px;
+
+    width: 14%;
     height: 50px;
+    border-bottom-width: 10px;
   }
   .glowRed {
     right: -5%;
@@ -146,14 +149,16 @@
 @media screen and (min-width: 1200px) {
   .container h1 {
     height: 175px;
+
     font-size: 140px;
   }
   .container span::after {
+    bottom: 12%;
+    left: 1%;
+
     width: 12%;
     height: 50px;
     border-bottom-width: 12px;
-    left: 1%;
-    bottom: 12%;
   }
 
   .glowRed {
