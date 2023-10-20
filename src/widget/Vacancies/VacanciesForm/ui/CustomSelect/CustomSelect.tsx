@@ -43,6 +43,8 @@ export const CustomSelect: FC<CustomSelectProps> = ({
 }) => {
   const [open, setOpen] = useState<boolean>(false);
 
+  const chosenValue = getValues(label);
+
   const toggleVisibility = () => setOpen((prev) => !prev);
 
   const handleClickItem = (item: string) => {
@@ -71,7 +73,11 @@ export const CustomSelect: FC<CustomSelectProps> = ({
           })}
           onClick={toggleVisibility}
         >
-          <span>{getValues(label) || placeholder}</span>
+          {!chosenValue ? (
+            <span className={styles.placeholder}>{placeholder}</span>
+          ) : (
+            <span>{chosenValue}</span>
+          )}
           <div className={styles.arrow}>
             <Image
               src={error ? arrowRed : arrow}
