@@ -150,9 +150,11 @@ body {
 
   background-color: var(--clr-main-bg);
 }
+
 body {
   scrollbar-gutter: stable;
 }
+
 body.lock {
   position: fixed;
   top: 0;
@@ -166,6 +168,7 @@ body.lock {
   flex-direction: column;
   gap: var(--gap-layout);
   align-items: center;
+  min-height: 40dvh;
 }
 
 @media screen and (min-width: 320px) {

@@ -4,7 +4,7 @@ import { ChangeEvent, FC } from "react";
 
 import styles from "./FileInput.module.css";
 
-import { FilePreview } from "./ui/FilePrevie/FilePreview";
+import { FilePreview } from "./ui/FilePreview/FilePreview";
 
 import clip from "&/images/vacancies/clip.png";
 
@@ -18,6 +18,10 @@ export const FileInput: FC<FileInputProps> = ({
 }) => {
   return (
     <div className={styles.container}>
+      <div className={styles.wrapper}>
+        <Image src={clip} className={styles.icon} alt="upload CV" />
+      </div>
+
       <div className={styles.placeholder}>
         {selectedName ? (
           <FilePreview name={selectedName} />
@@ -28,6 +32,7 @@ export const FileInput: FC<FileInputProps> = ({
           </>
         )}
       </div>
+
       <input
         onChange={handleFileChange}
         type="file"
@@ -35,7 +40,6 @@ export const FileInput: FC<FileInputProps> = ({
         placeholder="CV"
         className={styles.file}
       />
-      <Image src={clip} className={styles.icon} alt="upload CV" />
     </div>
   );
 };
