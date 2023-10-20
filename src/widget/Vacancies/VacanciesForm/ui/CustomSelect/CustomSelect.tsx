@@ -23,7 +23,6 @@ type CustomSelectProps = {
   placeholder: string;
   label: string;
   options: Array<string>;
-  helperText?: string;
   error?: boolean;
   register: UseFormRegister<VacancyFormType>;
   getValues: UseFormGetValues<VacancyFormType>;
@@ -49,7 +48,6 @@ export const CustomSelect: FC<CustomSelectProps> = ({
   label,
   placeholder,
   options,
-  helperText,
   error,
   register,
   getValues,
@@ -78,60 +76,56 @@ export const CustomSelect: FC<CustomSelectProps> = ({
   const divOutsideRef = useOutsideClick(handleOutsideClick);
 
   return (
-    <>
-      <div className={styles.container} data-custom-select ref={divOutsideRef}>
-        <button
-          type="button"
-          className={cn(styles.select, {
-            [styles.open]: open,
-            [styles.invalid]: error,
-          })}
-          onClick={toggleVisibility}
-        >
-          <Span value={chosenValue} placeholder={placeholder} />
-          <div className={styles.arrow}>
-            <Image
-              src={error ? arrowRed : arrow}
-              alt="arrow which opens dropdown in order to choose job title"
-            />
-          </div>
-        </button>
+    <div className={styles.container} data-custom-select ref={divOutsideRef}>
+      <button
+        type="button"
+        className={cn(styles.select, {
+          [styles.open]: open,
+          [styles.invalid]: error,
+        })}
+        onClick={toggleVisibility}
+      >
+        <Span value={chosenValue} placeholder={placeholder} />
+        <div className={styles.arrow}>
+          <Image
+            src={error ? arrowRed : arrow}
+            alt="arrow which opens dropdown in order to choose job title"
+          />
+        </div>
+      </button>
 
-        <AnimatePresence initial={false}>
-          {open && (
-            <motion.div
-              className={styles.dropdown}
-              initial="collapsed"
-              animate="open"
-              exit="collapsed"
-              variants={{
-                open: { opacity: 1, height: "auto" },
-                collapsed: { opacity: 0, height: 0 },
-              }}
-            >
-              {options.map((optionName, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  className={styles.dropdownItem}
-                  onClick={() => handleClickItem(optionName)}
-                >
-                  {optionName}
-                </button>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            className={styles.dropdown}
+            initial="collapsed"
+            animate="open"
+            exit="collapsed"
+            variants={{
+              open: { opacity: 1, height: "auto" },
+              collapsed: { opacity: 0, height: 0 },
+            }}
+          >
+            {options.map((optionName, idx) => (
+              <button
+                key={idx}
+                type="button"
+                className={styles.dropdownItem}
+                onClick={() => handleClickItem(optionName)}
+              >
+                {optionName}
+              </button>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-        <input
-          type="text"
-          className={styles.hidden}
-          {...register(label)}
-          {...props}
-        />
-      </div>
-
-      {helperText && <p className={styles.helperText}>{helperText}</p>}
-    </>
+      <input
+        type="text"
+        className={styles.hidden}
+        {...register(label)}
+        {...props}
+      />
+    </div>
   );
 };
