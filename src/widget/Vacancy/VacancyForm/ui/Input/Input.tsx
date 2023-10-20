@@ -8,29 +8,19 @@ import { VacancyFormType } from "../../formKeys";
 
 type InputProps = ComponentProps<"input"> & {
   error?: boolean;
-  helperText?: string;
   refresh?: boolean;
   label: string;
   register: UseFormRegister<VacancyFormType>;
 };
 
-export const Input: FC<InputProps> = ({
-  helperText,
-  label,
-  register,
-  error,
-  ...props
-}) => {
+export const Input: FC<InputProps> = ({ label, register, error, ...props }) => {
   return (
-    <>
-      <input
-        className={classNames(styles.input, {
-          [styles.invalid]: error,
-        })}
-        {...register(label)}
-        {...props}
-      />
-      {helperText && <p className={styles.helperText}>{helperText}</p>}
-    </>
+    <input
+      className={classNames(styles.input, {
+        [styles.invalid]: error,
+      })}
+      {...register(label)}
+      {...props}
+    />
   );
 };
