@@ -1,3 +1,10 @@
+import PageScript from "@/shared/analitics/PageScript";
+
 export default function PortfolioPage() {
-  return <section>Portfolio Page</section>;
+  return (
+    <>
+      <PageScript />
+      Portfolio Page
+    </>
+  );
 }

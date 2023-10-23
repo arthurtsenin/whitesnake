@@ -1,4 +1,5 @@
 import { VacancyPageLayout } from "@/page/dynamic/vacancy/Vacancy.page";
+import PageScript from "@/shared/analitics/PageScript";
 import { getLists } from "@/shared/utils/getVacancyLists";
 import { getSubtitle } from "@/shared/utils/getVacancySubtitle";
 import { getTitles } from "@/shared/utils/getVacancyTitles";
@@ -105,13 +106,16 @@ export default async function VacancyPage({
   const lists = getLists(vacancy.description);
 
   return (
-    <VacancyPageLayout
-      jobTitle={vacancy.name}
-      path={vacancy.alternate_url}
-      title={vacancy.name}
-      subtitle={subtitle[0]}
-      titles={titles}
-      lists={lists}
-    />
+    <>
+      <PageScript />
+      <VacancyPageLayout
+        jobTitle={vacancy.name}
+        path={vacancy.alternate_url}
+        title={vacancy.name}
+        subtitle={subtitle[0]}
+        titles={titles}
+        lists={lists}
+      />
+    </>
   );
 }

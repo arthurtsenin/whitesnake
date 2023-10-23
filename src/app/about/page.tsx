@@ -1,3 +1,10 @@
+import PageScript from "@/shared/analitics/PageScript";
+
 export default function AboutPage() {
-  return <section>About page</section>;
+  return (
+    <>
+      <PageScript />
+      About page
+    </>
+  );
 }
