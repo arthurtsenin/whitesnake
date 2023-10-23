@@ -21,7 +21,7 @@ import { Input } from "../ui/Input/Input";
 import { Loader } from "../ui/Loader/Loader";
 import { Textarea } from "../ui/Textarea/Textarea";
 import { Toast } from "../ui/Toast/Toast";
-import { FORM_VACANCY_SCHEMA } from "../validation";
+import { FORM_VACANCIES_SCHEMA } from "../validation";
 import { storage } from "../../../../firestore";
 
 import raindrops from "&/images/vacancies/form/green-raindrops.png";
@@ -70,7 +70,7 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
       [FORM_KEYS.message]: "",
     },
     mode: "onTouched",
-    resolver: yupResolver(FORM_VACANCY_SCHEMA),
+    resolver: yupResolver(FORM_VACANCIES_SCHEMA),
   });
 
   const uploadFile = async (name: string, file: File) => {
@@ -170,7 +170,7 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
           />
 
           <div className={styles.button}>
-            <Button variant="secondary" disabled={!isValid} type="submit">
+            <Button variant="secondary" disabled={isFileDownload || !isValid}>
               <div className={styles.text}>
                 {formStatus === "loading" ? <Loader /> : <p>Отправить</p>}
               </div>
