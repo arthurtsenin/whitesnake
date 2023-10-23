@@ -9,6 +9,10 @@
   background: rgba(255, 255, 255, 0.04);
 }
 
+.solidBorder {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
 .wrapper {
   position: absolute;
 
@@ -90,7 +94,7 @@
     display: block;
   }
 
-  .icon {
+  .wrapper {
     width: 24px;
     height: 24px;
   }
