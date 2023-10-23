@@ -45,14 +45,14 @@ export const AI_CHATBOTS_DATA: CaseDataType = {
 
           "Кроме того, наша команда разработала внутреннюю часть системы оценки ботов, позволяющую клиентам оставлять отзывы о производительности чат-ботов на базе искусственного интеллекта. Эта рейтинговая система помогла оценить и повысить эффективность чат-ботов в обработке запросов клиентов, обеспечив лучший пользовательский опыт.",
 
-          "Используя надежный технический стек, состоящий из Python, FastAPI, Aiohttp, Tensorflow, Pandas, PostgreSQL, Docker, Docker-Compose, Kubernetes, Redis, Kafka, GitHub, Seldon, Prometheus, мы создали мощное и масштабируемое решение.",
+          "Используя надежный технический стек, состоящий из Python, FastAPI, aiohttp, Tensorflow, Pandas, PostgreSQL, Docker, Docker-Compose, Kubernetes, Redis, Kafka, GitHub, Seldon, Prometheus, мы создали мощное и масштабируемое решение.",
         ],
         image: createChatBots,
       },
       {
         id: 2,
         text: [
-          "Python послужил основой нашей разработки и позволил нам создавать эффективные и надежные backend-функции. FastAPI и Aiohttp были использованы для создания высокопроизводительных RESTful API для бесшовной интеграции и взаимодействия с интерфейсом и другими сервисами. Эти фреймворки в сочетании с PostgreSQL обеспечили безопасное и эффективное хранение и извлечение данных рейтингов и конфигураций ботов.",
+          "Python послужил основой нашей разработки и позволил нам создавать эффективные и надежные backend-функции. FastAPI и aiohttp были использованы для создания высокопроизводительных RESTful API для бесшовной интеграции и взаимодействия с интерфейсом и другими сервисами. Эти фреймворки в сочетании с PostgreSQL обеспечили безопасное и эффективное хранение и извлечение данных рейтингов и конфигураций ботов.",
 
           "Для расширения возможностей чат-ботов мы использовали Tensorflow, что позволило разрабатывать и внедрять передовые модели машинного обучения. Мы использовали Pandas для эффективной обработки и анализа данных, благодаря чему мы смогли обеспечить точную информацию о взаимодействии с клиентами.",
 
@@ -94,7 +94,7 @@ export const AI_CHATBOTS_DATA: CaseDataType = {
   team_info: [
     { id: 1, teamName: "Backend-разработчиков", teamCount: 6 },
     { id: 2, teamName: "Fullstack-разработчика", teamCount: 2 },
-    { id: 4, teamName: "Dev-ops", teamCount: 1 },
+    { id: 4, teamName: "DevOps", teamCount: 1 },
     { id: 3, teamName: "Техлид", teamCount: 1 },
   ],
 
@@ -102,16 +102,16 @@ export const AI_CHATBOTS_DATA: CaseDataType = {
 
   stack_info: {
     backend: [
-      "Pyton",
+      "Python",
       "FastAPI",
-      "Aiohttp",
+      "aiohttp",
       "Pydantic",
       "SQLAlchemy",
       "Seldon",
       "Prometheus",
       "Kafka",
     ],
-    ["Dev-ops"]: ["Docker", "Docker-compose", "Kubernetes"],
+    ["DevOps"]: ["Docker", "Docker-compose", "Kubernetes"],
     платформы: ["AWS"],
   },
 };

@@ -1,3 +1,10 @@
+import PageScript from "@/shared/analitics/PageScript";
+
 export default function InternshipPage() {
-  return <section>Internship page</section>;
+  return (
+    <>
+      <PageScript />
+      Internship page
+    </>
+  );
 }
