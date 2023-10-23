@@ -1,4 +1,6 @@
 "use client";
+
+import classNames from "classnames";
 import Image from "next/image";
 import { ChangeEvent, FC } from "react";
 
@@ -9,22 +11,31 @@ import { FilePreview } from "./ui/FilePreview/FilePreview";
 import clip from "&/images/vacancies/clip.png";
 
 type FileInputProps = {
-  selectedName: string;
+  selectedFileName: string;
+  isFileDownload: boolean;
   handleFileChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
+
 export const FileInput: FC<FileInputProps> = ({
   handleFileChange,
-  selectedName,
+  isFileDownload,
+  selectedFileName,
 }) => {
   return (
-    <div className={styles.container}>
+    <div
+      className={classNames(styles.container, {
+        [styles.solidBorder]: selectedFileName,
+      })}
+    >
       <div className={styles.wrapper}>
         <Image src={clip} className={styles.icon} alt="upload CV" />
       </div>
 
       <div className={styles.placeholder}>
-        {selectedName ? (
-          <FilePreview name={selectedName} />
+        {isFileDownload ? (
+          "Загрузка файла..."
+        ) : selectedFileName ? (
+          <FilePreview name={selectedFileName} />
         ) : (
           <>
             <span className={styles.short}>CV</span>

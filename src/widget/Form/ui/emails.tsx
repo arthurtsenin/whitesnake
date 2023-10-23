@@ -50,16 +50,41 @@ export const LeaveRequest: FC<LeaveRequestProps> = ({
               </Text>
               <Text>Адрес электронной почты: {email}</Text>
               <Hr />
-              <Text>Номер телефона: {phone}</Text>
-              <Hr />
-              <Text>Telegram: {telegram}</Text>
-              <Hr />
-              <Text>LinkedIn: {linkedIn}</Text>
-              <Hr />
-              <Text>Сообщение: {message}</Text>
-              <Hr />
-              <Text>Резюме: {url}</Text>
-              <Hr />
+
+              {phone && (
+                <>
+                  <Text>Номер телефона: {phone}</Text>
+                  <Hr />
+                </>
+              )}
+
+              {telegram && (
+                <>
+                  <Text>Telegram: {telegram}</Text>
+                  <Hr />
+                </>
+              )}
+
+              {linkedIn && (
+                <>
+                  <Text>LinkedIn: {linkedIn}</Text>
+                  <Hr />
+                </>
+              )}
+
+              {message && (
+                <>
+                  <Text>Сообщение: {message}</Text>
+                  <Hr />
+                </>
+              )}
+
+              {url && (
+                <>
+                  <Text>Резюме: {url}</Text>
+                  <Hr />
+                </>
+              )}
             </Section>
           </Container>
         </Body>

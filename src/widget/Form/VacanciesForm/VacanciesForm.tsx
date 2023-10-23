@@ -8,45 +8,59 @@ import { ChangeEvent, useState } from "react";
 import { flushSync } from "react-dom";
 import { useForm } from "react-hook-form";
 
-import styles from "./VacancyForm.module.css";
+import styles from "./VacanciesForm.module.css";
 
 import { Button } from "@/shared";
 
-import { sendEmail } from "./action";
-import { FORM_KEYS, formTemplate, VacancyFormType } from "./formKeys";
-import { FileInput } from "./ui/FileInput/FileInput";
-import { FormTitle } from "./ui/FormTitle/FormTitle";
-import { Input } from "./ui/Input/Input";
-import { Loader } from "./ui/Loader/Loader";
-import { Textarea } from "./ui/Textarea/Textarea";
-import { Toast } from "./ui/Toast/Toast";
-import { FORM_VACANCY_SCHEMA } from "./validation";
+import { sendEmail } from "../action";
+import { FORM_KEYS, formTemplate, VacancyFormType } from "../formKeys";
+import { CustomSelect } from "../ui/CustomSelect/CustomSelect";
+import { FileInput } from "../ui/FileInput/FileInput";
+import { FormTitle } from "../ui/FormTitle/FormTitle";
+import { Input } from "../ui/Input/Input";
+import { Loader } from "../ui/Loader/Loader";
+import { Textarea } from "../ui/Textarea/Textarea";
+import { Toast } from "../ui/Toast/Toast";
+import { FORM_VACANCY_SCHEMA } from "../validation";
 import { storage } from "../../../../firestore";
 
 import raindrops from "&/images/vacancies/form/green-raindrops.png";
 
 type VacancyFormProps = {
-  jobTitle: string;
+  jobTitles: Array<string>;
 };
-type FormStatusType = "pending" | "error" | "success" | "loading";
-type ToastType = "error" | "success" | "pending";
 
-export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
+type FormStatusType = "pending" | "error" | "success" | "loading";
+
+type ToastType = {
+  isToastOpen: boolean;
+  toastType: "error" | "success" | "pending";
+  toastText: string;
+};
+
+export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
   const [selectedFileName, setSelectedFileName] = useState<string>("");
   const [downloadUrl, setDownloadUrl] = useState<string>("");
 
-  const [isToastOpen, setIsToastOpen] = useState<boolean>(false);
-  const [toastType, setToastType] = useState<ToastType>("pending");
-  const [toastText, setToastText] = useState<string>("");
+  const [isFileDownload, setIsFileDownload] = useState<boolean>(false);
+
+  const [toast, setToast] = useState<ToastType>({
+    isToastOpen: false,
+    toastType: "pending",
+    toastText: "",
+  });
 
   const [formStatus, setFormStatus] = useState<FormStatusType>("pending");
 
   const {
     reset,
     register,
+    getValues,
+    setValue,
     formState: { errors, isValid },
   } = useForm<VacancyFormType>({
     defaultValues: {
+      [FORM_KEYS.jobTitle]: "",
       [FORM_KEYS.name]: "",
       [FORM_KEYS.surname]: "",
       [FORM_KEYS.email]: "",
@@ -60,17 +74,20 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
   });
 
   const uploadFile = async (name: string, file: File) => {
+    setIsFileDownload(true);
     const storageRef = ref(storage, `cv/${name}`);
     await uploadBytes(storageRef, file as File);
-    await getDownloadURL(storageRef).then(async (downloadUrl) =>
-      setDownloadUrl(downloadUrl),
-    );
+    await getDownloadURL(storageRef).then(async (downloadUrl) => {
+      setDownloadUrl(downloadUrl);
+      setSelectedFileName(name);
+      setIsFileDownload(false);
+    });
   };
 
   const handleFileChange = async (e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      setSelectedFileName(e.target.files[0].name);
       await uploadFile(e.target.files[0].name, e.target.files[0]);
+      setSelectedFileName(e.target.files[0].name);
     }
   };
 
@@ -78,36 +95,37 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
     flushSync(() => setFormStatus("loading"));
 
     FormData.append(FORM_KEYS.url, downloadUrl);
-    FormData.append(FORM_KEYS.jobTitle, jobTitle);
 
     const result = await sendEmail(FormData);
 
     if (result.success) {
-      setIsToastOpen(true);
-      setToastType("success");
-      setToastText(result.success);
-
+      setToast({
+        isToastOpen: true,
+        toastType: "success",
+        toastText: result.success,
+      });
       setFormStatus("success");
     }
 
     if (result.error) {
-      setIsToastOpen(true);
-      setToastType("error");
-      setToastText(result.error);
-
+      setToast({
+        isToastOpen: true,
+        toastType: "error",
+        toastText: result.error,
+      });
       setFormStatus("error");
     }
-
     setSelectedFileName("");
+    setDownloadUrl("");
     reset();
   };
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="vacancies-form">
       <div className={styles.glowBlue} />
 
       <div className={styles.raindrops}>
-        <Image src={raindrops} alt="raindrops" priority />
+        <Image src={raindrops} alt="raindrops" />
       </div>
       <form
         className={styles.form}
@@ -116,8 +134,18 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
         id="leave-request"
       >
         <FormTitle title="Оставить заявку" />
+
         <div className={styles.fields}>
           <div className={styles.inputs}>
+            <CustomSelect
+              placeholder="Желаемая позиция*"
+              label={FORM_KEYS.jobTitle}
+              options={jobTitles}
+              error={!!errors[FORM_KEYS.jobTitle]}
+              getValues={getValues}
+              setValue={setValue}
+              register={register}
+            />
             {formTemplate.map((el) => (
               <Input
                 key={el.id}
@@ -136,9 +164,11 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
           </div>
 
           <FileInput
-            selectedName={selectedFileName}
+            isFileDownload={isFileDownload}
+            selectedFileName={selectedFileName}
             handleFileChange={handleFileChange}
           />
+
           <div className={styles.button}>
             <Button variant="secondary" disabled={!isValid} type="submit">
               <div className={styles.text}>
@@ -152,12 +182,12 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
           </div>
         </div>
       </form>
-      {isToastOpen && (
+      {toast.isToastOpen && (
         <Toast
           isToastOpen
-          handleClick={() => setIsToastOpen(false)}
-          toastType={toastType}
-          toastText={toastText}
+          handleClick={() => setToast({ ...toast, isToastOpen: false })}
+          toastType={toast.toastType}
+          toastText={toast.toastText}
         />
       )}
     </section>

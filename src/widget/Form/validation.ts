@@ -19,7 +19,7 @@ export const FORM_VACANCY_SCHEMA = yup.object({
     .required("Surname is a required field"),
   [FORM_KEYS.email]: yup
     .string()
-    .matches(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i, "Invalit email format")
+    .matches(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i, "Invalid email format")
     .required("Email is a required field")
     .email("Invalid email format"),
 });
