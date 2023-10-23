@@ -1,6 +1,7 @@
 "use client";
 
 import { Inter } from "next/font/google";
+import Head from "next/head";
 import { useLayoutEffect, useState } from "react";
 
 import "./global.css";
@@ -49,7 +50,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <LayoutScript />
+      <Head>
+        <LayoutScript />
+      </Head>
       <body className={inter.className}>
         {mystate && TbFP ? (
           <div className="layout">
