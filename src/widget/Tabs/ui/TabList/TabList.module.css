@@ -56,11 +56,11 @@
   }
 
   .tabs {
-    width: 80%;
+    width: 90%;
   }
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1440px) {
   .container {
     margin-inline: auto;
 
