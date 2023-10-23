@@ -1,9 +1,9 @@
 import { FC } from "react";
 
 import { VacancyType } from "@/app/vacancies/page";
+import { JOB_TITLES } from "@/widget/Form/data";
+import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
 import { VacanciesCards } from "@/widget/Vacancies/VacanciesCards/VacanciesCards";
-import { JOB_TITLES } from "@/widget/Vacancies/VacanciesForm/data";
-import { VacanciesForm } from "@/widget/Vacancies/VacanciesForm/VacanciesForm";
 import { VacanciesHero } from "@/widget/Vacancies/VacanciesHero/VacanciesHero";
 
 type VacanciesPageLayoutProps = {

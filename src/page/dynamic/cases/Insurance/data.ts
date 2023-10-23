@@ -13,8 +13,8 @@ export const INSURANCE_DATA: CaseDataType = {
       "Медицинское страхование",
       "Здравоохранение",
       "Страхование",
-      "Back-end разработка",
-      "Fullstack-разработка",
+      "Backend разработка",
+      "Fullstack разработка",
       "Python",
       "Go",
       "React",
@@ -139,8 +139,8 @@ export const INSURANCE_DATA: CaseDataType = {
 
   stack_info: {
     backend: [
-      "Pyton",
-      "Go lang",
+      "Python",
+      "Go",
       "Flask",
       "Marshmallow",
       "Phabricator",

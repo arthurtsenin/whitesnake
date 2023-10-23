@@ -15,7 +15,7 @@ export const HEALTH_MONITORING_DATA: CaseDataType = {
       "Python",
       "API",
       "Телемедицина",
-      "Backend-разработка",
+      "Backend разработка",
       "Web",
       "Django",
       "Анализ",
@@ -106,7 +106,7 @@ export const HEALTH_MONITORING_DATA: CaseDataType = {
   team_info: [
     { id: 1, teamName: "Backend-разработчиков", teamCount: 4 },
     { id: 2, teamName: "Fullstack-разработчика", teamCount: 1 },
-    { id: 3, teamName: "Dev-ops", teamCount: 1 },
+    { id: 3, teamName: "DevOps", teamCount: 1 },
     { id: 4, teamName: "Тимлид", teamCount: 1 },
   ],
 
@@ -114,14 +114,14 @@ export const HEALTH_MONITORING_DATA: CaseDataType = {
 
   stack_info: {
     backend: [
-      "Pyton",
+      "Python",
       "Django",
       "Django REST Framework",
       "Celery",
       "Kafka",
       "Pandas",
     ],
-    ["Dev-ops"]: ["Docker", "Docker-compose", "Kubernetes"],
+    ["DevOps"]: ["Docker", "Docker-compose", "Kubernetes"],
     платформы: ["AWS"],
   },
 };

@@ -1,4 +1,5 @@
 import { VacanciesPageLayout } from "@/page/Vacancies.page";
+import PageScript from "@/shared/analitics/PageScript";
 
 export type VacancyType = {
   id: string;
@@ -74,5 +75,10 @@ export default async function VacanciesPage() {
     vacancies?.at(0)?.employer.alternate_url ||
     "https://rabota.by/employer/5674346";
 
-  return <VacanciesPageLayout path={employerPath} vacancies={vacancies} />;
+  return (
+    <>
+      <PageScript />
+      <VacanciesPageLayout path={employerPath} vacancies={vacancies} />;
+    </>
+  );
 }

@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 
+import PageScript from "@/shared/analitics/PageScript";
 import { ACCORDIONS_DATA } from "@/widget/Accordion/data";
 import { Banner } from "@/widget/Banner/Banner";
 import { BenefitCards } from "@/widget/BenefitCards/BenefitCards";
@@ -22,6 +23,7 @@ const Accordion = dynamic(() => import("@/widget/Accordion/Accordion"));
 export default function Home() {
   return (
     <>
+      <PageScript />
       <HomeHero />
 
       <BenefitCards data={BENEFIT_CARD_WITH_ICON_DATA} variant="withIcon" />
