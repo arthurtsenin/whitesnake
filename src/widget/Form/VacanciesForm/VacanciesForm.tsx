@@ -41,7 +41,6 @@ type ToastType = {
 export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
   const [selectedFileName, setSelectedFileName] = useState<string>("");
   const [downloadUrl, setDownloadUrl] = useState<string>("");
-
   const [isFileDownload, setIsFileDownload] = useState<boolean>(false);
 
   const [toast, setToast] = useState<ToastType>({
@@ -170,7 +169,12 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
           />
 
           <div className={styles.button}>
-            <Button variant="secondary" disabled={isFileDownload || !isValid}>
+            <Button
+              variant="secondary"
+              disabled={
+                !/pdf/.test(selectedFileName) || isFileDownload || !isValid
+              }
+            >
               <div className={styles.text}>
                 {formStatus === "loading" ? <Loader /> : <p>Отправить</p>}
               </div>

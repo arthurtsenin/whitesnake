@@ -46,6 +46,7 @@ export const FileInput: FC<FileInputProps> = ({
 
       <input
         onChange={handleFileChange}
+        accept=".pdf"
         type="file"
         name="file"
         placeholder="CV"

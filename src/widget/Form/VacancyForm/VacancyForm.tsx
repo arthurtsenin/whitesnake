@@ -155,7 +155,12 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
           />
 
           <div className={styles.button}>
-            <Button variant="secondary" disabled={isFileDownload || !isValid}>
+            <Button
+              variant="secondary"
+              disabled={
+                !/pdf/.test(selectedFileName) || isFileDownload || !isValid
+              }
+            >
               <div className={styles.text}>
                 {formStatus === "loading" ? <Loader /> : <p>Отправить</p>}
               </div>
