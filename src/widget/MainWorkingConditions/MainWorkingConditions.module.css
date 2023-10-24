@@ -49,7 +49,7 @@
 }
 
 .glowRed2 {
-  top: 55%;
+  top: 52%;
   right: -55%;
 
   border-radius: 130px;
@@ -59,7 +59,7 @@
 }
 
 .glowBlue2 {
-  bottom: -10%;
+  bottom: -15%;
   left: -35%;
 
   border-radius: 366px;
@@ -72,5 +72,55 @@
   .container {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .glowBlue1,
+  .glowRed2 {
+    visibility: hidden;
+  }
+
+  .glowRed1 {
+    top: -20%;
+    right: -70%;
+  }
+
+  .glowBlue2 {
+    bottom: -40%;
+    left: -65%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .glowRed1 {
+    top: -30%;
+    right: -75%;
+  }
+
+  .glowBlue2 {
+    bottom: -60%;
+    left: -80%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .glowRed1 {
+    right: -80%;
+  }
+
+  .glowBlue2 {
+    bottom: -65%;
+    left: -80%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .glowRed1 {
+    right: -90%;
+    filter: blur(173px);
+  }
+
+  .glowBlue2 {
+    bottom: -100%;
+    left: -80%;
   }
 }
