@@ -12,13 +12,13 @@ import clip from "&/images/vacancies/clip.png";
 
 type FileInputProps = {
   selectedFileName: string;
-  isFileDownload: boolean;
+  isFileDownloading: boolean;
   handleFileChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const FileInput: FC<FileInputProps> = ({
   handleFileChange,
-  isFileDownload,
+  isFileDownloading,
   selectedFileName,
 }) => {
   return (
@@ -32,7 +32,7 @@ export const FileInput: FC<FileInputProps> = ({
       </div>
 
       <div className={styles.placeholder}>
-        {isFileDownload ? (
+        {isFileDownloading ? (
           "Загрузка файла..."
         ) : selectedFileName ? (
           <FilePreview name={selectedFileName} />

@@ -41,7 +41,7 @@ type ToastType = {
 export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
   const [selectedFileName, setSelectedFileName] = useState<string>("");
   const [downloadUrl, setDownloadUrl] = useState<string>("");
-  const [isFileDownload, setIsFileDownload] = useState<boolean>(false);
+  const [isFileDownloading, setIsFileDownloading] = useState<boolean>(false);
 
   const [toast, setToast] = useState<ToastType>({
     isToastOpen: false,
@@ -73,13 +73,13 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
   });
 
   const uploadFile = async (name: string, file: File) => {
-    setIsFileDownload(true);
+    setIsFileDownloading(true);
     const storageRef = ref(storage, `cv/${name}`);
     await uploadBytes(storageRef, file as File);
     await getDownloadURL(storageRef).then(async (downloadUrl) => {
       setDownloadUrl(downloadUrl);
       setSelectedFileName(name);
-      setIsFileDownload(false);
+      setIsFileDownloading(false);
     });
   };
 
@@ -118,6 +118,11 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
     setDownloadUrl("");
     reset();
   };
+
+  const isFileFormatValid =
+    selectedFileName.length > 0 && !/pdf/.test(selectedFileName);
+
+  const isDisabled = isFileDownloading || isFileFormatValid || !isValid;
 
   return (
     <section className={styles.container} id="vacancies-form">
@@ -163,18 +168,13 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
           </div>
 
           <FileInput
-            isFileDownload={isFileDownload}
+            isFileDownloading={isFileDownloading}
             selectedFileName={selectedFileName}
             handleFileChange={handleFileChange}
           />
 
           <div className={styles.button}>
-            <Button
-              variant="secondary"
-              disabled={
-                !/pdf/.test(selectedFileName) || isFileDownload || !isValid
-              }
-            >
+            <Button variant="secondary" disabled={isDisabled}>
               <div className={styles.text}>
                 {formStatus === "loading" ? <Loader /> : <p>Отправить</p>}
               </div>
