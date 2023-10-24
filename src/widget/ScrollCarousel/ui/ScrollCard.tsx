@@ -46,7 +46,7 @@ export const ScrollCard = ({
   const iconRotateProgress = useTransform(
     scrollYProgress,
     [0, 1],
-    ["-15deg", "0deg"],
+    !isMobileDevice ? ["-15deg", "0deg"] : ["0deg", "0deg"],
   );
   const markOpacity = useTransform(
     scrollYProgress,
