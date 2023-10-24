@@ -1,0 +1,23 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.container {
+  --gap-working-conditions: 24px;
+
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  gap: var(--gap-working-conditions);
+  justify-content: center;
+}
+
+@media screen and (min-width: 744px) {
+  .container {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
