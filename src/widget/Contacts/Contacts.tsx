@@ -23,6 +23,7 @@ export const Contacts: FC<ContactsProps> = ({ title, subtitle, contacts }) => {
             <ContactCard
               key={contact.id}
               url={contact.url}
+              target={contact.target}
               title={contact.title}
               description={contact.description}
             />

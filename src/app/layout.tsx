@@ -1,9 +1,13 @@
 "use client";
+
 import { Inter } from "next/font/google";
+import Head from "next/head";
 import { useLayoutEffect, useState } from "react";
 
 import "./global.css";
 
+import LayoutScript from "@/shared/analitics/LayoutScript";
+import { FormProvider } from "@/shared/provider/FormProvider";
 import { Footer } from "@/widget/Footer/Footer";
 import { Header } from "@/widget/Header/Header";
 
@@ -46,12 +50,16 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <Head>
+        <LayoutScript />
+      </Head>
       <body className={inter.className}>
         {mystate && TbFP ? (
           <div className="layout">
             <Header />
             <main className="main">{children}</main>
             <Footer />
+            <FormProvider />
           </div>
         ) : (
           <AppLoader />
