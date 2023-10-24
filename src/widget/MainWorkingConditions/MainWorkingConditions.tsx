@@ -20,7 +20,14 @@ export const MainWorkingConditions: FC<MainWorkingConditionsProps> = ({
   return (
     <Container>
       <section className={styles.section}>
-        <Title title={title} />
+        <div className={styles.glowRed1} />
+        <div className={styles.glowBlue1} />
+        <div className={styles.glowRed2} />
+        <div className={styles.glowBlue2} />
+
+        <div>
+          <Title title={title} />
+        </div>
 
         <div className={styles.container}>
           {conditions.map((condition) => (
