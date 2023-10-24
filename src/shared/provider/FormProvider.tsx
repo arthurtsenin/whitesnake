@@ -9,7 +9,7 @@ import { CloseButton } from "./ui/CloseButton/CloseButton";
 
 export const FormProvider = () => {
   const searchParams = useSearchParams();
-  const currentForm = searchParams.get("form");
+  const currentForm = searchParams?.get("form");
 
   useEffect(() => {
     currentForm
