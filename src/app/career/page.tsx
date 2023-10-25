@@ -3,7 +3,7 @@ import { VacanciesHero } from "@/widget/Vacancies/VacanciesHero/VacanciesHero";
 import { WORKING_CONDITIONS_DATA } from "@/widget/WorkingConditions/data";
 import { WorkingConditions } from "@/widget/WorkingConditions/WorkingConditions";
 
-export default function CareePage() {
+export default function CareerPage() {
   return (
     <>
       <PageScript />
