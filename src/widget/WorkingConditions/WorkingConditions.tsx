@@ -29,12 +29,13 @@ export const WorkingConditions: FC<WorkingConditionsProps> = ({
 
         <div className={styles.container}>
           {conditions.map((condition) => (
-            <WorkingCondition
-              key={condition.id}
-              title={condition.title}
-              subtitle={condition.subtitle}
-              imageSrc={condition.imageSrc}
-            />
+            <div key={condition.id} className={styles.itemContainer}>
+              <WorkingCondition
+                title={condition.title}
+                subtitle={condition.subtitle}
+                imageSrc={condition.imageSrc}
+              />
+            </div>
           ))}
         </div>
       </section>
