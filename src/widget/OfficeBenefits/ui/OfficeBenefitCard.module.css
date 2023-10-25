@@ -1,0 +1,116 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.rectangle .cardInfo {
+  padding-inline: 18px;
+}
+
+.card .cardImg img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.rectangle .cardImg img {
+  border-radius: 12px;
+}
+
+.square .cardImg img {
+  aspect-ratio: 1/1;
+  border-radius: 24px;
+}
+
+.circle .cardImg img {
+  aspect-ratio: 1/1;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.cardTitle {
+  color: var(--clr-main-text);
+  font-size: 16px;
+  font-weight: var(--fw-semibold);
+  line-height: 120%;
+  letter-spacing: -0.32px;
+}
+
+.cardDesc {
+  color: var(--clr-secondary-text);
+  font-size: 12px;
+  font-weight: var(--fw-light);
+  line-height: 120%;
+  letter-spacing: -0.32px;
+}
+
+.rectangle .cardDesc {
+  max-width: 60%;
+}
+
+@media screen and (min-width: 744px) {
+  .circle,
+  .square {
+    width: min-content;
+  }
+
+  .card .cardImg img {
+    max-height: 320px;
+    min-width: 320px;
+    width: 0;
+    height: 100%;
+  }
+
+  .card .cardDesc {
+    max-width: 90%;
+  }
+
+  .rectangle .cardDesc {
+    max-width: 40%;
+  }
+
+  .rectangle .cardImg img {
+    width: 100%;
+  }
+
+  .cardInfo {
+    gap: 14px;
+    padding-inline: 18px;
+  }
+
+  .cardTitle {
+    font-size: 24px;
+  }
+
+  .cardDesc {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .cardInfo {
+    gap: 18px;
+  }
+
+  .cardTitle {
+    font-size: 32px;
+  }
+
+  .cardDesc {
+    font-size: 24px;
+    max-width: 100%;
+  }
+
+  .card .cardImg img {
+    max-height: 425px;
+    min-width: 425px;
+  }
+}

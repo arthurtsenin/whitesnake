@@ -1,0 +1,57 @@
+.title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: var(--fw-bold);
+  line-height: 90%;
+  letter-spacing: -2px;
+  background: var(--clr-title-gradient);
+  color: var(--clr-main-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chipsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-block: 24px;
+}
+
+.chipsContainer div {
+  color: var(--clr-secondary-text);
+  font-size: 12.5px;
+  padding: 8px;
+}
+
+.officeBenefitsWrapper {
+  margin-top: 80px;
+}
+
+@media screen and (min-width: 744px) {
+  .title {
+    font-size: 56px;
+  }
+
+  .chipsContainer div {
+    font-size: 18px;
+    padding: 12px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 70px;
+  }
+
+  .chipsContainer div {
+    font-size: 25px;
+    padding: 12px 25px;
+  }
+
+  .chipsContainer {
+    margin-block: 30px;
+  }
+}
