@@ -11,16 +11,15 @@
   --gap-working-conditions: 24px;
 
   display: grid;
+  grid-auto-rows: auto;
   grid-template-rows: 1fr;
   grid-template-columns: 1fr;
-  grid-auto-rows: auto;
   gap: var(--gap-working-conditions);
   justify-content: center;
 }
 
 .itemContainer {
   position: relative;
-  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -33,6 +32,7 @@
   /* border: 1px solid green; */
 
   border-radius: 24px;
+  overflow: hidden;
 
   background: rgba(255, 255, 255, 0.04);
 }
@@ -158,9 +158,9 @@
   /* styles for first image bg of condition card */
   .itemContainer:nth-child(1) > div:first-child {
     top: unset;
-    left: unset;
     right: 0;
     bottom: 0;
+    left: unset;
 
     width: 80%;
     height: 100%;
@@ -168,14 +168,16 @@
 
   /* styles for second image bg of condition card */
   .itemContainer:nth-child(2) > div:first-child {
-    transform: unset;
     height: 100%;
+
+    transform: unset;
   }
 
   /* -- for third image bg of condition card */
   .itemContainer:nth-child(3) > div:first-child {
-    transform: translateX(20%) scale(1.3);
     height: 100%;
+
+    transform: translateX(20%) scale(1.3);
   }
 
   /* styles for fourth image bg of condition card */
@@ -213,8 +215,8 @@
   .itemContainer:nth-child(4) > div:first-child {
     top: 0;
     right: -5%;
-    left: unset;
     bottom: unset;
+    left: unset;
 
     width: 70%;
   }

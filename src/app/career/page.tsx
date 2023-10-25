@@ -2,11 +2,11 @@ import PageScript from "@/shared/analitics/PageScript";
 import Accordion from "@/widget/Accordion/Accordion";
 import { ACCORDIONS_DATA } from "@/widget/Accordion/data";
 import { CareerHero } from "@/widget/Career/CareerHero/CareerHero";
+import { WORKING_CONDITIONS_DATA } from "@/widget/Career/WorkingConditions/data";
+import { WorkingConditions } from "@/widget/Career/WorkingConditions/WorkingConditions";
 import { JOB_TITLES } from "@/widget/Form/data";
 import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
 import { VacanciesCards } from "@/widget/Vacancies/VacanciesCards/VacanciesCards";
-import { WORKING_CONDITIONS_DATA } from "@/widget/WorkingConditions/data";
-import { WorkingConditions } from "@/widget/WorkingConditions/WorkingConditions";
 
 export type VacancyType = {
   id: string;
