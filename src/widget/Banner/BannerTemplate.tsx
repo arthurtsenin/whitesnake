@@ -1,12 +1,12 @@
 import Image, { StaticImageData } from "next/image";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
 import styles from "./BannerTemplate.module.css";
 
 import { Container } from "@/shared";
 
 export type BannerTemplateProps = {
-  children: React.ReactNode;
+  children: ReactNode;
   image: StaticImageData | string;
 };
 
