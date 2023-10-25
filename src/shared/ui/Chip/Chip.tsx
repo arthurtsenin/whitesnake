@@ -5,7 +5,7 @@ import styles from "./Chip.module.css";
 
 type ChipProps = {
   text: string;
-  variant: "primary" | "secondary";
+  variant?: "primary" | "secondary";
 };
 
 export const Chip: FC<ChipProps> = ({ text, variant = "primary" }) => {
