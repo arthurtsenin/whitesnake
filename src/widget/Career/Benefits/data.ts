@@ -1,4 +1,4 @@
-type BenefitType = {
+export type BenefitType = {
   id: number;
   title: string;
   description: string;
