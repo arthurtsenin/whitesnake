@@ -1,4 +1,4 @@
-.container {
+.itemContainer {
   --fs-working-conditions-title: 18px;
   --fs-working-conditions-subtitle: 16px;
   --clr-working-conditions-title: #fff;
@@ -71,7 +71,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .container {
+  .itemContainer {
     --fs-working-conditions-title: 32px;
     --fs-working-conditions-subtitle: 20px;
   }

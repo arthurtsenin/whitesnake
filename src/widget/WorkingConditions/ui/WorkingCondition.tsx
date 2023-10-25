@@ -13,7 +13,7 @@ export const WorkingCondition: FC<WorkingConditionProps> = ({
   imageSrc,
 }) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.itemContainer}>
       <div className={styles.wrapper}>
         <Image src={imageSrc} alt="" />
       </div>
