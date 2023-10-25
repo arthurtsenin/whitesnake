@@ -2,11 +2,12 @@ import { FC } from "react";
 
 import styles from "./WorkingConditions.module.css";
 
+import { Container } from "@/shared";
+
 import { WorkingConditionType } from "./data";
 import { Title } from "./ui/Title/Title";
 import { TitleProps } from "./ui/Title/Title";
 import { WorkingCondition } from "./ui/WorkingCondition/WorkingCondition";
-import { Container } from "../../shared";
 
 type WorkingConditionsProps = {
   conditions: Array<WorkingConditionType>;
