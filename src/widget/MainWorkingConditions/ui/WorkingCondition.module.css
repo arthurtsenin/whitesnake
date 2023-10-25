@@ -18,8 +18,6 @@
 
   background: rgba(255, 255, 255, 0.04);
 
-  overflow: hidden;
-
   border: 1px solid green;
 }
 
@@ -31,7 +29,6 @@
 
   width: 100%;
   height: 80%;
-  /* aspect-ratio: 1/1; */
   opacity: 0.4;
 }
 
@@ -57,10 +54,29 @@
 }
 
 .subtitle {
-  width: 85%;
   color: var(--clr-working-conditions-subtitle);
   font-weight: var(--fw-regular);
   font-size: var(--fs-working-conditions-subtitle);
   line-height: 130%;
   letter-spacing: -0.8px;
+}
+
+@media screen and (min-width: 744px) {
+  .text {
+    justify-content: space-between;
+    height: 25%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    --fs-working-conditions-title: 32px;
+    --fs-working-conditions-subtitle: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
+
+@media screen and (min-width: 1920px) {
 }

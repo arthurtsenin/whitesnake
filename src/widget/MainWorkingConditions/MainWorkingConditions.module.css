@@ -29,7 +29,7 @@
 }
 
 .glowRed1 {
-  top: 0;
+  top: -10%;
   right: -55%;
 
   border-radius: 130px;
@@ -70,6 +70,8 @@
 
 @media screen and (min-width: 744px) {
   .container {
+    --gap-working-conditions: 20px;
+
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
   }
