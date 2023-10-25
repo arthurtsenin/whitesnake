@@ -41,6 +41,14 @@
   background: rgba(255, 255, 255, 0.04);
 }
 
+.itemContainer div:nth-child(2) {
+  opacity: 0;
+}
+
+.itemContainer div:last-child {
+  gap: 8px;
+}
+
 .glowRed1,
 .glowRed2,
 .glowBlue1,
@@ -97,6 +105,10 @@
     padding: 30px;
   }
 
+  .itemContainer div:last-child {
+    gap: 16px;
+  }
+
   .glowBlue1,
   .glowRed2 {
     visibility: hidden;
@@ -135,10 +147,6 @@
   .itemContainer {
     height: 624px;
     padding: 40px;
-  }
-
-  .itemContainer div:nth-child(2) {
-    opacity: 0;
   }
 
   .itemContainer div:last-child {
