@@ -1,7 +1,8 @@
 import PageScript from "@/shared/analitics/PageScript";
-import Accordion from "@/widget/Accordion/Accordion";
 import { ACCORDIONS_DATA } from "@/widget/Accordion/data";
 import { Benefits } from "@/widget/Career/Benefits/Benefits";
+import { BENEFITS_DATA } from "@/widget/Career/Benefits/data";
+import { CareerAccordion } from "@/widget/Career/CareerAccordion/CareerAccordion";
 import { CareerHero } from "@/widget/Career/CareerHero/CareerHero";
 import { WORKING_CONDITIONS_DATA } from "@/widget/Career/WorkingConditions/data";
 import { WorkingConditions } from "@/widget/Career/WorkingConditions/WorkingConditions";
@@ -94,8 +95,11 @@ export default async function CareerPage() {
         title="Что такое работа в Whitesnake"
         conditions={WORKING_CONDITIONS_DATA}
       />
-      <Benefits />
-      <Accordion accordions={ACCORDIONS_DATA} />
+      <Benefits title="Бенефиты" benefits={BENEFITS_DATA} />
+      <CareerAccordion
+        title="Часто задаваемые вопросы"
+        accordions={ACCORDIONS_DATA}
+      />
       <VacanciesForm jobTitles={JOB_TITLES} />
     </>
   );

@@ -1,16 +1,23 @@
+import { FC } from "react";
+
 import styles from "./Benefits.module.css";
 
-import { Title } from "@/shared";
-
-import { BENEFITS_DATA } from "./data";
+import { BenefitType } from "./data";
 import { BenefitCard } from "./ui/BenefitCard/BenefitCard";
+import { Title } from "../ui/Title/Title";
+import { TitleProps } from "../ui/Title/Title";
 
-export const Benefits = () => {
+type BenefitsProps = {
+  benefits: Array<BenefitType>;
+} & TitleProps;
+
+export const Benefits: FC<BenefitsProps> = ({ title, benefits }) => {
   return (
     <section className={styles.section}>
-      <Title title="Бенефиты" />
+      <Title title={title} />
+
       <div className={styles.container}>
-        {BENEFITS_DATA.map((card) => (
+        {benefits.map((card) => (
           <BenefitCard
             key={card.id}
             title={card.title}
