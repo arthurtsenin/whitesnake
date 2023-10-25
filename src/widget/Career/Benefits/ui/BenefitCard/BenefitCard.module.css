@@ -1,18 +1,22 @@
 .card {
-  box-sizing: border-box;
+  z-index: 1;
+
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: #101010;
+  box-sizing: border-box;
   padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+
+  background: #101010;
+
   transition: all 0.9s;
-  z-index: 1;
 }
 
 .card:nth-child(odd):hover {
   border: 1.5px solid rgba(255, 255, 255, 0.12);
+
   background: linear-gradient(
     135deg,
     #4a0000 0%,
@@ -23,6 +27,7 @@
 
 .card:nth-child(even):hover {
   border: 1.5px solid rgba(255, 255, 255, 0.12);
+
   background: radial-gradient(
     70.71% 70.71% at 50% 50%,
     #4a0000 0%,
@@ -31,30 +36,32 @@
 }
 
 .title {
-  font-size: 18px;
   font-weight: 700;
+  font-size: 18px;
   line-height: 120%;
   letter-spacing: -0.36px;
+
   background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.38) 100%);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .description {
+  width: 95%;
+
   color: rgba(255, 255, 255, 0.6);
-  font-size: 12px;
   font-weight: 400;
+  font-size: 12px;
   line-height: 120%;
   letter-spacing: -0.24px;
-  width: 95%;
 }
 
 @media screen and (min-width: 960px) {
   .card {
+    gap: 18px;
     min-height: 240px;
     padding: 24px;
-    gap: 18px;
     border-radius: 18px;
   }
 
@@ -63,8 +70,9 @@
   }
 
   .description {
-    font-size: 20px;
     max-width: 342px;
+
+    font-size: 20px;
   }
 }
 
@@ -80,7 +88,8 @@
   }
 
   .description {
-    font-size: 20px;
     max-width: 342px;
+
+    font-size: 20px;
   }
 }

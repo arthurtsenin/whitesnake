@@ -144,6 +144,10 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .section {
+    row-gap: 64px;
+  }
+
   .container {
     --gap-working-conditions: 20px;
 
@@ -248,6 +252,7 @@
   .itemContainer:nth-child(1):hover > div:first-child {
     opacity: 0.3;
   }
+
   .itemContainer:nth-child(2):hover > div:first-child,
   .itemContainer:nth-child(3):hover > div:first-child {
     opacity: 0.2;
