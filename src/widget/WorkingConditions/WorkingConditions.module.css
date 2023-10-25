@@ -44,7 +44,7 @@
 
 /* styles for image bg of each condition card */
 .itemContainer div:first-child {
-  opacity: 0.08;
+  opacity: 0.1;
 }
 
 /* -- for second image bg of condition card */
@@ -107,7 +107,7 @@
 }
 
 .glowBlue2 {
-  bottom: -15%;
+  bottom: -10%;
   left: -35%;
 
   border-radius: 366px;
