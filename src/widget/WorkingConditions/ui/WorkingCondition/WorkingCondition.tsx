@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FC } from "react";
 
-import { WorkingConditionType } from "../data";
+import { WorkingConditionType } from "../../data";
 
 type WorkingConditionProps = object & WorkingConditionType;
 
