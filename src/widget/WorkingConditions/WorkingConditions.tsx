@@ -19,10 +19,10 @@ export const WorkingConditions: FC<WorkingConditionsProps> = ({
   return (
     <Container>
       <section className={styles.section}>
-        <div className={styles.glowRed1} />
-        <div className={styles.glowBlue1} />
-        <div className={styles.glowRed2} />
-        <div className={styles.glowBlue2} />
+        <div className={styles.glowRedUpper} />
+        <div className={styles.glowBlueUpper} />
+        <div className={styles.glowRedLower} />
+        <div className={styles.glowBlueLower} />
 
         <Title title={title} />
 

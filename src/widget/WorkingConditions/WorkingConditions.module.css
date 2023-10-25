@@ -61,17 +61,17 @@
   gap: 8px;
 }
 
-.glowRed1,
-.glowRed2,
-.glowBlue1,
-.glowBlue2 {
+.glowRedUpper,
+.glowRedLower,
+.glowBlueUpper,
+.glowBlueLower {
   position: absolute;
   aspect-ratio: 1/1;
 
   width: 80%;
 }
 
-.glowRed1 {
+.glowRedUpper {
   top: -10%;
   right: -55%;
 
@@ -81,7 +81,7 @@
   filter: blur(100px);
 }
 
-.glowBlue1 {
+.glowBlueUpper {
   top: 25%;
   left: -75%;
 
@@ -91,7 +91,7 @@
   filter: blur(180px);
 }
 
-.glowRed2 {
+.glowRedLower {
   top: 52%;
   right: -55%;
 
@@ -101,7 +101,7 @@
   filter: blur(100px);
 }
 
-.glowBlue2 {
+.glowBlueLower {
   bottom: -10%;
   left: -35%;
 
@@ -120,24 +120,24 @@
     gap: 16px;
   }
 
-  .glowBlue1,
-  .glowRed2 {
+  .glowBlueUpper,
+  .glowRedLower {
     visibility: hidden;
   }
 
-  .glowRed1 {
+  .glowRedUpper {
     top: -20%;
     right: -70%;
   }
 
-  .glowBlue2 {
+  .glowBlueLower {
     bottom: -20%;
     left: -65%;
   }
 }
 
 @media screen and (min-width: 960px) {
-  .glowBlue2 {
+  .glowBlueLower {
     bottom: -30%;
     left: -65%;
   }
@@ -192,12 +192,12 @@
     gap: 10px;
   }
 
-  .glowRed1 {
+  .glowRedUpper {
     top: -30%;
     right: -75%;
   }
 
-  .glowBlue2 {
+  .glowBlueLower {
     bottom: -60%;
     left: -80%;
   }
@@ -219,24 +219,24 @@
     width: 70%;
   }
 
-  .glowRed1 {
+  .glowRedUpper {
     right: -80%;
   }
 
-  .glowBlue2 {
+  .glowBlueLower {
     bottom: -65%;
     left: -80%;
   }
 }
 
 @media screen and (min-width: 1920px) {
-  .glowRed1 {
+  .glowRedUpper {
     right: -90%;
 
     filter: blur(173px);
   }
 
-  .glowBlue2 {
+  .glowBlueLower {
     bottom: -100%;
     left: -80%;
   }
