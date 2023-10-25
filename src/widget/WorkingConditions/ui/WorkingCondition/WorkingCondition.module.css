@@ -6,8 +6,6 @@
   width: 100%;
   height: 80%;
 
-  /* border: 1px solid red; */
-
   top: 0;
   right: 0;
   bottom: 0;
@@ -36,6 +34,11 @@
 }
 
 .text {
+  --fs-working-conditions-title: 18px;
+  --fs-working-conditions-subtitle: 16px;
+  --clr-working-conditions-title: #fff;
+  --clr-working-conditions-subtitle: rgba(255, 255, 255, 0.6);
+
   display: flex;
   flex-direction: column;
 }
@@ -60,56 +63,42 @@
 }
 
 @media screen and (min-width: 744px) {
-  .title {
-    --fs-working-conditions-title: 20px;
+  .text {
+    --fs-working-conditions-title: 24px;
+    --fs-working-conditions-subtitle: 20px;
   }
 
   .subtitle {
-    --fs-working-conditions-subtitle: 18px;
-
     width: 60%;
   }
 }
 
 @media screen and (min-width: 960px) {
-  .title {
+  .text {
     --fs-working-conditions-title: 32px;
   }
 
   .subtitle {
-    --fs-working-conditions-subtitle: 20px;
-
     width: 50%;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .wrapper {
-    /* top: unset;
-    left: unset; */
-  }
-
   .text {
+    --fs-working-conditions-title: 28px;
+    --fs-working-conditions-subtitle: 18px;
+
     height: 30%;
   }
 
-  .title {
-    --fs-working-conditions-title: 28px;
-  }
-
   .subtitle {
-    --fs-working-conditions-subtitle: 18px;
-
     width: 85%;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .title {
+  .text {
     --fs-working-conditions-title: 32px;
-  }
-
-  .subtitle {
     --fs-working-conditions-subtitle: 20px;
   }
 }

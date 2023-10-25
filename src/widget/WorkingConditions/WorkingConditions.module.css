@@ -19,11 +19,6 @@
 }
 
 .itemContainer {
-  --fs-working-conditions-title: 18px;
-  --fs-working-conditions-subtitle: 16px;
-  --clr-working-conditions-title: #fff;
-  --clr-working-conditions-subtitle: rgba(255, 255, 255, 0.6);
-
   position: relative;
   overflow: hidden;
 
