@@ -25,6 +25,7 @@
   --clr-working-conditions-subtitle: rgba(255, 255, 255, 0.6);
 
   position: relative;
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -41,10 +42,26 @@
   background: rgba(255, 255, 255, 0.04);
 }
 
+/* styles for image bg of each condition card */
+.itemContainer div:first-child {
+  opacity: 0.1;
+}
+
+/* -- for second image bg of condition card */
+.itemContainer:nth-child(2) div:first-child {
+  transform: translate(50%, 20%) scale(2.1);
+}
+
+.itemContainer:nth-child(3) div:first-child {
+  transform: translateX(25%) scale(1.5);
+}
+
+/* styles for red glow during hover of each condition card */
 .itemContainer div:nth-child(2) {
   opacity: 0;
 }
 
+/* styles for text content of each condition card */
 .itemContainer div:last-child {
   gap: 8px;
 }
@@ -149,6 +166,16 @@
     padding: 40px;
   }
 
+  /* styles for second image bg of condition card */
+  .itemContainer:nth-child(2) div:first-child {
+    transform: translate(50%, 20%) scale(2.1);
+  }
+
+  .itemContainer:nth-child(2) div:first-child {
+    transform: translate(50%, 20%) scale(2.1);
+  }
+
+  /* styles for text content of each condition card */
   .itemContainer div:last-child {
     gap: 24px;
   }
