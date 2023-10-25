@@ -2,10 +2,9 @@ import { FC } from "react";
 
 import styles from "./WorkingConditions.module.css";
 
-import { Title } from "@/shared";
-import { TitleProps } from "@/shared/ui/Title/Title";
-
 import { WorkingConditionType } from "./data";
+import { Title } from "./ui/Title/Title";
+import { TitleProps } from "./ui/Title/Title";
 import { WorkingCondition } from "./ui/WorkingCondition";
 import { Container } from "../../shared";
 
