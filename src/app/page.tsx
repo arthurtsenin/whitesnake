@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 
 import PageScript from "@/shared/analitics/PageScript";
 import { ACCORDIONS_DATA } from "@/widget/Accordion/data";
-import { Banner } from "@/widget/Banner/Banner";
+import { HomeBanner } from "@/widget/Banner/HomeBanner/HomeBanner";
 import { BenefitCards } from "@/widget/BenefitCards/BenefitCards";
 import { BENEFIT_CARD_WITH_ICON_DATA } from "@/widget/BenefitCards/data";
 import { Contacts } from "@/widget/Contacts/Contacts";
@@ -40,7 +40,7 @@ export default function Home() {
       />
       <ScrollCarousel />
       <Statistic />
-      <Banner />
+      <HomeBanner />
       <DynamicTabs
         title="Современный стек технологий"
         subtitle="С нами работают специалисты с разнообразным опытом и постоянно обучаются"

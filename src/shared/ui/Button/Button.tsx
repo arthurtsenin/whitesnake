@@ -4,7 +4,7 @@ import { ComponentPropsWithoutRef, FC } from "react";
 import styles from "./Button.module.css";
 
 type ButtonProps = ComponentPropsWithoutRef<"button"> & {
-  variant?: "primary" | "secondary" | "transparent";
+  variant?: "primary" | "secondary" | "light" | "transparent";
 };
 
 export const Button: FC<ButtonProps> = ({

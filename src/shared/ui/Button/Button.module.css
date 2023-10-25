@@ -26,6 +26,12 @@
   background: var(--clr-button-secondary-bg);
 }
 
+.light {
+  color: #000;
+
+  background: #fff;
+}
+
 .transparent::before {
   position: absolute;
 
