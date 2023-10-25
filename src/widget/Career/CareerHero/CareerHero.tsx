@@ -9,8 +9,6 @@ import { NAVIGATION_LINKS } from "@/widget/Navigation/routes";
 import raindrop from "&/images/vacancies/hero/raindrop-lower.png";
 import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
 
-// TODO: insert internship link later
-
 export const CareerHero = () => {
   return (
     <div className={styles.hero}>
@@ -43,7 +41,7 @@ export const CareerHero = () => {
           <Link href={NAVIGATION_LINKS.vacancies.href}>
             <Button variant="primary">Вакансии</Button>
           </Link>
-          <Link target="_blank" href="#">
+          <Link href={NAVIGATION_LINKS.internship.href}>
             <Button variant="transparent">Хочу на стажировку</Button>
           </Link>
         </div>
