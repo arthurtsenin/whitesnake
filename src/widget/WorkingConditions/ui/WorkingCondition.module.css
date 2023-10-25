@@ -6,9 +6,12 @@
   width: 100%;
   height: 80%;
 
-  border: 1px solid red;
+  /* border: 1px solid red; */
 
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .wrapper img {
@@ -81,25 +84,38 @@
 }
 
 @media screen and (min-width: 1200px) {
-  /* .wrapper {
-    height: 100%;
-  } */
+  .wrapper {
+    /* top: unset;
+    left: unset; */
+  }
 
   .text {
-    height: 20%;
+    height: 30%;
   }
 
   .title {
-    --fs-working-conditions-title: 30px;
+    --fs-working-conditions-title: 28px;
   }
 
   .subtitle {
-    width: 100%;
+    --fs-working-conditions-subtitle: 18px;
+
+    width: 85%;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .title {
+    --fs-working-conditions-title: 32px;
+  }
+
+  .subtitle {
+    --fs-working-conditions-subtitle: 20px;
+  }
 }
 
 @media screen and (min-width: 1920px) {
+  .text {
+    height: 23%;
+  }
 }

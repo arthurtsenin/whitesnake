@@ -35,7 +35,7 @@
   padding: 20px;
   border: 1px solid rgba(255, 255, 255, 0.15);
 
-  border: 1px solid green;
+  /* border: 1px solid green; */
 
   border-radius: 24px;
 
@@ -118,7 +118,6 @@
 
 @media screen and (min-width: 744px) {
   .itemContainer {
-    height: 516px;
     padding: 30px;
   }
 
@@ -143,10 +142,6 @@
 }
 
 @media screen and (min-width: 960px) {
-  .itemContainer {
-    height: 616px;
-  }
-
   .glowBlue2 {
     bottom: -30%;
     left: -65%;
@@ -162,17 +157,35 @@
   }
 
   .itemContainer {
-    height: 624px;
     padding: 40px;
+  }
+
+  /* styles for first image bg of condition card */
+  .itemContainer:nth-child(1) div:first-child {
+    top: unset;
+    left: unset;
+    right: 0;
+    bottom: 0;
+
+    width: 80%;
+    height: 100%;
   }
 
   /* styles for second image bg of condition card */
   .itemContainer:nth-child(2) div:first-child {
-    transform: translate(50%, 20%) scale(2.1);
+    transform: unset;
+    height: 100%;
   }
 
-  .itemContainer:nth-child(2) div:first-child {
-    transform: translate(50%, 20%) scale(2.1);
+  /* -- for third image bg of condition card */
+  .itemContainer:nth-child(3) div:first-child {
+    transform: translateX(20%) scale(1.3);
+    height: 100%;
+  }
+
+  /* styles for fourth image bg of condition card */
+  .itemContainer:nth-child(4) div:first-child {
+    height: 100%;
   }
 
   /* styles for text content of each condition card */
@@ -196,6 +209,21 @@
 }
 
 @media screen and (min-width: 1440px) {
+  /* styles for third image bg of condition card */
+  .itemContainer:nth-child(3) div:first-child {
+    transform: translateX(20%) scale(1);
+  }
+
+  /* -- for fourth image bg of condition card */
+  .itemContainer:nth-child(4) div:first-child {
+    top: 0;
+    right: -5%;
+    left: unset;
+    bottom: unset;
+
+    width: 70%;
+  }
+
   .glowRed1 {
     right: -80%;
   }
@@ -220,7 +248,19 @@
 }
 
 @media (hover: hover) {
+  .itemContainer:nth-child(1):hover div:first-child {
+    opacity: 0.3;
+  }
+  .itemContainer:nth-child(2):hover div:first-child,
+  .itemContainer:nth-child(3):hover div:first-child {
+    opacity: 0.2;
+  }
+
+  .itemContainer:nth-child(4):hover div:first-child {
+    opacity: 0.5;
+  }
+
   .itemContainer:hover div:nth-child(2) {
-    opacity: 1;
+    opacity: 0.7;
   }
 }
