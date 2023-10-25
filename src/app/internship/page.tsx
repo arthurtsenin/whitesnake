@@ -8,9 +8,11 @@ export default function InternshipPage() {
   return (
     <>
       <InternshipHero />
-      <Container>
-        <InternshipOffice />
-      </Container>
+      <section>
+        <Container>
+          <InternshipOffice />
+        </Container>
+      </section>
       <InternshipAccardion />
       <InternshipForm />
     </>

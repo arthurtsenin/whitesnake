@@ -16,7 +16,9 @@ export const YandexMap: FC = () => {
 
   return (
     <>
-      <div className="yandexMapContainer" ref={ref} id="map" />
+      <div className="yandexMapContainer" ref={ref} id="map">
+        <div className="line" />
+      </div>
       <Script
         //нужно вставить ключ босса а не мой блят
         src="https://api-maps.yandex.ru/2.1/?apikey=c7227578-4951-445c-866e-370ad48303bb&lang=ru_RU"

@@ -2,6 +2,8 @@
   position: relative;
 
   min-height: max-content;
+  max-width: 1080px;
+  margin-inline: auto;
 }
 
 .imgWrapper {

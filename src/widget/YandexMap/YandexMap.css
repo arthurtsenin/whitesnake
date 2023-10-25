@@ -15,24 +15,48 @@
 }
 
 .yandexMapContainer {
+  position: relative;
   border-radius: 25px;
   border: 1px solid #000;
   aspect-ratio: 1/1;
 }
-/* .yandexMapContainer::after {
-	content: '';
 
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
+.line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 101%;
+  height: 35px;
+  background-color: black;
+  z-index: 2;
+}
 
-	background-color: #000;
+.yandexMapContainer:before {
+  content: "";
+  position: absolute;
+  bottom: 35px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 5px 5px 0 5px black;
+  background-color: transparent;
+  z-index: 2;
+}
 
-	height: 7%;
-	width: 100%;
+.yandexMapContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 35px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-bottom-left-radius: 25px;
+  box-shadow: -5px 5px 0 5px black;
+  background-color: transparent;
+  z-index: 2;
+}
 
-} */
 .ymaps-2-1-79-map {
   background: transparent !important;
 }
