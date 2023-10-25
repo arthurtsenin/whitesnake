@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FC } from "react";
 
 import styles from "./CareerHero.module.css";
 
@@ -10,11 +9,9 @@ import { NAVIGATION_LINKS } from "@/widget/Navigation/routes";
 import raindrop from "&/images/vacancies/hero/raindrop-lower.png";
 import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
 
-type CareerHeroProps = {
-  path: string;
-};
+// TODO: insert internship link later
 
-export const CareerHero: FC<CareerHeroProps> = ({ path }) => {
+export const CareerHero = () => {
   return (
     <div className={styles.hero}>
       <div className={styles.glowRed} />
@@ -46,8 +43,8 @@ export const CareerHero: FC<CareerHeroProps> = ({ path }) => {
           <Link href={NAVIGATION_LINKS.vacancies.href}>
             <Button variant="primary">Вакансии</Button>
           </Link>
-          <Link target="_blank" href={path}>
-            <Button variant="transparent">Перейти на rabota.by</Button>
+          <Link target="_blank" href="#">
+            <Button variant="transparent">Хочу на стажировку</Button>
           </Link>
         </div>
       </div>
