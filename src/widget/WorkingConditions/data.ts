@@ -5,14 +5,14 @@ import flash from "&/images/career/flash.png";
 import skittles from "&/images/career/skittles.png";
 import target from "&/images/career/target.png";
 
-export type MainWorkingConditionType = {
+export type WorkingConditionType = {
   id?: number;
   title: string;
   subtitle: string;
   imageSrc: StaticImageData;
 };
 
-export const MAIN_WORKING_CONDITIONS_DATA: Array<MainWorkingConditionType> = [
+export const WORKING_CONDITIONS_DATA: Array<WorkingConditionType> = [
   {
     id: 1,
     title: "Возможности роста",

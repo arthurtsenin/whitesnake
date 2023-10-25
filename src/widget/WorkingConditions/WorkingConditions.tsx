@@ -1,19 +1,19 @@
 import { FC } from "react";
 
-import styles from "./MainWorkingConditions.module.css";
+import styles from "./WorkingConditions.module.css";
 
 import { Title } from "@/shared";
 import { TitleProps } from "@/shared/ui/Title/Title";
 
-import { MainWorkingConditionType } from "./data";
+import { WorkingConditionType } from "./data";
 import { WorkingCondition } from "./ui/WorkingCondition";
 import { Container } from "../../shared";
 
-type MainWorkingConditionsProps = {
-  conditions: Array<MainWorkingConditionType>;
+type WorkingConditionsProps = {
+  conditions: Array<WorkingConditionType>;
 } & TitleProps;
 
-export const MainWorkingConditions: FC<MainWorkingConditionsProps> = ({
+export const WorkingConditions: FC<WorkingConditionsProps> = ({
   title,
   conditions,
 }) => {

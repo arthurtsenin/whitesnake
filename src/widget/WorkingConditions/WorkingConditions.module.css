@@ -118,6 +118,7 @@
 @media screen and (min-width: 1920px) {
   .glowRed1 {
     right: -90%;
+
     filter: blur(173px);
   }
 

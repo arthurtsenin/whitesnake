@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { FC } from "react";
 
-import { MainWorkingConditionType } from "../data";
+import { WorkingConditionType } from "../data";
 
-type WorkingConditionProps = object & MainWorkingConditionType;
+type WorkingConditionProps = object & WorkingConditionType;
 
 import styles from "./WorkingCondition.module.css";
 
