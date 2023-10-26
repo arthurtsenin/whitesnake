@@ -1,0 +1,41 @@
+.text {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--clr-secondary-text);
+  font-weight: var(--fw-light);
+  font-size: var(--fs-section-subtitle);
+  line-height: 130%;
+  letter-spacing: -0.6px;
+}
+
+.subtitle::first-letter {
+  text-transform: uppercase;
+}
+
+.title {
+  color: var(--clr-main-text);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-section-title);
+  line-height: 90%;
+  letter-spacing: -0.77px;
+  text-wrap: balance;
+  word-wrap: break-word;
+
+  background: var(--clr-title-gradient);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-block: 8px;
+}
+
+.title::first-letter {
+  text-transform: uppercase;
+}

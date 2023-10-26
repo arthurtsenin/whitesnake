@@ -1,0 +1,82 @@
+.internshipCard {
+  min-width: 552px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 24px;
+
+  transition:
+    min-width,
+    background 0.5s;
+  contain: layout;
+}
+
+.content {
+  padding: 20px;
+}
+.activeList {
+  margin-top: 32px;
+}
+.descriptionList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+
+  list-style-type: circle;
+}
+.descriptionList > li {
+  color: #fff;
+  font-weight: var(--fw-regular);
+  font-size: 19px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.38px;
+}
+.descriptionList > li::before {
+  padding-right: 8px;
+
+  color: #fff;
+
+  content: "•";
+}
+.cardTitle {
+  max-width: 300px;
+  color: #fff;
+  font-weight: var(--fw-semibold);
+  font-size: 32px;
+  font-style: normal;
+  line-height: 98%;
+  letter-spacing: -0.64px;
+  text-wrap: balance;
+}
+.timeCount {
+  color: var(--clr-secondary-text);
+  font-weight: var(--fw-semibold);
+  font-size: 50px;
+  font-style: normal;
+  line-height: 95%;
+  letter-spacing: -1.25px;
+}
+.timeInfo {
+  color: var(--clr-secondary-text);
+  font-weight: var(--fw-semibold);
+  font-size: 19px;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.38px;
+}
+.wrapper {
+  margin-top: 26px;
+}
+.additionalInfo {
+  color: var(--clr-secondary-text);
+  font-weight: var(--fw-semibold);
+  font-size: 32px;
+  font-style: normal;
+  line-height: 98%;
+  letter-spacing: -0.64px;
+}
+
+.activeCard {
+  min-width: 660px;
+  background: rgba(211, 11, 11, 1);
+}
