@@ -142,9 +142,10 @@ p {
 
 body {
   position: relative;
+  /* overflow-x: hidden; */
+  box-sizing: border-box;
 
-  width: 100vw;
-  overflow-x: hidden;
+  width: 99vw;
 
   color: var(--clr-main-text);
 
@@ -168,6 +169,7 @@ body.lock {
   flex-direction: column;
   gap: var(--gap-layout);
   align-items: center;
+  width: 99vw;
   min-height: 40dvh;
 }
 
@@ -462,6 +464,16 @@ body.lock {
 .layout {
   position: relative;
 
-  width: 100vw;
-  overflow: hidden;
+  box-sizing: border-box;
+  /* width: 90vw; */
+  /* overflow: hidden; */
+}
+
+.container {
+  /* width: ; */
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-layout);
+  max-width: 1920px;
+  overflow-x: hidden;
 }

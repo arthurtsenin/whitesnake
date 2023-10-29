@@ -55,6 +55,7 @@ export default function RootLayout({
           <div className="layout">
             <Header />
             <main className="main">{children}</main>
+
             <Footer />
             <FormProvider />
           </div>

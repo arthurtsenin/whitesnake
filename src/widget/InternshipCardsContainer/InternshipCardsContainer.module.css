@@ -1,6 +1,7 @@
 .internshipCardsContainer {
   position: sticky;
   top: 0;
+
   display: grid;
   gap: 12px;
   width: 100%;

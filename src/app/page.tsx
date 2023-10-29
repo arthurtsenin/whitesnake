@@ -13,10 +13,12 @@ import { HomeHero } from "@/widget/HomeHero/HomeHero";
 import { Statistic } from "@/widget/Statistic/Statistic";
 import { INDUSTRY_DATA, TECHNOLOGIE_DATA } from "@/widget/Tabs/data";
 
+import { HomeScroller } from "../widget/HomeScroller/HomeScroller";
+
 const StaticTabs = dynamic(() => import("@/widget/Tabs/StaticTabs"));
-const ScrollCarousel = dynamic(
-  () => import("@/widget/ScrollCarousel/ScrollCarousel"),
-);
+// const ScrollCarousel = dynamic(
+//   () => import("@/widget/ScrollCarousel/ScrollCarousel"),
+// );
 const DynamicTabs = dynamic(() => import("@/widget/Tabs/DynamicTabs"));
 const Accordion = dynamic(() => import("@/widget/Accordion/Accordion"));
 
@@ -24,35 +26,41 @@ export default function Home() {
   return (
     <>
       <PageScript />
-      <HomeHero />
+      <div className="container">
+        <HomeHero />
 
-      <BenefitCards data={BENEFIT_CARD_WITH_ICON_DATA} variant="withIcon" />
-      <GridContainer
-        title="Наши проекты"
-        subtitle="Как мы решаем сложные задачи"
-        suptitle="портфолио"
-        data={CASES_PREVIEW_CARDS}
-      />
-      <StaticTabs
-        title="Предоставляем команды разработчиков для разных сфер"
-        subtitle="Скорее всего, у нас уже есть опыт в вашей нише"
-        data={INDUSTRY_DATA}
-      />
-      <ScrollCarousel />
-      <Statistic />
-      <Banner />
-      <DynamicTabs
-        title="Современный стек технологий"
-        subtitle="С нами работают специалисты с разнообразным опытом и постоянно обучаются"
-        suptitle="технологии"
-        data={TECHNOLOGIE_DATA}
-      />
-      <Contacts
-        contacts={CONTACTS_DATA}
-        title="Связаться с нами"
-        subtitle="Закажите бесплатную консультацию, чтобы получить индивидуальное предложение в соответствии с вашими требованиями"
-      />
-      <Accordion accordions={ACCORDIONS_DATA} />
+        <BenefitCards data={BENEFIT_CARD_WITH_ICON_DATA} variant="withIcon" />
+        <GridContainer
+          title="Наши проекты"
+          subtitle="Как мы решаем сложные задачи"
+          suptitle="портфолио"
+          data={CASES_PREVIEW_CARDS}
+        />
+        <StaticTabs
+          title="Предоставляем команды разработчиков для разных сфер"
+          subtitle="Скорее всего, у нас уже есть опыт в вашей нише"
+          data={INDUSTRY_DATA}
+        />
+      </div>
+
+      {/* <ScrollCarousel /> */}
+      <HomeScroller />
+      <div className="container">
+        <Statistic />
+        <Banner />
+        <DynamicTabs
+          title="Современный стек технологий"
+          subtitle="С нами работают специалисты с разнообразным опытом и постоянно обучаются"
+          suptitle="технологии"
+          data={TECHNOLOGIE_DATA}
+        />
+        <Contacts
+          contacts={CONTACTS_DATA}
+          title="Связаться с нами"
+          subtitle="Закажите бесплатную консультацию, чтобы получить индивидуальное предложение в соответствии с вашими требованиями"
+        />
+        <Accordion accordions={ACCORDIONS_DATA} />
+      </div>
     </>
   );
 }

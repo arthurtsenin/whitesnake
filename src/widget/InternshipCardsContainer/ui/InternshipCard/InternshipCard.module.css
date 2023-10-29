@@ -40,6 +40,7 @@
 }
 .cardTitle {
   max-width: 300px;
+
   color: #fff;
   font-weight: var(--fw-semibold);
   font-size: 32px;
@@ -78,5 +79,6 @@
 
 .activeCard {
   min-width: 660px;
+
   background: rgba(211, 11, 11, 1);
 }
