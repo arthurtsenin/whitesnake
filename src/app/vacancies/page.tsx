@@ -78,7 +78,7 @@ export default async function VacanciesPage() {
   return (
     <>
       <PageScript />
-      <VacanciesPageLayout path={employerPath} vacancies={vacancies} />;
+      <VacanciesPageLayout path={employerPath} vacancies={vacancies} />
     </>
   );
 }
