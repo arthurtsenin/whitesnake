@@ -145,6 +145,7 @@ html {
 
 body {
   position: relative;
+  color: var(--clr-main-text);
   scrollbar-gutter: stable;
 
   box-sizing: border-box;
