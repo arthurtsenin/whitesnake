@@ -1,0 +1,43 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+}
+
+.container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  max-width: 1820px;
+  max-height: 720px;
+}
+
+.container > svg {
+  position: absolute;
+  /* inset: 0; */
+  z-index: 1;
+
+  max-width: 100%;
+}
+
+.itemsContainer {
+  /* position: absolute;
+  top: 0; */
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  padding: 40px;
+
+  column-gap: 45px;
+}
+
+@media screen and (min-width: 744px) {
+  .itemsContainer {
+    padding: 20px;
+
+    column-gap: 20px;
+  }
+}
