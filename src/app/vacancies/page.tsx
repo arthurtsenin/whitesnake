@@ -78,9 +78,7 @@ export default async function VacanciesPage() {
   return (
     <>
       <PageScript />
-      <div className="container">
-        <VacanciesPageLayout path={employerPath} vacancies={vacancies} />;
-      </div>
+      <VacanciesPageLayout path={employerPath} vacancies={vacancies} />;
     </>
   );
 }
