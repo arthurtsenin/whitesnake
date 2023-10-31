@@ -142,17 +142,9 @@ p {
 html {
   background-color: #000;
 }
+
 body {
   position: relative;
-
-  box-sizing: border-box;
-
-  width: 99vw;
-
-  color: var(--clr-main-text);
-}
-
-body {
   scrollbar-gutter: stable;
 
   box-sizing: border-box;
