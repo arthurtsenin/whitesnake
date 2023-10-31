@@ -108,6 +108,7 @@ export default async function VacancyPage({
   return (
     <>
       <PageScript />
+
       <VacancyPageLayout
         jobTitle={vacancy.name}
         path={vacancy.alternate_url}
