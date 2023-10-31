@@ -1,0 +1,168 @@
+.section {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100vw;
+  height: 200vh;
+  margin-inline: auto;
+}
+.yaica {
+  position: absolute;
+  top: 20%;
+  left: -20%;
+  z-index:;
+
+  width: 30vw;
+  aspect-ratio: 1/1;
+
+  rotate: -105deg;
+}
+.glow1 {
+  position: absolute;
+  top: 20%;
+  left: -35%;
+
+  width: 45vw;
+  border-radius: 706px;
+
+  background: rgba(204, 11, 11, 0.5);
+  filter: blur(350px);
+  aspect-ratio: 1/1;
+}
+
+.yaica img {
+  width: 100%;
+  height: 100%;
+}
+.glow2 {
+  position: absolute;
+  top: 60%;
+  right: -35%;
+
+  width: 45vw;
+  border-radius: 706px;
+
+  background: rgba(204, 11, 11, 0.5);
+  filter: blur(350px);
+  aspect-ratio: 1/1;
+}
+
+.background img {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  justify-content: space-around;
+
+  width: 94%;
+  min-width: max-content;
+  height: 50vh;
+  padding-top: 10vh;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.glow3 {
+  position: absolute;
+  bottom: -20%;
+  left: -20%;
+
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+
+  background: rgba(124, 254, 253, 0.5);
+
+  filter: blur(245.20001220703125px);
+}
+.secondBub {
+  position: absolute;
+  top: 40%;
+  right: -25%;
+
+  width: 50vw;
+  aspect-ratio: 1.4/1;
+  rotate: -95deg;
+}
+.net {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+
+  width: 80%;
+
+  height: 100%;
+
+  opacity: 1;
+}
+.secondBub img,
+.net img {
+  width: 100%;
+  height: 100%;
+}
+.glow4 {
+  position: absolute;
+  top: -20%;
+  right: -40%;
+
+  width: 50vw;
+
+  border-radius: 50%;
+
+  background: rgba(124, 254, 253, 0.5);
+
+  filter: blur(285.20001220703125px);
+  aspect-ratio: 1/1.3;
+}
+@media screen and (min-width: 744px) {
+  .section {
+    height: 150vh;
+  }
+  .container {
+    gap: 56px;
+    height: 100vh;
+    padding-top: 0;
+  }
+
+  .cards {
+    gap: 12px;
+  }
+
+  .cards > div:nth-child(1) {
+    align-self: start;
+  }
+
+  .cards > div:nth-child(2) {
+    align-self: center;
+  }
+
+  .cards > div:nth-child(3) {
+    align-self: end;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .net {
+    opacity: 0.6;
+  }
+  .section {
+    height: 300vh;
+  }
+  .container {
+    gap: 80px;
+  }
+}

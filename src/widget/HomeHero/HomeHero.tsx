@@ -7,8 +7,8 @@ import { Scroller } from "./ui/Scroller";
 import { ROUTES } from "../Navigation/routes";
 import { Button } from "../../shared";
 
-import raindropLower from "&/images/main-hero/raindrop-lower.png";
-import raindropMiddle from "&/images/main-hero/raindrop-middle.png";
+import raindropLower from "&/images/main-hero/raindrop-lower.webp";
+import raindropMiddle from "&/images/main-hero/raindrop-middle.webp";
 import raindropUpper from "&/images/main-hero/raindrop-upper.png";
 import sphere from "&/images/main-hero/sphere.png";
 
@@ -45,7 +45,7 @@ export const HomeHero = () => {
         </div>
       </div>
       <div className={styles.sphere}>
-        <Image src={sphere} alt="sphere" loading="lazy" placeholder="blur" />
+        <Image src={sphere} alt="sphere" priority placeholder="blur" />
       </div>
       <div className={styles.glowRed}></div>
       <div className={styles.glowBlue}></div>

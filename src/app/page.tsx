@@ -13,10 +13,10 @@ import { HomeHero } from "@/widget/HomeHero/HomeHero";
 import { Statistic } from "@/widget/Statistic/Statistic";
 import { INDUSTRY_DATA, TECHNOLOGIE_DATA } from "@/widget/Tabs/data";
 
+import { HomeScroller } from "../widget/HomeScroller/HomeScroller";
+
 const StaticTabs = dynamic(() => import("@/widget/Tabs/StaticTabs"));
-const ScrollCarousel = dynamic(
-  () => import("@/widget/ScrollCarousel/ScrollCarousel"),
-);
+
 const DynamicTabs = dynamic(() => import("@/widget/Tabs/DynamicTabs"));
 const Accordion = dynamic(() => import("@/widget/Accordion/Accordion"));
 
@@ -38,7 +38,9 @@ export default function Home() {
         subtitle="Скорее всего, у нас уже есть опыт в вашей нише"
         data={INDUSTRY_DATA}
       />
-      <ScrollCarousel />
+
+      <HomeScroller />
+
       <Statistic />
       <Banner />
       <DynamicTabs

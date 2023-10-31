@@ -50,7 +50,7 @@
 
 .container span::after {
   position: absolute;
-  bottom: -12%;
+  bottom: 9%;
   left: -1.5%;
 
   width: 12%;
@@ -68,7 +68,8 @@
 .container h1 {
   position: relative;
 
-  height: 32px;
+  display: block;
+
   margin: 0 0;
 
   font-family: "Govno";
@@ -79,6 +80,10 @@
   font-size: 28px;
 
   animation: identifier 3.5s linear forwards infinite;
+}
+.container h1 span {
+  display: inline-block;
+  height: fit-content;
 }
 .container span:after {
   animation: identifier2 3.5s linear forwards infinite;
@@ -153,7 +158,7 @@
     font-size: 140px;
   }
   .container span::after {
-    bottom: 12%;
+    bottom: 9%;
     left: 1%;
 
     width: 12%;
