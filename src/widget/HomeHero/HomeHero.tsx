@@ -10,7 +10,7 @@ import { Button } from "../../shared";
 import raindropLower from "&/images/main-hero/raindrop-lower.webp";
 import raindropMiddle from "&/images/main-hero/raindrop-middle.webp";
 import raindropUpper from "&/images/main-hero/raindrop-upper.png";
-import sphere from "&/images/main-hero/sphere.png";
+import sphere from "&/images/main-hero/sphere.webp";
 
 export const HomeHero = () => {
   return (
