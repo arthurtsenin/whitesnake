@@ -1,9 +1,13 @@
-.chip {
+.basis {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.primary {
   padding: 10px 20px;
   border: 0.8px solid #363636;
+
   border-radius: 40px;
 
   font-weight: var(--fw-regular);
@@ -12,9 +16,43 @@
   letter-spacing: -0.4px;
 }
 
+.secondary {
+  padding: 4.8px 7.2px;
+  border: 0.338px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16.875px;
+
+  color: #110d0d;
+
+  font-weight: 400;
+
+  font-size: 10px;
+  line-height: 90%;
+  letter-spacing: -0.169px;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
 @media (min-width: 744px) {
-  .chip {
+  .basis {
     font-size: 25px;
     letter-spacing: -0.5px;
+  }
+
+  .secondary {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .secondary {
+    padding: 16px 24px;
+    border: 1.125px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 56.25px;
+
+    color: #110d0d;
+    font-size: 24px;
+
+    letter-spacing: -0.562px;
   }
 }
