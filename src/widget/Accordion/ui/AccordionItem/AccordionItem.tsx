@@ -8,12 +8,23 @@ import styles from "./AccordionItem.module.css";
 
 import { AccordionType } from "@/widget/Accordion/data";
 
+import { useMobileScreen } from "../../../../shared/hooks/use-mobile-screen";
+
 type AccordionItemProps = {
   index: number | null;
   setIndex: Dispatch<SetStateAction<number | null>>;
   item: AccordionType;
 };
-
+const itemVars = {
+  hidden: {
+    x: -100,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+  },
+};
 export const AccordionItem: FC<AccordionItemProps> = ({
   index,
   setIndex,
@@ -23,41 +34,42 @@ export const AccordionItem: FC<AccordionItemProps> = ({
     setIndex((prev) => (prev === item.id ? null : item.id));
   };
 
+  const isMobile = useMobileScreen();
   return (
-    <button
-      type="button"
-      className={classNames(styles.container, {
-        [styles.open]: index === item.id,
-      })}
-      onClick={clickHandler}
-    >
-      <div className={styles.text}>
-        <p className={styles.summary}>{item.summary}</p>
-        <div className={styles.icon}>
-          <span />
-          <span />
+    <AnimatePresence>
+      <motion.button
+        initial="hidden"
+        whileInView="visible"
+        variants={!isMobile ? itemVars : {}}
+        type="button"
+        className={classNames(styles.container, {
+          [styles.open]: index === item.id,
+        })}
+        onClick={clickHandler}
+      >
+        <div className={styles.text}>
+          <p className={styles.summary}>{item.summary}</p>
+          <div className={styles.icon}>
+            <span />
+            <span />
+          </div>
         </div>
-      </div>
-      <AnimatePresence initial={false}>
+
         {index === item.id && (
           <motion.section
             className={classNames(styles.description)}
             key="content"
-            initial="collapsed"
-            animate="open"
-            exit="collapsed"
-            variants={{
-              open: { opacity: 1, height: "auto" },
-              collapsed: { opacity: 0, height: 0 },
-            }}
-            transition={{ duration: 0.4, ease: [0.04, 0.62, 0.23, 0.98] }}
+            initial={!isMobile ? { height: "0px" } : { height: "auto" }}
+            animate={{ height: "auto" }}
+            exit={!isMobile ? { height: "0px" } : { height: "auto" }}
+            transition={{ duration: 0.4 }}
           >
             <p>{item.description}</p>
           </motion.section>
         )}
-      </AnimatePresence>
 
-      <div className={styles.line} />
-    </button>
+        <div className={styles.line} />
+      </motion.button>
+    </AnimatePresence>
   );
 };

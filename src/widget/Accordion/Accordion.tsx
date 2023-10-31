@@ -1,5 +1,7 @@
 "use client";
 
+import classNames from "classnames";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { FC, useState } from "react";
 
@@ -24,7 +26,7 @@ const Accordion: FC<AccordionProps> = ({ accordions }) => {
         <div className={styles.imgWrapper}>
           <Image src={bubble} alt="design image" priority />
         </div>
-        <div className={styles.container}>
+        <motion.div className={classNames(styles.container, "bubka")}>
           {accordions.map((item) => (
             <AccordionItem
               key={item.id}
@@ -33,7 +35,7 @@ const Accordion: FC<AccordionProps> = ({ accordions }) => {
               setIndex={setIndex}
             />
           ))}
-        </div>
+        </motion.div>
       </section>
     </Container>
   );
