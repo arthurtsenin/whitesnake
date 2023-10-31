@@ -8,6 +8,7 @@ import styles from "./HomeScroller.module.css";
 
 import { WORKFLOW_CARDS } from "./data";
 import { HomeScrollerCard } from "./ui/HomeScrollerCard";
+import { useMobileScreen } from "../../shared/hooks/use-mobile-screen";
 
 import raindrops from "&/images/scroll-carousel/green-raindrops.png";
 import net from "&/images/scroll-carousel/net.png";
@@ -18,16 +19,22 @@ export const HomeScroller = () => {
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["35%", `-115%`]);
+  const isMobile = useMobileScreen();
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    !isMobile ? ["35%", `-115%`] : ["0%", "0%"],
+  );
   return (
     <div className={styles.container} ref={targetRef}>
       <div className={styles.imgBubsWrapper}>
-        <Image src={raindrop} alt="net" />
+        <Image src={raindrop} alt="" />
       </div>
       <div className={styles.imgBubsWrapper}>
-        <Image src={raindrops} alt="net" />
+        <Image src={raindrops} alt="" />
       </div>
+      <div className={styles.glowRed} />
+      <div className={styles.glowBlue} />
       <div className={styles.sticker}>
         <div className={styles.imgWrapper}>
           <Image src={net} alt="net" />

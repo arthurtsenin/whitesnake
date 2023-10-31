@@ -14,15 +14,16 @@ type InternshipCard = {
   timeCount?: string;
   timeInfo?: string;
   image?: StaticImageData;
-  additionalDescription?: string;
+  mark?: string;
   activeCard: number;
   index: number;
 };
+
 export const InternshipCard: FC<InternshipCard> = ({
   image,
   timeInfo,
   timeCount,
-  additionalDescription,
+  mark,
   description,
   title,
   activeCard,
@@ -30,28 +31,21 @@ export const InternshipCard: FC<InternshipCard> = ({
 }) => {
   return (
     <motion.div
-      className={classNames(styles.internshipCard, {
-        [styles.activeCard]: activeCard === index,
+      className={classNames(styles.card, {
+        [styles.active]: activeCard === index,
       })}
     >
-      <div className={styles.content}>
-        <h2 className={styles.cardTitle}>{title}</h2>
-        {additionalDescription && (
-          <p className={styles.additionalInfo}>({additionalDescription})</p>
-        )}
-        <motion.ul
-          className={classNames(styles.descriptionList, {
-            [styles.activeList]: activeCard === index,
-          })}
-          animate={{ height: activeCard === index ? "auto" : "0" }}
-        >
-          {description.map((item) => (
-            <li key={item.id}>{item.descriptionItem}</li>
-          ))}
-        </motion.ul>
-        <div className={styles.wrapper}>
+      <div className={styles.preview}>
+        <div className={styles.text}>
+          <h2 className={styles.title}>{title}</h2>
+          {mark && <p className={styles.mark}>{mark}</p>}
+        </div>
+
+        <div className={styles.date}>
           {image ? (
-            <Image src={image} alt="image" />
+            <div className={styles.wrapper}>
+              <Image src={image} alt="image" />
+            </div>
           ) : (
             <>
               <div className={styles.timeCount}>{timeCount}</div>
@@ -60,6 +54,15 @@ export const InternshipCard: FC<InternshipCard> = ({
           )}
         </div>
       </div>
+
+      <motion.ul
+        className={styles.description}
+        animate={{ height: activeCard === index ? "auto" : "0" }}
+      >
+        {description.map((item) => (
+          <li key={item.id}>{item.item}</li>
+        ))}
+      </motion.ul>
     </motion.div>
   );
 };

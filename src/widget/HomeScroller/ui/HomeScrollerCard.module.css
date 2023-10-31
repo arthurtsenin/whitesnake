@@ -2,17 +2,22 @@
   display: flex;
   flex-direction: column;
 
-  gap: 40px;
-  width: 60%;
+  gap: 24px;
+  width: 90%;
 }
 
-.imgWrapper {
+.imageWrapper {
+  width: 40px;
+  aspect-ratio: 1/1;
 }
-
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+}
 .text {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .text mark {
@@ -29,8 +34,11 @@
 }
 
 .text p:nth-child(2) {
+  width: fit-content;
+  padding-right: 4px;
+
   font-weight: 700;
-  font-size: 40px;
+  font-size: 18px;
   font-style: normal;
   line-height: 90%;
   letter-spacing: -2px;
@@ -49,8 +57,30 @@
   color: var(--white-60, rgba(255, 255, 255, 0.6));
   font-weight: 400;
 
-  font-size: 20px;
+  font-size: 14px;
   font-style: normal;
   line-height: 130%;
   letter-spacing: -1px;
+}
+
+@media screen and (min-width: 744px) {
+  .imageWrapper {
+    width: 60px;
+  }
+  .container {
+    gap: 40px;
+    width: 60%;
+  }
+  .text p:nth-child(2) {
+    font-size: 40px;
+  }
+  .text p:nth-child(3) {
+    font-size: 20px;
+  }
+  .text {
+    gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
 }

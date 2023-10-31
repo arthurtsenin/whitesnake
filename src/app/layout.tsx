@@ -52,13 +52,13 @@ export default function RootLayout({
       <LayoutScript />
       <body className={inter.className}>
         {mystate && TbFP ? (
-          <div className="layout">
+          <>
             <Header />
             <main className="main">{children}</main>
 
             <Footer />
             <FormProvider />
-          </div>
+          </>
         ) : (
           <AppLoader />
         )}
