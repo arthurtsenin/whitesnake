@@ -122,8 +122,37 @@
   margin-top: 16px;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  max-width: 175px;
+  margin-top: 16px;
+}
+
 .buttons button {
-  width: 220px;
+  width: 175px;
+}
+
+.buttons img {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+
+  cursor: pointer;
+
+  transition: all ease-in-out 0.2s;
+}
+
+@media (hover: hover) {
+  .buttons img:hover {
+    transform: scale(1.03);
+  }
 }
 
 @media screen and (min-width: 540px) {
@@ -223,10 +252,12 @@
 
   .buttons {
     flex-direction: row;
+    flex-wrap: nowrap;
   }
 
-  .buttons button {
-    width: 220px;
+  .buttons img {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -293,7 +324,16 @@
     font-size: 24px;
   }
 
+  .buttons {
+    gap: 24px;
+  }
+
   .buttons button {
-    width: 268px;
+    width: 250px;
+  }
+
+  .buttons img {
+    width: 80px;
+    height: 80px;
   }
 }
