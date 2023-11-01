@@ -9,7 +9,7 @@ const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_KEY);
 export const sendEmail = async (
   formData: Record<string, string>,
   url: string,
-  jobTitle: string,
+  jobTitle?: string,
 ) => {
   try {
     await resend.emails.send({
