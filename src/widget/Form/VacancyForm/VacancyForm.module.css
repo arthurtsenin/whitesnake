@@ -102,16 +102,16 @@
     width: 70vw;
   }
 
-  .inputs {
-    display: grid;
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    justify-items: center;
-  }
-
   .fields {
     gap: 40px;
+  }
+
+  .inputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(3, auto); */
+    column-gap: 20px;
+    /* justify-items: center; */
   }
 
   .inputs input[name="telegram"] {
@@ -132,7 +132,6 @@
   }
 
   .form textarea,
-  .form div,
   .button {
     grid-column: 1/3;
   }

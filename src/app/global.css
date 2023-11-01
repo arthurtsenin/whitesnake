@@ -145,15 +145,16 @@ html {
 
 body {
   position: relative;
-  color: var(--clr-main-text);
-  scrollbar-gutter: stable;
 
   box-sizing: border-box;
-  /* overflow-x: hidden; */
-  contain: paint;
   width: 100%;
 
+  color: var(--clr-main-text);
+
   background-color: #000;
+  scrollbar-gutter: stable;
+  /* overflow-x: hidden; */
+  contain: paint;
 }
 
 body.lock {

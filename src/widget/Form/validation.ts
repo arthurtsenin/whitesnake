@@ -5,39 +5,44 @@ import { FORM_KEYS } from "./formKeys";
 export const FORM_VACANCIES_SCHEMA = yup.object({
   [FORM_KEYS.jobTitle]: yup
     .string()
-    .min(1)
-    .required("Job title is a required field"),
+    .required("Желаемая позиция обязательное поле"),
   [FORM_KEYS.name]: yup
     .string()
-    .matches(/^([^0-9]*)$/, "Name should not contain numbers")
-    .matches(/^\S+$/, "Name should not contain spaces")
-    .required("Name is a required field"),
+    .required("Имя обязательное поле")
+    .matches(/^([^0-9]*)$/, "Имя не должно содержать цифр")
+    .matches(/^\S+$/, "Имя не должно содержать пробелов"),
   [FORM_KEYS.surname]: yup
     .string()
-    .matches(/^([^0-9]*)$/, "Surname should not contain numbers")
-    .matches(/^\S+$/, "Surname should not contain spaces")
-    .required("Surname is a required field"),
+    .required("Фамилия обязательное поле")
+    .matches(/^([^0-9]*)$/, "Фамилия не должна содержать цифр")
+    .matches(/^\S+$/, "Фамилия не должна содержать цифр"),
   [FORM_KEYS.email]: yup
     .string()
-    .matches(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i, "Invalid email format")
-    .required("Email is a required field")
-    .email("Invalid email format"),
+    .matches(
+      /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i,
+      "Неверный формат электронной почты",
+    )
+    .email("Неверный формат электронной почты")
+    .required("Электронная почта обязательное поле"),
 });
 
 export const FORM_VACANCY_SCHEMA = yup.object({
   [FORM_KEYS.name]: yup
     .string()
-    .matches(/^([^0-9]*)$/, "Name should not contain numbers")
-    .matches(/^\S+$/, "Name should not contain spaces")
-    .required("Name is a required field"),
+    .matches(/^([^0-9]*)$/, "Имя не должно содержать цифр")
+    .matches(/^\S+$/, "Имя не должно содержать пробелов")
+    .required("Имя обязательное поле"),
   [FORM_KEYS.surname]: yup
     .string()
-    .matches(/^([^0-9]*)$/, "Surname should not contain numbers")
-    .matches(/^\S+$/, "Surname should not contain spaces")
-    .required("Surname is a required field"),
+    .matches(/^([^0-9]*)$/, "Фамилия не должна содержать цифр")
+    .matches(/^\S+$/, "Фамилия не должна содержать цифр")
+    .required("Фамилия обязательное поле"),
   [FORM_KEYS.email]: yup
     .string()
-    .matches(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i, "Invalid email format")
-    .required("Email is a required field")
-    .email("Invalid email format"),
+    .matches(
+      /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i,
+      "Неверный формат электронной почты",
+    )
+    .email("Неверный формат электронной почты")
+    .required("Электронная почта обязательное поле"),
 });

@@ -110,7 +110,8 @@
     display: grid;
     grid-template-rows: repeat(4, auto);
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+
+    column-gap: 20px;
   }
 
   .inputs div[data-custom-select],
