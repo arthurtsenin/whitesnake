@@ -5,8 +5,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import Image from "next/image";
 import { FC } from "react";
 import { ChangeEvent, useState } from "react";
-import { flushSync } from "react-dom";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 
 import styles from "./VacanciesForm.module.css";
 
@@ -54,9 +53,10 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
   const {
     reset,
     register,
+    handleSubmit,
     getValues,
     setValue,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<VacancyFormType>({
     defaultValues: {
       [FORM_KEYS.jobTitle]: "",
@@ -68,7 +68,7 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
       [FORM_KEYS.linkedIn]: "",
       [FORM_KEYS.message]: "",
     },
-    mode: "onTouched",
+    mode: "onSubmit",
     resolver: yupResolver(FORM_VACANCIES_SCHEMA),
   });
 
@@ -90,12 +90,10 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
     }
   };
 
-  const actionHandler = async (FormData: FormData) => {
-    flushSync(() => setFormStatus("loading"));
+  const formSubmit: SubmitHandler<VacancyFormType> = async (formData) => {
+    setFormStatus("loading");
 
-    FormData.append(FORM_KEYS.url, downloadUrl);
-
-    const result = await sendEmail(FormData);
+    const result = await sendEmail(formData, downloadUrl);
 
     if (result.success) {
       setToast({
@@ -114,6 +112,7 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
       });
       setFormStatus("error");
     }
+
     setSelectedFileName("");
     setDownloadUrl("");
     reset();
@@ -122,7 +121,8 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
   const isFileFormatValid =
     selectedFileName.length > 0 && !/pdf/.test(selectedFileName);
 
-  const isDisabled = isFileDownloading || isFileFormatValid || !isValid;
+  const isDisabled =
+    isFileDownloading || isFileFormatValid || Object.keys(errors).length > 0;
 
   return (
     <section className={styles.container} id="vacancies-form">
@@ -132,10 +132,11 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
         <Image src={raindrops} alt="raindrops" />
       </div>
       <form
-        className={styles.form}
-        action={actionHandler}
+        noValidate
         autoComplete="off"
         id="leave-request"
+        className={styles.form}
+        onSubmit={handleSubmit(formSubmit)}
       >
         <FormTitle title="Оставить заявку" />
 
@@ -146,6 +147,7 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
               label={FORM_KEYS.jobTitle}
               options={jobTitles}
               error={!!errors[FORM_KEYS.jobTitle]}
+              helperText={errors?.[FORM_KEYS.jobTitle]?.message as string}
               getValues={getValues}
               setValue={setValue}
               register={register}
@@ -154,9 +156,10 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
               <Input
                 key={el.id}
                 type={el.type}
-                placeholder={el.placeholder}
                 label={el.form_key}
+                placeholder={el.placeholder}
                 error={!!errors[el.form_key]}
+                helperText={errors?.[el.form_key]?.message as string}
                 register={register}
               />
             ))}
@@ -166,7 +169,6 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
               register={register}
             />
           </div>
-
           <FileInput
             isFileDownloading={isFileDownloading}
             selectedFileName={selectedFileName}

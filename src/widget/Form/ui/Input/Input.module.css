@@ -45,7 +45,7 @@
 }
 
 .invalid::placeholder {
-  color: #cc0b0b;
+  /* color: #cc0b0b; */
 }
 
 .input:-webkit-autofill,
@@ -55,6 +55,18 @@
   background-color: transparent;
 
   transition: background-color 5000s ease-in-out 0s;
+}
+
+.container {
+  height: 80px;
+}
+
+.helper {
+  margin-top: 4px;
+  padding-left: 4px;
+
+  color: #cc0b0b;
+  font-size: 12px;
 }
 
 @media screen and (min-width: 960px) {

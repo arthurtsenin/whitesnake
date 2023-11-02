@@ -111,7 +111,6 @@ export default async function VacancyPage({
 
       <VacancyPageLayout
         jobTitle={vacancy.name}
-        path={vacancy.alternate_url}
         title={vacancy.name}
         subtitle={subtitle[0]}
         titles={titles}

@@ -1,5 +1,7 @@
 .container {
   position: relative;
+
+  height: 80px;
 }
 
 .select {
@@ -36,7 +38,7 @@
   --clr-select-dropdown-bg: #101010;
 
   position: absolute;
-  top: 120%;
+  top: 100%;
   right: 0;
   left: 0;
 
@@ -70,10 +72,22 @@
   color: var(--clr-error);
 }
 
+.invalid .placeholder {
+  /* color: #cc0b0b; */
+}
+
 .open .arrow {
   rotate: 180deg;
 
   transition: 0.3s ease-in-out;
+}
+
+.helper {
+  margin-top: 4px;
+  padding-left: 4px;
+
+  color: #cc0b0b;
+  font-size: 12px;
 }
 
 @media (hover: hover) {
@@ -102,6 +116,6 @@
   .dropdown {
     --gap-select-dropdown-items: 16px;
 
-    top: 130%;
+    top: 90%;
   }
 }

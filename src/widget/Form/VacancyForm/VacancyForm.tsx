@@ -5,8 +5,7 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import Image from "next/image";
 import { FC } from "react";
 import { ChangeEvent, useState } from "react";
-import { flushSync } from "react-dom";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 
 import styles from "./VacancyForm.module.css";
 
@@ -53,7 +52,8 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
   const {
     reset,
     register,
-    formState: { errors, isValid },
+    handleSubmit,
+    formState: { errors },
   } = useForm<VacancyFormType>({
     defaultValues: {
       [FORM_KEYS.name]: "",
@@ -64,7 +64,7 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
       [FORM_KEYS.linkedIn]: "",
       [FORM_KEYS.message]: "",
     },
-    mode: "onTouched",
+    mode: "onSubmit",
     resolver: yupResolver(FORM_VACANCY_SCHEMA),
   });
 
@@ -86,13 +86,10 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
     }
   };
 
-  const actionHandler = async (FormData: FormData) => {
-    flushSync(() => setFormStatus("loading"));
+  const formSubmit: SubmitHandler<VacancyFormType> = async (formData) => {
+    setFormStatus("loading");
 
-    FormData.append(FORM_KEYS.url, downloadUrl);
-    FormData.append(FORM_KEYS.jobTitle, jobTitle);
-
-    const result = await sendEmail(FormData);
+    const result = await sendEmail(formData, downloadUrl, jobTitle);
 
     if (result.success) {
       setToast({
@@ -120,7 +117,8 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
   const isFileFormatValid =
     selectedFileName.length > 0 && !/pdf/.test(selectedFileName);
 
-  const isDisabled = isFileDownloading || isFileFormatValid || !isValid;
+  const isDisabled =
+    isFileDownloading || isFileFormatValid || Object.keys(errors).length > 0;
 
   return (
     <section className={styles.container}>
@@ -129,12 +127,14 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
         <Image src={raindrops} alt="raindrops" priority />
       </div>
       <form
-        className={styles.form}
-        action={actionHandler}
+        noValidate
         autoComplete="off"
         id="leave-request"
+        className={styles.form}
+        onSubmit={handleSubmit(formSubmit)}
       >
         <FormTitle title="Оставить заявку" />
+
         <div className={styles.fields}>
           <div className={styles.inputs}>
             {formTemplate.map((el) => (
@@ -144,6 +144,7 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
                 placeholder={el.placeholder}
                 label={el.form_key}
                 error={!!errors[el.form_key]}
+                helperText={errors?.[el.form_key]?.message as string}
                 register={register}
               />
             ))}
