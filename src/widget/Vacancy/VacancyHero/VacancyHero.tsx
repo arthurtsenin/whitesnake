@@ -8,21 +8,14 @@ import { Button } from "@/shared";
 import { ROUTES } from "@/widget/Navigation/routes";
 
 import arrow from "&/images/vacancies/arrow.png";
-import linkedin from "&/images/vacancies/hero/linkedin.png";
-import rabotaby from "&/images/vacancies/hero/rabotaby.png";
 import raindrop from "&/images/vacancies/hero/raindrop-lower.png";
 import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
 
 type VacancyHeroProps = {
-  path: string;
   title: string;
   subtitle: string;
 };
-export const VacancyHero: FC<VacancyHeroProps> = ({
-  path,
-  title,
-  subtitle,
-}) => {
+export const VacancyHero: FC<VacancyHeroProps> = ({ title, subtitle }) => {
   return (
     <div className={styles.hero}>
       <div className={styles.glowRed} />
@@ -61,16 +54,6 @@ export const VacancyHero: FC<VacancyHeroProps> = ({
         <div className={styles.buttons}>
           <Link href="#leave-request">
             <Button variant="primary">Откликнуться</Button>
-          </Link>
-
-          <Link target="_blank" href={path}>
-            <Image src={rabotaby} alt="Rabota.by icon" />
-          </Link>
-          <Link
-            target="_blank"
-            href="https://www.linkedin.com/company/whitesnake/"
-          >
-            <Image src={linkedin} alt="LinkedIn  icon" />
           </Link>
         </div>
       </div>

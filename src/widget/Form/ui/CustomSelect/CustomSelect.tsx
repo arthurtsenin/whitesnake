@@ -24,6 +24,7 @@ type CustomSelectProps = {
   label: string;
   options: Array<string>;
   error?: boolean;
+  helperText: string;
   register: UseFormRegister<VacancyFormType>;
   getValues: UseFormGetValues<VacancyFormType>;
   setValue: UseFormSetValue<VacancyFormType>;
@@ -49,6 +50,7 @@ export const CustomSelect: FC<CustomSelectProps> = ({
   placeholder,
   options,
   error,
+  helperText,
   register,
   getValues,
   setValue,
@@ -126,6 +128,7 @@ export const CustomSelect: FC<CustomSelectProps> = ({
         {...register(label)}
         {...props}
       />
+      {helperText && <p className={styles.helper}>{helperText || ""}</p>}
     </div>
   );
 };

@@ -49,7 +49,8 @@
 }
 
 .basis:disabled {
-  background: #191919;
+  color: #a1a19e;
+  background: #1919194d;
 
   pointer-events: none;
 }

@@ -11,16 +11,26 @@ type InputProps = ComponentProps<"input"> & {
   refresh?: boolean;
   label: string;
   register: UseFormRegister<VacancyFormType>;
+  helperText: string;
 };
 
-export const Input: FC<InputProps> = ({ label, register, error, ...props }) => {
+export const Input: FC<InputProps> = ({
+  label,
+  register,
+  error,
+  helperText,
+  ...props
+}) => {
   return (
-    <input
-      className={classNames(styles.input, {
-        [styles.invalid]: error,
-      })}
-      {...register(label)}
-      {...props}
-    />
+    <div className={styles.container}>
+      <input
+        className={classNames(styles.input, {
+          [styles.invalid]: error,
+        })}
+        {...register(label)}
+        {...props}
+      />
+      {helperText && <p className={styles.helper}>{helperText}</p>}
+    </div>
   );
 };

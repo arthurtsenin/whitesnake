@@ -4,8 +4,8 @@ import { FC } from "react";
 
 import styles from "./VacanciesHero.module.css";
 
-import { Button } from "@/shared";
-
+import linkedin from "&/images/vacancies/hero/linkedin.png";
+import rabotaby from "&/images/vacancies/hero/rabotaby.png";
 import raindrop from "&/images/vacancies/hero/raindrop-lower.png";
 import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
 
@@ -42,10 +42,15 @@ export const VacanciesHero: FC<VacanciesHeroProps> = ({ path }) => {
           различных областях.Посмотрите, какая возможность из списка ниже
           подходит вам лучше всего!
         </p>
-
         <div className={styles.buttons}>
           <Link target="_blank" href={path}>
-            <Button variant="transparent">Перейти на rabota.by</Button>
+            <Image src={rabotaby} alt="Rabota.by icon" />
+          </Link>
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/company/whitesnake/"
+          >
+            <Image src={linkedin} alt="LinkedIn  icon" />
           </Link>
         </div>
       </div>
