@@ -1,9 +1,10 @@
 @font-face {
   font-weight: 700;
-  font-family: "Govno";
+  font-family: "Mark";
   font-style: normal;
   src: url("../../../../public/fonts/Mark-Pro-Bold.ttf");
 }
+
 .wrapper {
   position: relative;
 
@@ -33,6 +34,7 @@
 
   filter: blur(150px);
 }
+
 .glowBlue {
   position: absolute;
   top: -15%;
@@ -61,6 +63,8 @@
 
   border-radius: 50%;
 
+  animation: identifier2 3.5s linear forwards infinite;
+
   content: "";
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 }
@@ -72,16 +76,14 @@
 
   margin: 0 0;
 
-  font-family: "Govno";
-  line-height: 90%;
-}
-.container {
-}
-.container h1 {
   font-size: 28px;
+
+  font-family: "Mark";
+  line-height: 90%;
 
   animation: identifier 3.5s linear forwards infinite;
 }
+
 .container h1 span {
   position: relative;
 
@@ -91,9 +93,7 @@
 
   line-height: 90%;
 }
-.container span:after {
-  animation: identifier2 3.5s linear forwards infinite;
-}
+
 @keyframes identifier {
   0% {
     opacity: 0;
@@ -148,10 +148,12 @@
     height: 50px;
     border-bottom-width: 10px;
   }
+
   .glowRed {
     right: -5%;
     bottom: -15%;
   }
+
   .glowBlue {
     top: -15%;
     left: -15%;
@@ -164,12 +166,15 @@
 
     font-size: 140px;
   }
+
   .container span::after {
     bottom: 0%;
-    transform: translateY(30%);
+
     width: 80%;
     height: 40px;
     border-bottom-width: 16px;
+
+    transform: translateY(30%);
   }
 
   .glowRed {
@@ -186,6 +191,7 @@
 
     filter: blur(250px);
   }
+
   .glowBlue {
     position: absolute;
     top: -15%;
@@ -200,9 +206,11 @@
 
     filter: blur(250px);
   }
+
   @keyframes identifier2 {
     0% {
       opacity: 0;
+
       clip-path: polygon(0 57%, 0 58%, 0 100%, 0% 100%);
     }
     52% {
