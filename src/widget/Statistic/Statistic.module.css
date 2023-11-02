@@ -60,7 +60,7 @@
 
   transform: translate(10%, 30%);
 
-  animation: identifier3 80s linear infinite;
+  animation: identifier3 60s linear infinite;
 }
 .glowBlue {
   position: absolute;
@@ -108,32 +108,27 @@
 @keyframes identifier {
   0%,
   100% {
-    transform: translate(50%, 60%);
+    transform: translate(50%, 30%);
   }
-  30% {
-    transform: translate(-240%, 60%) rotate(145deg);
+
+  50% {
+    transform: translate(-220%, 60%) rotate(-145deg);
   }
-  60% {
-    transform: translate(-220%, -220%) rotate(-145deg);
-  }
-  80% {
-    transform: translate(40%, -220%) rotate(15deg);
+  65% {
+    transform: translate(-230%, 40%) rotate(-185deg);
   }
 }
 
 @keyframes identifier2 {
   0%,
   100% {
-    transform: translate(-50%, -40%);
+    transform: translate(-60%, -50%);
   }
-  30% {
-    transform: translate(220%, -60%) rotate(-40deg);
+  50% {
+    transform: translate(220%, -30%) rotate(-110deg);
   }
-  60% {
-    transform: translate(220%, 220%) rotate(-110deg);
-  }
-  85% {
-    transform: translate(-50%, 220%) rotate(-65deg);
+  65% {
+    transform: translate(220%, -60%) rotate(-110deg);
   }
 }
 
