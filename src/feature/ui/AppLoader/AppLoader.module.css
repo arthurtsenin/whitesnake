@@ -165,8 +165,8 @@
     font-size: 140px;
   }
   .container span::after {
-    bottom: -4px;
-
+    bottom: 0%;
+    transform: translateY(30%);
     width: 80%;
     height: 40px;
     border-bottom-width: 16px;
@@ -203,20 +203,18 @@
   @keyframes identifier2 {
     0% {
       opacity: 0;
-    }
-    45% {
-      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+      clip-path: polygon(0 57%, 0 58%, 0 100%, 0% 100%);
     }
     52% {
-      clip-path: polygon(28% 30%, 52% 33%, 65% 100%, 0 100%);
+      clip-path: polygon(23% 58%, 83% 59%, 100% 100%, 0 100%);
     }
     60% {
       opacity: 1;
 
-      clip-path: polygon(45% 13%, 55% 13%, 100% 100%, 0 100%);
+      clip-path: polygon(23% 58%, 83% 59%, 100% 100%, 0 100%);
     }
     100% {
-      clip-path: polygon(45% 13%, 55% 13%, 100% 100%, 0 100%);
+      clip-path: polygon(23% 58%, 83% 59%, 100% 100%, 0 100%);
     }
   }
 }
