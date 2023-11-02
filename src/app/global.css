@@ -145,15 +145,16 @@ html {
 
 body {
   position: relative;
-  color: var(--clr-main-text);
-  scrollbar-gutter: stable;
 
   box-sizing: border-box;
   /* overflow-x: hidden; */
-  contain: paint;
+
   width: 100%;
 
+  color: var(--clr-main-text);
+
   background-color: #000;
+  scrollbar-gutter: stable;
 }
 
 body.lock {
@@ -460,4 +461,5 @@ body.lock {
   /* width: 100%; */
   min-height: 40dvh;
   /* background-color: #000; */
+  contain: paint;
 }
