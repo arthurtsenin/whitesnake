@@ -5,7 +5,7 @@ export const ThirdCard = () => {
 
   return (
     <div className={styles.card}>
-      <div className={styles.glow} />
+      {/* <div className={styles.glow} /> */}
 
       <div className={styles.text}>
         <p>100</p>

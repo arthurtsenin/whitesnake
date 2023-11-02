@@ -2,12 +2,12 @@ import { FC } from "react";
 
 import styles from "./Contacts.module.css";
 
+import { Container } from "@/shared";
 import { ContactCard } from "@/shared/ui/ContactCard/ContactCard";
 import { Title } from "@/shared/ui/Title/Title";
 import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { ContactType } from "./data";
-import { Container } from "../../shared";
 
 export type ContactsProps = {
   contacts: Array<ContactType>;
@@ -23,6 +23,7 @@ export const Contacts: FC<ContactsProps> = ({ title, subtitle, contacts }) => {
             <ContactCard
               key={contact.id}
               url={contact.url}
+              target={contact.target}
               title={contact.title}
               description={contact.description}
             />

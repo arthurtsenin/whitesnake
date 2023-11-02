@@ -1,9 +1,8 @@
 import { FC } from "react";
 
 import { VacancyType } from "@/app/vacancies/page";
+import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
 import { VacanciesCards } from "@/widget/Vacancies/VacanciesCards/VacanciesCards";
-import { JOB_TITLES } from "@/widget/Vacancies/VacanciesForm/data";
-import { VacanciesForm } from "@/widget/Vacancies/VacanciesForm/VacanciesForm";
 import { VacanciesHero } from "@/widget/Vacancies/VacanciesHero/VacanciesHero";
 
 type VacanciesPageLayoutProps = {
@@ -21,11 +20,13 @@ export const VacanciesPageLayout: FC<VacanciesPageLayoutProps> = ({
     location: card.area.name,
   }));
 
+  const jobTitles = cards.map((card) => card.title).concat("Другое");
+
   return (
     <>
       <VacanciesHero path={path} />
       <VacanciesCards cards={cards} />
-      <VacanciesForm jobTitles={JOB_TITLES} />
+      <VacanciesForm jobTitles={jobTitles} />
     </>
   );
 };

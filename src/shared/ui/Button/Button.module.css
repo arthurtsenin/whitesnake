@@ -26,6 +26,12 @@
   background: var(--clr-button-secondary-bg);
 }
 
+.light {
+  color: #000;
+
+  background: #fff;
+}
+
 .transparent::before {
   position: absolute;
 
@@ -43,7 +49,9 @@
 }
 
 .basis:disabled {
-  background: #191919;
+  color: #a1a19e;
+
+  background: #1919194d;
 
   pointer-events: none;
 }

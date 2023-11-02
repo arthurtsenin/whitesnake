@@ -17,7 +17,11 @@ export const SolutionItem: FC<SolutionItemProps> = ({ text, image }) => {
         ))}
       </div>
       <div className={styles.wrapper}>
-        <Image src={image} alt="solution item preview" placeholder="blur" />
+        <Image
+          src={image}
+          alt="изображение карточки решения задачи"
+          placeholder="blur"
+        />
       </div>
     </>
   );

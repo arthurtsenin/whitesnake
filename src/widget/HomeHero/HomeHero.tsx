@@ -7,10 +7,10 @@ import { Scroller } from "./ui/Scroller";
 import { ROUTES } from "../Navigation/routes";
 import { Button } from "../../shared";
 
-import raindropLower from "&/images/main-hero/raindrop-lower.png";
-import raindropMiddle from "&/images/main-hero/raindrop-middle.png";
+import raindropLower from "&/images/main-hero/raindrop-lower.webp";
+import raindropMiddle from "&/images/main-hero/raindrop-middle.webp";
 import raindropUpper from "&/images/main-hero/raindrop-upper.png";
-import sphere from "&/images/main-hero/sphere.png";
+import sphere from "&/images/main-hero/sphere.webp";
 
 export const HomeHero = () => {
   return (
@@ -34,18 +34,18 @@ export const HomeHero = () => {
         </div>
         <div className={styles.rightSide}>
           <div className={styles.imgWrapper}>
-            <Image src={raindropUpper} alt="raindrop" priority />
+            <Image src={raindropUpper} alt="" priority />
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={raindropMiddle} alt="raindrop" priority />
+            <Image src={raindropMiddle} alt="" priority />
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={raindropLower} alt="raindrop" priority />
+            <Image src={raindropLower} alt="" priority />
           </div>
         </div>
       </div>
       <div className={styles.sphere}>
-        <Image src={sphere} alt="sphere" loading="lazy" placeholder="blur" />
+        <Image src={sphere} alt="" priority placeholder="blur" />
       </div>
       <div className={styles.glowRed}></div>
       <div className={styles.glowBlue}></div>

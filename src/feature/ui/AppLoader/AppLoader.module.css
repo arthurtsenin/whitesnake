@@ -1,9 +1,10 @@
 @font-face {
   font-weight: 700;
-  font-family: "Govno";
+  font-family: "Mark";
   font-style: normal;
   src: url("../../../../public/fonts/Mark-Pro-Bold.ttf");
 }
+
 .wrapper {
   position: relative;
 
@@ -33,6 +34,7 @@
 
   filter: blur(150px);
 }
+
 .glowBlue {
   position: absolute;
   top: -15%;
@@ -50,16 +52,18 @@
 
 .container span::after {
   position: absolute;
-  bottom: -12%;
-  left: -1.5%;
 
-  width: 12%;
+  bottom: -2px;
+
+  width: 90%;
   height: 10px;
   border: 5px solid;
   border-color: transparent;
   border-bottom-color: #e20f0f;
 
   border-radius: 50%;
+
+  animation: identifier2 3.5s linear forwards infinite;
 
   content: "";
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
@@ -68,21 +72,28 @@
 .container h1 {
   position: relative;
 
-  height: 32px;
+  display: flex;
+
   margin: 0 0;
 
-  font-family: "Govno";
-}
-.container {
-}
-.container h1 {
   font-size: 28px;
+
+  font-family: "Mark";
+  line-height: 90%;
 
   animation: identifier 3.5s linear forwards infinite;
 }
-.container span:after {
-  animation: identifier2 3.5s linear forwards infinite;
+
+.container h1 span {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+
+  line-height: 90%;
 }
+
 @keyframes identifier {
   0% {
     opacity: 0;
@@ -129,17 +140,20 @@
     font-size: 80px;
   }
   .container span::after {
-    bottom: 0%;
-    left: -2px;
+    /* bottom: 0%; */
+    /* left: -2px; */
 
-    width: 14%;
+    bottom: -4px;
+
     height: 50px;
     border-bottom-width: 10px;
   }
+
   .glowRed {
     right: -5%;
     bottom: -15%;
   }
+
   .glowBlue {
     top: -15%;
     left: -15%;
@@ -152,13 +166,15 @@
 
     font-size: 140px;
   }
-  .container span::after {
-    bottom: 12%;
-    left: 1%;
 
-    width: 12%;
-    height: 50px;
-    border-bottom-width: 12px;
+  .container span::after {
+    bottom: 0%;
+
+    width: 80%;
+    height: 40px;
+    border-bottom-width: 16px;
+
+    transform: translateY(30%);
   }
 
   .glowRed {
@@ -175,6 +191,7 @@
 
     filter: blur(250px);
   }
+
   .glowBlue {
     position: absolute;
     top: -15%;
@@ -188,5 +205,24 @@
     background: rgba(124, 254, 253, 0.5);
 
     filter: blur(250px);
+  }
+
+  @keyframes identifier2 {
+    0% {
+      opacity: 0;
+
+      clip-path: polygon(0 57%, 0 58%, 0 100%, 0% 100%);
+    }
+    52% {
+      clip-path: polygon(23% 58%, 83% 59%, 100% 100%, 0 100%);
+    }
+    60% {
+      opacity: 1;
+
+      clip-path: polygon(23% 58%, 83% 59%, 100% 100%, 0 100%);
+    }
+    100% {
+      clip-path: polygon(23% 58%, 83% 59%, 100% 100%, 0 100%);
+    }
   }
 }

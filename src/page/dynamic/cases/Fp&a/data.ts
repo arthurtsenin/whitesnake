@@ -93,14 +93,20 @@ export const FPA_DATA: CaseDataType = {
   team_info: [
     { id: 1, teamName: "Backend-разработчиков", teamCount: 8 },
     { id: 2, teamName: "Fullstack-разработчика", teamCount: 2 },
-    { id: 3, teamName: "Dev-ops", teamCount: 1 },
+    { id: 3, teamName: "DevOps", teamCount: 1 },
   ],
 
   stack_title: "Технологии",
 
   stack_info: {
-    backend: ["Pyton", "Django", "Django REST Framework", "Celery", "RabbitMQ"],
-    ["Dev-ops"]: [
+    backend: [
+      "Python",
+      "Django",
+      "Django REST Framework",
+      "Celery",
+      "RabbitMQ",
+    ],
+    ["DevOps"]: [
       "Docker",
       "Docker-compose",
       "Kubernetes",

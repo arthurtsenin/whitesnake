@@ -1,3 +1,4 @@
+import PageScript from "@/shared/analitics/PageScript";
 import { InternshipAccardion } from "@/widget/Internship/InternshipAccardion/InternshipAccardion";
 import { InternshipForm } from "@/widget/Internship/InternshipForm/InternshipForm";
 import { InternshipHero } from "@/widget/Internship/InternshipHero/InternshipHero";
@@ -18,6 +19,7 @@ export default function InternshipPage() {
       <TileTab />
       <InternshipAccardion />
       <InternshipForm />
+      <PageScript />
     </>
   );
 }

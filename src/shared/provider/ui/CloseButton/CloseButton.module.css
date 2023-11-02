@@ -1,0 +1,7 @@
+.close {
+  align-self: flex-end;
+
+  color: white;
+
+  cursor: pointer;
+}

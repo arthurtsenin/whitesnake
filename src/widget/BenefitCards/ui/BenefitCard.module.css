@@ -56,6 +56,8 @@
   flex-shrink: 0;
   align-self: start;
   width: 25%;
+
+  transition: all 0.4s ease-in-out;
 }
 
 .cardImage img {
@@ -114,6 +116,9 @@
 
   .card:hover {
     border: 1px solid #fff0;
+  }
+  .card:hover .cardImage {
+    scale: 1.05;
   }
 }
 

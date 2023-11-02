@@ -1,3 +1,4 @@
+import PageScript from "@/shared/analitics/PageScript";
 import { Contacts } from "@/widget/Contacts/Contacts";
 import { CONTACTS_DATA } from "@/widget/Contacts/data";
 import { CASES_PREVIEW_CARDS } from "@/widget/GridContainer/data";
@@ -7,6 +8,7 @@ import { PortfolioHero } from "@/widget/PortfolioHero/PortfolioHero";
 export default function PortfolioPage() {
   return (
     <>
+      <PageScript />
       <PortfolioHero
         title="Портфолио"
         subtitle="Как мы решаем сложные задачи"
