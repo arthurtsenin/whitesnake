@@ -19,8 +19,9 @@ export const HomeScrollerCard = ({
   return (
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
-        <Image src={image} alt="marker" />
+        <Image src={image} alt="" />
       </div>
+
       <div className={styles.text}>
         <mark>{order}</mark>
         <p>{title}</p>

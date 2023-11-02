@@ -35,14 +35,9 @@ export const Mawi: FC<MawiProps> = ({ title, subtitle, keywords }) => {
             {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
+            {Array.from({ length: 8 }).map((_, index) => (
+              <Image key={index} src={heroImage} alt="" priority />
+            ))}
           </div>
           <div className={styles.keywords}>
             {keywords.map((k, idx) => (

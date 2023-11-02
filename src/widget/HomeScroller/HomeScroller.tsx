@@ -1,14 +1,16 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
 import styles from "./HomeScroller.module.css";
 
+import { useMobileScreen } from "@/shared/hooks/use-mobile-screen";
+import { MotionComponent } from "@/shared/motion/MotionComponent";
+
 import { WORKFLOW_CARDS } from "./data";
 import { HomeScrollerCard } from "./ui/HomeScrollerCard";
-import { useMobileScreen } from "../../shared/hooks/use-mobile-screen";
 
 import raindrops from "&/images/scroll-carousel/green-raindrops.png";
 import net from "&/images/scroll-carousel/net.png";
@@ -25,24 +27,29 @@ export const HomeScroller = () => {
     [0, 1],
     !isMobile ? ["35%", `-115%`] : ["0%", "0%"],
   );
+
   return (
     <div className={styles.container} ref={targetRef}>
-      <div className={styles.imgBubsWrapper}>
+      <div className={styles.imgRaindropWrapper}>
         <Image src={raindrop} alt="" />
       </div>
-      <div className={styles.imgBubsWrapper}>
+      <div className={styles.imgRaindropWrapper}>
         <Image src={raindrops} alt="" />
       </div>
       <div className={styles.glowRed} />
       <div className={styles.glowBlue} />
       <div className={styles.sticker}>
         <div className={styles.imgWrapper}>
-          <Image src={net} alt="net" />
+          <Image src={net} alt="" />
         </div>
 
         <div className={styles.title}>Как начать работать с нами</div>
         <div className={styles.devider} />
-        <motion.div className={styles.cardContainer} style={{ y }}>
+        <MotionComponent
+          as="div"
+          className={styles.cardContainer}
+          style={{ y }}
+        >
           {WORKFLOW_CARDS.map((el) => (
             <HomeScrollerCard
               description={el.description}
@@ -52,7 +59,7 @@ export const HomeScroller = () => {
               key={el.order}
             />
           ))}
-        </motion.div>
+        </MotionComponent>
       </div>
     </div>
   );

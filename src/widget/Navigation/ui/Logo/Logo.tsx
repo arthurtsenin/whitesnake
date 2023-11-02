@@ -27,7 +27,7 @@ export const Logo: FC<LogoProps> = ({ variant, clickHandler }) => {
     >
       <Image
         src={logo}
-        alt="WhiteSnake logo"
+        alt="Логотип кампании УайтСнейк"
         className={styles[variant]}
         priority
       />

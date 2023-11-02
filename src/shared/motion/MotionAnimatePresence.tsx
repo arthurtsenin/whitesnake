@@ -1,11 +1,11 @@
 import { AnimatePresence, AnimatePresenceProps } from "framer-motion";
 import React, { FC, ReactNode } from "react";
 
-type MAnimatePresenceProps = {
+type MotionAnimatePresenceProps = {
   children: ReactNode;
 } & AnimatePresenceProps;
 
-export const MAnimatePresence: FC<MAnimatePresenceProps> = ({
+export const MotionAnimatePresence: FC<MotionAnimatePresenceProps> = ({
   children,
   ...rest
 }) => {

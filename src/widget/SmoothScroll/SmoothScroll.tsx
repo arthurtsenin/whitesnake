@@ -1,9 +1,11 @@
 "use client";
 
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useScroll, useSpring, useTransform } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 import styles from "./SmoothScroll.module.css";
+
+import { MotionComponent } from "@/shared/motion/MotionComponent";
 
 export default function SmoothScroll({
   children,
@@ -40,9 +42,14 @@ export default function SmoothScroll({
     <>
       <div style={{ height: contentHeight }} />
 
-      <motion.div className={styles.scrollBody} style={{ y }} ref={contentRef}>
+      <MotionComponent
+        as="div"
+        className={styles.scrollBody}
+        style={{ y }}
+        ref={contentRef}
+      >
         {children}
-      </motion.div>
+      </MotionComponent>
     </>
   );
 }

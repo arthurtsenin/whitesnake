@@ -1,7 +1,9 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { FC, MutableRefObject, useEffect, useState } from "react";
 
 import styles from "./ButtonUp.module.css";
+
+import { MotionAnimatePresence } from "@/shared/motion/MotionAnimatePresence";
+import { MotionComponent } from "@/shared/motion/MotionComponent";
 
 type ButtonUpProps = {
   elementRef: MutableRefObject<HTMLElement | null>;
@@ -32,20 +34,21 @@ export const ButtonUp: FC<ButtonUpProps> = ({ elementRef }) => {
   }, [elementRef]);
 
   return (
-    <AnimatePresence>
+    <MotionAnimatePresence>
       {isInView && (
-        <motion.div
+        <MotionComponent
+          as="div"
           className={styles.buttonContainer}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
           <button className={styles.buttonUp} onClick={handleClick}>
-            <span className={styles.arrowUp}></span>
-            <span className={styles.arrowUp}></span>
+            <span className={styles.arrowUp} />
+            <span className={styles.arrowUp} />
           </button>
-        </motion.div>
+        </MotionComponent>
       )}
-    </AnimatePresence>
+    </MotionAnimatePresence>
   );
 };

@@ -26,7 +26,7 @@ export const VacancyCard: FC<VacancyCardProps> = ({ title, location, id }) => {
         <p className={styles.title}>{title}</p>
         <p className={styles.description}>{location}</p>
         <div className={cn(styles.arrow, styles.hover)}>
-          <Image src={arrow} alt="" />
+          <Image src={arrow} alt="Открыть вакансию." />
         </div>
       </Link>
     </div>

@@ -1,9 +1,12 @@
 import classNames from "classnames";
-import { animate, AnimatePresence, motion, stagger } from "framer-motion";
+import { animate, stagger } from "framer-motion";
 import Image from "next/image";
 import { FC, useEffect } from "react";
 
 import styles from "./DynamicPannel.module.css";
+
+import { MotionAnimatePresence } from "@/shared/motion/MotionAnimatePresence";
+import { MotionComponent } from "@/shared/motion/MotionComponent";
 
 import { TechnologieType } from "../../data";
 
@@ -48,26 +51,32 @@ export type DynamicPannelProps = {
 export const DynamicPannel: FC<DynamicPannelProps> = ({ cards }) => {
   useEffect(() => {
     animate(
-      ".jopa",
+      ".animateItem",
       { transform: ["translateX(-100px)", "translateX(0)"], opacity: [0, 1] },
       { delay: stagger(0.06) },
     );
   }, [cards]);
+
   return (
-    <AnimatePresence>
+    <MotionAnimatePresence>
       <div className={styles.container}>
         <div className={styles.pannels}>
           {cards.cards.map((card) => (
-            <motion.div
+            <MotionComponent
+              as="div"
               key={card.name}
-              className={classNames(styles.item, styles[card.name], "jopa")}
+              className={classNames(
+                styles.item,
+                styles[card.name],
+                "animateItem",
+              )}
             >
               <Image src={card.icon} alt={card.name} />
               <p className={styles.name}>{card.name}</p>
-            </motion.div>
+            </MotionComponent>
           ))}
         </div>
       </div>
-    </AnimatePresence>
+    </MotionAnimatePresence>
   );
 };

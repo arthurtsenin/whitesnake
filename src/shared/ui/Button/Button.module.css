@@ -50,6 +50,7 @@
 
 .basis:disabled {
   color: #a1a19e;
+
   background: #1919194d;
 
   pointer-events: none;

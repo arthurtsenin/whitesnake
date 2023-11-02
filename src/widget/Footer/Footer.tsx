@@ -22,7 +22,7 @@ export const Footer = () => {
     <footer className={styles.container} ref={footerRef}>
       <div className={styles.glow} />
       <div className={styles.glow} />
-      <Image alt="design image" src={bubble} className={styles.image} />
+      <Image alt="" src={bubble} className={styles.image} />
       <ButtonUp elementRef={footerRef} />
       <Container>
         <div className={styles.navContainer}>

@@ -25,7 +25,7 @@ export const BenefitCard: FC<BenefitCardProps> = ({
     <Link href={link} className={classNames(styles.card, styles[variant])}>
       {icon && (
         <div className={styles.cardImage}>
-          <Image src={icon} alt="benefit card icon" />
+          <Image src={icon} alt="" />
         </div>
       )}
       <div className={styles.cardContent}>

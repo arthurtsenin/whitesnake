@@ -1,4 +1,5 @@
 import styles from "./AppLoader.module.css";
+
 export const AppLoader = () => {
   return (
     <div className={styles.wrapper}>

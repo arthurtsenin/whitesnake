@@ -44,13 +44,13 @@ export const VacanciesHero: FC<VacanciesHeroProps> = ({ path }) => {
         </p>
         <div className={styles.buttons}>
           <Link target="_blank" href={path}>
-            <Image src={rabotaby} alt="Rabota.by icon" />
+            <Image src={rabotaby} alt="Вакансии на сайте Работабай." />
           </Link>
           <Link
             target="_blank"
             href="https://www.linkedin.com/company/whitesnake/"
           >
-            <Image src={linkedin} alt="LinkedIn  icon" />
+            <Image src={linkedin} alt="Уайтснейк в ЛинкедИн." />
           </Link>
         </div>
       </div>

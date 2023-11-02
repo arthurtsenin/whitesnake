@@ -10,8 +10,8 @@ export const FifthCard = () => {
       {/* <div className={styles.glow} /> */}
 
       <div className={styles.images}>
-        {/* <Image src={greenRaindrop} alt="raindrop" /> */}
-        {/* <Image src={semiRaindrop} alt="raindrop" /> */}
+        {/* <Image src={greenRaindrop} alt="" /> */}
+        {/* <Image src={semiRaindrop} alt="" /> */}
       </div>
     </div>
   );

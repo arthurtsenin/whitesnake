@@ -22,24 +22,24 @@ export const VacancyHero: FC<VacancyHeroProps> = ({ title, subtitle }) => {
       <div className={styles.glowBlue} />
 
       <div className={styles.raindrop1}>
-        <Image src={raindrop} alt="raindrop" priority />
+        <Image src={raindrop} alt="" priority />
       </div>
 
       <div className={styles.raindrop2}>
-        <Image src={raindrop} alt="raindrop" priority />
+        <Image src={raindrop} alt="" priority />
       </div>
 
       <div className={styles.raindrop3}>
-        <Image src={raindropPurple} alt="raindrop" priority />
+        <Image src={raindropPurple} alt="" priority />
       </div>
 
       <div className={styles.raindrop4}>
-        <Image src={raindropPurple} alt="raindrop" priority />
+        <Image src={raindropPurple} alt="" priority />
       </div>
 
       <div className={styles.content}>
         <Link className={styles.back} href={`/${ROUTES.FIVE.href}`}>
-          <Image src={arrow} alt="back" />
+          <Image src={arrow} alt="Все вакансии." />
           <span className={styles.link}>Назад к вакансиям</span>
         </Link>
 

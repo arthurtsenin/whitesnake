@@ -129,7 +129,7 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
       <div className={styles.glowBlue} />
 
       <div className={styles.raindrops}>
-        <Image src={raindrops} alt="raindrops" />
+        <Image src={raindrops} alt="" />
       </div>
       <form
         noValidate

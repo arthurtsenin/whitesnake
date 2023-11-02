@@ -1,20 +1,21 @@
 "use client";
 
 import classNames from "classnames";
-import { AnimatePresence, motion } from "framer-motion";
 import { Dispatch, FC, SetStateAction } from "react";
 
 import styles from "./AccordionItem.module.css";
 
+import { useMobileScreen } from "@/shared/hooks/use-mobile-screen";
+import { MotionAnimatePresence } from "@/shared/motion/MotionAnimatePresence";
+import { MotionComponent } from "@/shared/motion/MotionComponent";
 import { AccordionType } from "@/widget/Accordion/data";
-
-import { useMobileScreen } from "../../../../shared/hooks/use-mobile-screen";
 
 type AccordionItemProps = {
   index: number | null;
   setIndex: Dispatch<SetStateAction<number | null>>;
   item: AccordionType;
 };
+
 const itemVars = {
   hidden: {
     x: -100,
@@ -25,6 +26,7 @@ const itemVars = {
     opacity: 1,
   },
 };
+
 export const AccordionItem: FC<AccordionItemProps> = ({
   index,
   setIndex,
@@ -35,13 +37,14 @@ export const AccordionItem: FC<AccordionItemProps> = ({
   };
 
   const isMobile = useMobileScreen();
+
   return (
-    <AnimatePresence>
-      <motion.button
+    <MotionAnimatePresence>
+      <MotionComponent
+        as="button"
         initial="hidden"
         whileInView="visible"
         variants={!isMobile ? itemVars : {}}
-        type="button"
         className={classNames(styles.container, {
           [styles.open]: index === item.id,
         })}
@@ -56,7 +59,8 @@ export const AccordionItem: FC<AccordionItemProps> = ({
         </div>
 
         {index === item.id && (
-          <motion.section
+          <MotionComponent
+            as="section"
             className={classNames(styles.description)}
             key="content"
             initial={!isMobile ? { height: "0px" } : { height: "auto" }}
@@ -65,11 +69,11 @@ export const AccordionItem: FC<AccordionItemProps> = ({
             transition={{ duration: 0.4 }}
           >
             <p>{item.description}</p>
-          </motion.section>
+          </MotionComponent>
         )}
 
         <div className={styles.line} />
-      </motion.button>
-    </AnimatePresence>
+      </MotionComponent>
+    </MotionAnimatePresence>
   );
 };

@@ -19,12 +19,13 @@ export const Statistic: FC = () => {
     <Container>
       <div className={styles.mask}>
         <div className={styles.images}>
-          <Image src={raindropBlue} alt="raindrop" />
-          <Image src={raindropYellow} alt="raindrop" />
-          <Image src={greenRaindrop} alt="raindrop" />
+          <Image src={raindropBlue} alt="" />
+          <Image src={raindropYellow} alt="" />
+          <Image src={greenRaindrop} alt="" />
         </div>
         <div className={styles.glowBlue} />
         <div className={styles.glowRed} />
+
         <div className={styles.container}>
           <FirstCard />
           <SecondCard />
