@@ -1,13 +1,14 @@
 import classNames from "classnames";
-import { animate, AnimatePresence, motion } from "framer-motion";
+import { animate } from "framer-motion";
 import Image from "next/image";
 import { FC, useEffect } from "react";
 
 import styles from "./StaticPannel.module.css";
 
+import { useMobileScreen } from "@/shared/hooks/use-mobile-screen";
+import { MotionAnimatePresence } from "@/shared/motion/MotionAnimatePresence";
+import { MotionComponent } from "@/shared/motion/MotionComponent";
 import { IndustryType } from "@/widget/Tabs/data";
-
-import { useMobileScreen } from "../../../../shared/hooks/use-mobile-screen";
 
 type StaticPannelProps = {
   panel: IndustryType;
@@ -30,12 +31,14 @@ type StaticPannelProps = {
 //     },
 //   },
 // };
+
 export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
   const isMobile = useMobileScreen();
+
   useEffect(() => {
     if (!isMobile) {
       animate(
-        ".pipka",
+        ".animateContainer",
         {
           transform: ["translateX(-50px)", "translateX(0px)"],
           opacity: [0, 1],
@@ -43,7 +46,7 @@ export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
         { duration: 0.4 },
       );
       animate(
-        ".panelTitle",
+        ".animateTitle",
         {
           transform: ["translateX(-40px)", "translateX(0px)"],
           opacity: [0, 0, 0.5, 1],
@@ -51,7 +54,7 @@ export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
         { duration: 0.5, delay: 0.4 },
       );
       animate(
-        ".panelDescription",
+        ".animateDescription",
         {
           transform: ["translateX(-40px)", "translateX(0px)"],
           opacity: [0, 0, 0.5, 1],
@@ -60,23 +63,31 @@ export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
       );
     }
   }, [panel, isMobile]);
+
   return (
-    <AnimatePresence>
-      <motion.div className={classNames(styles.container, "pipka")}>
+    <MotionAnimatePresence>
+      <MotionComponent
+        as="div"
+        className={classNames(styles.container, "animateContainer")}
+      >
         <div className={styles.wrapper}>
           <Image alt={panel.name} src={panel.image} placeholder="blur" fill />
           <div className={styles.text}>
-            <motion.h3 className={classNames(styles.title, "panelTitle")}>
+            <MotionComponent
+              as="h3"
+              className={classNames(styles.title, "animateTitle")}
+            >
               {panel.name}
-            </motion.h3>
-            <motion.p
-              className={classNames(styles.description, "panelDescription")}
+            </MotionComponent>
+            <MotionComponent
+              as="p"
+              className={classNames(styles.description, "animateDescription")}
             >
               {panel.description}
-            </motion.p>
+            </MotionComponent>
           </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
+      </MotionComponent>
+    </MotionAnimatePresence>
   );
 };

@@ -17,11 +17,11 @@ type ComponentPropsType = {
   children: ReactNode;
 } & ElementProps;
 
-type MComponentProps = ForwardRefExoticComponent<
+type MotionComponentProps = ForwardRefExoticComponent<
   Omit<ComponentPropsType, "ref"> & RefAttributes<HTMLElement>
 >;
 
-export const MComponent: MComponentProps = forwardRef(
+export const MotionComponent: MotionComponentProps = forwardRef(
   ({ as = "div", children, ...rest }, ref) => {
     const Tag = motion[as as keyof typeof motion] as FC<ElementProps>;
 
