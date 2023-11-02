@@ -90,11 +90,6 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
     }
   };
 
-  const isFileFormatValid =
-    selectedFileName.length > 0 && !/pdf/.test(selectedFileName);
-
-  const isDisabled = isFileDownloading || isFileFormatValid;
-
   const formSubmit: SubmitHandler<VacancyFormType> = async (formData) => {
     setFormStatus("loading");
 
@@ -122,6 +117,12 @@ export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
     setDownloadUrl("");
     reset();
   };
+
+  const isFileFormatValid =
+    selectedFileName.length > 0 && !/pdf/.test(selectedFileName);
+
+  const isDisabled =
+    isFileDownloading || isFileFormatValid || Object.keys(errors).length > 0;
 
   return (
     <section className={styles.container} id="vacancies-form">

@@ -117,7 +117,8 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
   const isFileFormatValid =
     selectedFileName.length > 0 && !/pdf/.test(selectedFileName);
 
-  const isDisabled = isFileDownloading || isFileFormatValid;
+  const isDisabled =
+    isFileDownloading || isFileFormatValid || Object.keys(errors).length > 0;
 
   return (
     <section className={styles.container}>
