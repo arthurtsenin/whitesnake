@@ -28,7 +28,11 @@ export const FileInput: FC<FileInputProps> = ({
       })}
     >
       <div className={styles.wrapper}>
-        <Image src={clip} className={styles.icon} alt="upload CV" />
+        <Image
+          src={clip}
+          className={styles.icon}
+          alt="прикрепить файл резюме"
+        />
       </div>
 
       <div className={styles.placeholder}>

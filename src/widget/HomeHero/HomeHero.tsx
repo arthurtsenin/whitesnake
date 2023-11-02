@@ -34,18 +34,35 @@ export const HomeHero = () => {
         </div>
         <div className={styles.rightSide}>
           <div className={styles.imgWrapper}>
-            <Image src={raindropUpper} alt="raindrop" priority />
+            <Image
+              src={raindropUpper}
+              alt="декоративное изображение"
+              priority
+            />
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={raindropMiddle} alt="raindrop" priority />
+            <Image
+              src={raindropMiddle}
+              alt="декоративное изображение"
+              priority
+            />
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={raindropLower} alt="raindrop" priority />
+            <Image
+              src={raindropLower}
+              alt="декоративное изображение"
+              priority
+            />
           </div>
         </div>
       </div>
       <div className={styles.sphere}>
-        <Image src={sphere} alt="sphere" priority placeholder="blur" />
+        <Image
+          src={sphere}
+          alt="декоративное изображение"
+          priority
+          placeholder="blur"
+        />
       </div>
       <div className={styles.glowRed}></div>
       <div className={styles.glowBlue}></div>

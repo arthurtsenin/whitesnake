@@ -23,7 +23,7 @@ export const LivePerson: FC<LivePersonProps> = ({
   return (
     <section className={styles.hero}>
       <Image
-        alt=""
+        alt="фоновое изображение хиро"
         src={heroBg}
         fill
         priority
@@ -39,7 +39,7 @@ export const LivePerson: FC<LivePersonProps> = ({
             {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={heroImage} alt="" priority />
+            <Image src={heroImage} alt="фоновое изображение хиро" priority />
           </div>
           <div className={styles.keywords}>
             {keywords.map((k, idx) => (

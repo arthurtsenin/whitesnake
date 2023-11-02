@@ -20,19 +20,19 @@ export const VacanciesHero: FC<VacanciesHeroProps> = ({ path }) => {
       <div className={styles.glowBlue} />
 
       <div className={styles.raindrop1}>
-        <Image src={raindrop} alt="" />
+        <Image src={raindrop} alt="декоративное изображение" />
       </div>
 
       <div className={styles.raindrop2}>
-        <Image src={raindrop} alt="" />
+        <Image src={raindrop} alt="декоративное изображение" />
       </div>
 
       <div className={styles.raindrop3}>
-        <Image src={raindropPurple} alt="" />
+        <Image src={raindropPurple} alt="декоративное изображение" />
       </div>
 
       <div className={styles.raindrop4}>
-        <Image src={raindropPurple} alt="" />
+        <Image src={raindropPurple} alt="декоративное изображение" />
       </div>
 
       <div className={styles.content}>
@@ -44,13 +44,13 @@ export const VacanciesHero: FC<VacanciesHeroProps> = ({ path }) => {
         </p>
         <div className={styles.buttons}>
           <Link target="_blank" href={path}>
-            <Image src={rabotaby} alt="Rabota.by icon" />
+            <Image src={rabotaby} alt="иконка сайта Работа.бай" />
           </Link>
           <Link
             target="_blank"
             href="https://www.linkedin.com/company/whitesnake/"
           >
-            <Image src={linkedin} alt="LinkedIn  icon" />
+            <Image src={linkedin} alt="иконка социальной сети ЛинкедИн" />
           </Link>
         </div>
       </div>

@@ -30,11 +30,12 @@ const DynamicTabs: FC<DynamicTabsProps> = ({
     <section className={styles.section}>
       <div className={styles.glow} />
       <Image
-        alt="design image"
+        alt="декоративное изображение"
         src={bubble}
         className={styles.image}
         priority
       />
+
       <Title suptitle={suptitle} title={title} subtitle={subtitle} />
       <div className={styles.container}>
         <TabList

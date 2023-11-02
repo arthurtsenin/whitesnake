@@ -57,7 +57,11 @@ export const HealthMonitoringPage = () => {
             </div>
 
             <div className={`${styles.wrapper} ${styles.image1}`}>
-              <Image src={deviceService} alt="" placeholder="blur" />
+              <Image
+                src={deviceService}
+                alt="Сервис обработки и анализа данных"
+                placeholder="blur"
+              />
             </div>
 
             <div className={`${styles.text} ${styles.text2}`}>
@@ -76,7 +80,7 @@ export const HealthMonitoringPage = () => {
             <div className={`${styles.wrapper} ${styles.image2}`}>
               <Image
                 src={dataProcessing}
-                alt="solution item preview"
+                alt="Сервис уведомлений"
                 placeholder="blur"
               />
             </div>
@@ -102,7 +106,11 @@ export const HealthMonitoringPage = () => {
             </div>
 
             <div className={`${styles.wrapper} ${styles.image3}`}>
-              <Image src={dashboardService} alt="" placeholder="blur" />
+              <Image
+                src={dashboardService}
+                alt="Сервисная панель"
+                placeholder="blur"
+              />
             </div>
           </div>
         </CaseSolution>

@@ -12,10 +12,10 @@ export const FirstCard = () => {
         </p>
       </div>
       {/* <div className={styles.raindropY}>
-        <Image alt="" src={raindropYellow} priority />
+        <Image alt="декоративное изображение" src={raindropYellow} priority />
       </div>
       <div className={styles.raindropB}>
-        <Image alt="" src={raindropBlue} priority />
+        <Image alt="декоративное изображение" src={raindropBlue} priority />
       </div> */}
     </div>
   );

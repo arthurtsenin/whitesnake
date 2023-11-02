@@ -19,7 +19,7 @@ export const Mawi: FC<MawiProps> = ({ title, subtitle, keywords }) => {
   return (
     <section className={styles.hero}>
       <Image
-        alt=""
+        alt="фоновое изображение хиро"
         src={heroBg}
         fill
         priority
@@ -35,14 +35,14 @@ export const Mawi: FC<MawiProps> = ({ title, subtitle, keywords }) => {
             {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
-            <Image src={heroImage} alt="" priority />
+            <Image src={heroImage} alt="фоновое изображение хиро" priority />
+            <Image src={heroImage} alt="фоновое изображение хиро" priority />
+            <Image src={heroImage} alt="фоновое изображение хиро" priority />
+            <Image src={heroImage} alt="фоновое изображение хиро" priority />
+            <Image src={heroImage} alt="фоновое изображение хиро" priority />
+            <Image src={heroImage} alt="фоновое изображение хиро" priority />
+            <Image src={heroImage} alt="фоновое изображение хиро" priority />
+            <Image src={heroImage} alt="фоновое изображение хиро" priority />
           </div>
           <div className={styles.keywords}>
             {keywords.map((k, idx) => (

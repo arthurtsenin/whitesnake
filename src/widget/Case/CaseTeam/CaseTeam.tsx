@@ -27,7 +27,7 @@ export const CaseTeam: FC<caseTeamProps> = ({ data, title }) => {
           <div key={teamName} className={styles.caseTeam}>
             <p className={styles.caseTeamTitle}>{teamCount}</p>
             <div className={styles.caseTeamDesc}>
-              <Image src={user} alt="user" width={40} height={40} />
+              <Image src={user} alt="иконка человека" width={40} height={40} />
               <p>{teamName}</p>
             </div>
           </div>
