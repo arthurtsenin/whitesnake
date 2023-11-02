@@ -6,12 +6,11 @@ import { useLayoutEffect, useState } from "react";
 
 import "./global.css";
 
+import { AppLoader } from "@/feature/ui/AppLoader/AppLoader";
 import LayoutScript from "@/shared/analitics/LayoutScript";
 import { FormProvider } from "@/shared/provider/FormProvider";
 import { Footer } from "@/widget/Footer/Footer";
 import { Header } from "@/widget/Header/Header";
-
-import { AppLoader } from "../feature/ui/AppLoader/AppLoader";
 
 const inter = Inter({
   subsets: ["latin"],

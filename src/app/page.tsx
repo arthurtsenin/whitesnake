@@ -10,13 +10,11 @@ import { CONTACTS_DATA } from "@/widget/Contacts/data";
 import { CASES_PREVIEW_CARDS } from "@/widget/GridContainer/data";
 import { GridContainer } from "@/widget/GridContainer/GridContainer";
 import { HomeHero } from "@/widget/HomeHero/HomeHero";
+import { HomeScroller } from "@/widget/HomeScroller/HomeScroller";
 import { Statistic } from "@/widget/Statistic/Statistic";
 import { INDUSTRY_DATA, TECHNOLOGIE_DATA } from "@/widget/Tabs/data";
 
-import { HomeScroller } from "../widget/HomeScroller/HomeScroller";
-
 const StaticTabs = dynamic(() => import("@/widget/Tabs/StaticTabs"));
-
 const DynamicTabs = dynamic(() => import("@/widget/Tabs/DynamicTabs"));
 const Accordion = dynamic(() => import("@/widget/Accordion/Accordion"));
 
