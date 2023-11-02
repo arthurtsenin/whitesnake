@@ -117,14 +117,6 @@
 
 .buttons {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 16px;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 16px;
   align-items: center;
