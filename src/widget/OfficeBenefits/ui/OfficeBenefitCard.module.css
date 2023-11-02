@@ -1,116 +1,54 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: background-color 0.3s;
 }
 
-.cardInfo {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  box-sizing: border-box;
+.slide:nth-child(1) {
+  align-self: center;
 }
 
-.rectangle .cardInfo {
-  padding-inline: 18px;
-}
-
-.card .cardImg img {
+.slide img {
   width: 100%;
   height: 100%;
-  display: block;
-}
-
-.rectangle .cardImg img {
-  border-radius: 12px;
-}
-
-.square .cardImg img {
-  aspect-ratio: 1/1;
-  border-radius: 24px;
-}
-
-.circle .cardImg img {
-  aspect-ratio: 1/1;
-  flex-shrink: 0;
-  border-radius: 50%;
-}
-
-.cardTitle {
-  color: var(--clr-main-text);
-  font-size: 16px;
-  font-weight: var(--fw-semibold);
-  line-height: 120%;
-  letter-spacing: -0.32px;
-}
-
-.cardDesc {
-  color: var(--clr-secondary-text);
-  font-size: 12px;
-  font-weight: var(--fw-light);
-  line-height: 120%;
-  letter-spacing: -0.32px;
-}
-
-.rectangle .cardDesc {
-  max-width: 60%;
 }
 
 @media screen and (min-width: 744px) {
-  .circle,
-  .square {
-    width: min-content;
+  .slide:nth-child(1) {
+    align-self: flex-start;
   }
 
-  .card .cardImg img {
-    max-height: 320px;
-    min-width: 320px;
-    width: 0;
-    height: 100%;
+  .slide:nth-child(2) {
+    align-self: flex-end;
+  }
+  .slide {
+    width: 48%;
   }
 
-  .card .cardDesc {
-    max-width: 90%;
+  .slide::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
-  .rectangle .cardDesc {
-    max-width: 40%;
-  }
-
-  .rectangle .cardImg img {
-    width: 100%;
-  }
-
-  .cardInfo {
-    gap: 14px;
-    padding-inline: 18px;
-  }
-
-  .cardTitle {
-    font-size: 24px;
-  }
-
-  .cardDesc {
-    font-size: 18px;
+  .slide.active::after {
+    background-color: rgba(0, 0, 0, 0);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .cardInfo {
-    gap: 18px;
+  .slide:nth-child(1) {
+    align-self: flex-start;
   }
-
-  .cardTitle {
-    font-size: 32px;
+  .slide:nth-child(2) {
+    align-self: center;
   }
-
-  .cardDesc {
-    font-size: 24px;
-    max-width: 100%;
+  .slide:nth-child(3) {
+    align-self: flex-end;
   }
-
-  .card .cardImg img {
-    max-height: 425px;
-    min-width: 425px;
+  .slide {
+    width: 32%;
   }
 }

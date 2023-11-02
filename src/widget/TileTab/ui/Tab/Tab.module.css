@@ -1,0 +1,90 @@
+.tab {
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.9px;
+  letter-spacing: -0.72px;
+
+  background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.38) 100%);
+
+  border-bottom: 1px solid currentColor;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-block: 10px;
+  cursor: pointer;
+}
+
+.tab::after {
+  content: "";
+  display: block;
+  background: linear-gradient(135deg, #6fd6d6 30%, #1c9897 100%);
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -1px;
+  left: 0;
+  animation: removeActiveTab 0.7s;
+  -webkit-animation: removeActiveTab 0.7s;
+}
+
+.tab:nth-of-type(1) {
+  padding-top: 0px;
+}
+
+.tab:last-of-type {
+  border-bottom: none;
+}
+
+.active {
+  background: linear-gradient(135deg, #6fd6d6 30%, #1c9897 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tab.active::after {
+  width: 100%;
+  animation: addActiveTab 0.7s;
+  -webkit-animation: addActiveTab 0.7s;
+}
+
+@media screen and (min-width: 960px) {
+  .tab {
+    font-size: 28px;
+    line-height: 33.6px;
+    letter-spacing: -0.56px;
+
+    padding-block: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .tab {
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: -0.72px;
+
+    padding-block: 24px;
+  }
+}
+
+@keyframes removeActiveTab {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes addActiveTab {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}

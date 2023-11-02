@@ -1,4 +1,4 @@
-import { OfficeBenefitData } from "../../OfficeBenefits/types";
+import { StaticImageData } from "next/image";
 
 import icon from "&/images/internship/hyinya.png";
 
@@ -11,23 +11,11 @@ export const OFFICE_TAGS: string[] = [
   "6 минут до метро",
 ];
 
-export const OFFICE_BENEFITS_DATA: OfficeBenefitData[] = [
-  {
-    title: "Развлечения",
-    desc: "Турниры, корпоративы, праздники в офисе, дружеская неформальная обстановка",
-    icon,
-    variant: "rectangle",
-  },
-  {
-    title: "Гибкий график",
-    desc: "Турниры, корпоративы, праздники в офисе, дружеская неформальная обстановка",
-    icon,
-    variant: "circle",
-  },
-  {
-    title: "Курсы английского",
-    desc: "Турниры, корпоративы, праздники в офисе, дружеская неформальная обстановка",
-    icon,
-    variant: "square",
-  },
+export const OFFICE_BENEFITS_DATA: { id: number; icon: StaticImageData }[] = [
+  { id: 1, icon },
+  { id: 2, icon },
+  { id: 3, icon },
+  { id: 4, icon },
+  { id: 5, icon },
+  { id: 6, icon },
 ];
