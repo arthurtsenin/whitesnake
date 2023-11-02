@@ -32,7 +32,7 @@ export const Toast: FC<ToastProps> = ({
       className={classNames(styles.basic, styles[toastType])}
     >
       <p>{toastText}</p>
-      <Image src={close} alt="иконка закрытия всплывающего уведомления" />
+      <Image src={close} alt="Иконка закрытия всплывающего уведомления." />
     </div>
   );
 };

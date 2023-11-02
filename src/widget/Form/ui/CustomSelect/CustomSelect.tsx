@@ -90,10 +90,7 @@ export const CustomSelect: FC<CustomSelectProps> = ({
       >
         <Span value={chosenValue} placeholder={placeholder} />
         <div className={styles.arrow}>
-          <Image
-            src={error ? arrowRed : arrow}
-            alt="стрелочка которая открывает выпадающий список"
-          />
+          <Image src={error ? arrowRed : arrow} alt="" />
         </div>
       </button>
 

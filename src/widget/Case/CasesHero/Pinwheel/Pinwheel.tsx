@@ -18,7 +18,7 @@ export const Pinwheel: FC<PinwheelProps> = ({ title, subtitle, keywords }) => {
   return (
     <section className={styles.hero}>
       <Image
-        alt="фоновое изображение хиро"
+        alt=""
         src={heroBg}
         fill
         priority

@@ -44,7 +44,7 @@ export const InternshipCard: FC<InternshipCard> = ({
         <div className={styles.date}>
           {image ? (
             <div className={styles.wrapper}>
-              <Image src={image} alt="декоративное изображение" />
+              <Image src={image} alt="" />
             </div>
           ) : (
             <>

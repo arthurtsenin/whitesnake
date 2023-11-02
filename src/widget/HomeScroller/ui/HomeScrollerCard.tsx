@@ -19,7 +19,7 @@ export const HomeScrollerCard = ({
   return (
     <div className={styles.container}>
       <div className={styles.imageWrapper}>
-        <Image src={image} alt="декоративное изображение пунктов списка" />
+        <Image src={image} alt="" />
       </div>
 
       <div className={styles.text}>

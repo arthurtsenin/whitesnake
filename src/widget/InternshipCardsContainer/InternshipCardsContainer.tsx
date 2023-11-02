@@ -35,13 +35,13 @@ export const InternshipCardsContainer = () => {
   return (
     <section className={styles.section} ref={targetRef}>
       <div className={styles.raindrops}>
-        <Image src={raindrops} alt="декоративное изображение" />
+        <Image src={raindrops} alt="" />
       </div>
       <div className={styles.raindrop}>
-        <Image src={raindrop} alt="декоративное изображение" />
+        <Image src={raindrop} alt="" />
       </div>
       <div className={styles.net}>
-        <Image src={net} alt="декоративное фоновое изображение" />
+        <Image src={net} alt="" />
       </div>
       <div className={styles.glow1} />
       <div className={styles.glow2} />

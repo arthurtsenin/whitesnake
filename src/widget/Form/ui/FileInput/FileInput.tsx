@@ -31,7 +31,7 @@ export const FileInput: FC<FileInputProps> = ({
         <Image
           src={clip}
           className={styles.icon}
-          alt="прикрепить файл резюме"
+          alt="Прикрепить файл резюме."
         />
       </div>
 

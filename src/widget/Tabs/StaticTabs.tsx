@@ -30,7 +30,7 @@ const StaticTabs: FC<StaticTabsProps> = ({
     <section className={styles.section}>
       <div className={styles.glow} />
       <div className={styles.image}>
-        <Image alt="декоративное изображение" src={bubbles} priority />
+        <Image alt="" src={bubbles} priority />
       </div>
 
       <div className={styles.titleContainer}>

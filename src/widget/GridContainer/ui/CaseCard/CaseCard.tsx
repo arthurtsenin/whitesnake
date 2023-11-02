@@ -32,7 +32,7 @@ export const CaseCard: FC<CaseCardProps> = ({
           <div className={styles.arrow}>
             <Image
               src={arrow}
-              alt="стрелочка для перехода на страницу с детальной информацией"
+              alt="Перехода на страницу с детальной информацией."
             />
           </div>
           <p className={styles.description}>{description}</p>

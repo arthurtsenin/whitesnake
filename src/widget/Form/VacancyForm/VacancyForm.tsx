@@ -124,7 +124,7 @@ export const VacancyForm: FC<VacancyFormProps> = ({ jobTitle }) => {
     <section className={styles.container}>
       <div className={styles.glowBlue} />
       <div className={styles.raindrops}>
-        <Image src={raindrops} alt="декоративное изображение" priority />
+        <Image src={raindrops} alt="" priority />
       </div>
 
       <form

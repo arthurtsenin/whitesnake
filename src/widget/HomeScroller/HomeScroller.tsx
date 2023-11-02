@@ -31,16 +31,16 @@ export const HomeScroller = () => {
   return (
     <div className={styles.container} ref={targetRef}>
       <div className={styles.imgRaindropWrapper}>
-        <Image src={raindrop} alt="декоративное изображение" />
+        <Image src={raindrop} alt="" />
       </div>
       <div className={styles.imgRaindropWrapper}>
-        <Image src={raindrops} alt="декоративное изображение" />
+        <Image src={raindrops} alt="" />
       </div>
       <div className={styles.glowRed} />
       <div className={styles.glowBlue} />
       <div className={styles.sticker}>
         <div className={styles.imgWrapper}>
-          <Image src={net} alt="декоративное фоновое изображение" />
+          <Image src={net} alt="" />
         </div>
 
         <div className={styles.title}>Как начать работать с нами</div>

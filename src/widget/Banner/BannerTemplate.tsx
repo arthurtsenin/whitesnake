@@ -18,7 +18,7 @@ export const BannerTemplate: FC<BannerTemplateProps> = ({
     <Container>
       <div className={styles.wrapper}>
         <Image
-          alt="декоративный баннер"
+          alt=""
           src={image}
           placeholder="blur"
           fill

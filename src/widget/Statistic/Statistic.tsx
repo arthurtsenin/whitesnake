@@ -19,9 +19,9 @@ export const Statistic: FC = () => {
     <Container>
       <div className={styles.mask}>
         <div className={styles.images}>
-          <Image src={raindropBlue} alt="декоративное изображение" />
-          <Image src={raindropYellow} alt="декоративное изображение" />
-          <Image src={greenRaindrop} alt="декоративное изображение" />
+          <Image src={raindropBlue} alt="" />
+          <Image src={raindropYellow} alt="" />
+          <Image src={greenRaindrop} alt="" />
         </div>
         <div className={styles.glowBlue} />
         <div className={styles.glowRed} />
