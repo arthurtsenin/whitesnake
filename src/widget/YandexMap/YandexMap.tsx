@@ -21,7 +21,7 @@ export const YandexMap: FC = () => {
       <div className="yandexMapContainer" ref={ref} id="map">
         <div className="line" />
         <div className="imageWrapper">
-          <Image src={bubble} alt="Декоративный элемент" />
+          <Image src={bubble} alt="" />
           <div className="redGlow" />
         </div>
       </div>

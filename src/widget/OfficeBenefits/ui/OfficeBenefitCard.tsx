@@ -1,9 +1,10 @@
 import classNames from "classnames";
-import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
 
 import styles from "./OfficeBenefitCard.module.css";
+
+import { MotionComponent } from "@/shared/motion/MotionComponent";
 
 type officeBenefitsCardProps = {
   icon: StaticImageData;
@@ -26,7 +27,8 @@ export const OfficeBenefitCard: FC<officeBenefitsCardProps> = ({
   active,
 }) => {
   return (
-    <motion.div
+    <MotionComponent
+      as="div"
       className={classNames(styles.slide, { [styles.active]: active })}
       initial={{
         opacity: 0,
@@ -42,6 +44,6 @@ export const OfficeBenefitCard: FC<officeBenefitsCardProps> = ({
       custom={id}
     >
       <Image alt="photo" src={icon} />
-    </motion.div>
+    </MotionComponent>
   );
 };

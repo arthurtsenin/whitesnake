@@ -1,11 +1,12 @@
 "use client";
 
 import classNames from "classnames";
-import { AnimatePresence } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { FC, useCallback, useEffect, useLayoutEffect, useState } from "react";
 
 import styles from "./OfficeBenefits.module.css";
+
+import { MotionAnimatePresence } from "@/shared/motion/MotionAnimatePresence";
 
 import { OfficeBenefitCard } from "./ui/OfficeBenefitCard";
 
@@ -21,22 +22,6 @@ export const OfficeBenefits: FC<OfficeBenefitsProps> = ({ data }) => {
   const [direction, setdirection] = useState<number>(1);
   const [slidesNum, setSlidesNum] = useState<number | null>(null);
   const [deviseWidth, setDeviceWidth] = useState<number>(1200);
-
-  useLayoutEffect(() => {
-    if (typeof window != "undefined") {
-      setDeviceWidth(window.innerWidth);
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setDeviceWidth(window.innerWidth);
-    });
-
-    return window.removeEventListener("resize", () => {
-      setDeviceWidth(window.innerWidth);
-    });
-  }, []);
 
   const handleClickNext = useCallback(() => {
     setCurrentIndex((i) => (i >= data.length - 1 ? 0 : i + 1));
@@ -68,12 +53,28 @@ export const OfficeBenefits: FC<OfficeBenefitsProps> = ({ data }) => {
     };
   }, [handleClickNext, currentIndex]);
 
+  useLayoutEffect(() => {
+    if (typeof window != "undefined") {
+      setDeviceWidth(window.innerWidth);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setDeviceWidth(window.innerWidth);
+    });
+
+    return window.removeEventListener("resize", () => {
+      setDeviceWidth(window.innerWidth);
+    });
+  }, []);
+
   return (
     <div className={styles.officeBenefits}>
       <button className={styles.sliderArrow} onClick={handleClickPrev}>
-        <Image src={sliderArrLeft} alt="slider arrow" />
+        <Image src={sliderArrLeft} alt="Slider left arrow." />
       </button>
-      <AnimatePresence custom={data[currentIndex].id}>
+      <MotionAnimatePresence custom={data[currentIndex].id}>
         <div className={styles.slidesContainer}>
           {slidesNum && slidesNum > 2 && (
             <OfficeBenefitCard
@@ -112,9 +113,9 @@ export const OfficeBenefits: FC<OfficeBenefitsProps> = ({ data }) => {
             />
           )}
         </div>
-      </AnimatePresence>
+      </MotionAnimatePresence>
       <button className={styles.sliderArrow} onClick={handleClickNext}>
-        <Image src={sliderArrRight} alt="slider arrow" />
+        <Image src={sliderArrRight} alt="Slider right arrow." />
       </button>
       {slidesNum === 1 && (
         <div className={styles.dotsContainer}>

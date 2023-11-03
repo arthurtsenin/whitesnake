@@ -17,12 +17,12 @@ export const InternshipOffice: FC = () => {
     <section className={styles.internshipOffice}>
       <div className={styles.wrapper}>
         <div className={styles.imageWrapper}>
-          <Image src={bubble} alt="Декоративный элемент" />
+          <Image src={bubble} alt="" />
           <div className={styles.redGlow} />
         </div>
 
         <div className={styles.imageWrapper2}>
-          <Image src={bubble2} alt="Декоративный элемент" />
+          <Image src={bubble2} alt="" />
           {/* <div className={styles.redGlow2} /> */}
         </div>
         <Title title="Наш офис" />

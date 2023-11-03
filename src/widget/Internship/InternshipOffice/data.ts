@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-import icon from "&/images/internship/hyinya.png";
+import icon from "&/images/internship/slide_1.png";
 
 export const OFFICE_TAGS: string[] = [
   "Класс А",

@@ -34,12 +34,12 @@ export const InternshipWorkBenefits: FC = () => {
             <Title title="Что такое работа в Whitesnake" />
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={bubble} alt="Декоративный элемент" priority />
+            <Image src={bubble} alt="" priority />
             <div className={styles.greenGlow} />
           </div>
 
           <div className={styles.imgWrapper2}>
-            <Image src={bubble1} alt="Декоративный элемент" priority />
+            <Image src={bubble1} alt="" priority />
             <div className={styles.redGlow} />
           </div>
 

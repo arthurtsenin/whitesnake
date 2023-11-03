@@ -10,6 +10,7 @@ import { TileTab } from "@/widget/TileTab/TileTab";
 export default function InternshipPage() {
   return (
     <>
+      <PageScript />
       <InternshipHero />
       <InternshipCardsContainer />
       <InternshipWorkBenefits />
@@ -17,7 +18,6 @@ export default function InternshipPage() {
       <TileTab />
       <InternshipAccardion />
       <InternshipForm />
-      <PageScript />
     </>
   );
 }
