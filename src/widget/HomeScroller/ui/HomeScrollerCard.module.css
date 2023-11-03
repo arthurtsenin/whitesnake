@@ -82,5 +82,17 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-height: 650px) {
+  .container {
+    gap: 20px;
+  }
+  .imageWrapper {
+    width: 40px;
+  }
+  .text p:nth-child(2) {
+    font-size: 22px;
+  }
+  .text p:nth-child(3) {
+    font-size: 20px;
+  }
 }

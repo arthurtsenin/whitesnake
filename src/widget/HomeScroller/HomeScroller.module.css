@@ -248,3 +248,11 @@
     height: 70vh;
   }
 }
+@media screen and (max-height: 650px) {
+  .cardContainer {
+    gap: 80px;
+  }
+  .title {
+    font-size: 54px;
+  }
+}

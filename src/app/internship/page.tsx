@@ -4,7 +4,6 @@ export default function InternshipPage() {
   return (
     <>
       <PageScript />
-      Internship page
     </>
   );
 }

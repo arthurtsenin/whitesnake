@@ -6,7 +6,8 @@
   justify-content: flex-end;
   width: 100vw;
   max-width: 1920px;
-  height: 100dvh;
+  height: 100vh;
+  min-height: 670px;
 
   background-color: #000;
 }
