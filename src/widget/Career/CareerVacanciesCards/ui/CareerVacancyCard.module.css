@@ -53,19 +53,20 @@
   right: 0;
   bottom: 0;
 
-  opacity: 0;
-  transition: ease 500ms;
-
   display: flex;
   align-items: center;
   justify-content: center;
   width: 70px;
   border-radius: 50%;
-  aspect-ratio: 1/1;
 
   color: var(--clr-main-text);
 
   background-color: #cc0b0b;
+
+  opacity: 0;
+
+  transition: ease 500ms;
+  aspect-ratio: 1/1;
 }
 
 .arrow img {
