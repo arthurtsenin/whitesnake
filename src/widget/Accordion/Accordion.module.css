@@ -1,7 +1,10 @@
 .section {
   position: relative;
 
+  max-width: 1080px;
+
   min-height: max-content;
+  margin-inline: auto;
 }
 
 .imgWrapper {
@@ -25,7 +28,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 750px;
+
   margin: auto;
 
   background-color: transparent;
@@ -56,9 +59,6 @@
 }
 
 @media screen and (width>=1440px) {
-  .container {
-    height: 1150px;
-  }
   .imgWrapper {
     top: -20%;
     left: -10%;

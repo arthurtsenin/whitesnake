@@ -38,13 +38,17 @@
   letter-spacing: -0.77px;
   text-wrap: balance;
   word-wrap: break-word;
-
   background: var(--clr-title-gradient);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
   padding-block: 8px;
 }
 
 .title::first-letter {
   text-transform: uppercase;
+}
+
+@media screen and (max-height: 720px) {
+  .title {
+    font-size: 50px;
+  }
 }

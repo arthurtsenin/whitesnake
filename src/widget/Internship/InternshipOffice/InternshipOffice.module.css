@@ -1,0 +1,95 @@
+.chipsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-block: 24px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.imageWrapper {
+  display: none;
+}
+
+.chipsContainer div {
+  padding: 8px;
+  color: var(--clr-secondary-text);
+  font-size: 12.5px;
+}
+
+.officeBenefitsWrapper {
+  margin-top: 80px;
+}
+
+@media screen and (min-width: 744px) {
+  .chipsContainer div {
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .imageWrapper {
+    position: absolute;
+    top: -20%;
+    right: -55%;
+    display: block;
+    width: 100%;
+    rotate: 60deg;
+    aspect-ratio: 1/1;
+  }
+
+  .imageWrapper2 {
+    position: absolute;
+    bottom: -25%;
+    left: -38%;
+    width: 50%;
+    aspect-ratio: 1/1;
+  }
+
+  .imageWrapper2 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* .redGlow2 {
+		position: absolute;
+		inset: 0;
+		border-radius: 50%;
+		background: rgba(204, 11, 11, 0.5);
+		filter: blur(300px);
+	} */
+
+  .imageWrapper img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.imageWrapper2 {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .imageWrapper {
+    display: none;
+  }
+
+  .imageWrapper2 {
+    right: -45%;
+    bottom: -5%;
+    left: unset;
+
+    display: block;
+    width: 70%;
+  }
+
+  .chipsContainer div {
+    padding: 12px 25px;
+    font-size: 25px;
+  }
+
+  .chipsContainer {
+    margin-block: 30px;
+  }
+}
