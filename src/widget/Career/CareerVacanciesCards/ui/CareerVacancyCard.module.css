@@ -48,34 +48,28 @@
   font-size: var(--fs-vacancy-card-description);
 }
 
-.hover {
+.arrow {
   position: absolute;
   right: 0;
   bottom: 0;
 
   opacity: 0;
-
   transition: ease 500ms;
-}
 
-.arrow {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 70px;
   border-radius: 50%;
-  overflow: hidden;
+  aspect-ratio: 1/1;
 
   color: var(--clr-main-text);
 
   background-color: #cc0b0b;
-  aspect-ratio: 1/1;
 }
 
 .arrow img {
   width: 30%;
-  /* width: 30%;
-  height: 100%; */
   object-fit: contain;
 }
 
@@ -99,7 +93,7 @@
     mask-composite: exclude;
   }
 
-  .container:hover .hover {
+  .container:hover .arrow {
     opacity: 1;
   }
 }
@@ -144,11 +138,9 @@
   .container {
     --gap-vacancy-card-text: 151px;
     --container-padding: 48px;
-    --fs-vacancy-card-title: 38px;
-    --fs-vacancy-card-description: 28px;
   }
 
   .arrow {
-    width: 150px;
+    width: 100px;
   }
 }

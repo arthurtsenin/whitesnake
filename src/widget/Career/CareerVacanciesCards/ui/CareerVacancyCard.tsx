@@ -1,4 +1,3 @@
-import cn from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
@@ -29,7 +28,7 @@ export const CareerVacancyCard: FC<CareerVacancyCardProps> = ({
       <Link href={href} className={styles.text}>
         <p className={styles.title}>{title}</p>
         <p className={styles.description}>{location}</p>
-        <div className={cn(styles.arrow, styles.hover)}>
+        <div className={styles.arrow}>
           <Image src={arrow} alt="" />
         </div>
       </Link>

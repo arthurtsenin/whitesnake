@@ -77,7 +77,7 @@
   }
 
   .cards div:last-child {
-    display: initial;
+    display: inherit;
   }
 }
 
