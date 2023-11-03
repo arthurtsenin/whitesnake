@@ -1,11 +1,14 @@
 .tab {
   position: relative;
+
   width: 100%;
   border-bottom: 1px solid currentColor;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 18.9px;
   letter-spacing: -0.72px;
+
   background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.38) 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -18,11 +21,15 @@
   position: absolute;
   bottom: -1px;
   left: 0;
+
   display: block;
   width: 0;
   height: 1px;
+
   background: linear-gradient(135deg, #6fd6d6 30%, #1c9897 100%);
+
   animation: removeActiveTab 0.7s;
+
   content: "";
 }
 
@@ -43,6 +50,7 @@
 
 .tab.active::after {
   width: 100%;
+
   animation: addActiveTab 0.7s;
 }
 

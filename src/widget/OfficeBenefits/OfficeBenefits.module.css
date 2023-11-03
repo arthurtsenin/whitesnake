@@ -1,5 +1,6 @@
 .officeBenefits {
   position: relative;
+
   display: flex;
   gap: 14px;
   align-items: center;
@@ -11,6 +12,7 @@
 .slidesContainer {
   position: relative;
   z-index: 2;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,12 +27,14 @@
   justify-content: center;
   width: 25px;
   height: 25px;
+
   color: var(--clr-main-text);
 }
 
 .sliderArrow img {
   width: 100%;
   height: 100%;
+
   color: var(--clr-main-text);
 }
 
@@ -38,9 +42,11 @@
   position: absolute;
   bottom: -15px;
   left: 50%;
+
   display: flex;
   gap: 5px;
   justify-content: space-between;
+
   transform: translateX(-50%);
 }
 
@@ -48,6 +54,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
+
   background-color: var(--clr-border);
 }
 

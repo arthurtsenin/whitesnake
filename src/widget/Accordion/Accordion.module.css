@@ -35,14 +35,14 @@
   contain: content;
 }
 
-@media screen and (width>=450px) {
+@media screen and (min-width: 450px) {
   .imgWrapper {
     top: -40%;
     left: -40%;
   }
 }
 
-@media screen and (width>=744px) {
+@media screen and (min-width: 744px) {
   .imgWrapper {
     top: -20%;
     left: -10%;
@@ -52,13 +52,13 @@
   }
 }
 
-@media screen and (width>=1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 80%;
   }
 }
 
-@media screen and (width>=1440px) {
+@media screen and (min-width: 1440px) {
   .imgWrapper {
     top: -20%;
     left: -10%;
@@ -66,7 +66,4 @@
     width: 30vw;
     aspect-ratio: 1/1;
   }
-}
-
-@media screen and (width>=1920px) {
 }

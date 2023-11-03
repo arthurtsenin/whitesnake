@@ -38,6 +38,7 @@
   letter-spacing: -0.77px;
   text-wrap: balance;
   word-wrap: break-word;
+
   background: var(--clr-title-gradient);
   background-clip: text;
   padding-block: 8px;

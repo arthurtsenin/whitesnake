@@ -6,9 +6,9 @@ import { ACCORDIONS_DATA } from "@/widget/Accordion/data";
 
 export const InternshipAccardion: FC = () => {
   return (
-    <div>
+    <>
       <Title title="Часто задаваемые вопросы" />
       <Accordion accordions={ACCORDIONS_DATA} />
-    </div>
+    </>
   );
 };

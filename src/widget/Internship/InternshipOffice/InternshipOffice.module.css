@@ -17,6 +17,7 @@
 
 .chipsContainer div {
   padding: 8px;
+
   color: var(--clr-secondary-text);
   font-size: 12.5px;
 }
@@ -28,6 +29,7 @@
 @media screen and (min-width: 744px) {
   .chipsContainer div {
     padding: 12px;
+
     font-size: 18px;
   }
 
@@ -35,6 +37,7 @@
     position: absolute;
     top: -20%;
     right: -55%;
+
     display: block;
     width: 100%;
     rotate: 60deg;
@@ -45,6 +48,7 @@
     position: absolute;
     bottom: -25%;
     left: -38%;
+
     width: 50%;
     aspect-ratio: 1/1;
   }
@@ -86,6 +90,7 @@
 
   .chipsContainer div {
     padding: 12px 25px;
+
     font-size: 25px;
   }
 

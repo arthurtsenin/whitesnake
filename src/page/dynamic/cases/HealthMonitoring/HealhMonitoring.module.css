@@ -26,10 +26,13 @@
   position: absolute;
   top: 50%;
   left: 0;
+
   width: 20px;
   height: 3px;
   border-radius: 4px;
+
   background: linear-gradient(135deg, #fff 30%, hsl(0deg 0% 100% / 38%));
+
   content: "";
 }
 

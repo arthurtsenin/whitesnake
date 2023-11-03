@@ -1,5 +1,6 @@
 .section {
   position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -11,8 +12,10 @@
   top: -40vw;
   right: -30%;
   z-index: -2;
+
   width: 90vw;
   border-radius: var(--radius-rounded);
+
   background: rgb(204 11 11 / 50%);
   filter: blur(150px);
   aspect-ratio: 1/1;
@@ -23,15 +26,19 @@
   top: -25vw;
   right: -30%;
   z-index: -1;
+
   width: 60vw;
   height: 50%;
+
   opacity: 0.4;
 }
 
 @media screen and (min-width: 750px) {
   .glow {
     top: -25vw;
+
     width: 40vw;
+
     background: rgb(204 11 11 / 50%);
     filter: blur(200px);
   }
@@ -39,6 +46,7 @@
   .image {
     top: -20vw;
     right: -30%;
+
     width: 55vw;
   }
 }
@@ -51,6 +59,7 @@
 @media screen and (min-width: 1200px) {
   .glow {
     width: 40vw;
+
     background: rgb(204 11 11 / 50%);
     filter: blur(350px);
   }
@@ -58,6 +67,7 @@
   .image {
     top: -20vw;
     right: -20%;
+
     width: 40vw;
     height: 80%;
   }
