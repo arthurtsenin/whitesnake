@@ -4,11 +4,11 @@ import { Benefits } from "@/widget/Career/Benefits/Benefits";
 import { BENEFITS_DATA } from "@/widget/Career/Benefits/data";
 import { CareerAccordion } from "@/widget/Career/CareerAccordion/CareerAccordion";
 import { CareerHero } from "@/widget/Career/CareerHero/CareerHero";
+import { CareerVacanciesCards } from "@/widget/Career/CareerVacanciesCards/CareerVacanciesCards";
 import { WORKING_CONDITIONS_DATA } from "@/widget/Career/WorkingConditions/data";
 import { WorkingConditions } from "@/widget/Career/WorkingConditions/WorkingConditions";
 import { JOB_TITLES } from "@/widget/Form/data";
 import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
-import { VacanciesCards } from "@/widget/Vacancies/VacanciesCards/VacanciesCards";
 
 export type VacancyType = {
   id: string;
@@ -80,17 +80,19 @@ export default async function CareerPage() {
   const vacanciesData = await getVacanciesData();
   const vacancies = vacanciesData.items;
 
-  const cards = vacancies.map((card) => ({
-    id: card.id,
-    title: card.name,
-    location: card.area.name,
-  }));
+  const cards = vacancies
+    .map((card) => ({
+      id: card.id,
+      title: card.name,
+      location: card.area.name,
+    }))
+    .slice(0, 3);
 
   return (
     <>
       <PageScript />
       <CareerHero />
-      <VacanciesCards cards={cards} />
+      <CareerVacanciesCards cards={cards} />
       <WorkingConditions
         title="Что такое работа в Whitesnake"
         conditions={WORKING_CONDITIONS_DATA}
