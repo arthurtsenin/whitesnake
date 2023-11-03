@@ -153,3 +153,9 @@
     letter-spacing: -0.38px;
   }
 }
+
+@media screen and (max-height: 720px) {
+  .title {
+    font-size: 28px;
+  }
+}
