@@ -4,11 +4,13 @@
 //@ts-nocheck
 "use client";
 
+import Image from "next/image";
 import Script from "next/script";
 import { FC, useRef } from "react";
 
 import "./YandexMap.css";
 
+import bubble from "&/images/internship/map_bubble.png";
 import icon from "&/yandex_placemark.svg";
 
 export const YandexMap: FC = () => {
@@ -18,6 +20,10 @@ export const YandexMap: FC = () => {
     <>
       <div className="yandexMapContainer" ref={ref} id="map">
         <div className="line" />
+        <div className="imageWrapper">
+          <Image src={bubble} alt="Декоративный элемент" />
+          <div className="redGlow" />
+        </div>
       </div>
       <Script
         //нужно вставить ключ босса а не мой блят

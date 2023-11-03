@@ -4,18 +4,16 @@ import { InternshipForm } from "@/widget/Internship/InternshipForm/InternshipFor
 import { InternshipHero } from "@/widget/Internship/InternshipHero/InternshipHero";
 import { InternshipOffice } from "@/widget/Internship/InternshipOffice/InternshipOffice";
 import { InternshipWorkBenefits } from "@/widget/Internship/InternshipWorkBenefits/InternshipWorkBenefits";
+import { InternshipCardsContainer } from "@/widget/InternshipCardsContainer/InternshipCardsContainer";
 import { TileTab } from "@/widget/TileTab/TileTab";
 
 export default function InternshipPage() {
   return (
     <>
       <InternshipHero />
-      <section>
-        <InternshipWorkBenefits />
-      </section>
-      <section>
-        <InternshipOffice />
-      </section>
+      <InternshipCardsContainer />
+      <InternshipWorkBenefits />
+      <InternshipOffice />
       <TileTab />
       <InternshipAccardion />
       <InternshipForm />

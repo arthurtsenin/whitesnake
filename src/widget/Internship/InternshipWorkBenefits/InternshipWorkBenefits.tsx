@@ -1,13 +1,17 @@
 "use client";
 
+import Image from "next/image";
 import { FC, useRef, useState } from "react";
 
 import styles from "./InternshipWorkBenefits.module.css";
 
-import { Title } from "@/shared";
+import { Container, Title } from "@/shared";
 
 import { WORK_BENEFITS_DATA } from "./data";
 import { InternshipWorkCard } from "./ui/InternshipWorkCard";
+
+import bubble1 from "&/images/internship/map_bubble.png";
+import bubble from "&/images/internship/office_work_benefits_buble.png";
 
 export const InternshipWorkBenefits: FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -24,18 +28,36 @@ export const InternshipWorkBenefits: FC = () => {
 
   return (
     <section>
-      <div className={styles.title}>
-        <Title title="Что такое работа в Whitesnake" />
-      </div>
-      <div ref={containerRef} className={styles.wrapper} onClick={handleClick}>
-        {WORK_BENEFITS_DATA.map((card) => (
-          <InternshipWorkCard
-            key={card.id}
-            {...card}
-            activeCardId={activeCardId}
-          />
-        ))}
-      </div>
+      <Container>
+        <div className={styles.wrap}>
+          <div className={styles.title}>
+            <Title title="Что такое работа в Whitesnake" />
+          </div>
+          <div className={styles.imgWrapper}>
+            <Image src={bubble} alt="Декоративный элемент" priority />
+            <div className={styles.greenGlow} />
+          </div>
+
+          <div className={styles.imgWrapper2}>
+            <Image src={bubble1} alt="Декоративный элемент" priority />
+            <div className={styles.redGlow} />
+          </div>
+
+          <div
+            ref={containerRef}
+            className={styles.wrapper}
+            onClick={handleClick}
+          >
+            {WORK_BENEFITS_DATA.map((card) => (
+              <InternshipWorkCard
+                key={card.id}
+                {...card}
+                activeCardId={activeCardId}
+              />
+            ))}
+          </div>
+        </div>
+      </Container>
     </section>
   );
 };

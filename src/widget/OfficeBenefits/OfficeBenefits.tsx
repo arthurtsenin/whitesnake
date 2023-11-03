@@ -3,7 +3,7 @@
 import classNames from "classnames";
 import { AnimatePresence } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
-import { FC, useCallback, useEffect, useState } from "react";
+import { FC, useCallback, useEffect, useLayoutEffect, useState } from "react";
 
 import styles from "./OfficeBenefits.module.css";
 
@@ -20,8 +20,23 @@ export const OfficeBenefits: FC<OfficeBenefitsProps> = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [direction, setdirection] = useState<number>(1);
   const [slidesNum, setSlidesNum] = useState<number | null>(null);
+  const [deviseWidth, setDeviceWidth] = useState<number>(1200);
 
-  const SCREEN_WIDTH = window.innerWidth;
+  useLayoutEffect(() => {
+    if (typeof window != "undefined") {
+      setDeviceWidth(window.innerWidth);
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setDeviceWidth(window.innerWidth);
+    });
+
+    return window.removeEventListener("resize", () => {
+      setDeviceWidth(window.innerWidth);
+    });
+  }, []);
 
   const handleClickNext = useCallback(() => {
     setCurrentIndex((i) => (i >= data.length - 1 ? 0 : i + 1));
@@ -34,19 +49,19 @@ export const OfficeBenefits: FC<OfficeBenefitsProps> = ({ data }) => {
   };
 
   useEffect(() => {
-    if (SCREEN_WIDTH >= 1200) {
+    if (deviseWidth >= 1200) {
       setSlidesNum(3);
-    } else if (SCREEN_WIDTH >= 744 && SCREEN_WIDTH <= 1200) {
+    } else if (deviseWidth >= 744 && deviseWidth <= 1200) {
       setSlidesNum(2);
-    } else if (SCREEN_WIDTH >= 320 && SCREEN_WIDTH <= 744) {
+    } else if (deviseWidth >= 320 && deviseWidth <= 744) {
       setSlidesNum(1);
     }
-  }, [SCREEN_WIDTH]);
+  }, [deviseWidth]);
 
   useEffect(() => {
     const autoSwip = setTimeout(() => {
       handleClickNext();
-    }, 2500);
+    }, 3000);
 
     return () => {
       clearTimeout(autoSwip);

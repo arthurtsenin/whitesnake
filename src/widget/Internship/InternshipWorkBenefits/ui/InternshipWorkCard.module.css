@@ -1,20 +1,23 @@
 .card {
   position: absolute;
+  left: 100%;
+
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  padding-right: 30px;
   flex-shrink: 0;
+  box-sizing: border-box;
   width: 90%;
   height: 100%;
-  aspect-ratio: 1/1.25;
-  border-radius: 24px;
+  padding: 20px;
+  padding-right: 30px;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  background: #000;
-  box-sizing: border-box;
-  left: 100%;
-  transition: left 0.5s;
+  border-radius: 24px;
   overflow: hidden;
+
+  background: #000;
+
+  transition: left 0.5s;
+  aspect-ratio: 1/1.25;
 }
 
 .card:nth-child(1) {
@@ -59,29 +62,32 @@
 }
 
 .imageWrapper {
-  height: auto;
   flex: 1;
+  height: auto;
 }
 
 .cardBg {
   position: absolute;
-  inset: 0;
+  z-index: 1;
+
   background: url("../../../../../public/images/internship/work_benefit_card_bg.png")
     no-repeat;
-  background-size: cover;
   background-position: 75% 0;
-  filter: blur(9.5px);
-  z-index: 1;
+  background-size: cover;
   -webkit-filter: blur(9.5px);
+  filter: blur(9.5px);
+  inset: 0;
 }
 
 .glow {
   position: absolute;
   bottom: -50%;
   left: -50%;
+
   width: 370px;
   height: 370px;
   border-radius: 369.5px;
+
   background: rgba(124, 254, 253, 0.4);
   filter: blur(175px);
 }
@@ -92,26 +98,27 @@
 
 .content {
   position: relative;
+  z-index: 2;
+
   display: flex;
   flex-direction: column;
   gap: 12px;
-  z-index: 2;
   margin-top: auto;
   padding-right: 20px;
 }
 
 .title {
   color: var(--clr-main-text);
-  font-size: 18px;
   font-weight: var(--fw-bold);
+  font-size: 18px;
   line-height: 100%;
   letter-spacing: -0.9px;
 }
 
 .text {
   color: var(--clr-secondary-text);
-  font-size: 14px;
   font-weight: var(--fw-regular);
+  font-size: 14px;
   line-height: 130%;
   letter-spacing: -0.7px;
 }
@@ -120,13 +127,14 @@
   .card {
     position: relative;
     left: initial;
+
     width: 100%;
     aspect-ratio: unset;
   }
 
   .content {
-    padding: unset;
     margin-top: auto;
+    padding: unset;
   }
 
   .card:nth-child(1) > .content,
@@ -138,19 +146,23 @@
   .glow {
     bottom: -20%;
     left: -10%;
+
     width: 185px;
     height: 185px;
+
     filter: blur(87px);
   }
 
   .card:nth-child(even) > .glow {
-    width: 245px;
-    height: 245px;
-    filter: blur(115px);
     right: -10%;
     bottom: -20%;
     left: unset;
     z-index: 2;
+
+    width: 245px;
+    height: 245px;
+
+    filter: blur(115px);
   }
 }
 
@@ -162,8 +174,8 @@
   }
 
   .card {
-    border-radius: 12px;
     padding: 32px;
+    border-radius: 12px;
   }
 
   .content {
@@ -195,17 +207,21 @@
   .card:nth-child(3) > .glow {
     bottom: -40%;
     left: -10%;
+
     width: 370px;
     height: 370px;
+
     filter: blur(175px);
   }
 
   .card:nth-child(2) > .glow,
   .card:nth-child(6) > .glow {
-    width: 490px;
-    height: 490px;
     right: -40%;
     bottom: -75%;
+
+    width: 490px;
+    height: 490px;
+
     background: rgba(204, 11, 11, 0.5);
     filter: blur(230px);
   }

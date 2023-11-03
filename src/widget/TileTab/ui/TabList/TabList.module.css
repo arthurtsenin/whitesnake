@@ -2,9 +2,10 @@
   display: none;
 
   color: #fff;
-  font-size: 32px;
   font-weight: 500;
+  font-size: 32px;
   letter-spacing: -0.64px;
+
   opacity: 0.6;
 }
 
@@ -19,7 +20,7 @@
     display: block;
 
     display: flex;
-    align-items: center;
     gap: 28px;
+    align-items: center;
   }
 }

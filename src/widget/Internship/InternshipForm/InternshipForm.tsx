@@ -11,11 +11,11 @@ import styles from "./InternshipForm.module.css";
 
 import { Button } from "@/shared/ui/Button/Button";
 import { Loader } from "@/shared/ui/Loader/Loader";
-import { FileInput } from "@/widget/Vacancies/VacanciesForm/ui/FileInput/FileInput";
-import { FormTitle } from "@/widget/Vacancies/VacanciesForm/ui/FormTitle/FormTitle";
-import { Input } from "@/widget/Vacancies/VacanciesForm/ui/Input/Input";
-import { Textarea } from "@/widget/Vacancies/VacanciesForm/ui/Textarea/Textarea";
-import { Toast } from "@/widget/Vacancy/VacancyForm/ui/Toast/Toast";
+import { FileInput } from "@/widget/Form/ui/FileInput/FileInput";
+import { FormTitle } from "@/widget/Form/ui/FormTitle/FormTitle";
+import { Input } from "@/widget/Form/ui/Input/Input";
+import { Textarea } from "@/widget/Form/ui/Textarea/Textarea";
+import { Toast } from "@/widget/Form/ui/Toast/Toast";
 
 import { sendEmail } from "./action";
 import { FORM_KEYS, formTemplate, VacancyFormType } from "./formKeys";
@@ -30,6 +30,7 @@ type ToastType = "error" | "success" | "pending";
 export const InternshipForm: FC = () => {
   const [selectedFileName, setSelectedFileName] = useState<string>("");
   const [downloadUrl, setDownloadUrl] = useState<string>("");
+  const [isFileDownloading, setIsFileDownloading] = useState<boolean>(false);
 
   const [isToastOpen, setIsToastOpen] = useState<boolean>(false);
   const [toastType, setToastType] = useState<ToastType>("pending");
@@ -40,7 +41,7 @@ export const InternshipForm: FC = () => {
   const {
     reset,
     register,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm<VacancyFormType>({
     defaultValues: {
       [FORM_KEYS.jobTitle]: "",
@@ -57,11 +58,14 @@ export const InternshipForm: FC = () => {
   });
 
   const uploadFile = async (name: string, file: File) => {
+    setIsFileDownloading(true);
     const storageRef = ref(storage, `cv/${name}`);
     await uploadBytes(storageRef, file as File);
-    await getDownloadURL(storageRef).then(async (downloadUrl) =>
-      setDownloadUrl(downloadUrl),
-    );
+    await getDownloadURL(storageRef).then(async (downloadUrl) => {
+      setDownloadUrl(downloadUrl);
+      setSelectedFileName(name);
+      setIsFileDownloading(false);
+    });
   };
 
   const handleFileChange = async (e: ChangeEvent<HTMLInputElement>) => {
@@ -97,6 +101,12 @@ export const InternshipForm: FC = () => {
     reset();
   };
 
+  const isFileFormatValid =
+    selectedFileName.length > 0 && !/pdf/.test(selectedFileName);
+
+  const isDisabled =
+    isFileDownloading || isFileFormatValid || Object.keys(errors).length > 0;
+
   return (
     <section className={styles.container} id="vacancies-form">
       <div className={styles.glowBlue} />
@@ -121,6 +131,7 @@ export const InternshipForm: FC = () => {
                 placeholder={el.placeholder}
                 label={el.form_key}
                 error={!!errors[el.form_key]}
+                helperText={errors?.[el.form_key]?.message as string}
                 register={register}
               />
             ))}
@@ -132,12 +143,13 @@ export const InternshipForm: FC = () => {
           </div>
 
           <FileInput
-            selectedName={selectedFileName}
+            isFileDownloading={isFileDownloading}
+            selectedFileName={selectedFileName}
             handleFileChange={handleFileChange}
           />
 
           <div className={styles.button}>
-            <Button variant="secondary" disabled={!isValid} type="submit">
+            <Button variant="secondary" disabled={isDisabled} type="submit">
               <div className={styles.text}>
                 {formStatus === "loading" ? <Loader /> : <p>Отправить</p>}
               </div>

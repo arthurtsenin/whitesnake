@@ -2,7 +2,7 @@
 
 import { Resend } from "resend";
 
-import { LeaveRequest } from "@/widget/Vacancies/VacanciesForm/ui/emails";
+import { LeaveRequest } from "@/widget/Form/ui/emails";
 
 import { FORM_KEYS } from "./formKeys";
 

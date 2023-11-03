@@ -14,8 +14,8 @@ type officeBenefitsCardProps = {
 };
 
 const transitionVar = {
-  x: { type: "spring", stiffness: 300, damping: 30 },
-  opacity: { duration: 0.5 },
+  translateX: { type: "spring", stiffness: 300, damping: 30 },
+  opacity: { duration: 0.2 },
 };
 
 export const OfficeBenefitCard: FC<officeBenefitsCardProps> = ({
@@ -30,12 +30,12 @@ export const OfficeBenefitCard: FC<officeBenefitsCardProps> = ({
       className={classNames(styles.slide, { [styles.active]: active })}
       initial={{
         opacity: 0,
-        translateX: direction > 0 ? 200 : -200,
+        translateX: direction > 0 ? 350 : -350,
       }}
       animate={{ opacity: 1, translateX: 0 }}
       exit={{
         opacity: 0,
-        translateX: direction > 0 ? -200 : 200,
+        translateX: direction > 0 ? -350 : 350,
       }}
       transition={transitionVar}
       key={keyK}

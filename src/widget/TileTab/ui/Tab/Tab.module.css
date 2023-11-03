@@ -1,32 +1,38 @@
 .tab {
   position: relative;
+
   width: 100%;
-  font-size: 16px;
+
+  border-bottom: 1px solid currentColor;
+
   font-weight: 700;
+  font-size: 16px;
   line-height: 18.9px;
   letter-spacing: -0.72px;
 
   background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.38) 100%);
-
-  border-bottom: 1px solid currentColor;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
+  cursor: pointer;
   -webkit-text-fill-color: transparent;
   padding-block: 10px;
-  cursor: pointer;
 }
 
 .tab::after {
-  content: "";
-  display: block;
-  background: linear-gradient(135deg, #6fd6d6 30%, #1c9897 100%);
   position: absolute;
-  width: 0;
-  height: 1px;
   bottom: -1px;
   left: 0;
-  animation: removeActiveTab 0.7s;
+
+  display: block;
+  width: 0;
+  height: 1px;
+
+  background: linear-gradient(135deg, #6fd6d6 30%, #1c9897 100%);
+
   -webkit-animation: removeActiveTab 0.7s;
+  animation: removeActiveTab 0.7s;
+
+  content: "";
 }
 
 .tab:nth-of-type(1) {
@@ -39,15 +45,16 @@
 
 .active {
   background: linear-gradient(135deg, #6fd6d6 30%, #1c9897 100%);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .tab.active::after {
   width: 100%;
-  animation: addActiveTab 0.7s;
+
   -webkit-animation: addActiveTab 0.7s;
+  animation: addActiveTab 0.7s;
 }
 
 @media screen and (min-width: 960px) {
