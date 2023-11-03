@@ -35,6 +35,11 @@
   color: var(--clr-main-text);
   font-weight: var(--fw-bold);
   font-size: var(--fs-vacancy-card-title);
+
+  background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.38) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .description {
@@ -69,6 +74,8 @@
 
 .arrow img {
   width: 30%;
+  /* width: 30%;
+  height: 100%; */
   object-fit: contain;
 }
 
@@ -135,7 +142,7 @@
 
 @media screen and (min-width: 1920px) {
   .container {
-    --gap-vacancy-card-text: 294px;
+    --gap-vacancy-card-text: 151px;
     --container-padding: 48px;
     --fs-vacancy-card-title: 38px;
     --fs-vacancy-card-description: 28px;

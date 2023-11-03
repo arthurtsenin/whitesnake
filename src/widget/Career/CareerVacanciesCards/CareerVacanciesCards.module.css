@@ -6,6 +6,7 @@
 
   position: relative;
 
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   row-gap: 24px;
@@ -76,7 +77,7 @@
   }
 
   .cards div:last-child {
-    display: unset;
+    display: initial;
   }
 }
 
@@ -86,5 +87,7 @@
 @media screen and (min-width: 1920px) {
   .container {
     --gap-vacancies-cards: 40px;
+
+    max-width: 80%;
   }
 }
