@@ -287,6 +287,9 @@
 }
 
 @media screen and (min-width: 1600px) {
+  .wrapper {
+    grid-template-rows: repeat(2, 360px);
+  }
   .wrapper div:nth-child(1) {
     grid-area: 1 / 1 / 2 / 6;
   }

@@ -23,11 +23,11 @@ export const InternshipCardsContainer = () => {
   });
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest > 0 && latest <= 0.3) {
+    if (latest > 0 && latest <= 0.2) {
       setActiveCard(1);
-    } else if (latest >= 0.3 && latest <= 0.7) {
+    } else if (latest >= 0.2 && latest <= 0.6) {
       setActiveCard(2);
-    } else if (latest >= 0.7 && latest <= 1) {
+    } else if (latest >= 0.6 && latest <= 1) {
       setActiveCard(3);
     } else setActiveCard(1);
   });

@@ -23,7 +23,6 @@ export const InternshipOffice: FC = () => {
 
         <div className={styles.imageWrapper2}>
           <Image src={bubble2} alt="" />
-          {/* <div className={styles.redGlow2} /> */}
         </div>
         <Title title="Наш офис" />
         <div className={styles.chipsContainer}>

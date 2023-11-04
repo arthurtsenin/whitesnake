@@ -99,7 +99,9 @@
   border-radius: 50%;
 
   background: rgba(124, 254, 253, 0.5);
+  transform: translate3d(0, 0, 0);
   filter: blur(100px);
+
   aspect-ratio: 1/1;
 }
 
@@ -114,6 +116,7 @@
   border-radius: 50%;
 
   background: rgba(204, 11, 11, 0.4);
+  transform: translate3d(0, 0, 0);
   filter: blur(80px);
   aspect-ratio: 1/1;
 }

@@ -2,11 +2,13 @@
   position: relative;
 
   display: flex;
-  gap: 14px;
+  gap: 24px;
   align-items: center;
-  width: 100%;
+  box-sizing: border-box;
+  width: 94%;
   height: 250px;
   margin-bottom: 35px;
+  margin-inline: auto;
 }
 
 .slidesContainer {
@@ -64,6 +66,13 @@
 
 @media screen and (min-width: 744px) {
   .officeBenefits {
+    gap: 28px;
     height: 300px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .officeBenefits {
+    gap: 32px;
   }
 }

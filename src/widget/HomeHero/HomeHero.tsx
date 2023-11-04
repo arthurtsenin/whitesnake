@@ -3,7 +3,6 @@ import Link from "next/link";
 
 import styles from "./HomeHero.module.css";
 
-import { Scroller } from "./ui/Scroller";
 import { ROUTES } from "../Navigation/routes";
 import { Button } from "../../shared";
 
@@ -27,7 +26,8 @@ export const HomeHero = () => {
           </div>
           <div className={styles.buttons}>
             <Button variant="primary">Связаться с нами</Button>
-            <Link href={`${ROUTES.FIVE.href}/#vacancies-form`}>
+            {/* НЕ РАБОТАЕТ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
+            <Link href={`${ROUTES.FIVE.href}#leave-request`}>
               <Button variant="transparent">Хочу в команду</Button>
             </Link>
           </div>
@@ -49,9 +49,6 @@ export const HomeHero = () => {
       </div>
       <div className={styles.glowRed}></div>
       <div className={styles.glowBlue}></div>
-      <div className={styles.slider}>
-        <Scroller />
-      </div>
     </section>
   );
 };
