@@ -50,23 +50,21 @@
   filter: blur(150px);
 }
 
-.container span::after {
+.smile {
   position: absolute;
-
   bottom: 0%;
   left: 5%;
+  z-index: 2;
+
+  display: block;
 
   width: 90%;
-  height: fit-content;
+  height: auto;
 
-  background-image: url(../../../../public/images/Vector.svg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  transform: translateY(4px);
+  transform: translateY(64%);
 
   animation: identifier2 3.5s linear forwards infinite;
 
-  content: "";
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
   aspect-ratio: 2/1;
 }
@@ -81,7 +79,7 @@
   font-size: 28px;
 
   font-family: "Mark";
-  line-height: 90%;
+  line-height: 80%;
 
   animation: identifier 3.5s linear forwards infinite;
 }
@@ -93,7 +91,7 @@
   justify-content: center;
   height: fit-content;
 
-  line-height: 90%;
+  line-height: 80%;
 }
 
 @keyframes identifier {
@@ -148,8 +146,7 @@
 
     font-size: 80px;
   }
-  .container span::after {
-    transform: translateY(12px);
+  .smile {
   }
 
   .glowRed {
@@ -165,13 +162,11 @@
 
 @media screen and (min-width: 1200px) {
   .container h1 {
-    height: 175px;
-
     font-size: 140px;
   }
 
-  .container span::after {
-    transform: translateY(20px);
+  .smile {
+    /* z-index: 11; */
   }
 
   .glowRed {

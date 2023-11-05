@@ -23,7 +23,6 @@ export default function Home() {
     <>
       <PageScript />
       <HomeHero />
-
       <BenefitCards data={BENEFIT_CARD_WITH_ICON_DATA} variant="withIcon" />
       <GridContainer
         title="Наши проекты"
