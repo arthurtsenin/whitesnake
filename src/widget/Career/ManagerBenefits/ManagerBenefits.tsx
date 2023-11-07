@@ -32,7 +32,7 @@ export const ManagerBenefits: FC<ManagerBenefitsProps> = ({
 
   return (
     <Container>
-      <section className={styles.section} style={{ marginTop: "350px" }}>
+      <section className={styles.section}>
         <Title title={title} subtitle={subtitle} />
 
         <div className={styles.container}>
