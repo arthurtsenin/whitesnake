@@ -15,7 +15,7 @@ type BenefitsProps = {
 export const Benefits: FC<BenefitsProps> = ({ title, benefits }) => {
   return (
     <Container>
-      <section className={styles.section} style={{ marginTop: "350px" }}>
+      <section className={styles.section}>
         <Title title={title} />
 
         <div className={styles.container}>
