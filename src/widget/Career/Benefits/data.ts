@@ -1,11 +1,11 @@
 import { StaticImageData } from "next/image";
 
-import benefitCardBg1 from "&/images/career/benefit-card-bg-1.webp";
-import benefitCardBg2 from "&/images/career/benefit-card-bg-2.webp";
-import benefitCardBg3 from "&/images/career/benefit-card-bg-3.webp";
-import benefitCardBg4 from "&/images/career/benefit-card-bg-4.webp";
-import benefitCardBg5 from "&/images/career/benefit-card-bg-5.webp";
-import benefitCardBg6 from "&/images/career/benefit-card-bg-6.webp";
+import benefitCardBg1 from "&/images/career/benefits/benefit-card-bg-1.webp";
+import benefitCardBg2 from "&/images/career/benefits/benefit-card-bg-2.webp";
+import benefitCardBg3 from "&/images/career/benefits/benefit-card-bg-3.webp";
+import benefitCardBg4 from "&/images/career/benefits/benefit-card-bg-4.webp";
+import benefitCardBg5 from "&/images/career/benefits/benefit-card-bg-5.webp";
+import benefitCardBg6 from "&/images/career/benefits/benefit-card-bg-6.webp";
 
 export type BenefitType = {
   id: number;
