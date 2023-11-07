@@ -5,8 +5,8 @@ import { BENEFITS_DATA } from "@/widget/Career/Benefits/data";
 import { CareerAccordion } from "@/widget/Career/CareerAccordion/CareerAccordion";
 import { CareerHero } from "@/widget/Career/CareerHero/CareerHero";
 import { CareerVacanciesCards } from "@/widget/Career/CareerVacanciesCards/CareerVacanciesCards";
-import { WORKING_CONDITIONS_DATA } from "@/widget/Career/WorkingConditions/data";
-import { WorkingConditions } from "@/widget/Career/WorkingConditions/WorkingConditions";
+import { MANAGER_BENEFITS_DATA } from "@/widget/Career/ManagerBenefits/data";
+import { ManagerBenefits } from "@/widget/Career/ManagerBenefits/ManagerBenefits";
 import { JOB_TITLES } from "@/widget/Form/data";
 import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
 
@@ -93,9 +93,10 @@ export default async function CareerPage() {
       <PageScript />
       <CareerHero />
       <CareerVacanciesCards cards={cards} />
-      <WorkingConditions
-        title="Что такое работа в Whitesnake"
-        conditions={WORKING_CONDITIONS_DATA}
+      <ManagerBenefits
+        title="Стань менеджером"
+        subtitle="Мы поощряем ребят, которые берут стажеров под личное руководство и даём возможность расти в сторону менеджмента"
+        benefits={MANAGER_BENEFITS_DATA}
       />
       <Benefits title="Бенефиты" benefits={BENEFITS_DATA} />
       <CareerAccordion
