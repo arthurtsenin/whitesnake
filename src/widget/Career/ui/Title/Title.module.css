@@ -1,13 +1,15 @@
-/* Vars --fs-section-suptitle and --fs-section-subtitle is taken from global.css now */
+/* Var --fs-section-suptitle is taken from global.css now */
 
 .text {
   --fs-title: 36px;
+  --fs-subtitle: 14px;
 
   position: relative;
   z-index: 1;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: var(--gap-section-title);
 
   text-align: center;
@@ -42,6 +44,8 @@
 }
 
 .subtitle {
+  width: 90%;
+
   color: var(--clr-secondary-text);
   font-weight: var(--fw-light);
   font-size: var(--fs-section-subtitle);
@@ -56,11 +60,33 @@
 @media screen and (min-width: 744px) {
   .text {
     --fs-title: 48px;
+    --fs-subtitle: 18px;
+  }
+
+  .subtitle {
+    width: 80%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .text {
     --fs-title: 70px;
+    --fs-subtitle: 24px;
+  }
+
+  .subtitle {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .subtitle {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .subtitle {
+    width: 40%;
   }
 }
