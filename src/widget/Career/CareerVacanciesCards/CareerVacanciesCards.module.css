@@ -88,7 +88,5 @@
 @media screen and (min-width: 1920px) {
   .container {
     --gap-vacancies-cards: 40px;
-
-    max-width: 80%;
   }
 }
