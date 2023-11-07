@@ -1,46 +1,26 @@
-/* */
-
-.container {
-  position: relative;
-}
-
-.wrapper {
-  width: 100%;
-  height: 100%;
-}
-
-.wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
 .text {
-  --fs-title: 18px;
-  --fs-subtitle: 16px;
-  --clr-title: #fff;
-  --clr-subtitle: rgba(255, 255, 255, 0.6);
+  --fs-benefit-title: 18px;
+  --fs-benefit-subtitle: 12px;
+  --clr-benefit-title: #fff;
+  --clr-benefit-subtitle: rgba(255, 255, 255, 0.6);
+  --gap-benefit-text: 16px;
 
   position: absolute;
-  top: 50%;
-  left: 25%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 32px;
+  row-gap: var(--gap-benefit-text);
 
   text-align: center;
 }
 
 .title {
-  width: fit-content;
+  width: min-content;
 
-  color: var(--clr-title);
+  color: var(--clr-benefit-title);
   font-weight: var(--fw-regular);
-  font-size: var(--fs-title);
-  line-height: 100%;
-  letter-spacing: -0.9px;
+  font-size: var(--fs-benefit-title);
 
   background: var(--clr-title-gradient);
   background-clip: text;
@@ -50,51 +30,92 @@
 .subtitle {
   width: 90%;
 
-  color: var(--clr-subtitle);
+  color: var(--clr-benefit-subtitle);
   font-weight: var(--fw-regular);
-  font-size: var(--fs-subtitle);
+  font-size: var(--fs-benefit-subtitle);
+}
+
+@media screen and (min-width: 485px) {
+  .subtitle {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .text {
+    --fs-benefit-title: 20px;
+    --fs-benefit-subtitle: 14px;
+    --gap-benefit-text: 18px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .text {
+    --fs-benefit-title: 24px;
+    --fs-benefit-subtitle: 16px;
+    --gap-benefit-text: 20px;
+  }
+
+  .subtitle {
+    width: 65%;
+  }
 }
 
 @media screen and (min-width: 744px) {
   .text {
-    --fs-title: 20px;
-    --fs-subtitle: 14px;
+    --fs-benefit-title: 42px;
+    --fs-benefit-subtitle: 18px;
+    --gap-benefit-text: 24px;
+  }
+}
 
-    top: 25%;
-    left: 0;
-    row-gap: 14px;
+@media screen and (min-width: 800px) {
+  .subtitle {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .text {
+    --fs-benefit-title: 48px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .text {
-    --fs-title: 28px;
-    --fs-subtitle: 18px;
-
-    top: 30%;
+    --fs-benefit-title: 42px;
+    --fs-benefit-subtitle: 18px;
+    --gap-benefit-text: 28px;
   }
 
   .subtitle {
-    width: 80%;
+    width: 85%;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .text {
-    --fs-title: 36px;
-    --fs-subtitle: 22px;
+    --fs-benefit-title: 48px;
+    --fs-benefit-subtitle: 22px;
+  }
+
+  .subtitle {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .text {
+    --fs-benefit-subtitle: 24px;
+  }
+
+  .subtitle {
+    width: 85%;
   }
 }
 
 @media screen and (min-width: 1920px) {
-  .text {
-    --fs-title: 48px;
-    --fs-subtitle: 24px;
-
-    top: 35%;
-  }
-
-  .title {
-    width: 95%;
+  .subtitle {
+    width: 75%;
   }
 }
