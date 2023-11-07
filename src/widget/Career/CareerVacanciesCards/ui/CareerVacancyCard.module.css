@@ -30,7 +30,7 @@
 }
 
 .title {
-  width: 60%;
+  width: min-content;
 
   color: var(--clr-main-text);
   font-weight: var(--fw-bold);
