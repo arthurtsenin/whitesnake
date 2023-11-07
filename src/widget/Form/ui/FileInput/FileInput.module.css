@@ -70,7 +70,8 @@
   opacity: 1;
 }
 
-.file::-webkit-file-upload-button {
+.file::-webkit-file-upload-button,
+.file::file-selector-button {
   width: 100%;
   height: 100%;
 

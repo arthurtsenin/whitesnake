@@ -2,39 +2,32 @@
 
 import { Resend } from "resend";
 
-import { FORM_KEYS } from "./formKeys";
 import { LeaveRequest } from "./ui/emails";
 
 const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_KEY);
 
-export const sendEmail = async (formData: FormData) => {
-  const name = formData.get(FORM_KEYS.name);
-  const surname = formData.get(FORM_KEYS.surname);
-  const email = formData.get(FORM_KEYS.email);
-  const phone = formData.get(FORM_KEYS.phone);
-  const telegram = formData.get(FORM_KEYS.telegram);
-  const linkedIn = formData.get(FORM_KEYS.linkedIn);
-  const message = formData.get(FORM_KEYS.message);
-  const url = formData.get(FORM_KEYS.url);
-  const jobTitle = formData.get(FORM_KEYS.jobTitle);
-
+export const sendEmail = async (
+  formData: Record<string, string>,
+  url: string,
+  jobTitle?: string,
+) => {
   try {
     await resend.emails.send({
       from: "LeaveRequest <whiteSnake@resend.dev>",
       to: "arturcenin@gmail.com",
       subject: "Message from LeaveRequest form",
-      reply_to: email as string,
+      reply_to: formData.email as string,
       react: (
         <LeaveRequest
-          name={name as string}
-          surname={surname as string}
-          email={email as string}
-          phone={phone as string}
-          telegram={telegram as string}
-          linkedIn={linkedIn as string}
-          message={message as string}
+          name={formData.name as string}
+          surname={formData.surname as string}
+          email={formData.email as string}
+          phone={formData.phone as string}
+          telegram={formData.telegram as string}
+          linkedIn={formData.linkedIn as string}
+          message={formData.message as string}
           url={url as string}
-          jobTitle={jobTitle as string}
+          jobTitle={jobTitle || (formData.jobTitle as string)}
         />
       ),
     });

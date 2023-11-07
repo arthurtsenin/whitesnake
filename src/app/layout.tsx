@@ -6,12 +6,11 @@ import { useLayoutEffect, useState } from "react";
 
 import "./global.css";
 
+import { AppLoader } from "@/feature/ui/AppLoader/AppLoader";
 import LayoutScript from "@/shared/analitics/LayoutScript";
 import { FormProvider } from "@/shared/provider/FormProvider";
 import { Footer } from "@/widget/Footer/Footer";
 import { Header } from "@/widget/Header/Header";
-
-import { AppLoader } from "../feature/ui/AppLoader/AppLoader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -55,12 +54,13 @@ export default function RootLayout({
       </Head>
       <body className={inter.className}>
         {mystate && TbFP ? (
-          <div className="layout">
+          <>
             <Header />
             <main className="main">{children}</main>
+
             <Footer />
             <FormProvider />
-          </div>
+          </>
         ) : (
           <AppLoader />
         )}

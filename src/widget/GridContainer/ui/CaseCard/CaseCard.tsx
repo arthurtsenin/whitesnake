@@ -30,7 +30,10 @@ export const CaseCard: FC<CaseCardProps> = ({
           className={styles.hover}
         >
           <div className={styles.arrow}>
-            <Image src={arrow} alt="arrow" />
+            <Image
+              src={arrow}
+              alt="Перехода на страницу с детальной информацией."
+            />
           </div>
           <p className={styles.description}>{description}</p>
         </Link>

@@ -1,0 +1,78 @@
+.officeBenefits {
+  position: relative;
+
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  box-sizing: border-box;
+  width: 94%;
+  height: 250px;
+  margin-bottom: 35px;
+  margin-inline: auto;
+}
+
+.slidesContainer {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.sliderArrow {
+  display: flex;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+
+  color: var(--clr-main-text);
+}
+
+.sliderArrow img {
+  width: 100%;
+  height: 100%;
+
+  color: var(--clr-main-text);
+}
+
+.dotsContainer {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+
+  transform: translateX(-50%);
+}
+
+.sliderDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+
+  background-color: var(--clr-border);
+}
+
+.activeDot {
+  background-color: var(--clr-main-text);
+}
+
+@media screen and (min-width: 744px) {
+  .officeBenefits {
+    gap: 28px;
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .officeBenefits {
+    gap: 32px;
+  }
+}

@@ -5,7 +5,6 @@ import { VacancyDescription } from "@/widget/Vacancy/VacancyDescription/VacancyD
 import { VacancyHero } from "@/widget/Vacancy/VacancyHero/VacancyHero";
 
 type VacancyPageLayoutProps = {
-  path: string;
   jobTitle: string;
   title: string;
   subtitle: string;
@@ -15,7 +14,6 @@ type VacancyPageLayoutProps = {
 
 export const VacancyPageLayout: FC<VacancyPageLayoutProps> = ({
   jobTitle,
-  path,
   title,
   subtitle,
   titles,
@@ -23,7 +21,7 @@ export const VacancyPageLayout: FC<VacancyPageLayoutProps> = ({
 }) => {
   return (
     <>
-      <VacancyHero path={path} title={title} subtitle={subtitle} />
+      <VacancyHero title={title} subtitle={subtitle} />
       <VacancyDescription titles={titles} lists={lists} />
       <VacancyForm jobTitle={jobTitle} />
     </>

@@ -6,7 +6,8 @@
   justify-content: flex-end;
   width: 100vw;
   max-width: 1920px;
-  height: 100dvh;
+  height: 100vh;
+  min-height: 670px;
 
   background-color: #000;
 }
@@ -25,7 +26,7 @@
 }
 
 .leftSide {
-  z-index: 1;
+  z-index: 4;
 
   display: flex;
   flex-direction: column;
@@ -97,9 +98,14 @@
 .rightSide .imgWrapper:nth-child(1) {
   top: -12%;
   right: -10%;
-  z-index: 1;
 
   width: 60%;
+
+  animation: upperBubs 45s linear infinite forwards;
+
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .rightSide .imgWrapper:nth-child(2) {
@@ -107,6 +113,12 @@
   z-index: 2;
 
   width: 100%;
+
+  animation: middleBubs 45s linear infinite forwards;
+
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
   aspect-ratio: 1/1.1;
 }
 
@@ -114,7 +126,15 @@
   bottom: -10%;
   left: -15%;
 
+  z-index: 1;
+
   width: 60%;
+
+  animation: lowerBubs 55s linear infinite forwards;
+
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
   rotate: -10deg;
 }
 
@@ -124,15 +144,19 @@
 
   width: 60%;
   height: 40vh;
+
+  pointer-events: none;
 }
 
 .glowRed {
   top: 30%;
   right: -10%;
+  z-index: 3;
 
   border-radius: 345px;
 
   background: rgb(204 11 11 / 40%);
+  -webkit-filter: blur(100px);
   filter: blur(100px);
 }
 
@@ -143,6 +167,7 @@
   border-radius: 303px;
 
   background: rgb(124 254 253 / 50%);
+  -webkit-filter: blur(100px);
   filter: blur(100px);
 }
 
@@ -150,8 +175,21 @@
   position: absolute;
   right: -50%;
   bottom: -10%;
+  z-index: 1;
 
   width: 140%;
+
+  border-radius: 50%;
+
+  opacity: 0.1;
+
+  filter: blur(1px);
+
+  animation: sphere 90s infinite linear;
+
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .sphere img {
@@ -245,9 +283,12 @@
 
 @media screen and (min-width: 1200px) {
   .sphere {
+    right: -10%;
     bottom: -6%;
 
     width: 40%;
+
+    filter: blur(2px);
   }
 
   .buttons {
@@ -279,5 +320,116 @@
 
   .leftSide {
     gap: 80px;
+
+    transform: translateY(60px);
+  }
+}
+
+@keyframes sphere {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes middleBubs {
+  0%,
+  100% {
+    filter: blur(0px);
+  }
+  40% {
+    transform: translate(-10%, 6%) skew(4deg, 6deg);
+    rotate: 30deg;
+  }
+  60% {
+    transform: translate(-10%, -2%) skew(-4deg, -6deg);
+    rotate: -15deg;
+    scale: 1.1;
+  }
+}
+@keyframes lowerBubs {
+  0%,
+  100% {
+  }
+  40% {
+    transform: translate(-10%, 10%) rotate(45deg) skew(12deg, 8deg) scale(1.1);
+  }
+  70% {
+    transform: translate(0%, 15%) rotate(-25deg) skew(-14deg, -7deg) scale(0.8);
+  }
+}
+@keyframes upperBubs {
+  0%,
+  100% {
+    transform: translate(0%, 0%);
+  }
+  40% {
+    transform: translate(-15%, -10%) skew(9deg, 7deg);
+    rotate: 45deg;
+  }
+  60% {
+    transform: translate(-5%, -5%) skew(-12deg, -14deg) scale(0.85);
+    rotate: -10deg;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  @keyframes middleBubs {
+    0%,
+    100% {
+      filter: blur(0px);
+    }
+    40% {
+      transform: translate(-30%, 6%) skew(4deg, 6deg);
+      rotate: 30deg;
+    }
+    60% {
+      transform: translate(-30%, 0%) skew(-4deg, -6deg);
+      rotate: -15deg;
+      scale: 1.1;
+    }
+  }
+  @keyframes lowerBubs {
+    0%,
+    100% {
+    }
+    40% {
+      transform: translate(-30%, 10%) rotate(45deg) skew(12deg, 8deg) scale(1.1);
+    }
+    70% {
+      transform: translate(-30%, 35%) rotate(-25deg) skew(-14deg, -7deg)
+        scale(0.8);
+    }
+  }
+}
+
+.glowBlue {
+  -webkit-filter: blur(350px);
+
+  animation: glo 60s infinite cubic-bezier(0.256, 0.54, 0.756, 1);
+}
+.glowRed {
+  -webkit-filter: blur(350px);
+
+  animation: glo2 60s infinite cubic-bezier(0.256, 0.54, 0.756, 1);
+}
+
+@keyframes glo {
+  0%,
+  100% {
+    transform: translate(0%, -30%);
+  }
+  50% {
+    transform: translate(170%, -70%);
+  }
+  70% {
+    transform: translate(170%, -40%);
+  }
+}
+@keyframes glo2 {
+  0%,
+  100% {
+    transform: translate(0%, 50%);
+  }
+  50% {
+    transform: translate(-160%, 50%);
   }
 }

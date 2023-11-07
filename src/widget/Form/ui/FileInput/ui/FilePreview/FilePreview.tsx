@@ -16,7 +16,11 @@ export const FilePreview: FC<FilePreviewProps> = ({ name }) => {
       <Image
         className={styles.icon}
         src={/pdf/.test(name) ? complete : error}
-        alt={/pdf/.test(name) ? "complete" : "error"}
+        alt={
+          /pdf/.test(name)
+            ? "Файл загружен."
+            : "Ошибка загрузки (поддерживается только формат pdf)."
+        }
       />
       <span className={styles.text}>{name}</span>
     </div>

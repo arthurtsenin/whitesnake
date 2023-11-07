@@ -26,6 +26,12 @@
   background: var(--clr-button-secondary-bg);
 }
 
+.light {
+  color: #000;
+
+  background: #fff;
+}
+
 .transparent::before {
   position: absolute;
 
@@ -40,10 +46,13 @@
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .basis:disabled {
-  background: #191919;
+  color: #a1a19e;
+
+  background: #1919194d;
 
   pointer-events: none;
 }

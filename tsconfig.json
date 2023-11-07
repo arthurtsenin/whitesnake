@@ -29,6 +29,12 @@
       "&/*": ["./public/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/widget/YandexMap/YandexMap.tsx"
+  ],
   "exclude": ["node_modules"]
 }
