@@ -22,6 +22,7 @@ export const Statistic: FC = () => {
           <Image src={raindropBlue} alt="" />
           <Image src={raindropYellow} alt="" />
           <Image src={greenRaindrop} alt="" />
+          <Image src={raindropBlue} alt="" />
         </div>
         <div className={styles.glowBlue} />
         <div className={styles.glowRed} />

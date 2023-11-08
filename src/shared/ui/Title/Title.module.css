@@ -48,8 +48,8 @@
   text-transform: uppercase;
 }
 
-@media screen and (max-height: 720px) {
+/* @media screen and (max-height: 720px) {
   .title {
     font-size: 50px;
   }
-}
+} */

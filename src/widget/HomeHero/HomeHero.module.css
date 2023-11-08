@@ -6,7 +6,7 @@
   justify-content: flex-end;
   width: 100vw;
   max-width: 1920px;
-  height: 100vh;
+  height: 100dvh;
   min-height: 670px;
 
   background-color: #000;
@@ -402,13 +402,9 @@
 }
 
 .glowBlue {
-  -webkit-filter: blur(350px);
-
   animation: glo 60s infinite cubic-bezier(0.256, 0.54, 0.756, 1);
 }
 .glowRed {
-  -webkit-filter: blur(350px);
-
   animation: glo2 60s infinite cubic-bezier(0.256, 0.54, 0.756, 1);
 }
 
