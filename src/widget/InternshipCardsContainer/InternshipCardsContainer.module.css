@@ -23,35 +23,48 @@
 }
 .glow1 {
   position: absolute;
-  top: 20%;
-  left: -35%;
+  top: 80%;
+  right: -25%;
 
-  width: 45vw;
+  width: 55vw;
   border-radius: 706px;
 
   background: rgba(204, 11, 11, 0.5);
 
   transform: translate3d(0, 0, 0);
-  filter: blur(350px);
+  filter: blur(150px);
   aspect-ratio: 1/1;
-}
-
-.raindrops img {
-  width: 100%;
-  height: 100%;
 }
 .glow2 {
   position: absolute;
-  top: 60%;
+  top: 20%;
   right: -35%;
 
-  width: 45vw;
-  border-radius: 706px;
+  width: 65vw;
+  border-radius: 50%;
 
   background: rgba(204, 11, 11, 0.5);
   transform: translate3d(0, 0, 0);
-  filter: blur(350px);
+  filter: blur(150px);
   aspect-ratio: 1/1;
+}
+.glow3 {
+  position: absolute;
+  bottom: -20%;
+  left: -25%;
+
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+
+  background: rgba(124, 254, 253, 1);
+  transform: translate3d(0, 0, 0);
+  -webkit-filter: blur(145px);
+  filter: blur(145px);
+}
+.raindrops img {
+  width: 100%;
+  height: 100%;
 }
 
 .background img {
@@ -71,7 +84,7 @@
   width: 94%;
   min-width: max-content;
   height: 50vh;
-  padding-top: 10vh;
+  padding-top: 13vh;
 }
 
 .cards {
@@ -79,20 +92,7 @@
   flex-direction: column;
   gap: 5px;
 }
-.glow3 {
-  position: absolute;
-  bottom: -20%;
-  left: -20%;
 
-  width: 30vw;
-  height: 30vw;
-  border-radius: 50%;
-
-  background: rgba(124, 254, 253, 0.5);
-  transform: translate3d(0, 0, 0);
-  -webkit-filter: blur(245px);
-  filter: blur(245px);
-}
 .raindrop {
   position: absolute;
   top: 40%;
@@ -159,6 +159,11 @@
   .cards > div:nth-child(3) {
     align-self: end;
   }
+  .glow1,
+  .glow2,
+  .glow3 {
+    filter: blur(250px);
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -170,6 +175,17 @@
   }
   .container {
     gap: 80px;
+  }
+  .glow1,
+  .glow2 {
+    width: 45vw;
+
+    filter: blur(350px);
+  }
+  .glow3 {
+    width: 35vw;
+
+    filter: blur(350px);
   }
 }
 

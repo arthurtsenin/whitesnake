@@ -2,7 +2,7 @@
   position: relative;
 
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
 
   background-color: #101010;
 
@@ -21,7 +21,7 @@
   gap: 16px;
 
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
 }
 
 .images {
@@ -62,6 +62,15 @@
 
   animation: identifier3 60s linear infinite;
 }
+
+.images img:nth-child(4) {
+  top: 0;
+  right: 0;
+
+  transform: translate(10%, 150%);
+
+  animation: identifier4 80s linear infinite;
+}
 .glowBlue {
   position: absolute;
   top: 0;
@@ -89,6 +98,21 @@
   background: rgba(204, 11, 11, 0.5);
 
   filter: blur(250px);
+}
+@keyframes identifier4 {
+  0%,
+  100% {
+    transform: translate(10%, 150%);
+  }
+  30% {
+    transform: translate(-50%, 280%) rotate(65deg);
+  }
+  60% {
+    transform: translate(-140%, 320%) rotate(-45deg);
+  }
+  85% {
+    transform: translate(-100%, 90%) rotate(65deg);
+  }
 }
 @keyframes identifier3 {
   0%,
@@ -133,8 +157,11 @@
 }
 
 @media screen and (min-width: 744px) {
+  .images img:nth-child(4) {
+    display: none;
+  }
   .mask {
-    height: 80dvh;
+    height: 80vh;
 
     mask: url("../../../public/images/statistic/Frame\ 2087326196.png");
     mask-size: 100% 100%;
@@ -143,7 +170,7 @@
   .container {
     grid-template-rows: 0.43fr 1fr 1fr 1fr;
     grid-template-columns: 0.937fr 1.3fr;
-    height: 80dvh;
+    height: 80vh;
   }
 }
 
@@ -177,13 +204,13 @@
     filter: blur(350px);
   }
   .mask {
-    height: 140dvh;
+    height: 140vh;
     min-height: 1100px;
   }
 
   .container {
     gap: 40px;
-    height: 140dvh;
+    height: 140vh;
     min-height: 1100px;
   }
 }
