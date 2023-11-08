@@ -48,6 +48,7 @@
   position: absolute;
   top: 10%;
   left: 0%;
+
   width: 100%;
 }
 
@@ -62,6 +63,7 @@
   position: absolute;
   top: 10%;
   right: 10%;
+
   width: 80%;
   rotate: 45deg;
 }
@@ -172,6 +174,7 @@
     top: 5%;
     right: -25%;
     left: unset;
+
     width: 80%;
   }
 
@@ -179,14 +182,16 @@
     top: 5%;
     right: 5%;
     left: unset;
+
     width: 40%;
   }
 
   .six {
     top: 2%;
     right: -5%;
-    width: 85%;
     left: unset;
+
+    width: 85%;
   }
 
   .wrapper {
@@ -316,6 +321,7 @@
   .forth {
     top: 10%;
     left: 30%;
+
     width: 100%;
   }
 

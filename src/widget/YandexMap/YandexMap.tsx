@@ -28,7 +28,7 @@ export const YandexMap: FC = () => {
       <Script
         //нужно вставить ключ босса а не мой блят
         src="https://api-maps.yandex.ru/2.1/?apikey=c7227578-4951-445c-866e-370ad48303bb&lang=ru_RU"
-        onLoad={() => {
+        onReady={() => {
           ymaps.ready(() => {
             const DARK_MAP = "custom#dark";
 
