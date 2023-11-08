@@ -9,8 +9,8 @@
 
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: var(--gap-section-title);
+  align-items: center;
 
   text-align: center;
 }
