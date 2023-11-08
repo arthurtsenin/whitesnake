@@ -32,15 +32,15 @@
 }
 
 .container > div[data-position="first"] {
-  top: 5%;
+  top: 6%;
 }
 
 .container > div[data-position="second"] {
-  top: 38%;
+  top: 39%;
 }
 
 .container > div[data-position="third"] {
-  top: 70%;
+  top: 71%;
 }
 
 @media screen and (min-width: 500px) {
