@@ -54,23 +54,7 @@
 
   animation: identifier 60s linear infinite;
 }
-.images img:nth-child(3) {
-  top: 0;
-  right: 0;
 
-  transform: translate(10%, 30%);
-
-  animation: identifier3 160s linear infinite;
-}
-
-.images img:nth-child(4) {
-  top: 0;
-  right: 0;
-
-  transform: translate(10%, 150%);
-
-  animation: identifier4 80s linear infinite;
-}
 .glowBlue {
   position: absolute;
   top: 0;
@@ -99,47 +83,18 @@
 
   filter: blur(250px);
 }
-@keyframes identifier4 {
-  0%,
-  100% {
-    transform: translate(10%, 150%);
-  }
-  30% {
-    transform: translate(-50%, 280%) rotate(65deg);
-  }
-  60% {
-    transform: translate(-140%, 320%) rotate(-45deg);
-  }
-  85% {
-    transform: translate(-100%, 90%) rotate(65deg);
-  }
-}
-@keyframes identifier3 {
-  0%,
-  100% {
-    transform: translate(10%, 30%);
-  }
-  30% {
-    transform: translate(-100%, 140%) rotate(65deg);
-  }
-  60% {
-    transform: translate(-160%, 50%) rotate(-45deg);
-  }
-  85% {
-    transform: translate(-120%, -30%) rotate(65deg);
-  }
-}
+
 @keyframes identifier {
   0%,
   100% {
     transform: translate(50%, 30%);
   }
 
-  50% {
-    transform: translate(-220%, 60%) rotate(-145deg);
+  45% {
+    transform: translate(-20%, 60%) rotate(-145deg);
   }
-  65% {
-    transform: translate(-230%, 40%) rotate(-185deg);
+  75% {
+    transform: translate(-80%, -30%) rotate(85deg);
   }
 }
 
@@ -149,17 +104,14 @@
     transform: translate(-60%, -50%);
   }
   50% {
-    transform: translate(220%, -30%) rotate(-110deg);
+    transform: translate(55%, 30%) rotate(-110deg);
   }
   65% {
-    transform: translate(220%, -60%) rotate(-110deg);
+    transform: translate(0%, 60%) rotate(50deg);
   }
 }
 
 @media screen and (min-width: 744px) {
-  .images img:nth-child(4) {
-    display: none;
-  }
   .mask {
     height: 80vh;
 

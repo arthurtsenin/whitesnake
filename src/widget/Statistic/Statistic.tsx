@@ -12,7 +12,6 @@ import { Container } from "../../shared";
 
 import raindropBlue from "&/images/statistic/raindrop.png";
 import raindropYellow from "&/images/statistic/raindrop.png";
-import greenRaindrop from "&/images/statistic/raindrop-green.png";
 
 export const Statistic: FC = () => {
   return (
@@ -21,8 +20,6 @@ export const Statistic: FC = () => {
         <div className={styles.images}>
           <Image src={raindropBlue} alt="" />
           <Image src={raindropYellow} alt="" />
-          <Image src={greenRaindrop} alt="" />
-          <Image src={raindropBlue} alt="" />
         </div>
         <div className={styles.glowBlue} />
         <div className={styles.glowRed} />
