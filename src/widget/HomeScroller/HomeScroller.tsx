@@ -2,11 +2,10 @@
 
 import { useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import styles from "./HomeScroller.module.css";
 
-import { useMobileScreen } from "@/shared/hooks/use-mobile-screen";
 import { MotionComponent } from "@/shared/motion/MotionComponent";
 
 import { WORKFLOW_CARDS } from "./data";
@@ -17,16 +16,30 @@ import net from "&/images/scroll-carousel/net.png";
 import raindrop from "&/images/scroll-carousel/raindrop.png";
 
 export const HomeScroller = () => {
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-  const isMobile = useMobileScreen();
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    !isMobile ? ["35%", `-115%`] : ["0%", "0%"],
+    isDesktop ? ["35%", "-115%"] : ["0%", "0%"],
   );
+
+  useLayoutEffect(() => {
+    setIsDesktop(window.innerWidth >= 1200);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1200);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className={styles.container} ref={targetRef}>
