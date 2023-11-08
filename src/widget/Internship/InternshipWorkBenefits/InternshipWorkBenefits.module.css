@@ -46,9 +46,8 @@
 
 .forth {
   position: absolute;
-  top: -10%;
+  top: 10%;
   left: 0%;
-
   width: 100%;
 }
 
@@ -61,11 +60,9 @@
 
 .six {
   position: absolute;
-  right: 0;
-  bottom: 20%;
-  left: 0;
-
-  width: 100%;
+  top: 10%;
+  right: 10%;
+  width: 80%;
   rotate: 45deg;
 }
 
@@ -172,26 +169,24 @@
 
   .forth {
     position: absolute;
-    top: -40%;
-    left: 25%;
-
+    top: 5%;
+    right: -25%;
+    left: unset;
     width: 80%;
   }
 
   .fifth {
-    top: 0;
-    right: 0;
+    top: 5%;
+    right: 5%;
     left: unset;
-
-    width: 43%;
+    width: 40%;
   }
 
   .six {
-    top: -10%;
-    right: -10%;
-    left: 20%;
-
+    top: 2%;
+    right: -5%;
     width: 85%;
+    left: unset;
   }
 
   .wrapper {
@@ -319,9 +314,8 @@
   }
 
   .forth {
-    top: -30%;
-    left: 25%;
-
+    top: 10%;
+    left: 30%;
     width: 100%;
   }
 

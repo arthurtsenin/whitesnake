@@ -1,11 +1,13 @@
 .container {
   display: flex;
   justify-content: flex-start;
-  width: 98%;
+  width: 100%;
   margin-bottom: var(--gap-widget);
   margin-left: 2%;
   overflow: hidden;
   padding-inline: 5px;
+  max-width: 1329px;
+  margin-inline: auto;
 }
 
 .tabs {
@@ -52,7 +54,7 @@
 
 @media screen and (min-width: 1200px) {
   .container {
-    margin-left: 0;
+    width: 80%;
   }
 
   .tabs {
