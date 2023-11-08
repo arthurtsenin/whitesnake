@@ -2,7 +2,8 @@
 
 import { Inter } from "next/font/google";
 import Head from "next/head";
-import { useLayoutEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 import "./global.css";
 
@@ -23,7 +24,7 @@ export default function RootLayout({
 }) {
   const [mystate, setMystate] = useState(false);
   const [TbFP, setTbFP] = useState(false);
-
+  const router = useRouter();
   useLayoutEffect(() => {
     if (
       typeof window !== "undefined" &&
@@ -46,6 +47,10 @@ export default function RootLayout({
 
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [router]);
 
   return (
     <html lang="en">

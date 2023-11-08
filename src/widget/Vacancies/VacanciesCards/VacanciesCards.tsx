@@ -17,6 +17,7 @@ export const VacanciesCards: FC<VacanciesCardsProps> = ({ cards }) => {
       <section
         className={cn(styles.container, {
           [styles.gridCol2]: cards.length < 6,
+          [styles.gridCol3]: (cards.length = 3),
         })}
       >
         {cards.map((card) => (
