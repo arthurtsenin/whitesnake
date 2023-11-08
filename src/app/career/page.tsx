@@ -8,6 +8,9 @@ import { CareerVacanciesCards } from "@/widget/Career/CareerVacanciesCards/Caree
 import { MANAGER_BENEFITS_DATA } from "@/widget/Career/ManagerBenefits/data";
 import { ManagerBenefits } from "@/widget/Career/ManagerBenefits/ManagerBenefits";
 import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
+import { InternshipOffice } from "@/widget/Internship/InternshipOffice/InternshipOffice";
+import { InternshipWorkBenefits } from "@/widget/Internship/InternshipWorkBenefits/InternshipWorkBenefits";
+import { TileTab } from "@/widget/TileTab/TileTab";
 
 export type VacancyType = {
   id: string;
@@ -94,12 +97,15 @@ export default async function CareerPage() {
       <PageScript />
       <CareerHero />
       <CareerVacanciesCards cards={cards} />
+      <InternshipWorkBenefits />
       <ManagerBenefits
         title="Стань менеджером"
         subtitle="Мы поощряем ребят, которые берут стажеров под личное руководство и даём возможность расти в сторону менеджмента"
         benefits={MANAGER_BENEFITS_DATA}
       />
       <Benefits title="Бенефиты" benefits={BENEFITS_DATA} />
+      <InternshipOffice />
+      <TileTab />
       <CareerAccordion
         title="Часто задаваемые вопросы"
         accordions={ACCORDIONS_DATA}
