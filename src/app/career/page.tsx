@@ -7,7 +7,6 @@ import { CareerHero } from "@/widget/Career/CareerHero/CareerHero";
 import { CareerVacanciesCards } from "@/widget/Career/CareerVacanciesCards/CareerVacanciesCards";
 import { MANAGER_BENEFITS_DATA } from "@/widget/Career/ManagerBenefits/data";
 import { ManagerBenefits } from "@/widget/Career/ManagerBenefits/ManagerBenefits";
-import { JOB_TITLES } from "@/widget/Form/data";
 import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
 
 export type VacancyType = {
@@ -81,12 +80,14 @@ export default async function CareerPage() {
   const vacancies = vacanciesData.items;
 
   const cards = vacancies
-    .map((card) => ({
-      id: card.id,
-      title: card.name,
-      location: card.area.name,
+    .map((vacancy) => ({
+      id: vacancy.id,
+      title: vacancy.name,
+      location: vacancy.area.name,
     }))
     .slice(0, 3);
+
+  const jobTitles = vacancies.map((vacancy) => vacancy.name);
 
   return (
     <>
@@ -103,7 +104,7 @@ export default async function CareerPage() {
         title="Часто задаваемые вопросы"
         accordions={ACCORDIONS_DATA}
       />
-      <VacanciesForm jobTitles={JOB_TITLES} />
+      <VacanciesForm jobTitles={jobTitles} />
     </>
   );
 }
