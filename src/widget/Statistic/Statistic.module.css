@@ -60,7 +60,7 @@
 
   transform: translate(10%, 30%);
 
-  animation: identifier3 60s linear infinite;
+  animation: identifier3 160s linear infinite;
 }
 
 .images img:nth-child(4) {
