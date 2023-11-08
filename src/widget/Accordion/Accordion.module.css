@@ -1,8 +1,6 @@
 .section {
   position: relative;
 
-  max-width: 1080px;
-
   min-height: max-content;
   margin-inline: auto;
 }
