@@ -90,7 +90,7 @@ export default async function CareerPage() {
     }))
     .slice(0, 3);
 
-  const jobTitles = vacancies.map((vacancy) => vacancy.name);
+  const jobTitles = vacancies.map((vacancy) => vacancy.name).concat("Другое");
 
   return (
     <>
