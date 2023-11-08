@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { FC, useLayoutEffect, useState } from "react";
+import { FC, useEffect, useLayoutEffect, useState } from "react";
 
 import styles from "./ManagerBenefits.module.css";
 
@@ -28,6 +28,16 @@ export const ManagerBenefits: FC<ManagerBenefitsProps> = ({
 
   useLayoutEffect(() => {
     setIsDesktop(window.innerWidth >= 1200);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1200);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
