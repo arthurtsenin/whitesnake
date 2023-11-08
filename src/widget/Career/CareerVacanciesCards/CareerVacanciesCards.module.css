@@ -53,6 +53,26 @@
   display: none;
 }
 
+@keyframes arrow-slider-anim {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+}
+
+@media (hover: hover) {
+  .container a[data-show-all-vacancies]:hover::after {
+    animation: arrow-slider-anim 1.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+  }
+}
+
 @media screen and (min-width: 744px) {
   .container {
     --fs-show-vacancies-link: 18px;
