@@ -25,7 +25,7 @@ import { storage } from "../../../../firestore";
 
 import raindrops from "&/images/vacancies/form/green-raindrops.png";
 
-type VacancyFormProps = {
+type VacanciesFormProps = {
   jobTitles: Array<string>;
 };
 
@@ -37,7 +37,7 @@ type ToastType = {
   toastText: string;
 };
 
-export const VacanciesForm: FC<VacancyFormProps> = ({ jobTitles }) => {
+export const VacanciesForm: FC<VacanciesFormProps> = ({ jobTitles }) => {
   const [selectedFileName, setSelectedFileName] = useState<string>("");
   const [downloadUrl, setDownloadUrl] = useState<string>("");
   const [isFileDownloading, setIsFileDownloading] = useState<boolean>(false);

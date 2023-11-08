@@ -30,11 +30,16 @@
 }
 
 .title {
-  width: 60%;
+  width: min-content;
 
   color: var(--clr-main-text);
   font-weight: var(--fw-bold);
   font-size: var(--fs-vacancy-card-title);
+
+  background: linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.38) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .description {
@@ -43,25 +48,23 @@
   font-size: var(--fs-vacancy-card-description);
 }
 
-.hover {
+.arrow {
   position: absolute;
   right: 0;
   bottom: 0;
 
-  opacity: 0;
-}
-
-.arrow {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 70px;
   border-radius: 50%;
-  overflow: hidden;
 
   color: var(--clr-main-text);
 
   background-color: #cc0b0b;
+
+  opacity: 0;
+
   aspect-ratio: 1/1;
 }
 
@@ -90,7 +93,7 @@
     mask-composite: exclude;
   }
 
-  .container:hover .hover {
+  .container:hover .arrow {
     opacity: 1;
   }
 }
@@ -128,18 +131,13 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
-}
-
 @media screen and (min-width: 1920px) {
   .container {
-    --gap-vacancy-card-text: 294px;
+    --gap-vacancy-card-text: 151px;
     --container-padding: 48px;
-    --fs-vacancy-card-title: 38px;
-    --fs-vacancy-card-description: 28px;
   }
 
   .arrow {
-    width: 150px;
+    width: 100px;
   }
 }
