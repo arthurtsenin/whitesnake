@@ -29,8 +29,8 @@
   justify-content: center;
   width: 25px;
   height: 25px;
-
   color: var(--clr-main-text);
+  cursor: pointer;
 }
 
 .sliderArrow img {
@@ -56,7 +56,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-
+  cursor: pointer;
   background-color: var(--clr-border);
 }
 
