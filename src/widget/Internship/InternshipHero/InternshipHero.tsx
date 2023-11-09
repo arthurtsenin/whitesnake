@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 
 import styles from "./InternshipHero.module.css";
@@ -30,7 +31,9 @@ export const InternshipHero: FC = () => {
       <p className={styles.heroText}>
         Получи возможность расти в нашей команде, или растить начинающих ребят!
       </p>
-      <Button>Хочу на стажировку</Button>
+      <Button>
+        <Link href="#internship-form">Хочу на стажировку</Link>
+      </Button>
     </div>
   );
 };

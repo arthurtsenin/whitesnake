@@ -108,7 +108,7 @@ export const InternshipForm: FC = () => {
     isFileDownloading || isFileFormatValid || Object.keys(errors).length > 0;
 
   return (
-    <section className={styles.container} id="vacancies-form">
+    <section className={styles.container} id="internship-form">
       <div className={styles.glowBlue} />
 
       <div className={styles.raindrops}>

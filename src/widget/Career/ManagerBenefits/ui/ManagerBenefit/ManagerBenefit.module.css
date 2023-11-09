@@ -1,6 +1,6 @@
 .text {
   --fs-benefit-title: 18px;
-  --fs-benefit-subtitle: 12px;
+  --fs-benefit-subtitle: 10px;
   --clr-benefit-title: #fff;
   --clr-benefit-subtitle: rgba(255, 255, 255, 0.6);
   --gap-benefit-text: 16px;
@@ -36,6 +36,10 @@
 }
 
 @media screen and (min-width: 485px) {
+  .text {
+    --fs-benefit-subtitle: 12px;
+  }
+
   .subtitle {
     width: 75%;
   }
