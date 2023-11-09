@@ -21,6 +21,8 @@
 
   display: flex;
   gap: 20px;
+
+  scrollbar-width: none;
 }
 
 .tabs::-webkit-scrollbar {
