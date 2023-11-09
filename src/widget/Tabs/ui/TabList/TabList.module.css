@@ -1,20 +1,20 @@
 .container {
   display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  margin-bottom: var(--gap-widget);
-  margin-left: 2%;
-  overflow: hidden;
-  padding-inline: 5px;
-  max-width: 1329px;
-  margin-inline: auto;
+  justify-content: space-around;
+
+  width: 97%;
+
+  margin-bottom: 45px;
+  margin-left: 3%;
 }
 
 .tabs {
-  width: fit-content;
+  display: flex;
+  gap: 20px;
   padding: 8px;
   border: 1px solid rgb(255 255 255 / 15%);
-  border-radius: var(--radius-300);
+  border-right: none;
+  border-radius: var(--radius-300) 0 0 var(--radius-300);
   overflow-x: auto;
 
   color: var(--clr-secondary-text);
@@ -24,48 +24,22 @@
   background-color: var(--clr-main-bg);
 }
 
-.tabsInner {
-  display: flex;
-  gap: 20px;
-  width: fit-content;
-  overflow-x: auto;
-  margin-inline: 5px;
-}
-
-.tabs::-webkit-scrollbar,
-.tabsInner::-webkit-scrollbar {
+.tabs::-webkit-scrollbar {
   display: none;
 }
 
 @media screen and (min-width: 960px) {
   .container {
     justify-content: center;
-  }
-
-  .tabsInner {
-    width: auto;
-  }
-
-  .tabs {
-    gap: 10px;
-    padding: 10px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    width: 80%;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-left: 0;
   }
 
   .tabs {
-    width: 92%;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .container {
-    margin-inline: auto;
-
-    max-width: 1920px;
+    gap: 6px;
+    padding: 8px;
+    border: 1px solid rgb(255 255 255 / 15%);
+    border-radius: var(--radius-300);
   }
 }

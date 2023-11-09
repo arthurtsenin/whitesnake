@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import { animate } from "framer-motion";
-import Image from "next/image";
 import { FC, useEffect } from "react";
 
 import styles from "./StaticPannel.module.css";
@@ -13,6 +12,7 @@ import { IndustryType } from "@/widget/Tabs/data";
 type StaticPannelProps = {
   panel: IndustryType;
 };
+
 // const cardVars = {
 //   initial: {
 //     opacity: 0,
@@ -36,32 +36,32 @@ export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
   const isMobile = useMobileScreen();
 
   useEffect(() => {
-    if (!isMobile) {
-      animate(
-        ".animateContainer",
-        {
-          transform: ["translateX(-50px)", "translateX(0px)"],
-          opacity: [0, 1],
-        },
-        { duration: 0.4 },
-      );
-      animate(
-        ".animateTitle",
-        {
-          transform: ["translateX(-40px)", "translateX(0px)"],
-          opacity: [0, 0, 0.5, 1],
-        },
-        { duration: 0.5, delay: 0.4 },
-      );
-      animate(
-        ".animateDescription",
-        {
-          transform: ["translateX(-40px)", "translateX(0px)"],
-          opacity: [0, 0, 0.5, 1],
-        },
-        { duration: 0.5, delay: 0.2 },
-      );
-    }
+    // if (!isMobile) {
+    animate(
+      ".animateContainer",
+      {
+        transform: ["translateX(-50px)", "translateX(0px)"],
+        opacity: [0, 1],
+      },
+      { duration: 0.8 },
+    );
+    animate(
+      ".animateTitle",
+      {
+        transform: ["translateX(-40px)", "translateX(0px)"],
+        opacity: [0, 0, 0.5, 1],
+      },
+      { duration: 0.5, delay: 0.4 },
+    );
+    animate(
+      ".animateDescription",
+      {
+        transform: ["translateX(-40px)", "translateX(0px)"],
+        opacity: [0, 0, 0.5, 1],
+      },
+      { duration: 0.5, delay: 0.2 },
+    );
+    // }
   }, [panel, isMobile]);
 
   return (
@@ -70,8 +70,13 @@ export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
         as="div"
         className={classNames(styles.container, "animateContainer")}
       >
-        <div className={styles.wrapper}>
-          <Image alt={panel.name} src={panel.image} placeholder="blur" fill />
+        <div
+          className={styles.wrapper}
+          style={{
+            backgroundImage: `linear-gradient(45.57deg, #000000 -27.33%, rgba(0, 0, 0, 0) 73.09%), url(${panel.image})`,
+          }}
+        >
+          {/* <Image alt={panel.name} src={panel.image} fill priority /> */}
           <div className={styles.text}>
             <MotionComponent
               as="h3"
