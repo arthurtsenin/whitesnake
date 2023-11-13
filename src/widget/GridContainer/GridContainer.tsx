@@ -29,9 +29,10 @@ export const GridContainer: FC<GridContainerProps> = ({
         </div>
 
         <Title suptitle={suptitle} title={title} subtitle={subtitle} />
+
         <div className={styles.container}>
           {data.map((card) => (
-            <div className={styles.wrapper} key={card.id}>
+            <div key={card.id} className={styles.wrapper}>
               <CaseCard
                 caption={card.caption}
                 description={card.description}
