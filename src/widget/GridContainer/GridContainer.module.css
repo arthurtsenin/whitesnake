@@ -41,6 +41,7 @@
   display: grid;
   grid-template-columns: 1fr;
   row-gap: var(--gap-row-case-cards);
+
   column-gap: var(--gap-column-case-cards);
 }
 
@@ -59,12 +60,14 @@
   width: 1px;
   height: 1px;
   border-radius: 50%;
+
   filter: blur(10px);
 }
 
 .wrapper:nth-child(2) > figure [data-glowright] {
   top: 0;
   right: 0;
+
   background-color: #002985;
   box-shadow: 0 0 75vw 30vw #002985;
 }
@@ -72,6 +75,7 @@
 .wrapper:nth-child(3) > figure [data-glowleft] {
   bottom: 40%;
   left: 0;
+
   background-color: rgba(124, 254, 253, 0.4);
   box-shadow: 0 0 30vw 12vw rgba(124, 254, 253, 0.4);
 }
@@ -79,6 +83,7 @@
 .wrapper:nth-child(3) > figure [data-glowright] {
   top: 20%;
   right: 0;
+
   background-color: rgba(124, 254, 253, 0.4);
   box-shadow: 0 0 30vw 12vw rgba(124, 254, 253, 0.4);
 }
@@ -86,6 +91,7 @@
 .wrapper:nth-child(4) > figure [data-glowleft] {
   bottom: 20%;
   left: 0;
+
   background-color: #ee2020;
   box-shadow: 0 0 43vw 15vw #ee2020;
 }
@@ -93,6 +99,7 @@
 .wrapper:nth-child(5) > figure [data-glowleft] {
   bottom: 20%;
   left: 0;
+
   background-color: #002985;
   box-shadow: 0 0 43vw 15vw #002985;
 }
@@ -100,6 +107,7 @@
 .wrapper:nth-child(5) > figure [data-glowright] {
   top: 50%;
   right: -10%;
+
   background-color: #ee2020;
   box-shadow: 0 0 30vw 12vw #ee2020;
 }
@@ -107,6 +115,7 @@
 .wrapper:nth-child(6) > figure [data-glowleft] {
   bottom: 35%;
   left: 0;
+
   background-color: #002985;
   box-shadow: 0 0 45vw 20vw #002985;
 }
@@ -114,6 +123,7 @@
 .wrapper:nth-child(6) > figure [data-glowright] {
   top: 10%;
   right: 0;
+
   background-color: #3d298c;
   box-shadow: 0 0 30vw 15vw #3d298c;
 }
@@ -121,13 +131,15 @@
 .wrapper:nth-child(7) > figure [data-glowleft] {
   bottom: 30%;
   left: 0;
+
   background-color: #8c6529;
   box-shadow: 0 0 50vw 17vw #8c6529;
 }
 
 .wrapper:nth-child(7) > figure [data-glowright] {
-  bottom: 5%;
   right: -5%;
+  bottom: 5%;
+
   background-color: #8c6529;
   box-shadow: 0 0 30vw 15vw #8c6529;
 }
@@ -199,17 +211,20 @@
 
   .wrapper:nth-child(3) > figure [data-glowleft] {
     bottom: 50%;
+
     box-shadow: 0 0 38vw 7vw rgba(124, 254, 253, 0.4);
   }
 
   .wrapper:nth-child(3) > figure [data-glowright] {
     top: 50%;
+
     box-shadow: 0 0 28vw 8vw rgba(124, 254, 253, 0.4);
   }
 
   .wrapper:nth-child(4) > figure [data-glowleft] {
     top: 50%;
     left: 10%;
+
     background-color: #4a2b56;
     box-shadow: 0 0 30vw 10vw #4a2b56;
   }
@@ -217,6 +232,7 @@
   .wrapper:nth-child(4) > figure [data-glowright] {
     top: 20%;
     right: -10%;
+
     background-color: #ee2020;
     box-shadow: 0 0 40vw 10vw #ee2020;
   }
@@ -224,11 +240,13 @@
   .wrapper:nth-child(5) > figure [data-glowleft] {
     top: 20%;
     left: 40%;
+
     box-shadow: 0 0 40vw 10vw #002985;
   }
 
   .wrapper:nth-child(5) > figure [data-glowright] {
     top: 10%;
+
     box-shadow: 0 0 40vw 10vw #ee2020;
   }
 
@@ -240,12 +258,14 @@
   .wrapper:nth-child(7) > figure [data-glowleft] {
     bottom: 40%;
     left: 10%;
+
     box-shadow: 0 0 21vw 7vw #8c6529;
   }
 
   .wrapper:nth-child(7) > figure [data-glowright] {
-    bottom: 45%;
     right: 0;
+    bottom: 45%;
+
     box-shadow: 0 0 13vw 6vw #8c6529;
   }
 }
@@ -278,11 +298,13 @@
 
   .wrapper:nth-child(3) > figure [data-glowleft] {
     bottom: 50%;
+
     box-shadow: 0 0 16vw 5vw rgba(124, 254, 253, 0.4);
   }
 
   .wrapper:nth-child(3) > figure [data-glowright] {
     top: 50%;
+
     box-shadow: 0 0 12vw 4vw rgba(124, 254, 253, 0.4);
   }
 
@@ -320,6 +342,7 @@
   .wrapper:nth-child(4) > figure [data-glowleft] {
     top: 100%;
     left: 0;
+
     box-shadow: 0 0 40vw 10vw #4a2b56;
   }
 
@@ -330,12 +353,14 @@
   .wrapper:nth-child(5) > figure [data-glowleft] {
     top: 20%;
     left: -20%;
+
     box-shadow: 0 0 40vw 10vw #002985;
   }
 
   .wrapper:nth-child(5) > figure [data-glowright] {
     top: 10%;
     right: -10%;
+
     box-shadow: 0 0 40vw 8vw #ee2020;
   }
 }
@@ -348,12 +373,14 @@
   .wrapper:nth-child(5) > figure [data-glowleft] {
     top: 0;
     left: -20%;
+
     box-shadow: 0 0 40vw 8vw #002985;
   }
 
   .wrapper:nth-child(5) > figure [data-glowright] {
     top: 30%;
     right: -15%;
+
     box-shadow: 0 0 40vw 8vw #ee2020;
   }
 }
