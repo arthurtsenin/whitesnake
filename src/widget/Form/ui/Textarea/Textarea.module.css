@@ -19,6 +19,7 @@
   background-color: transparent;
 
   resize: none;
+  backface-visibility: hidden;
 }
 
 .textarea::placeholder {

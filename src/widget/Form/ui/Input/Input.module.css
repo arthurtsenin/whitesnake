@@ -18,6 +18,8 @@
   font-size: 16px;
 
   background-color: transparent;
+
+  backface-visibility: hidden;
 }
 
 .input::placeholder {
