@@ -9,18 +9,19 @@
 }
 
 .tabs {
+  display: flex;
+  gap: 20px;
   padding: 8px;
   border: 1px solid rgb(255 255 255 / 15%);
   border-right: none;
   border-radius: var(--radius-300) 0 0 var(--radius-300);
   overflow-x: auto;
+
   color: var(--clr-secondary-text);
   font-weight: var(--fw-light);
   font-size: var(--fs-tab);
-  background-color: var(--clr-main-bg);
 
-  display: flex;
-  gap: 20px;
+  background-color: var(--clr-main-bg);
 
   scrollbar-width: none;
 }
@@ -38,8 +39,8 @@
   }
 
   .tabs {
-    padding: 8px;
     gap: 6px;
+    padding: 8px;
     border: 1px solid rgb(255 255 255 / 15%);
     border-radius: var(--radius-300);
   }
