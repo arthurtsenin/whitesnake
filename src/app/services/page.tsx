@@ -4,7 +4,6 @@ export default function ServicesPage() {
   return (
     <>
       <PageScript />
-      Services Page
     </>
   );
 }
