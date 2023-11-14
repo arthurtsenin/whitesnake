@@ -5,8 +5,6 @@ import { ACCORDIONS_DATA } from "@/widget/Accordion/data";
 import { HomeBanner } from "@/widget/Banner/HomeBanner/HomeBanner";
 import { BenefitCards } from "@/widget/BenefitCards/BenefitCards";
 import { BENEFIT_CARD_WITH_ICON_DATA } from "@/widget/BenefitCards/data";
-import { Contacts } from "@/widget/Contacts/Contacts";
-import { CONTACTS_DATA } from "@/widget/Contacts/data";
 import { CASES_PREVIEW_CARDS } from "@/widget/GridContainer/data";
 import { GridContainer } from "@/widget/GridContainer/GridContainer";
 import { HomeHero } from "@/widget/HomeHero/HomeHero";
@@ -45,11 +43,6 @@ export default function Home() {
         subtitle="С нами работают специалисты с разнообразным опытом и постоянно обучаются"
         suptitle="технологии"
         data={TECHNOLOGIE_DATA}
-      />
-      <Contacts
-        contacts={CONTACTS_DATA}
-        title="Связаться с нами"
-        subtitle="Закажите бесплатную консультацию, чтобы получить индивидуальное предложение в соответствии с вашими требованиями"
       />
       <Accordion accordions={ACCORDIONS_DATA} />
     </>
