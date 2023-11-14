@@ -1,13 +1,13 @@
 .container {
   --padding-content: 12px;
-  --gap-description: 16px;
+  --gap-description: 12px;
 
   position: relative;
   z-index: 0;
 
   display: flex;
   overflow: hidden;
-  border: 0.495px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: var(--radius-300);
   height: 100%;
 
@@ -20,7 +20,7 @@
   height: 100%;
   object-fit: cover;
 
-  transition: ease 500ms;
+  transition: transform 300ms ease;
 }
 
 .caption {
@@ -37,8 +37,15 @@
 
 .hover {
   position: absolute;
-  inset: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -71,8 +78,8 @@
 
 .further::after {
   display: inline-block;
-  width: 16px;
-  height: 15px;
+  width: 14px;
+  height: 12px;
   margin-left: 11px;
 
   vertical-align: middle;
@@ -119,12 +126,6 @@
   .caption {
     width: 80%;
     font-weight: var(--fw-regular);
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .hover {
-    --gap-description: 24px;
   }
 }
 

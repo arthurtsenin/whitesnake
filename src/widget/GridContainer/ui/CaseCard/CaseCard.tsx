@@ -23,6 +23,9 @@ export const CaseCard: FC<CaseCardProps> = ({
     <figure className={styles.container}>
       <Image src={image} alt={caption} placeholder="blur" />
 
+      <div data-glowleft />
+      <div data-glowright />
+
       <figcaption className={styles.caption}>{caption}</figcaption>
 
       <Link
