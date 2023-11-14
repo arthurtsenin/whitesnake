@@ -40,7 +40,6 @@
   --fs-section-subtitle: 20px;
   --gap-section-title: 24px;
   --fs-case-card-title: 24px;
-  --pl-case-card-title: 36px;
   --fs-case-card-description: 20px;
   --gap-case-card: 32px;
   --gap-row-case-cards: 40px;
@@ -139,6 +138,7 @@ p {
   display: block;
   box-sizing: border-box;
 }
+
 html {
   background-color: #000;
 }
@@ -189,7 +189,6 @@ body.lock {
     --fs-section-subtitle: 14px;
     --gap-section-title: 8px;
     --fs-case-card-title: 16px;
-    --pl-case-card-title: 0px;
     --fs-case-card-description: 12px;
     --gap-case-card: 16px;
     --gap-row-case-cards: 24px;
@@ -239,8 +238,7 @@ body.lock {
     --fs-section-title: 24px;
     --fs-section-subtitle: 12px;
     --gap-section-title: 8px;
-    --fs-case-card-title: 18px;
-    --pl-case-card-title: 0px;
+    --fs-case-card-title: 16px;
     --fs-case-card-description: 14px;
     --gap-case-card: 16px;
     --gap-row-case-cards: 32px;
@@ -290,8 +288,7 @@ body.lock {
     --fs-section-title: 48px;
     --fs-section-subtitle: 20px;
     --gap-section-title: 24px;
-    --fs-case-card-title: 24px;
-    --pl-case-card-title: 36px;
+    --fs-case-card-title: 20px;
     --fs-case-card-description: 20px;
     --gap-case-card: 16px;
     --gap-row-case-cards: 40px;
@@ -325,6 +322,12 @@ body.lock {
     --fs-questions-title: 24px;
     --fs-questions-description: 14px;
     --fs-footer-navlink: 12px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  :root {
+    --fs-case-card-title: 14px;
   }
 }
 
@@ -370,9 +373,8 @@ body.lock {
     --fs-section-title: 70px;
     --fs-section-subtitle: 20px;
     --gap-section-title: 24px;
-    --fs-case-card-title: 24px;
-    --pl-case-card-title: 36px;
-    --fs-case-card-description: 20px;
+    --fs-case-card-title: 18px;
+    --fs-case-card-description: 12px;
     --gap-case-card: 32px;
     --gap-row-case-cards: 40px;
     --gap-column-case-cards: 40px;
@@ -440,6 +442,19 @@ body.lock {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  :root {
+    --fs-case-card-description: 14px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  :root {
+    --fs-case-card-title: 24px;
+    --fs-case-card-description: 20px;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
   height: 5px;
@@ -454,6 +469,7 @@ body.lock {
 
   background: #702525de;
 }
+
 .main {
   position: relative;
   z-index: 3;
@@ -465,6 +481,7 @@ body.lock {
   min-height: 100dvh;
   contain: paint;
 }
+
 input,
 textarea,
 button,
