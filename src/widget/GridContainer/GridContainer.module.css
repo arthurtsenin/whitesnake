@@ -212,7 +212,7 @@
   }
 
   .container {
-    grid-template-rows: repeat(20, 1fr);
+    grid-template-rows: repeat(18, 1fr);
     grid-template-columns: repeat(24, 1fr);
     height: 70vh;
     min-height: 950px;
