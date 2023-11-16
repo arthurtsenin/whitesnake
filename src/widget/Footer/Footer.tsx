@@ -10,6 +10,7 @@ import { Button } from "@/shared";
 
 import { ButtonUp } from "../ButtonUp/ButtonUp";
 import { Navigation } from "../Navigation/Navigation";
+import { ROUTES } from "../Navigation/routes";
 import { Logo } from "../Navigation/ui/Logo/Logo";
 
 import bubble from "&/images/footer/bubble.png";
@@ -57,14 +58,15 @@ export const Footer = () => {
             <br />
             <Link href="#">Политика конфиденциальности и обработки данных</Link>
           </div>
-          <button className={styles.benefit}>
+
+          <Link href={ROUTES.FIVE.href} className={styles.benefit}>
             <p>Работа в Whitesnake</p>
             <p>
               Если ты разработчик, мы с радостью с тобой пообщаемся и рассмотрим
-              возможность работать с нами.{" "}
+              возможность работать с нами.
             </p>
-            <Button variant="primary">Карьера </Button>
-          </button>
+            <Button variant="primary">Карьера</Button>
+          </Link>
         </div>
       </div>
     </footer>
