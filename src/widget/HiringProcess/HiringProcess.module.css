@@ -11,6 +11,7 @@
 
 .external {
   margin-inline: auto;
+
   width: var(--external-width);
 }
 
@@ -24,6 +25,7 @@
 
 .inner {
   white-space: nowrap;
+
   transition: transform 1s;
 }
 
@@ -34,12 +36,12 @@
   }
 
   .inner {
-    white-space: normal;
-
     display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: var(--gap-cards);
+
+    white-space: normal;
   }
 }
 

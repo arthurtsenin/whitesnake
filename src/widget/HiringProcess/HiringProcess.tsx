@@ -1,4 +1,6 @@
-import { FC } from "react";
+"use client";
+
+import { FC, useState } from "react";
 
 import styles from "./HiringProcess.module.css";
 
@@ -14,6 +16,8 @@ type HiringProcessProps = {
 } & TitleProps;
 
 export const HiringProcess: FC<HiringProcessProps> = ({ title, cards }) => {
+  const [activeItemId, _setActiveItemId] = useState<number>(1);
+
   return (
     <Container>
       <section className={styles.section} style={{ marginTop: "350px" }}>
@@ -28,11 +32,12 @@ export const HiringProcess: FC<HiringProcessProps> = ({ title, cards }) => {
                   title={card.title}
                   instructions={card.instructions}
                   image={card.image}
+                  isActive={card.id === activeItemId}
                 />
               ))}
             </div>
 
-            <Indicators ids={[1, 2, 3]} activeItemId={1} />
+            <Indicators ids={[1, 2, 3]} activeItemId={activeItemId} />
           </div>
         </div>
       </section>

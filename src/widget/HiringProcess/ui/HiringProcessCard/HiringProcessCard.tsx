@@ -1,3 +1,4 @@
+import cn from "classnames";
 import Image from "next/image";
 import { FC } from "react";
 
@@ -5,15 +6,22 @@ import styles from "./HiringProcessCard.module.css";
 
 import { HiringProcessCardType } from "../../data";
 
-type HiringProcessCardProps = object & HiringProcessCardType;
+type HiringProcessCardProps = {
+  isActive: boolean;
+} & HiringProcessCardType;
 
 export const HiringProcessCard: FC<HiringProcessCardProps> = ({
   title,
   instructions,
   image,
+  isActive,
 }) => {
   return (
-    <div className={styles.container}>
+    <div
+      className={cn(styles.container, {
+        [styles.active]: isActive,
+      })}
+    >
       <div className={styles.wrapper}>
         <Image alt="" placeholder="blur" src={image} />
       </div>
