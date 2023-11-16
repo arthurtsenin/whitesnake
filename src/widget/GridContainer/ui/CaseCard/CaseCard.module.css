@@ -1,6 +1,6 @@
 .container {
   --padding-content: 12px;
-  --gap-description: 12px;
+  --gap-description: 14px;
 
   position: relative;
   z-index: 0;
@@ -132,6 +132,12 @@
     width: 80%;
 
     font-weight: var(--fw-regular);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hover {
+    --gap-description: 24px;
   }
 }
 
