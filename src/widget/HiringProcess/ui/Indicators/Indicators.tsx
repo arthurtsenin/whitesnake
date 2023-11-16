@@ -14,12 +14,12 @@ export const Indicators: FC<IndicatorsPropsType> = ({ ids, activeItemId }) => {
       {ids.map((id) => (
         <button
           key={id}
-          data-slide-to={id}
+          data-step-to={id}
           className={cn(styles.indicator, {
             [styles.active]: id === activeItemId,
           })}
           aria-current={id === activeItemId}
-          aria-label={`Hiring step ${id}`}
+          aria-label={`Hiring step ${++id}`}
         />
       ))}
     </div>

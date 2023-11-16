@@ -14,7 +14,7 @@ export type HiringProcessCardType = {
 
 export const HIRING_PROCESS_DATA: Array<HiringProcessCardType> = [
   {
-    id: 1,
+    id: 0,
     title: "Отклик на вакансию",
     instructions: [
       "Заполни форму и оставь заявку",
@@ -24,7 +24,7 @@ export const HIRING_PROCESS_DATA: Array<HiringProcessCardType> = [
     image: reply,
   },
   {
-    id: 2,
+    id: 1,
     title: "Прескрин",
     instructions: [
       "Пройди 10-минутное собеседование, на которому тебя проверят английский и базовые технические знания",
@@ -32,7 +32,7 @@ export const HIRING_PROCESS_DATA: Array<HiringProcessCardType> = [
     image: prescreen,
   },
   {
-    id: 3,
+    id: 2,
     title: "Техническое интервью",
     instructions: [
       "Пройди 30-60-минутное техническое интервью",
@@ -42,7 +42,7 @@ export const HIRING_PROCESS_DATA: Array<HiringProcessCardType> = [
     image: interview,
   },
   {
-    id: 4,
+    id: 3,
     title: "Оффер!",
     instructions: ["Экскурсия по офису", "Обсуждение условий работы"],
     image: offer,
