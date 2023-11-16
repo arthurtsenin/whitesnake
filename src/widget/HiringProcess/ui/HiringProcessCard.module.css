@@ -9,6 +9,9 @@
   display: flex;
   flex-direction: column;
 
+  gap: var(--gap-hiring-card-container);
+  padding-right: 20px;
+
   border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -54,29 +57,41 @@
 
 @media screen and (min-width: 744px) {
   .container {
-    --gap-hiring-card-container: 46px;
+    --gap-hiring-card-container: 34px;
     --gap-hiring-card-content: 24px;
     --gap-hiring-card-instructions: 14px;
     --fs-card-title: 36px;
     --fs-card-description: 20px;
 
+    padding-right: 0;
+
     border: none;
   }
 
   .wrapper {
+    width: 60%;
+    height: 200px;
   }
 
-  .content {
+  .title {
+    width: 80%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
-    --gap-hiring-card-container: 58px;
+    --gap-hiring-card-container: 38px;
     --gap-hiring-card-content: 28px;
-    --gap-hiring-card-instructions: 16px;
+    --gap-hiring-card-instructions: 12px;
+  }
 
-    gap: var(--gap-hiring-card-container);
+  .wrapper {
+    width: 90%;
+    height: 200px;
+  }
+
+  .title {
+    width: fit-content;
   }
 
   .description {
@@ -84,8 +99,9 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
   .container {
+    --gap-hiring-card-container: 58px;
     --fs-card-description: 25px;
   }
 }
