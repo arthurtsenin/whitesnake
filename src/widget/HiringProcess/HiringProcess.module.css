@@ -1,4 +1,5 @@
 .section {
+  --external-width: 82vw;
   --gap-section: 24px;
   --gap-cards: 0px;
 
@@ -8,11 +9,22 @@
   row-gap: var(--gap-section);
 }
 
+.external {
+  margin-inline: auto;
+  width: var(--external-width);
+}
+
 .container {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--gap-cards);
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+
+  overflow: hidden;
+}
+
+.inner {
+  white-space: nowrap;
+  transition: transform 1s;
 }
 
 @media screen and (min-width: 744px) {
@@ -21,9 +33,13 @@
     --gap-cards: 60px;
   }
 
-  .container {
+  .inner {
+    white-space: normal;
+
+    display: grid;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    gap: var(--gap-cards);
   }
 }
 
@@ -33,7 +49,7 @@
     --gap-cards: 80px;
   }
 
-  .container {
+  .inner {
     grid-template-rows: 1fr;
     grid-template-columns: repeat(4, 1fr);
   }
