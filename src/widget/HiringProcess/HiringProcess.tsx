@@ -6,7 +6,7 @@ import { Container } from "@/shared";
 import { Title, TitleProps } from "@/shared/ui/Title/Title";
 
 import { HiringProcessCardType } from "./data";
-import { HiringProcessCard } from "./ui/HiringProcessCard";
+import { HiringProcessCard } from "./ui/HiringProcessCard/HiringProcessCard";
 
 type HiringProcessProps = {
   cards: Array<HiringProcessCardType>;

@@ -3,7 +3,7 @@ import { FC } from "react";
 
 import styles from "./HiringProcessCard.module.css";
 
-import { HiringProcessCardType } from "../data";
+import { HiringProcessCardType } from "../../data";
 
 type HiringProcessCardProps = object & HiringProcessCardType;
 
