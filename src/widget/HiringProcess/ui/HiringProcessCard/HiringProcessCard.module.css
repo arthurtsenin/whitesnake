@@ -1,5 +1,5 @@
 .container {
-  --margin-card: 48px;
+  --margin-card: 36px;
   --gap-hiring-card-container: 20px;
   --gap-hiring-card-content: 16px;
   --gap-hiring-card-instructions: 12px;
@@ -10,7 +10,7 @@
   display: inline-flex;
   flex-direction: column;
 
-  width: calc((var(--external-width) - var(--margin-card)) / 1.5);
+  width: calc((var(--external-width) - var(--margin-card)) / 1.25);
 
   margin-right: var(--margin-card);
 
@@ -20,6 +20,9 @@
 
   opacity: 0.6;
   row-gap: var(--gap-hiring-card-container);
+
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .wrapper {
@@ -81,7 +84,7 @@
     margin: 0;
     padding: 0;
 
-    border: none;
+    border-right: none;
 
     opacity: 1;
   }

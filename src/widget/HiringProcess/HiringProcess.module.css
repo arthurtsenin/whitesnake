@@ -20,15 +20,29 @@
   flex-direction: column;
   row-gap: 32px;
 
-  overflow: hidden;
+  /* overflow: hidden; */
+
+  /* overflow-x: auto;
+  scrollbar-width: none; */
 }
 
+/* .container::-webkit-scrollbar {
+  display: none;
+} */
+
 .inner {
+  overflow-x: scroll;
+
   white-space: nowrap;
 
   transition:
     transform 1s,
     opacity 1s;
+  scroll-snap-type: x mandatory;
+}
+
+.inner > div:last-child {
+  border-right: none;
 }
 
 @media screen and (min-width: 744px) {
