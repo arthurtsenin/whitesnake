@@ -7,6 +7,8 @@ import { BenefitCards } from "@/widget/BenefitCards/BenefitCards";
 import { BENEFIT_CARD_WITH_ICON_DATA } from "@/widget/BenefitCards/data";
 import { CASES_PREVIEW_CARDS } from "@/widget/GridContainer/data";
 import { GridContainer } from "@/widget/GridContainer/GridContainer";
+import { HIRING_PROCESS_DATA } from "@/widget/HiringProcess/data";
+import { HiringProcess } from "@/widget/HiringProcess/HiringProcess";
 import { HomeHero } from "@/widget/HomeHero/HomeHero";
 import { HomeScroller } from "@/widget/HomeScroller/HomeScroller";
 import { Statistic } from "@/widget/Statistic/Statistic";
@@ -20,6 +22,12 @@ export default function Home() {
   return (
     <>
       <PageScript />
+
+      <HiringProcess
+        title="Как происходит процесс найма?"
+        cards={HIRING_PROCESS_DATA}
+      />
+
       <HomeHero />
       <BenefitCards data={BENEFIT_CARD_WITH_ICON_DATA} variant="withIcon" />
       <GridContainer

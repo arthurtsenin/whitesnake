@@ -1,6 +1,6 @@
 import cn from "classnames";
 import Image from "next/image";
-import { FC } from "react";
+import { FC, MouseEventHandler } from "react";
 
 import styles from "./HiringProcessCard.module.css";
 
@@ -8,6 +8,7 @@ import { HiringProcessCardType } from "../../data";
 
 type HiringProcessCardProps = {
   isActive: boolean;
+  onClick: MouseEventHandler<HTMLDivElement> | undefined;
 } & HiringProcessCardType;
 
 export const HiringProcessCard: FC<HiringProcessCardProps> = ({
@@ -15,12 +16,16 @@ export const HiringProcessCard: FC<HiringProcessCardProps> = ({
   instructions,
   image,
   isActive,
+  // onPrevClick,
+  // onNextClick,
+  onClick,
 }) => {
   return (
     <div
       className={cn(styles.container, {
         [styles.active]: isActive,
       })}
+      onClick={onClick}
     >
       <div className={styles.wrapper}>
         <Image alt="" placeholder="blur" src={image} />

@@ -6,6 +6,7 @@
   --fs-card-title: 20px;
   --fs-card-description: 12px;
   --clr-card-description: #f5f5f5;
+
   display: inline-flex;
   flex-direction: column;
 
@@ -75,11 +76,14 @@
     --gap-hiring-card-instructions: 14px;
     --fs-card-title: 36px;
     --fs-card-description: 20px;
+    width: 100%;
 
     margin: 0;
     padding: 0;
 
     border: none;
+
+    opacity: 1;
   }
 
   .wrapper {
