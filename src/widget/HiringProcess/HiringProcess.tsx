@@ -23,28 +23,26 @@ export const HiringProcess: FC<HiringProcessProps> = ({ title, cards }) => {
 
   return (
     <Container>
-      <section className={styles.section} style={{ marginTop: "350px" }}>
+      <section className={styles.section}>
         <Title title={title} />
 
-        <div className={styles.external}>
-          <div className={styles.container}>
-            <div className={styles.inner} ref={innerRef}>
-              {cards.map((card) => (
-                <HiringProcessCard
-                  key={card.id}
-                  id={card.id}
-                  title={card.title}
-                  instructions={card.instructions}
-                  image={card.image}
-                  isActive={card.id === activeItemId}
-                  setActiveItemId={setActiveItemId}
-                  containerEl={innerRef.current}
-                />
-              ))}
-            </div>
-
-            <Indicators ids={ids} activeItemId={activeItemId} />
+        <div className={styles.container}>
+          <div className={styles.inner} ref={innerRef}>
+            {cards.map((card) => (
+              <HiringProcessCard
+                key={card.id}
+                id={card.id}
+                title={card.title}
+                instructions={card.instructions}
+                image={card.image}
+                isActive={card.id === activeItemId}
+                setActiveItemId={setActiveItemId}
+                containerEl={innerRef.current}
+              />
+            ))}
           </div>
+
+          <Indicators ids={ids} activeItemId={activeItemId} />
         </div>
       </section>
     </Container>

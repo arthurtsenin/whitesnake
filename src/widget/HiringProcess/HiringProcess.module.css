@@ -9,16 +9,13 @@
   row-gap: var(--gap-section);
 }
 
-.external {
-  margin-inline: auto;
-
-  width: var(--external-width);
-}
-
 .container {
   display: flex;
   flex-direction: column;
   row-gap: 32px;
+
+  margin-inline: auto;
+  width: var(--external-width);
 }
 
 .inner {

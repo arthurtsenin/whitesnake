@@ -21,7 +21,7 @@ export const HiringProcessCard: FC<HiringProcessCardProps> = ({
   setActiveItemId,
   containerEl,
 }) => {
-  const itemRef = useRef<HTMLDivElement | null>(null);
+  const itemRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const callback = (entries: Array<IntersectionObserverEntry>) => {
