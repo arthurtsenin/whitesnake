@@ -9,6 +9,7 @@ import { HiringProcessCardType } from "../../data";
 type HiringProcessCardProps = {
   isActive: boolean;
   setActiveItemId: (num: number) => void;
+  containerEl: Element | Document | null | undefined;
 } & HiringProcessCardType;
 
 export const HiringProcessCard: FC<HiringProcessCardProps> = ({
@@ -18,7 +19,7 @@ export const HiringProcessCard: FC<HiringProcessCardProps> = ({
   image,
   isActive,
   setActiveItemId,
-  // containerRef,
+  containerEl,
 }) => {
   const itemRef = useRef<HTMLDivElement | null>(null);
 
@@ -26,14 +27,15 @@ export const HiringProcessCard: FC<HiringProcessCardProps> = ({
     const callback = (entries: Array<IntersectionObserverEntry>) => {
       entries.forEach((entry) => {
         if (entry.intersectionRatio > 0.75) {
-          const newId = Number(entry.target.dataset.id);
+          const targetEl = entry.target as HTMLElement;
+          const newId = Number(targetEl.dataset.id);
           setActiveItemId(newId);
         }
       });
     };
 
     const options = {
-      root: document.querySelector("#inner"),
+      root: containerEl,
       rootMargin: "0px",
       threshold: 1,
     };
@@ -43,9 +45,7 @@ export const HiringProcessCard: FC<HiringProcessCardProps> = ({
     if (itemRef && itemRef.current) {
       observer.observe(itemRef.current);
     }
-
-    // return () => unobserve
-  }, [setActiveItemId]);
+  }, [setActiveItemId, containerEl]);
 
   return (
     <div

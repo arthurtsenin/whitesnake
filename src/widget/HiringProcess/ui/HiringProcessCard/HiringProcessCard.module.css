@@ -21,7 +21,7 @@
   opacity: 0.6;
   row-gap: var(--gap-hiring-card-container);
 
-  scroll-snap-align: start;
+  scroll-snap-align: center;
   scroll-snap-stop: always;
 }
 

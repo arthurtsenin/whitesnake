@@ -17,12 +17,9 @@ type HiringProcessProps = {
 
 export const HiringProcess: FC<HiringProcessProps> = ({ title, cards }) => {
   const [activeItemId, setActiveItemId] = useState<number>(0);
-  // const [direction, _setDirection] = useState<number>(1);
   const innerRef = useRef<HTMLDivElement>(null);
 
   const ids = cards.map((card) => card.id as number);
-
-  // TODO: handle resize
 
   return (
     <Container>
@@ -31,7 +28,7 @@ export const HiringProcess: FC<HiringProcessProps> = ({ title, cards }) => {
 
         <div className={styles.external}>
           <div className={styles.container}>
-            <div className={styles.inner} ref={innerRef} id="inner">
+            <div className={styles.inner} ref={innerRef}>
               {cards.map((card) => (
                 <HiringProcessCard
                   key={card.id}
@@ -41,7 +38,7 @@ export const HiringProcess: FC<HiringProcessProps> = ({ title, cards }) => {
                   image={card.image}
                   isActive={card.id === activeItemId}
                   setActiveItemId={setActiveItemId}
-                  // containerRef={innerRef}
+                  containerEl={innerRef.current}
                 />
               ))}
             </div>
