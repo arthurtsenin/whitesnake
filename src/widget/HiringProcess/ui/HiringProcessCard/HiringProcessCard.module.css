@@ -125,4 +125,8 @@
     --gap-hiring-card-container: 58px;
     --fs-card-description: 25px;
   }
+
+  .wrapper {
+    width: 80%;
+  }
 }
