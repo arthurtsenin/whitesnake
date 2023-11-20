@@ -2,8 +2,9 @@ import Image from "next/image";
 
 import styles from "./ServicesHero.module.css";
 
-import raindrop from "&/images/services/corner.png";
 import heroBg from "&/images/services/heroBg.png";
+import leftRaindrop from "&/images/services/leftCorner.png";
+import rightRaindrop from "&/images/services/rightCorner.png";
 // import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
 
 export const ServicesHero = () => {
@@ -11,13 +12,16 @@ export const ServicesHero = () => {
     <div className={styles.hero}>
       <Image src={heroBg} alt="" priority fill />
 
-      <div className={styles.raindropWrapper}>
-        <Image src={raindrop} alt="" />
+      <div className={styles.rightRaindropWrapper}>
+        <Image src={rightRaindrop} alt="" />
       </div>
 
-      {/* <div className={styles.glowRed} />
-      <div className={styles.glowBlue} />
- */}
+      <div className={styles.leftRaindropWrapper}>
+        <Image src={leftRaindrop} alt="" />
+      </div>
+
+      <div className={styles.glowRight} />
+      <div className={styles.glowLeft} />
 
       <div className={styles.text}>
         <h1 className={styles.title}>Услуги</h1>
