@@ -4,8 +4,8 @@
 
 .raindropWrapper {
   position: absolute;
-  bottom: 10%;
   right: -55%;
+  bottom: 10%;
   z-index: 1;
 
   width: 100%;
@@ -66,15 +66,17 @@
 }
 
 .question::before {
-  content: "";
-
-  margin-right: 16px;
   display: none;
   width: 36px;
   height: 3px;
 
+  margin-right: 16px;
+
   border-radius: 4px;
+
   background: var(--clr-title-gradient);
+
+  content: "";
 }
 
 .answer {
@@ -89,16 +91,16 @@
 
 @media screen and (min-width: 500px) {
   .raindropWrapper {
-    bottom: 10%;
     right: -47%;
+    bottom: 10%;
 
     width: 80%;
   }
 }
 @media screen and (min-width: 744px) {
   .raindropWrapper {
-    bottom: -75%;
     right: -47%;
+    bottom: -75%;
   }
 
   .content {
@@ -156,7 +158,7 @@
 
 @media screen and (min-width: 1920px) {
   .raindropWrapper {
-    bottom: -100%;
     right: -36%;
+    bottom: -100%;
   }
 }
