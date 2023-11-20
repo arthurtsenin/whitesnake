@@ -32,7 +32,7 @@ import tornado from "&/images/services/team-extension/tornado.svg";
 import unittest from "&/images/services/team-extension/unittest.svg";
 import web3py from "&/images/services/team-extension/web3py.svg";
 
-type ServiceCardType = {
+export type ServiceCardType = {
   id: number;
   icon: StaticImageData;
   text: string;
@@ -42,7 +42,7 @@ export type ServiceDataType = {
   title: string;
   question: string;
   answer: Array<string>;
-  cards: Array<ServiceCardType>;
+  cardItems: Array<ServiceCardType>;
   image?: StaticImageData;
 };
 
@@ -53,7 +53,7 @@ export const TEAM_EXTENSION_DATA: ServiceDataType = {
     "Вы можете легко интегрировать наших штатных специалистов в свою команду, как правило, в течение нескольких дней. Это не просто дополнительные рабочие руки - это квалифицированные специалисты, способные восполнить пробелы в квалификации вашей команды и ускорить темпы реализации проекта.",
     "Вы сохраняете полный контроль над ситуацией, а мы дополняем вашу команду необходимыми знаниями и опытом в области бэкенда. С нашей помощью вы сможете создать более эффективную команду, быстро адаптироваться к изменениям и обеспечить выполнение проекта в срок и в рамках бюджета.",
   ],
-  cards: [
+  cardItems: [
     { id: 1, icon: python, text: "Python" },
     { id: 2, icon: django, text: "Django" },
     { id: 3, icon: fastapi, text: "FastAPI" },
@@ -79,7 +79,7 @@ export const END_TO_END_DATA: ServiceDataType = {
     "Whitesnake - это тот партнер, которого вы давно искали. Наша штатная команда разработчиков и системных архитекторов выполнит весь цикл разработки бэкенда - от проектирования архитектуры системы и интеграции API до обеспечения безопасности данных и структурирования базы данных.",
     "Вы сохраняете контроль над ситуацией, а мы при необходимости предоставляем стратегические рекомендации. Поскольку мы занимаемся техническими вопросами, вы можете сосредоточиться на своей основной деятельности. Мы позаботимся об административных деталях, обеспечив плавный и прозрачный процесс разработки. Мы готовы превратить вашу идею в высокопроизводительный, масштабируемый продукт в срок и в рамках бюджета.",
   ],
-  cards: [
+  cardItems: [
     { id: 1, icon: backdev, text: "Backend development" },
     { id: 2, icon: web3dev, text: "Web3 development" },
     { id: 3, icon: dataeng, text: "Data engenieering" },
@@ -99,7 +99,7 @@ export const CONSULTING_DATA: ServiceDataType = {
   answer: [
     "Наши эксперты готовы помочь. Мы соберем небольшую группу профессионалов из нашей команды, лучших в своих областях, для анализа вашего продукта. Они проведут детальный анализ, предложат стратегические рекомендации и будут тесно сотрудничать с Вами для внесения необходимых улучшений. Наша цель - помочь вам получить максимальную отдачу от вашего продукта, повысить его эффективность и успех вашего бизнеса.",
   ],
-  cards: [
+  cardItems: [
     { id: 1, icon: backrev, text: "Backend review" },
     { id: 2, icon: vulnerability, text: "Vulnerability & Bug detection" },
     { id: 3, icon: refactoring, text: "Refactoring" },
