@@ -1,15 +1,15 @@
 import Image from "next/image";
 import { FC } from "react";
 
-import styles from "./FlexCard.module.css";
+import styles from "./TechCard.module.css";
 
 import { ServiceCardType } from "@/widget/Services/data";
 
-type FlexCardProps = {
+type TechCardProps = {
   cardItems: Array<ServiceCardType>;
 };
 
-export const FlexCard: FC<FlexCardProps> = ({ cardItems }) => {
+export const TechCard: FC<TechCardProps> = ({ cardItems }) => {
   return (
     <div className={styles.card}>
       <p className={styles.title}>Умеем:</p>

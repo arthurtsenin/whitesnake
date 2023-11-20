@@ -8,6 +8,7 @@
   --fs-service-card-text: 10px;
   --clr-service-card-title: #fff;
   --clr-service-card-text: rgba(255, 255, 255, 0.5);
+
   display: flex;
   flex-direction: column;
 

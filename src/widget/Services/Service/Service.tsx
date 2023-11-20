@@ -5,7 +5,7 @@ import styles from "./Service.module.css";
 
 import { Container } from "@/shared";
 
-import { FlexCard } from "./ui/FlexCard/FlexCard";
+import { TechCard } from "./ui/TechCard/TechCard";
 import { ServiceDataType } from "../data";
 
 type ServiceProps = object & ServiceDataType;
@@ -36,7 +36,7 @@ export const Service: FC<ServiceProps> = ({
             ))}
           </div>
 
-          <FlexCard cardItems={cardItems} />
+          <TechCard cardItems={cardItems} />
         </div>
       </section>
     </Container>
