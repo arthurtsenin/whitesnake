@@ -21,7 +21,7 @@ export const Service: FC<ServiceProps> = ({
     <Container>
       <section className={styles.container}>
         {image && (
-          <div className={styles.raindrop}>
+          <div className={styles.raindropWrapper}>
             <Image src={image} alt="" />
           </div>
         )}
