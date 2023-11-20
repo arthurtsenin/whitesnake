@@ -1,6 +1,8 @@
-// import Image from "next/image";
+import Image from "next/image";
 
 import styles from "./ServicesHero.module.css";
+
+import heroBg from "&/images/services/heroBg.png";
 
 // import raindrop from "&/images/vacancies/hero/raindrop-lower.png";
 // import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
@@ -8,6 +10,8 @@ import styles from "./ServicesHero.module.css";
 export const ServicesHero = () => {
   return (
     <div className={styles.hero}>
+      <Image src={heroBg} alt="" priority fill />
+
       {/* <div className={styles.glowRed} />
       <div className={styles.glowBlue} />
 

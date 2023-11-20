@@ -11,6 +11,16 @@
   justify-content: center;
   width: 100vw;
   height: 100vh;
+
+  overflow: hidden;
+}
+
+.hero > img:first-child {
+  display: none;
+
+  object-fit: fill;
+
+  filter: blur(14px);
 }
 
 /* .glowBlue,
@@ -106,8 +116,8 @@
     --gradient-title,
     linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.38) 100%)
   );
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -125,6 +135,10 @@
     --gap-service-hero-text: 32px;
     --fs-services-hero-title: 56px;
     --fs-services-hero-subtitle: 18px;
+  }
+
+  .hero > img:first-child {
+    display: initial;
   }
 
   /* .glowBlue {
