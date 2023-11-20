@@ -10,7 +10,7 @@
   display: inline-flex;
   flex-direction: column;
 
-  width: calc((var(--external-width) - var(--margin-card)) / 1.2);
+  min-width: calc((var(--external-width) - var(--margin-card)) / 1.2);
 
   margin-right: var(--margin-card);
 
