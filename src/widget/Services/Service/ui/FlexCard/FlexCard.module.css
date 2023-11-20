@@ -33,7 +33,7 @@
   letter-spacing: -0.8px;
 }
 
-.container {
+.flexContainer {
   display: flex;
   flex-wrap: wrap;
   gap: var(--row-gap-card-container) var(--col-gap-card-container);
