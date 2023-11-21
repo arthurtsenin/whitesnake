@@ -40,7 +40,7 @@
   height: 1px;
   border-radius: 50%;
 
-  opacity: 0.5;
+  opacity: 0.4;
   filter: blur(10px);
 }
 
@@ -153,6 +153,7 @@
   }
 
   .glow {
+    right: -23%;
     bottom: -40%;
   }
 }
@@ -168,6 +169,7 @@
   }
 
   .glow {
+    right: -15%;
     bottom: -20%;
   }
 
