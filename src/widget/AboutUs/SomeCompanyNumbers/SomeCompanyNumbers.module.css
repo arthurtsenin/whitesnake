@@ -1,0 +1,33 @@
+/* .section {
+  --gap-benefits-section: 28px;
+  --gap-benefits-cards: 8px;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--gap-benefits-section);
+}
+
+.container {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-benefits-cards);
+}
+
+@media screen and (min-width: 744px) {
+  .section {
+    --gap-benefits-section: 48px;
+    --gap-benefits-cards: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    --gap-benefits-section: 64px;
+    --gap-benefits-cards: 32px;
+  }
+
+  .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
