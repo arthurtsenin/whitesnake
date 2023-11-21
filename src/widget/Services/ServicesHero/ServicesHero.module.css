@@ -37,11 +37,11 @@
 }
 
 .leftRaindropWrapper {
-  bottom: 15%;
+  bottom: 25%;
   left: 0;
 
   width: 30%;
-  max-width: 150px;
+  max-width: 200px;
 }
 
 .rightRaindropWrapper img,
@@ -63,8 +63,8 @@
 }
 
 .glowRight {
-  top: 10%;
-  right: 0;
+  top: 0;
+  right: -5%;
 
   background-color: #cc0b0b;
   box-shadow: 0 0 28vh 23vh #cc0b0b;
@@ -76,8 +76,8 @@
   left: -10%;
 
   background-color: #7cfefd;
-  box-shadow: 0 0 28vh 23vh #7cfefd;
-  opacity: 0.4;
+  box-shadow: 0 0 31vh 25vh #7cfefd;
+  opacity: 0.2;
 }
 
 .text {
@@ -130,6 +130,7 @@
 
   .glowRight {
     top: 25%;
+    right: 0;
 
     opacity: 0.4;
   }
