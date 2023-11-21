@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FC } from "react";
 
 import styles from "./CompanyNumbers.module.css";
@@ -7,6 +8,8 @@ import { Title, TitleProps } from "@/shared/ui/Title/Title";
 
 import { CompanyNumbersCardType } from "./data";
 import { NumberCard } from "./ui/NumberCard/NumberCard";
+
+import bg from "&/images/about/company-numbers/liquid.png";
 
 type CompanyNumbersProps = {
   cards: Array<CompanyNumbersCardType>;
@@ -22,12 +25,22 @@ export const SomeCompanyNumbers: FC<CompanyNumbersProps> = ({
         <Title title={title} />
 
         <div className={styles.container}>
-          {cards.map((card) => (
-            <>
-              <NumberCard key={card.id} number={card.number} text={card.text} />
-              <div className={styles.divider} />
-            </>
-          ))}
+          <Image src={bg} alt="" fill />
+
+          <div className={styles.glow} />
+
+          <div className={styles.cardsContainer}>
+            {cards.map((card) => (
+              <>
+                <NumberCard
+                  key={card.id}
+                  number={card.number}
+                  text={card.text}
+                />
+                <div className={styles.divider} />
+              </>
+            ))}
+          </div>
         </div>
       </section>
     </Container>

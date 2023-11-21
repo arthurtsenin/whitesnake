@@ -10,13 +10,41 @@
 }
 
 .container {
+  position: relative;
+
+  margin-inline: auto;
+
+  max-width: 425px;
+}
+
+.container > img:first-child {
+  z-index: 1;
+}
+
+.glow {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  width: 1855px;
+  height: 362px;
+
+  border-radius: 100%;
+
+  background: rgba(41, 90, 89, 0.43);
+
+  filter: blur(200px);
+}
+
+.cardsContainer {
+  position: relative;
+  z-index: 3;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   row-gap: var(--gap-company-number-container);
-
-  margin-inline: auto;
-  max-width: 425px;
 }
 
 .divider {
@@ -27,7 +55,7 @@
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.container > p:nth-of-type(8),
+.cardsContainer > p:nth-of-type(8),
 .divider:nth-of-type(8) {
   display: none;
 }
@@ -46,7 +74,7 @@
     --margin-divider: 40px;
   }
 
-  .container > p:nth-of-type(8) {
+  .cardsContainer > p:nth-of-type(8) {
     display: flex;
   }
 
