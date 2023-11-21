@@ -7,22 +7,25 @@ import styles from "./TechCard.module.css";
 import { ServiceCardType } from "@/widget/Services/data";
 
 type TechCardProps = {
-  cardType: string | undefined;
+  cardContainerType: string | undefined;
   cardItems: Array<ServiceCardType>;
 };
 
-export const TechCard: FC<TechCardProps> = ({ cardType, cardItems }) => {
+export const TechCard: FC<TechCardProps> = ({
+  cardContainerType,
+  cardItems,
+}) => {
   return (
     <div
       className={cn(styles.card, {
-        [styles.cardWithGridContainer]: cardType === "grid",
+        [styles.cardWithGridContainer]: cardContainerType === "grid",
       })}
     >
       <p className={styles.title}>Умеем:</p>
 
       <div
         className={cn(styles.container, {
-          [styles.gridContainer]: cardType === "grid",
+          [styles.gridContainer]: cardContainerType === "grid",
         })}
       >
         {cardItems.map((item) => (

@@ -14,7 +14,7 @@ export const Service: FC<ServiceProps> = ({
   title,
   question,
   answer,
-  cardType,
+  cardContainerType,
   cardItems,
   image,
   glowColor,
@@ -41,7 +41,10 @@ export const Service: FC<ServiceProps> = ({
             ))}
           </div>
 
-          <TechCard cardType={cardType} cardItems={cardItems} />
+          <TechCard
+            cardContainerType={cardContainerType}
+            cardItems={cardItems}
+          />
         </div>
       </section>
     </Container>

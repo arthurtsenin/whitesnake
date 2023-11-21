@@ -42,7 +42,7 @@ export type ServiceDataType = {
   title: string;
   question: string;
   answer: Array<string>;
-  cardType?: string;
+  cardContainerType?: string;
   cardItems: Array<ServiceCardType>;
   image?: StaticImageData;
   glowColor?: string;
@@ -55,7 +55,7 @@ export const TEAM_EXTENSION_DATA: ServiceDataType = {
     "Вы можете легко интегрировать наших штатных специалистов в свою команду, как правило, в течение нескольких дней. Это не просто дополнительные рабочие руки - это квалифицированные специалисты, способные восполнить пробелы в квалификации вашей команды и ускорить темпы реализации проекта.",
     "Вы сохраняете полный контроль над ситуацией, а мы дополняем вашу команду необходимыми знаниями и опытом в области бэкенда. С нашей помощью вы сможете создать более эффективную команду, быстро адаптироваться к изменениям и обеспечить выполнение проекта в срок и в рамках бюджета.",
   ],
-  cardType: "grid",
+  cardContainerType: "grid",
   cardItems: [
     { id: 1, icon: python, text: "Python" },
     { id: 2, icon: django, text: "Django" },
