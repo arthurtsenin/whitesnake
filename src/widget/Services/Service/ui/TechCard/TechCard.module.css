@@ -40,6 +40,16 @@
   gap: var(--row-gap-card-container) var(--col-gap-card-container);
 }
 
+.gridContainer {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gridContainer .item:last-child {
+  grid-column: 2/4;
+}
+
 .item {
   display: inline-flex;
   align-items: center;
@@ -60,6 +70,23 @@
   letter-spacing: -0.5px;
 }
 
+@media screen and (min-width: 600px) {
+  .gridContainer {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .gridContainer .item:last-child {
+    grid-column: 4/6;
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .cardWithGridContainer {
+    width: 75%;
+  }
+}
+
 @media screen and (min-width: 960px) {
   .card {
     --gap-card: 32px;
@@ -72,6 +99,10 @@
 
     padding: 42px 32px 50px;
   }
+
+  .cardWithGridContainer {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -82,12 +113,17 @@
     --col-gap-card-container: 36px;
     --gap-card-item: 16px;
     --fs-service-card-title: 28px;
-    --fs-service-card-text: 21px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   .card {
+    --fs-service-card-text: 21px;
+
+    width: 80%;
+  }
+
+  .cardWithGridContainer {
     width: 70%;
   }
 }

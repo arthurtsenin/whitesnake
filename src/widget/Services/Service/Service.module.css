@@ -23,8 +23,8 @@
 
 .glow {
   position: absolute;
-  bottom: 30%;
   right: -15%;
+  bottom: 30%;
   z-index: 2;
 
   width: 1px;
@@ -186,8 +186,9 @@
   }
 
   .glow {
-    bottom: -35%;
     right: 20%;
+    bottom: -35%;
+
     opacity: 0.4;
   }
 
@@ -204,8 +205,8 @@
   }
 
   .glow {
-    bottom: -15%;
     right: 10%;
+    bottom: -15%;
   }
 
   .answer {
