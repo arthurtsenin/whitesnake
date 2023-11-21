@@ -16,14 +16,18 @@ export const Service: FC<ServiceProps> = ({
   answer,
   cardItems,
   image,
+  glowColor,
 }) => {
   return (
     <Container>
       <section className={styles.container}>
         {image && (
-          <div className={styles.raindropWrapper}>
-            <Image src={image} alt="" />
-          </div>
+          <>
+            <div className={styles.raindropWrapper}>
+              <Image src={image} alt="" />
+            </div>
+            <div className={styles.glow} data-glow-color={glowColor} />
+          </>
         )}
 
         <div className={styles.content}>
