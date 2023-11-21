@@ -5,10 +5,9 @@
   position: relative;
 }
 
-.raindropWrapper {
+.raindropWrapper,
+.additionalRaindropWrapper {
   position: absolute;
-  right: -55%;
-  bottom: 10%;
   z-index: 1;
 
   width: 100%;
@@ -16,26 +15,47 @@
   aspect-ratio: 1/1;
 }
 
-.raindropWrapper img {
+.additionalRaindropWrapper {
+  top: -10%;
+  right: -65%;
+}
+
+.raindropWrapper {
+  right: -55%;
+  bottom: -80%;
+}
+
+.raindropWrapper img,
+.additionalRaindropWrapper img {
   width: 100%;
   height: 100%;
 }
 
-.glow {
+.glow,
+.additionalGlow {
   position: absolute;
-  right: -15%;
-  bottom: 30%;
   z-index: 2;
 
   width: 1px;
   height: 1px;
   border-radius: 50%;
 
-  opacity: 0.7;
+  opacity: 0.5;
   filter: blur(10px);
 }
 
-.glow[data-glow-color="red"] {
+.additionalGlow {
+  top: 15%;
+  right: -10%;
+}
+
+.glow {
+  right: -15%;
+  bottom: -60%;
+}
+
+.glow[data-glow-color="red"],
+.additionalGlow {
   background-color: rgba(204, 11, 11, 0.5);
   box-shadow: 0 0 var(--glow-blur-radius) var(--glow-spread-radius)
     rgba(204, 11, 11, 0.5);
@@ -119,21 +139,31 @@
 }
 
 @media screen and (min-width: 500px) {
+  .additionalRaindropWrapper {
+    top: -25%;
+    right: -45%;
+
+    width: 70%;
+  }
+
   .raindropWrapper {
     right: -47%;
-    bottom: 10%;
 
     width: 80%;
   }
 
   .glow {
-    bottom: 40%;
+    bottom: -40%;
   }
 }
 
 @media screen and (min-width: 744px) {
+  .additionalRaindropWrapper,
+  .additionalGlow {
+    display: none;
+  }
+
   .raindropWrapper {
-    right: -47%;
     bottom: -75%;
   }
 
