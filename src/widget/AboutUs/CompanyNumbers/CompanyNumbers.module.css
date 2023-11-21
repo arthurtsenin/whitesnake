@@ -1,5 +1,5 @@
-/* .section {
-  --gap-benefits-section: 28px;
+.section {
+  --gap-company-numbers-section: 28px;
   --gap-benefits-cards: 8px;
 
   display: flex;
@@ -30,4 +30,4 @@
   .container {
     grid-template-columns: repeat(3, 1fr);
   }
-} */
+}

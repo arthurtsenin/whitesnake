@@ -1,10 +1,10 @@
-export type SomeCompanyNumbersCardType = {
+export type CompanyNumbersCardType = {
   id?: number;
   number: string;
   text: string;
 };
 
-export const SOME_COMPANY_NUMBERS_DATA: Array<SomeCompanyNumbersCardType> = [
+export const COMPANY_NUMBERS_DATA: Array<CompanyNumbersCardType> = [
   {
     id: 1,
     number: "120",
