@@ -8,6 +8,7 @@ import performance from "&/images/services/consulting/performance.svg";
 import refactoring from "&/images/services/consulting/refactoring.svg";
 import storage from "&/images/services/consulting/storage.svg";
 import vulnerability from "&/images/services/consulting/vulnerability.svg";
+import dough from "&/images/services/dough.png";
 import backdev from "&/images/services/end-to-end/backend-development.svg";
 import dataeng from "&/images/services/end-to-end/data-eng.svg";
 import dataadmin from "&/images/services/end-to-end/database-administration.svg";
@@ -45,6 +46,7 @@ export type ServiceDataType = {
   cardContainerType?: string;
   cardItems: Array<ServiceCardType>;
   image?: StaticImageData;
+  additionalImage?: StaticImageData;
   glowColor?: string;
 };
 
@@ -73,6 +75,7 @@ export const TEAM_EXTENSION_DATA: ServiceDataType = {
     { id: 14, icon: aws, text: "Amazon Web Services" },
   ],
   image: blot,
+  additionalImage: dough,
   glowColor: "red",
 };
 
