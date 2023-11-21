@@ -5,7 +5,6 @@ import styles from "./ServicesHero.module.css";
 import heroBg from "&/images/services/heroBg.png";
 import leftRaindrop from "&/images/services/leftCorner.png";
 import rightRaindrop from "&/images/services/rightCorner.png";
-// import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
 
 export const ServicesHero = () => {
   return (
