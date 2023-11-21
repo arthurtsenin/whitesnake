@@ -1,9 +1,16 @@
 import { FC } from "react";
 
-import { SomeCompanyNumbersCardType } from "../../data";
+import styles from "./NumberCard.module.css";
 
-type NumberCardProps = object & SomeCompanyNumbersCardType;
+import { CompanyNumbersCardType } from "../../data";
 
-export const NumberCard: FC<NumberCardProps> = () => {
-  return "NumberCard";
+type NumberCardProps = object & CompanyNumbersCardType;
+
+export const NumberCard: FC<NumberCardProps> = ({ number, text }) => {
+  return (
+    <p className={styles.card}>
+      <span className={styles.number}>{number}</span>
+      <span className={styles.text}>{text}</span>
+    </p>
+  );
 };

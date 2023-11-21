@@ -23,7 +23,10 @@ export const SomeCompanyNumbers: FC<CompanyNumbersProps> = ({
 
         <div className={styles.container}>
           {cards.map((card) => (
-            <NumberCard key={card.id} number={card.number} text={card.text} />
+            <>
+              <NumberCard key={card.id} number={card.number} text={card.text} />
+              <div className={styles.divider} />
+            </>
           ))}
         </div>
       </section>

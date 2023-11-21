@@ -1,33 +1,75 @@
 .section {
   --gap-company-numbers-section: 28px;
-  --gap-benefits-cards: 8px;
+  --gap-company-number-container: 12px;
+  --width-divider: 1px;
+  --margin-divider: 12px;
 
   display: flex;
   flex-direction: column;
-  row-gap: var(--gap-benefits-section);
+  row-gap: var(--gap-company-numbers-section);
 }
 
 .container {
-  display: grid;
-  grid-auto-rows: 1fr;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--gap-benefits-cards);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: var(--gap-company-number-container);
+
+  margin-inline: auto;
+  max-width: 425px;
+}
+
+.divider {
+  margin-inline: var(--margin-divider);
+
+  width: var(--width-divider);
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.container > p:nth-of-type(8),
+.divider:nth-of-type(8) {
+  display: none;
+}
+
+.divider:nth-of-type(3),
+.divider:nth-of-type(6),
+.divider:nth-of-type(10) {
+  display: none;
 }
 
 @media screen and (min-width: 744px) {
   .section {
-    --gap-benefits-section: 48px;
-    --gap-benefits-cards: 20px;
+    --gap-company-numbers-section: 48px;
+    --gap-company-number-container: 40px;
+    --width-divider: 1.25px;
+    --margin-divider: 40px;
+  }
+
+  .container > p:nth-of-type(8) {
+    display: flex;
+  }
+
+  .divider:nth-of-type(8) {
+    display: initial;
+  }
+
+  .divider:nth-of-type(3),
+  .divider:nth-of-type(6),
+  .divider:nth-of-type(10) {
+    display: initial;
+  }
+
+  .divider:nth-of-type(3n) {
+    display: none;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .section {
-    --gap-benefits-section: 64px;
-    --gap-benefits-cards: 32px;
-  }
-
-  .container {
-    grid-template-columns: repeat(3, 1fr);
+    --gap-company-numbers-section: 64px;
+    --gap-company-number-container: 64px;
+    --width-divider: 2px;
+    --margin-divider: 64px;
   }
 }
