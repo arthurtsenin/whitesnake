@@ -21,7 +21,7 @@ export const TechCard: FC<TechCardProps> = ({ cardType, cardItems }) => {
       <p className={styles.title}>Умеем:</p>
 
       <div
-        className={cn(styles.flexContainer, {
+        className={cn(styles.container, {
           [styles.gridContainer]: cardType === "grid",
         })}
       >
