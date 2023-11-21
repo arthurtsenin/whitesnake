@@ -33,15 +33,15 @@
   top: 0;
   right: 0;
 
-  width: 60%;
+  width: 40%;
 }
 
 .leftRaindropWrapper {
-  bottom: 22%;
+  bottom: 15%;
   left: 0;
 
   width: 30%;
-  max-width: 200px;
+  max-width: 150px;
 }
 
 .rightRaindropWrapper img,
@@ -121,7 +121,7 @@
   }
 
   .rightRaindropWrapper {
-    width: 50%;
+    width: 30%;
   }
 
   .leftRaindropWrapper {
@@ -180,10 +180,6 @@
     --fs-services-hero-subtitle: 20px;
   }
 
-  .rightRaindropWrapper {
-    width: 40%;
-  }
-
   .glowLeft {
     bottom: 20%;
     left: 0%;
@@ -199,16 +195,16 @@
     --fs-services-hero-subtitle: 24px;
   }
 
-  .rightRaindropWrapper {
-    width: 30%;
-  }
-
   .glowRight {
     top: 10%;
   }
 }
 
 @media screen and (min-width: 1440px) {
+  .rightRaindropWrapper {
+    width: 25%;
+  }
+
   .glowRight {
     right: 0%;
   }
