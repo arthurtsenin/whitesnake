@@ -21,26 +21,20 @@ export const SomeCompanyNumbers: FC<CompanyNumbersProps> = ({
 }) => {
   return (
     <Container>
-      <section className={styles.section} style={{ marginTop: "250px" }}>
+      <section className={styles.section} style={{ marginBlock: "50px" }}>
         <Title title={title} />
 
+        <Image src={bg} alt="" fill />
+
+        <div className={styles.glow} />
+
         <div className={styles.container}>
-          <Image src={bg} alt="" fill />
-
-          <div className={styles.glow} />
-
-          <div className={styles.cardsContainer}>
-            {cards.map((card) => (
-              <>
-                <NumberCard
-                  key={card.id}
-                  number={card.number}
-                  text={card.text}
-                />
-                <div className={styles.divider} />
-              </>
-            ))}
-          </div>
+          {cards.map((card) => (
+            <>
+              <NumberCard key={card.id} number={card.number} text={card.text} />
+              <div className={styles.divider} />
+            </>
+          ))}
         </div>
       </section>
     </Container>

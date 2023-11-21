@@ -7,44 +7,42 @@
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-company-numbers-section);
-}
 
-.container {
   position: relative;
-
-  margin-inline: auto;
-
-  max-width: 425px;
 }
 
-.container > img:first-child {
+.section > img {
   z-index: 1;
 }
 
 .glow {
   position: absolute;
-  inset: 0;
+  top: 15%;
+  left: 0;
 
   z-index: 2;
 
-  width: 1855px;
-  height: 362px;
+  width: 100%;
+  height: 100%;
 
   border-radius: 100%;
 
   background: rgba(41, 90, 89, 0.43);
 
-  filter: blur(200px);
+  filter: blur(80px);
 }
 
-.cardsContainer {
+.container {
   position: relative;
   z-index: 3;
 
+  margin-inline: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   row-gap: var(--gap-company-number-container);
+
+  max-width: 425px;
 }
 
 .divider {
@@ -55,7 +53,7 @@
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.cardsContainer > p:nth-of-type(8),
+.container > p:nth-of-type(8),
 .divider:nth-of-type(8) {
   display: none;
 }
@@ -74,7 +72,7 @@
     --margin-divider: 40px;
   }
 
-  .cardsContainer > p:nth-of-type(8) {
+  .container > p:nth-of-type(8) {
     display: flex;
   }
 
