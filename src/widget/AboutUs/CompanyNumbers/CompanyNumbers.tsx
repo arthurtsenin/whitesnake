@@ -18,10 +18,7 @@ type CompanyNumbersProps = {
 export const CompanyNumbers: FC<CompanyNumbersProps> = ({ title, cards }) => {
   return (
     <Container>
-      <section
-        className={styles.section}
-        style={{ marginTop: "100px", marginBottom: "250px" }}
-      >
+      <section className={styles.section}>
         <Title title={title} />
 
         <Image src={bg} alt="" fill />
