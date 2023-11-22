@@ -1,0 +1,135 @@
+.card {
+  --gap-card: 24px;
+  --card-radius: 7px;
+  --row-gap-card-container: 14px;
+  --col-gap-card-container: 24px;
+  --gap-card-item: 6px;
+  --fs-service-card-title: 16px;
+  --fs-service-card-text: 10px;
+  --clr-service-card-title: #fff;
+  --clr-service-card-text: rgba(255, 255, 255, 0.5);
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  width: 90%;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  border-radius: var(--card-radius);
+
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(2.2031288146972656px);
+  row-gap: var(--gap-card);
+}
+
+.title {
+  color: var(--clr-service-card-title);
+  font-weight: var(--fw-bold);
+
+  font-size: var(--fs-service-card-title);
+  line-height: 100%;
+  letter-spacing: -0.8px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--row-gap-card-container) var(--col-gap-card-container);
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gridContainer .item:last-child {
+  grid-column: 2/4;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+
+  font-size: var(--fs-service-card-text);
+  column-gap: var(--gap-card-item);
+}
+
+.item > img:first-child {
+  width: 2em;
+  height: 2em;
+}
+
+.text {
+  color: var(--clr-service-card-text);
+  font-weight: var(--fw-regular);
+  line-height: 130%;
+  letter-spacing: -0.5px;
+}
+
+@media screen and (min-width: 600px) {
+  .gridContainer {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .gridContainer .item:last-child {
+    grid-column: 4/6;
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .cardWithGridContainer {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .card {
+    --gap-card: 32px;
+    --card-radius: 18px;
+    --row-gap-card-container: 30px;
+    --col-gap-card-container: 27px;
+    --gap-card-item: 12px;
+    --fs-service-card-title: 25px;
+    --fs-service-card-text: 16px;
+
+    padding: 42px 32px 50px;
+  }
+
+  .cardWithGridContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card {
+    --gap-card: 44px;
+    --card-radius: 25px;
+    --row-gap-card-container: 40px;
+    --col-gap-card-container: 36px;
+    --gap-card-item: 16px;
+    --fs-service-card-title: 28px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    --fs-service-card-text: 21px;
+
+    width: 80%;
+  }
+
+  .cardWithGridContainer {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .card {
+    padding: 56px 68px 61px 61px;
+  }
+}
