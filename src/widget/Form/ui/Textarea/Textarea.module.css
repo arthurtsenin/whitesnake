@@ -1,4 +1,7 @@
 .textarea {
+  /* stylelint-disable */
+  all: unset;
+  /* stylelint-enable */
   --clr-valid-input-text: #fff;
 
   display: block;
@@ -20,7 +23,6 @@
 
   resize: none;
 
-  all: unset;
   caret-color: #d9d9d9;
 }
 
