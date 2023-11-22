@@ -10,6 +10,7 @@ import styles from "./Navigation.module.css";
 import { checkPath } from "@/shared/utils/checkPath";
 
 import { NAVIGATION_LINKS } from "./routes";
+import { DropDown } from "./ui/DropDown/DropDown";
 
 type NavigationProps = {
   clickHandler?: () => void;
@@ -33,6 +34,7 @@ export const Navigation: FC<NavigationProps> = ({ clickHandler }) => {
           </Link>
         </li>
       ))}
+      <DropDown />
     </>
   );
 };

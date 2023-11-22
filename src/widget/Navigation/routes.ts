@@ -17,8 +17,8 @@ export const ROUTES = {
   TWO: { label: "Портфолио", href: "portfolio" },
   THREE: { label: "Услуги", href: "services" },
   FOUR: { label: "О нас", href: "about" },
-  FIVE: { label: "Вакансии", href: "vacancies" },
-  SIX: { label: "Карьера", href: "career" },
+  FIVE: { label: "Карьера", href: "career" },
+  SIX: { label: "Вакансии", href: "vacancies" },
 };
 
 export const DYNAMIC_ROUTES: Record<string, string> = {
@@ -56,10 +56,5 @@ export const NAVIGATION_LINKS: LinksType = {
     id: 5,
     href: `/${ROUTES.FIVE.href}`,
     label: ROUTES.FIVE.label,
-  },
-  [ROUTES.SIX.href]: {
-    id: 6,
-    href: `/${ROUTES.SIX.href}`,
-    label: ROUTES.SIX.label,
   },
 };

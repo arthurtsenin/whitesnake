@@ -5,7 +5,7 @@ import { FC } from "react";
 import styles from "./VacancyHero.module.css";
 
 import { Button } from "@/shared";
-import { ROUTES } from "@/widget/Navigation/routes";
+import { NAVIGATION_LINKS } from "@/widget/Navigation/routes";
 
 import arrow from "&/images/vacancies/arrow.png";
 import raindrop from "&/images/vacancies/hero/raindrop-lower.png";
@@ -14,8 +14,13 @@ import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
 type VacancyHeroProps = {
   title: string;
   subtitle: string;
+  department: string;
 };
-export const VacancyHero: FC<VacancyHeroProps> = ({ title, subtitle }) => {
+export const VacancyHero: FC<VacancyHeroProps> = ({
+  title,
+  subtitle,
+  department,
+}) => {
   return (
     <div className={styles.hero}>
       <div className={styles.glowRed} />
@@ -38,7 +43,10 @@ export const VacancyHero: FC<VacancyHeroProps> = ({ title, subtitle }) => {
       </div>
 
       <div className={styles.content}>
-        <Link className={styles.back} href={`/${ROUTES.FIVE.href}`}>
+        <Link
+          className={styles.back}
+          href={`${NAVIGATION_LINKS.career.href}/${department}`}
+        >
           <Image src={arrow} alt="Все вакансии." />
           <span className={styles.link}>Назад к вакансиям</span>
         </Link>

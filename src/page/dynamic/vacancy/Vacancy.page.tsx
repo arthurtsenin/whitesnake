@@ -10,6 +10,7 @@ type VacancyPageLayoutProps = {
   subtitle: string;
   titles?: Array<string>;
   lists?: Array<Array<string> | undefined>;
+  department: string;
 };
 
 export const VacancyPageLayout: FC<VacancyPageLayoutProps> = ({
@@ -18,10 +19,11 @@ export const VacancyPageLayout: FC<VacancyPageLayoutProps> = ({
   subtitle,
   titles,
   lists,
+  department,
 }) => {
   return (
     <>
-      <VacancyHero title={title} subtitle={subtitle} />
+      <VacancyHero title={title} subtitle={subtitle} department={department} />
       <VacancyDescription titles={titles} lists={lists} />
       <VacancyForm jobTitle={jobTitle} />
     </>

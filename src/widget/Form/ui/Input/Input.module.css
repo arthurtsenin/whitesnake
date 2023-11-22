@@ -1,7 +1,8 @@
 .input {
-  --clr-valid-input-text: #fff;
-
+  /* stylelint-disable */
   all: unset;
+  /* stylelint-enable */
+  --clr-valid-input-text: #fff;
 
   display: block;
 

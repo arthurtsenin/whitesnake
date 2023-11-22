@@ -11,9 +11,10 @@ import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
 
 type VacanciesHeroProps = {
   path: string;
+  department: string;
 };
 
-export const VacanciesHero: FC<VacanciesHeroProps> = ({ path }) => {
+export const VacanciesHero: FC<VacanciesHeroProps> = ({ path, department }) => {
   return (
     <div className={styles.hero}>
       <div className={styles.glowRed} />
@@ -36,7 +37,9 @@ export const VacanciesHero: FC<VacanciesHeroProps> = ({ path }) => {
       </div>
 
       <div className={styles.content}>
-        <h1 className={styles.title}>Вакансии</h1>
+        <h1 className={styles.title}>
+          Вакансии <span>{department}</span>
+        </h1>
         <p className={styles.subtitle}>
           Мы активно ищем талантливых, преданных своему делу профессионалов в
           различных областях.Посмотрите, какая возможность из списка ниже

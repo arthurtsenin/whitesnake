@@ -7,8 +7,6 @@ import {
 import { Service } from "@/widget/Services/Service/Service";
 import { ServicesHero } from "@/widget/Services/ServicesHero/ServicesHero";
 
-import { Advantages } from "../../widget/Advantages/Advantages";
-
 export default function ServicesPage() {
   return (
     <>
@@ -17,7 +15,6 @@ export default function ServicesPage() {
       <Service {...TEAM_EXTENSION_DATA} />
       <Service {...END_TO_END_DATA} />
       <Service {...CONSULTING_DATA} />
-      <Advantages />
     </>
   );
 }
