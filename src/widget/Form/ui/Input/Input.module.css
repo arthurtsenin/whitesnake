@@ -1,7 +1,8 @@
 .input {
-  --clr-valid-input-text: #fff;
-
+  /* stylelint-disable */
   all: unset;
+  /* stylelint-enable */
+  --clr-valid-input-text: #fff;
 
   display: block;
 
@@ -14,13 +15,15 @@
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 
-  font-size: 16px;
   color: var(--clr-valid-input-text);
-  caret-color: #d9d9d9;
+
+  font-size: 16px;
 
   background-color: transparent;
 
   backface-visibility: hidden;
+
+  caret-color: #d9d9d9;
 }
 
 .input::placeholder {

@@ -1,7 +1,8 @@
 .textarea {
-  --clr-valid-input-text: #fff;
-
+  /* stylelint-disable */
   all: unset;
+  /* stylelint-enable */
+  --clr-valid-input-text: #fff;
 
   display: block;
 
@@ -12,15 +13,17 @@
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
 
+  color: var(--clr-valid-input-text);
+
   font-size: 16px;
   font-family: arial;
-  color: var(--clr-valid-input-text);
-  caret-color: #d9d9d9;
 
   background-color: transparent;
+  backface-visibility: hidden;
 
   resize: none;
-  backface-visibility: hidden;
+
+  caret-color: #d9d9d9;
 }
 
 .textarea::placeholder {
