@@ -42,13 +42,13 @@ export const COMPANY_NUMBERS_DATA: Array<CompanyNumbersCardType> = [
   },
   {
     id: 8,
-    number: "93%",
-    text: "Наших стажеров получили предложение о работе",
+    number: "4",
+    text: "Четыре",
   },
   {
     id: 9,
-    number: "4",
-    text: "Четыре",
+    number: "93%",
+    text: "Наших стажеров получили предложение о работе",
   },
   {
     id: 10,
