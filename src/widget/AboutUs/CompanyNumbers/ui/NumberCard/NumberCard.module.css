@@ -53,6 +53,15 @@
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+@media screen and (min-width: 744px) {
+  .card {
+    --fs-content-number: 72px;
+    --fs-content-text: 12px;
+    --width-divider: 1.25px;
+    --margin-divider: 24px;
+  }
+}
+
 @media screen and (min-width: 960px) {
   .card {
     --fs-content-number: 100px;

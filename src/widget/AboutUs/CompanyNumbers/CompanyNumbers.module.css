@@ -54,6 +54,13 @@
   display: none;
 }
 
+@media screen and (min-width: 744px) {
+  .container {
+    justify-content: space-evenly;
+    max-width: 620px;
+  }
+}
+
 @media screen and (min-width: 960px) {
   .section {
     --gap-company-numbers-section: 48px;
@@ -61,6 +68,7 @@
   }
 
   .container {
+    justify-content: center;
     max-width: unset;
   }
 
