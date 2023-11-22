@@ -19,7 +19,11 @@
   width: 100vw;
   height: auto;
 
-  background: linear-gradient(330deg, #000 16.22%, rgb(0 0 0 / 0%) 74.01%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(41, 90, 89, 0.01) 740%
+  );
 
   content: "";
 }

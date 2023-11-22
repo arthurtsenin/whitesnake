@@ -121,17 +121,18 @@
   flex-direction: column;
   gap: 24px;
   order: 3;
-
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
   box-sizing: border-box;
   width: 30%;
   height: fit-content;
   padding: 32px;
 
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+
+  font-size: 12px;
+
   background: #000;
   cursor: pointer;
-  font-size: 12px;
 }
 
 .benefit p:nth-child(1),
