@@ -1,5 +1,6 @@
 import PageScript from "@/shared/analitics/PageScript";
 import { ACCORDIONS_DATA } from "@/widget/Accordion/data";
+import { Advantages } from "@/widget/Advantages/Advantages";
 import { CareerAccordion } from "@/widget/Career/CareerAccordion/CareerAccordion";
 import { CareerHero } from "@/widget/Career/CareerHero/CareerHero";
 import { CareerVacanciesCards } from "@/widget/Career/CareerVacanciesCards/CareerVacanciesCards";
@@ -8,8 +9,6 @@ import { ManagerBenefits } from "@/widget/Career/ManagerBenefits/ManagerBenefits
 import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
 import { InternshipOffice } from "@/widget/Internship/InternshipOffice/InternshipOffice";
 import { InternshipWorkBenefits } from "@/widget/Internship/InternshipWorkBenefits/InternshipWorkBenefits";
-
-import { Advantages } from "../../widget/Advantages/Advantages";
 
 export type VacancyType = {
   id: string;
