@@ -77,6 +77,7 @@
   }
 
   .text {
+    width: 80%;
     letter-spacing: -0.28px;
   }
 }
@@ -89,6 +90,10 @@
     --margin-divider: 40px;
 
     max-width: 20%;
+  }
+
+  .content {
+    justify-content: flex-start;
   }
 
   .number {
@@ -106,10 +111,6 @@
     --fs-content-text: 16px;
     --width-divider: 2px;
     --margin-divider: 42px;
-  }
-
-  .text {
-    width: 80%;
   }
 }
 
