@@ -33,7 +33,7 @@ export const formTemplate = [
   },
   {
     id: 4,
-    type: "text",
+    type: "tel",
     placeholder: "Телефон",
     form_key: FORM_KEYS.phone,
   },
