@@ -6,9 +6,10 @@
   --margin-divider: 12px;
 
   box-sizing: border-box;
+
   display: flex;
 
-  max-width: 28%;
+  max-width: 33%;
 }
 
 .content {
@@ -47,7 +48,7 @@
 
 .divider {
   margin-inline: var(--margin-divider);
-  width: var(--width-divider);
+  min-width: var(--width-divider);
 
   background-color: rgba(255, 255, 255, 0.3);
 }

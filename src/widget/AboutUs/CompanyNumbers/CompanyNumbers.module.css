@@ -37,13 +37,13 @@
   margin-inline: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   row-gap: var(--gap-company-number-container);
 
   max-width: 425px;
 }
 
-.container > div:nth-of-type(8) {
+.container > div:nth-of-type(9) {
   display: none;
 }
 
