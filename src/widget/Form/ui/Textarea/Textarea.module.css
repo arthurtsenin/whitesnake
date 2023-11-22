@@ -1,6 +1,8 @@
 .textarea {
   --clr-valid-input-text: #fff;
 
+  all: unset;
+
   display: block;
 
   box-sizing: border-box;
