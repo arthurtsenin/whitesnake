@@ -23,7 +23,13 @@ export const TabList: FC<TabListProps> = ({
           <Tab
             key={tab.id}
             name={tab.name}
-            active={currentTab === tab.name ? "active" : ""}
+            active={
+              currentTab === tab.name
+                ? currentTab === "Плюшки"
+                  ? "green"
+                  : "active"
+                : ""
+            }
             clickHandler={() => clickHandler(tab.name)}
           />
         ))}

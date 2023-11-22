@@ -5,7 +5,8 @@ import { InternshipHero } from "@/widget/Internship/InternshipHero/InternshipHer
 import { InternshipOffice } from "@/widget/Internship/InternshipOffice/InternshipOffice";
 import { InternshipWorkBenefits } from "@/widget/Internship/InternshipWorkBenefits/InternshipWorkBenefits";
 import { InternshipCardsContainer } from "@/widget/InternshipCardsContainer/InternshipCardsContainer";
-import { TileTab } from "@/widget/TileTab/TileTab";
+
+import { Advantages } from "../../widget/Advantages/Advantages";
 
 export default function InternshipPage() {
   return (
@@ -15,7 +16,7 @@ export default function InternshipPage() {
       <InternshipCardsContainer />
       <InternshipWorkBenefits />
       <InternshipOffice />
-      <TileTab />
+      <Advantages />
       <InternshipAccardion />
       <InternshipForm />
     </>

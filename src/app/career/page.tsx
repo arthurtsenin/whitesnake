@@ -1,7 +1,5 @@
 import PageScript from "@/shared/analitics/PageScript";
 import { ACCORDIONS_DATA } from "@/widget/Accordion/data";
-import { Benefits } from "@/widget/Career/Benefits/Benefits";
-import { BENEFITS_DATA } from "@/widget/Career/Benefits/data";
 import { CareerAccordion } from "@/widget/Career/CareerAccordion/CareerAccordion";
 import { CareerHero } from "@/widget/Career/CareerHero/CareerHero";
 import { CareerVacanciesCards } from "@/widget/Career/CareerVacanciesCards/CareerVacanciesCards";
@@ -10,7 +8,8 @@ import { ManagerBenefits } from "@/widget/Career/ManagerBenefits/ManagerBenefits
 import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
 import { InternshipOffice } from "@/widget/Internship/InternshipOffice/InternshipOffice";
 import { InternshipWorkBenefits } from "@/widget/Internship/InternshipWorkBenefits/InternshipWorkBenefits";
-import { TileTab } from "@/widget/TileTab/TileTab";
+
+import { Advantages } from "../../widget/Advantages/Advantages";
 
 export type VacancyType = {
   id: string;
@@ -103,9 +102,8 @@ export default async function CareerPage() {
         subtitle="Мы поощряем ребят, которые берут стажеров под личное руководство и даём возможность расти в сторону менеджмента"
         benefits={MANAGER_BENEFITS_DATA}
       />
-      <Benefits title="Бенефиты" benefits={BENEFITS_DATA} />
+      <Advantages />
       <InternshipOffice />
-      <TileTab />
       <CareerAccordion
         title="Часто задаваемые вопросы"
         accordions={ACCORDIONS_DATA}

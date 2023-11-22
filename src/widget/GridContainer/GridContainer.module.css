@@ -164,8 +164,8 @@
 }
 
 .wrapper:nth-child(7) > figure [data-glowright] {
-  bottom: 40%;
   right: 12%;
+  bottom: 40%;
 
   background-color: #8c6529;
   box-shadow: 0 0 25vh 10vh #8c6529;
@@ -188,11 +188,13 @@
 
   .wrapper:nth-child(3) > figure [data-glowleft] {
     left: 0;
+
     opacity: 0.5;
   }
 
   .wrapper:nth-child(3) > figure [data-glowright] {
     right: 0;
+
     opacity: 0.5;
   }
 
