@@ -15,10 +15,7 @@ type CompanyNumbersProps = {
   cards: Array<CompanyNumbersCardType>;
 } & TitleProps;
 
-export const SomeCompanyNumbers: FC<CompanyNumbersProps> = ({
-  title,
-  cards,
-}) => {
+export const CompanyNumbers: FC<CompanyNumbersProps> = ({ title, cards }) => {
   return (
     <Container>
       <section className={styles.section} style={{ marginBlock: "50px" }}>
