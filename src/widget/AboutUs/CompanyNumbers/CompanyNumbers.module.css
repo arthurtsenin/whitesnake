@@ -60,14 +60,23 @@
     --gap-company-number-container: 40px;
   }
 
-  .container > div:nth-of-type(8) {
+  .container {
+    max-width: unset;
+  }
+
+  .container > div:nth-of-type(9) {
     display: flex;
   }
 
   .container > div:nth-of-type(3) > span:last-child,
-  .container > div:nth-of-type(6) > span:last-child,
-  .container > div:nth-of-type(10) > span:last-child {
+  .container > div:nth-of-type(6) > span:last-child {
     display: initial;
+  }
+
+  /* Hide few dividers */
+  .container > div:nth-of-type(4) > span:last-child,
+  .container > div:nth-of-type(8) > span:last-child {
+    display: none;
   }
 }
 

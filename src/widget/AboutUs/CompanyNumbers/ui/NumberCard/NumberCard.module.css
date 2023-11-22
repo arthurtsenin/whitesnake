@@ -8,7 +8,7 @@
   box-sizing: border-box;
 
   display: flex;
-
+  justify-content: center;
   max-width: 33%;
 }
 
@@ -60,7 +60,7 @@
     --width-divider: 1.25px;
     --margin-divider: 40px;
 
-    max-width: unset;
+    max-width: 26%;
   }
 
   .number {
