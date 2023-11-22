@@ -1,8 +1,6 @@
 .section {
   --gap-company-numbers-section: 28px;
   --gap-company-number-container: 12px;
-  --width-divider: 1px;
-  --margin-divider: 12px;
 
   display: flex;
   flex-direction: column;
@@ -45,49 +43,31 @@
   max-width: 425px;
 }
 
-.divider {
-  margin-inline: var(--margin-divider);
-
-  width: var(--width-divider);
-
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.container > p:nth-of-type(8),
-.divider:nth-of-type(8) {
+.container > div:nth-of-type(8) {
   display: none;
 }
 
-.divider:nth-of-type(3),
-.divider:nth-of-type(6),
-.divider:nth-of-type(10) {
+/* Hide few dividers */
+.container > div:nth-of-type(3) > span:last-child,
+.container > div:nth-of-type(6) > span:last-child,
+.container > div:nth-of-type(10) > span:last-child {
   display: none;
 }
 
-@media screen and (min-width: 744px) {
+@media screen and (min-width: 960px) {
   .section {
     --gap-company-numbers-section: 48px;
     --gap-company-number-container: 40px;
-    --width-divider: 1.25px;
-    --margin-divider: 40px;
   }
 
-  .container > p:nth-of-type(8) {
+  .container > div:nth-of-type(8) {
     display: flex;
   }
 
-  .divider:nth-of-type(8) {
+  .container > div:nth-of-type(3) > span:last-child,
+  .container > div:nth-of-type(6) > span:last-child,
+  .container > div:nth-of-type(10) > span:last-child {
     display: initial;
-  }
-
-  .divider:nth-of-type(3),
-  .divider:nth-of-type(6),
-  .divider:nth-of-type(10) {
-    display: initial;
-  }
-
-  .divider:nth-of-type(3n) {
-    display: none;
   }
 }
 
@@ -95,7 +75,5 @@
   .section {
     --gap-company-numbers-section: 64px;
     --gap-company-number-container: 64px;
-    --width-divider: 2px;
-    --margin-divider: 64px;
   }
 }

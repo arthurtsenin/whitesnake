@@ -1,19 +1,26 @@
 .card {
-  --fs-card-number: 52px;
-  --fs-card-text: 10px;
-  --clr-card-text: rgba(255, 255, 255, 0.6);
+  --fs-content-number: 52px;
+  --fs-content-text: 10px;
+  --clr-content-text: rgba(255, 255, 255, 0.6);
+  --width-divider: 1px;
+  --margin-divider: 12px;
 
+  box-sizing: border-box;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 
   max-width: 28%;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .number {
   font-weight: var(--fw-light);
-  font-size: var(--fs-card-number);
+  font-size: var(--fs-content-number);
   line-height: 110%;
   letter-spacing: -1.04px;
   text-align: center;
@@ -29,19 +36,30 @@
 }
 
 .text {
-  color: var(--clr-card-text);
+  color: var(--clr-content-text);
   font-weight: var(--fw-light);
-  font-size: var(--fs-card-text);
+  font-size: var(--fs-content-text);
   line-height: 120%;
   letter-spacing: -0.2px;
 
   text-align: center;
 }
 
+.divider {
+  margin-inline: var(--margin-divider);
+  width: var(--width-divider);
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 @media screen and (min-width: 960px) {
   .card {
-    --fs-card-number: 100px;
-    --fs-card-text: 14px;
+    --fs-content-number: 100px;
+    --fs-content-text: 14px;
+    --width-divider: 1.25px;
+    --margin-divider: 40px;
+
+    max-width: unset;
   }
 
   .number {
@@ -55,8 +73,10 @@
 
 @media screen and (min-width: 1200px) {
   .card {
-    --fs-card-number: 160px;
-    --fs-card-text: 21px;
+    --fs-content-number: 160px;
+    --fs-content-text: 21px;
+    --width-divider: 2px;
+    --margin-divider: 64px;
   }
 
   .number {

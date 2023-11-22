@@ -8,9 +8,13 @@ type NumberCardProps = object & CompanyNumbersCardType;
 
 export const NumberCard: FC<NumberCardProps> = ({ number, text }) => {
   return (
-    <p className={styles.card}>
-      <span className={styles.number}>{number}</span>
-      <span className={styles.text}>{text}</span>
-    </p>
+    <div className={styles.card}>
+      <p className={styles.content}>
+        <span className={styles.number}>{number}</span>
+        <span className={styles.text}>{text}</span>
+      </p>
+
+      <span className={styles.divider} />
+    </div>
   );
 };

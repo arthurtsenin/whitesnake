@@ -27,10 +27,7 @@ export const CompanyNumbers: FC<CompanyNumbersProps> = ({ title, cards }) => {
 
         <div className={styles.container}>
           {cards.map((card) => (
-            <>
-              <NumberCard key={card.id} number={card.number} text={card.text} />
-              <div className={styles.divider} />
-            </>
+            <NumberCard key={card.id} number={card.number} text={card.text} />
           ))}
         </div>
       </section>
