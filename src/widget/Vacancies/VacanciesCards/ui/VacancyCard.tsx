@@ -13,12 +13,18 @@ export type VacancyCardType = {
   id: string;
   title: string;
   location: string;
+  department: string;
 };
 
 type VacancyCardProps = object & VacancyCardType;
 
-export const VacancyCard: FC<VacancyCardProps> = ({ title, location, id }) => {
-  const href = `${NAVIGATION_LINKS.vacancies.href}/${id}`;
+export const VacancyCard: FC<VacancyCardProps> = ({
+  title,
+  location,
+  id,
+  department,
+}) => {
+  const href = `${NAVIGATION_LINKS.career.href}/${department}/${id}`;
 
   return (
     <div className={styles.container}>

@@ -1,0 +1,22 @@
+.wrapper {
+  position: relative;
+
+  display: block;
+  min-height: 335px;
+  border-radius: 25px;
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+@media (min-width: 744px) {
+  .wrapper {
+    min-height: 547px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    min-height: 730px;
+  }
+}

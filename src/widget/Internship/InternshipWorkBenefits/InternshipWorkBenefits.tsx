@@ -27,8 +27,8 @@ export const InternshipWorkBenefits: FC = () => {
   };
 
   return (
-    <section>
-      <Container>
+    <Container>
+      <section>
         <div className={styles.wrap}>
           <div className={styles.title}>
             <Title title="Что такое работа в Whitesnake" />
@@ -57,7 +57,7 @@ export const InternshipWorkBenefits: FC = () => {
             ))}
           </div>
         </div>
-      </Container>
-    </section>
+      </section>
+    </Container>
   );
 };

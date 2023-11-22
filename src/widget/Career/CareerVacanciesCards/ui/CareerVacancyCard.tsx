@@ -12,6 +12,7 @@ export type CareerVacancyCardType = {
   id: string;
   title: string;
   location: string;
+  department: string;
 };
 
 type CareerVacancyCardProps = object & CareerVacancyCardType;
@@ -19,9 +20,10 @@ type CareerVacancyCardProps = object & CareerVacancyCardType;
 export const CareerVacancyCard: FC<CareerVacancyCardProps> = ({
   title,
   location,
+  department,
   id,
 }) => {
-  const href = `${NAVIGATION_LINKS.vacancies.href}/${id}`;
+  const href = `${NAVIGATION_LINKS.career.href}/${department}/${id}`;
 
   return (
     <div className={styles.container}>
