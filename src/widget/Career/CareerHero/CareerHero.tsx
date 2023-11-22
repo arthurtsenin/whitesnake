@@ -38,7 +38,7 @@ export const CareerHero = () => {
         </p>
 
         <div className={styles.buttons}>
-          <Link href={NAVIGATION_LINKS.vacancies.href}>
+          <Link href="/">
             <Button variant="primary">Вакансии</Button>
           </Link>
           <Link href={NAVIGATION_LINKS.internship.href}>
