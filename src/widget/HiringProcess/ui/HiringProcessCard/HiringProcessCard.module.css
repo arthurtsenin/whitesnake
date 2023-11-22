@@ -4,6 +4,7 @@
   --gap-hiring-card-content: 16px;
   --gap-hiring-card-instructions: 12px;
   --fs-card-title: 20px;
+  --lh-card-title: 1.1;
   --fs-card-description: 12px;
   --clr-card-description: #f5f5f5;
 
@@ -46,6 +47,7 @@
   color: var(--clr-main-text);
   font-weight: var(--fw-bold);
   font-size: var(--fs-card-title);
+  line-height: var(--lh-card-title);
 
   background: var(--clr-title-gradient);
   background-clip: text;
@@ -103,6 +105,7 @@
     --gap-hiring-card-container: 38px;
     --gap-hiring-card-content: 28px;
     --gap-hiring-card-instructions: 12px;
+    --fs-card-title: 32px;
   }
 
   .wrapper {
@@ -112,6 +115,7 @@
 
   .title {
     width: fit-content;
+    min-height: calc(2 * calc(1em * var(--lh-card-title)));
   }
 
   .description {
@@ -137,5 +141,9 @@
 
   .wrapper {
     width: 70%;
+  }
+
+  .title {
+    min-height: calc(1em * var(--lh-card-title));
   }
 }
