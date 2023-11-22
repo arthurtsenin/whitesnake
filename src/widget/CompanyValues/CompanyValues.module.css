@@ -27,8 +27,8 @@
 .greenGlow {
   position: absolute;
   inset: 0;
-  background: #0a7340;
-  filter: blur(120px);
+  background: rgba(124, 254, 253, 0.4);
+  filter: blur(90px);
 }
 
 .imgWrapper {
@@ -47,6 +47,7 @@
   left: -80%;
   top: 27%;
   width: 100%;
+  aspect-ratio: 1.2/1;
   rotate: -210deg;
 }
 
@@ -85,14 +86,12 @@
     bottom: unset;
     top: 15%;
     width: 30%;
-    height: 30%;
     transform: rotate(-40deg);
   }
 
   .imgWrapper:nth-child(2) {
     left: -10%;
     width: 40%;
-    height: 40%;
     top: unset;
     bottom: -10%;
     rotate: -330deg;
@@ -105,7 +104,7 @@
   }
 
   .greenGlow {
-    filter: blur(170px);
+    filter: blur(200px);
   }
 }
 
@@ -121,13 +120,11 @@
 
   .imgWrapper:nth-child(1) {
     right: -15%;
-    width: 40%;
-    height: 40%;
+    width: 35%;
   }
 
   .imgWrapper:nth-child(2) {
-    width: 45%;
-    height: 45%;
+    width: 40%;
   }
 
   .redGlow {
