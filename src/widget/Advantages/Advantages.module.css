@@ -254,7 +254,14 @@
   width: 99%;
 }
 .tabListWrapper {
-  width: fit-content;
+  width: max-content;
+  margin-inline: auto;
+}
+.tabListWrapper > div {
+  margin: 0;
+}
+.tabListWrapper > div > div {
+  border-radius: 8px;
 }
 @media screen and (min-width: 744px) {
   .section {
