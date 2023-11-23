@@ -70,6 +70,13 @@
 .arcWrapper {
   position: absolute;
   z-index: 1;
+
+  width: 100%;
+}
+
+.leftRaindropWrapper,
+.rightRaindropWrapper {
+  max-width: 500px;
 }
 
 .leftRaindropWrapper {
@@ -78,8 +85,6 @@
 
   display: none;
 
-  width: 100%;
-  max-width: 500px;
   aspect-ratio: 1/1.1;
 
   transform: translateX(-20%) translateY(-19%);
@@ -89,9 +94,6 @@
   top: 0;
   right: 0;
 
-  width: 100%;
-  max-width: 500px;
-
   transform: translateX(10%) translateY(-20%);
 }
 
@@ -99,7 +101,6 @@
   bottom: 0;
   left: 50%;
 
-  width: 100%;
   max-width: 700px;
   aspect-ratio: 1.8/1;
 
@@ -116,57 +117,55 @@
 .glowLeft,
 .glowMiddle,
 .glowRight {
+  position: absolute;
+  z-index: 3;
+
+  aspect-ratio: 1/1;
 }
 
 .glowLeft {
-  position: absolute;
   top: 0;
   left: 0;
-  z-index: 3;
 
   width: 80%;
-  aspect-ratio: 1/1;
   border-radius: 80%;
+
   background: rgba(124, 254, 253, 0.5);
+  transform: translateX(-60%) translateY(-40%) rotate(61.935deg);
 
   filter: blur(200px);
-  transform: translateX(-60%) translateY(-40%) rotate(61.935deg);
 }
 
 .glowMiddle {
-  position: absolute;
   bottom: 0;
   left: 50%;
-  z-index: 3;
 
   width: 33%;
-  aspect-ratio: 1/1;
   border-radius: 100%;
 
-  opacity: 0.5;
   background: rgba(204, 11, 11, 0.5);
 
-  filter: blur(104px);
-
   transform: translateX(-50%) translateY(30%) rotate(61.935deg);
+
+  opacity: 0.5;
+
+  filter: blur(104px);
 }
 
 .glowRight {
-  position: absolute;
   top: 0;
   right: 0;
-  z-index: 3;
 
   display: none;
   width: 50%;
-  aspect-ratio: 1/1;
 
   border-radius: 120%;
+
   background: rgba(124, 254, 253, 0.4);
 
-  filter: blur(214px);
-
   transform: translateX(50%) translateY(-40%);
+
+  filter: blur(214px);
 }
 
 @media screen and (min-width: 744px) {
@@ -197,6 +196,7 @@
 
   .glowRight {
     display: initial;
+
     filter: blur(214px);
   }
 
@@ -261,10 +261,7 @@
     --fs-about-hero-subtitle: 24px;
   }
 
-  .leftRaindropWrapper {
-    transform: translateX(0) translateY(0);
-  }
-
+  .leftRaindropWrapper,
   .rightRaindropWrapper {
     transform: translateX(0) translateY(0);
   }
@@ -277,7 +274,4 @@
   .glowRight {
     opacity: 0.6;
   }
-}
-
-@media screen and (min-width: 1920px) {
 }
