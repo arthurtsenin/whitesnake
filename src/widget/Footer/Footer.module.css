@@ -373,6 +373,10 @@
     width: min-content;
   }
 
+  .leftSide > a {
+    cursor: pointer;
+  }
+
   .lowerInfo {
     flex-direction: column;
   }
