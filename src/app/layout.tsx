@@ -9,8 +9,8 @@ import "./global.css";
 
 import { AppLoader } from "@/feature/ui/AppLoader/AppLoader";
 import LayoutScript from "@/shared/analitics/LayoutScript";
-import { FormProvider } from "@/shared/provider/FormProvider";
 import { Footer } from "@/widget/Footer/Footer";
+import { FormProvider } from "@/widget/Form/FormProvider/FormProvider";
 import { Header } from "@/widget/Header/Header";
 
 const inter = Inter({

@@ -4,13 +4,13 @@ import { UseFormRegister } from "react-hook-form";
 
 import styles from "./Input.module.css";
 
-import { VacancyFormType } from "../../formKeys";
+import { FormType } from "../../params";
 
 type InputProps = ComponentProps<"input"> & {
   error?: boolean;
   refresh?: boolean;
   label: string;
-  register: UseFormRegister<VacancyFormType>;
+  register: UseFormRegister<FormType>;
   helperText: string;
 };
 

@@ -3,6 +3,8 @@ import Link from "next/link";
 
 import styles from "./HomeHero.module.css";
 
+import { FORM_URL_PARAMS } from "@/widget/Form/params";
+
 import { ROUTES } from "../Navigation/routes";
 import { Button } from "../../shared";
 
@@ -25,8 +27,9 @@ export const HomeHero = () => {
             </p>
           </div>
           <div className={styles.buttons}>
-            <Button variant="primary">Связаться с нами</Button>
-            {/* НЕ РАБОТАЕТ!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
+            <Link href={FORM_URL_PARAMS.BookACall}>
+              <Button variant="primary">Связаться с нами</Button>
+            </Link>
             <Link href={`${ROUTES.FIVE.href}#leave-request`}>
               <Button variant="transparent">Хочу в команду</Button>
             </Link>

@@ -1,8 +1,10 @@
+import Link from "next/link";
 import { FC } from "react";
 
 import styles from "./HomeBanner.module.css";
 
 import { Button } from "@/shared";
+import { FORM_URL_PARAMS } from "@/widget/Form/params";
 
 import { BannerTemplate } from "../BannerTemplate";
 
@@ -19,7 +21,9 @@ export const HomeBanner: FC = () => {
           Отправим резюме подходящих специалистов в течение суток
         </p>
 
-        <Button variant="secondary">Оставить заявку</Button>
+        <Link href={FORM_URL_PARAMS.LeaveRequest}>
+          <Button variant="secondary">Оставить заявку</Button>
+        </Link>
       </div>
     </BannerTemplate>
   );

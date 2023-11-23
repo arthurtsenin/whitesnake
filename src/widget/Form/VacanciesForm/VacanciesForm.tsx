@@ -11,8 +11,9 @@ import styles from "./VacanciesForm.module.css";
 
 import { Button } from "@/shared";
 
-import { sendEmail } from "../action";
-import { FORM_KEYS, formTemplate, VacancyFormType } from "../formKeys";
+import { VACANCIES_FORM_TEMPLATE } from "./vacanciesFormTemplate";
+import { leaveRequestVacancyAction } from "../action";
+import { FORM_KEYS, FormType } from "../params";
 import { CustomSelect } from "../ui/CustomSelect/CustomSelect";
 import { FileInput } from "../ui/FileInput/FileInput";
 import { FormTitle } from "../ui/FormTitle/FormTitle";
@@ -27,6 +28,7 @@ import raindrops from "&/images/vacancies/form/green-raindrops.png";
 
 type VacanciesFormProps = {
   jobTitles: Array<string>;
+  formTitle: string;
 };
 
 type FormStatusType = "pending" | "error" | "success" | "loading";
@@ -37,7 +39,10 @@ type ToastType = {
   toastText: string;
 };
 
-export const VacanciesForm: FC<VacanciesFormProps> = ({ jobTitles }) => {
+export const VacanciesForm: FC<VacanciesFormProps> = ({
+  jobTitles,
+  formTitle,
+}) => {
   const [selectedFileName, setSelectedFileName] = useState<string>("");
   const [downloadUrl, setDownloadUrl] = useState<string>("");
   const [isFileDownloading, setIsFileDownloading] = useState<boolean>(false);
@@ -57,7 +62,7 @@ export const VacanciesForm: FC<VacanciesFormProps> = ({ jobTitles }) => {
     getValues,
     setValue,
     formState: { errors },
-  } = useForm<VacancyFormType>({
+  } = useForm<FormType>({
     defaultValues: {
       [FORM_KEYS.jobTitle]: "",
       [FORM_KEYS.name]: "",
@@ -90,10 +95,10 @@ export const VacanciesForm: FC<VacanciesFormProps> = ({ jobTitles }) => {
     }
   };
 
-  const formSubmit: SubmitHandler<VacancyFormType> = async (formData) => {
+  const formSubmit: SubmitHandler<FormType> = async (formData) => {
     setFormStatus("loading");
 
-    const result = await sendEmail(formData, downloadUrl);
+    const result = await leaveRequestVacancyAction(formData, downloadUrl);
 
     if (result.success) {
       setToast({
@@ -138,7 +143,7 @@ export const VacanciesForm: FC<VacanciesFormProps> = ({ jobTitles }) => {
         className={styles.form}
         onSubmit={handleSubmit(formSubmit)}
       >
-        <FormTitle title="Оставить заявку" />
+        <FormTitle title={formTitle} />
 
         <div className={styles.fields}>
           <div className={styles.inputs}>
@@ -152,7 +157,7 @@ export const VacanciesForm: FC<VacanciesFormProps> = ({ jobTitles }) => {
               setValue={setValue}
               register={register}
             />
-            {formTemplate.map((el) => (
+            {VACANCIES_FORM_TEMPLATE.map((el) => (
               <Input
                 key={el.id}
                 type={el.type}

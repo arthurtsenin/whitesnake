@@ -1,18 +1,6 @@
-export type VacancyFormType = Record<string, string>;
+import { FORM_KEYS } from "../params";
 
-export const FORM_KEYS: VacancyFormType = {
-  name: "name",
-  surname: "surname",
-  email: "email",
-  phone: "phone",
-  telegram: "telegram",
-  linkedIn: "linkedIn",
-  message: "message",
-  url: "url",
-  jobTitle: "jobTitle",
-};
-
-export const formTemplate = [
+export const VACANCY_FORM_TEMPLATE = [
   {
     id: 1,
     type: "text",

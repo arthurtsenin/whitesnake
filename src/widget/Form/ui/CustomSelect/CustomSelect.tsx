@@ -15,7 +15,7 @@ import { useOutsideClick } from "@/shared/hooks/use-outside-click";
 import { MotionAnimatePresence } from "@/shared/motion/MotionAnimatePresence";
 import { MotionComponent } from "@/shared/motion/MotionComponent";
 
-import { VacancyFormType } from "../../formKeys";
+import { FormType } from "../../params";
 
 import arrowRed from "&/arrow-down-red.svg";
 import arrow from "&/arrow-down-white.svg";
@@ -26,9 +26,9 @@ type CustomSelectProps = {
   options: Array<string>;
   error?: boolean;
   helperText: string;
-  register: UseFormRegister<VacancyFormType>;
-  getValues: UseFormGetValues<VacancyFormType>;
-  setValue: UseFormSetValue<VacancyFormType>;
+  register: UseFormRegister<FormType>;
+  getValues: UseFormGetValues<FormType>;
+  setValue: UseFormSetValue<FormType>;
 };
 
 type SpanProps = {

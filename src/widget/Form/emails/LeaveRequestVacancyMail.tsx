@@ -21,9 +21,10 @@ type LeaveRequestProps = {
   message: string;
   url?: string;
   jobTitle?: string;
+  company: string;
 };
 
-export const LeaveRequest: FC<LeaveRequestProps> = ({
+export const LeaveRequestVacancyMail: FC<LeaveRequestProps> = ({
   name,
   surname,
   email,
@@ -33,6 +34,7 @@ export const LeaveRequest: FC<LeaveRequestProps> = ({
   message,
   url,
   jobTitle,
+  company,
 }) => {
   return (
     <Html>
@@ -52,11 +54,22 @@ export const LeaveRequest: FC<LeaveRequestProps> = ({
                 )}
               </Heading>
 
-              <Text>
-                Кандидат: {name} {surname}
-              </Text>
-              <Text>Адрес электронной почты: {email}</Text>
-              <Hr />
+              {name && surname && email && (
+                <>
+                  <Text>
+                    Кандидат: {name} {surname}
+                  </Text>
+                  <Text>Адрес электронной почты: {email}</Text>
+                  <Hr />
+                </>
+              )}
+
+              {company && (
+                <>
+                  <Text>Компания: {company}</Text>
+                  <Hr />
+                </>
+              )}
 
               {phone && (
                 <>
