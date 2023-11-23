@@ -5,18 +5,18 @@
   --width-divider: 1px;
   --margin-divider: 12px;
 
-  box-sizing: border-box;
-
   display: flex;
   justify-content: flex-start;
+
+  box-sizing: border-box;
   max-width: 33%;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .number {
@@ -48,6 +48,7 @@
 
 .divider {
   margin-inline: var(--margin-divider);
+
   min-width: var(--width-divider);
 
   background-color: rgba(255, 255, 255, 0.3);
@@ -78,6 +79,7 @@
 
   .text {
     width: 80%;
+
     letter-spacing: -0.28px;
   }
 }

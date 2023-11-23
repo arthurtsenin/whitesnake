@@ -2,11 +2,11 @@
   --gap-company-numbers-section: 28px;
   --gap-company-number-container: 12px;
 
+  position: relative;
+
   display: flex;
   flex-direction: column;
   row-gap: var(--gap-company-numbers-section);
-
-  position: relative;
 }
 
 .section > img {
@@ -35,6 +35,7 @@
   z-index: 3;
 
   margin-inline: auto;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
