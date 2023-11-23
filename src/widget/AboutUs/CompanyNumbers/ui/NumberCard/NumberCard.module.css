@@ -15,8 +15,8 @@
 .content {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
 }
 
 .number {
@@ -90,10 +90,6 @@
     --margin-divider: 40px;
 
     max-width: 20%;
-  }
-
-  .content {
-    justify-content: flex-start;
   }
 
   .number {
