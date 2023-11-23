@@ -31,7 +31,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  row-gap: var(--gap-service-hero-content);
+  row-gap: var(--gap-about-hero-content);
 
   text-align: center;
 }
@@ -170,7 +170,14 @@
 
 @media screen and (min-width: 744px) {
   .hero {
+    --gap-about-hero-content: 32px;
     --gap-about-buttons: 20px;
+    --fs-about-hero-title: 56px;
+    --fs-about-hero-subtitle: 18px;
+  }
+
+  .title {
+    letter-spacing: -2px;
   }
 
   .subtitle {
@@ -179,10 +186,15 @@
 
   .leftRaindropWrapper {
     display: initial;
+    max-width: 700px;
+  }
+
+  .rightRaindropWrapper {
+    max-width: 600px;
   }
 
   .arcWrapper {
-    transform: translateX(-50%) translateY(30%);
+    transform: translateX(-50%) translateY(0%) scale(1.2);
   }
 
   .glowLeft {
@@ -206,26 +218,8 @@
 }
 
 @media screen and (min-width: 960px) {
-  .hero {
-    --gap-service-hero-content: 32px;
-    --fs-about-hero-title: 56px;
-    --fs-about-hero-subtitle: 18px;
-  }
-
-  .title {
-    letter-spacing: -2px;
-  }
-
-  .leftRaindropWrapper {
-    max-width: 700px;
-  }
-
-  .rightRaindropWrapper {
-    max-width: 600px;
-  }
-
   .arcWrapper {
-    transform: translateX(-50%) translateY(30%);
+    transform: translateX(-50%) translateY(0%) scale(1.2);
   }
 }
 
@@ -244,6 +238,11 @@
     max-width: 700px;
   }
 
+  .arcWrapper {
+    max-width: 1000px;
+    transform: translateX(-50%) translateY(30%);
+  }
+
   .glowLeft,
   .glowRight {
     opacity: 0.8;
@@ -256,7 +255,7 @@
 
 @media screen and (min-width: 1440px) {
   .hero {
-    --gap-service-hero-content: 40px;
+    --gap-about-hero-content: 40px;
     --fs-about-hero-title: 100px;
     --fs-about-hero-subtitle: 24px;
   }
@@ -264,10 +263,6 @@
   .leftRaindropWrapper,
   .rightRaindropWrapper {
     transform: translateX(0) translateY(0);
-  }
-
-  .arcWrapper {
-    max-width: 1000px;
   }
 
   .glowLeft,
