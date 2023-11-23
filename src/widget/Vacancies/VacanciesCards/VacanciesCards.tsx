@@ -22,6 +22,7 @@ export const VacanciesCards: FC<VacanciesCardsProps> = ({ cards }) => {
         {cards.map((card) => (
           <VacancyCard
             key={card.id}
+            department={card.department}
             id={card.id}
             title={card.title}
             location={card.location}

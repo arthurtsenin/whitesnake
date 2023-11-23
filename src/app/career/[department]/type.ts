@@ -1,8 +1,54 @@
-import { VacancyPageLayout } from "@/page/dynamic/vacancy/Vacancy.page";
-import PageScript from "@/shared/analitics/PageScript";
-import { getLists } from "@/shared/utils/getVacancyLists";
-import { getSubtitle } from "@/shared/utils/getVacancySubtitle";
-import { getTitles } from "@/shared/utils/getVacancyTitles";
+export type VacanciesType = {
+  id: string;
+  premium: boolean;
+  name: string;
+  department: null;
+  has_test: boolean;
+  response_letter_required: boolean;
+  area: { id: string; name: string; url: string };
+  salary: null;
+  type: { id: string; name: string };
+  address: null;
+  response_url: null;
+  sort_point_distance: null;
+  published_at: string;
+  created_at: string;
+  archived: boolean;
+  apply_alternate_url: string;
+  show_logo_in_search: null;
+  insider_interview: null;
+  url: string;
+  alternate_url: string;
+  relations: [];
+  employer: {
+    id: string;
+    name: string;
+    url: string;
+    alternate_url: string;
+    logo_urls: {
+      [key: string]: string;
+    };
+    vacancies_url: string;
+    accredited_it_employer: boolean;
+    trusted: boolean;
+  };
+  snippet: {
+    requirement: string;
+    responsibility: string;
+  };
+  contacts: null;
+  schedule: { id: string; name: string };
+  working_days: [];
+  working_time_intervals: [];
+  working_time_modes: [];
+  accept_temporary: boolean;
+  professional_roles: [{ id: string; name: string }];
+  accept_incomplete_resumes: boolean;
+  experience: { id: string; name: string };
+  employment: { id: string; name: string };
+  adv_response_url: null;
+  is_adv_vacancy: boolean;
+};
 
 export type VacancyType = {
   id: string;
@@ -81,41 +127,3 @@ export type VacancyType = {
   accept_temporary: boolean;
   languages: [];
 };
-
-async function getData(id: string): Promise<VacancyType> {
-  const url = `https://api.hh.ru/vacancies/${id}?host=rabota.by`;
-  const res = await fetch(`${url}`, {
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
-
-export default async function VacancyPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const vacancy = await getData(params.id);
-  const subtitle = getSubtitle(vacancy.description, vacancy.name) || [""];
-  const titles = getTitles(vacancy.description);
-  const lists = getLists(vacancy.description);
-
-  return (
-    <>
-      <PageScript />
-
-      <VacancyPageLayout
-        jobTitle={vacancy.name}
-        title={vacancy.name}
-        subtitle={subtitle[0]}
-        titles={titles}
-        lists={lists}
-      />
-    </>
-  );
-}
