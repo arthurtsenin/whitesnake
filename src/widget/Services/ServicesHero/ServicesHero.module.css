@@ -196,17 +196,11 @@
     --fs-services-hero-subtitle: 24px;
   }
 
-  .glowRight {
-    top: 10%;
-  }
-}
-
-@media screen and (min-width: 1440px) {
   .rightRaindropWrapper {
     width: 25%;
   }
 
   .glowRight {
-    right: 0%;
+    top: 10%;
   }
 }
