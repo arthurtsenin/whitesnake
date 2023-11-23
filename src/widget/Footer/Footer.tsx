@@ -18,6 +18,9 @@ import linked from "&/images/vacancies/hero/linkedin.png";
 import rabotaby from "&/images/vacancies/hero/rabotaby.png";
 import telega from "&/images/vacancies/hero/telegram.png";
 
+const wsEmail = "contact@whitesnake.io";
+const emailHref = ["mailto:", wsEmail].join("");
+
 export const Footer = () => {
   const footerRef = useRef<HTMLElement | null>(null);
 
@@ -34,7 +37,7 @@ export const Footer = () => {
         <div className={styles.navContainer}>
           <div className={styles.leftSide}>
             <p>Беларусь, Минск, проспект Дзержинского 104 (БЦ Титан) 20 этаж</p>
-            <Link href="#">contact@whitesnake.io</Link>
+            <Link href={emailHref}>{wsEmail}</Link>
             <div className={styles.imagesContainer}>
               <Image alt="" src={telega} />
               <Image alt="" src={rabotaby} />
