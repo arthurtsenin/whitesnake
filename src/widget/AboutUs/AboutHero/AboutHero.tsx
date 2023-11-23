@@ -25,7 +25,9 @@ export const AboutHero = () => {
         <Image src={arc} alt="" priority />
       </div>
 
+      <div className={styles.glowLeft} />
       <div className={styles.glowMiddle} />
+      <div className={styles.glowRight} />
 
       <article className={styles.article}>
         <div className={styles.content}>
