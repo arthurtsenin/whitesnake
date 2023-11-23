@@ -25,7 +25,7 @@ export const VacancyPageLayout: FC<VacancyPageLayoutProps> = ({
     <>
       <VacancyHero title={title} subtitle={subtitle} department={department} />
       <VacancyDescription titles={titles} lists={lists} />
-      <VacancyForm jobTitle={jobTitle} />
+      <VacancyForm jobTitle={jobTitle} formTitle="Оставить заявку" />
     </>
   );
 };
