@@ -8,44 +8,49 @@
 
 .cardsContainer {
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: auto;
+  grid-template-columns: 1fr;
   gap: 55px;
-  max-width: 90%;
   margin-inline: auto;
 }
 
 .redGlow {
   position: absolute;
-  inset: 0;
-  background: rgba(204, 11, 11, 0.5);
-  filter: blur(80px);
+
   width: 120%;
   height: 120%;
+
+  background: rgba(204, 11, 11, 0.5);
+  filter: blur(80px);
+  inset: 0;
 }
 
 .greenGlow {
   position: absolute;
   inset: 0;
+
   background: rgba(124, 254, 253, 0.4);
   filter: blur(90px);
 }
 
 .imgWrapper {
   position: absolute;
+
   width: 100%;
 }
 
 .imgWrapper:nth-child(1) {
   right: -80%;
   bottom: -5%;
-  opacity: 0.5;
+
   transform: rotate(30deg);
+  opacity: 0.5;
 }
 
 .imgWrapper:nth-child(2) {
-  left: -80%;
   top: 27%;
+  left: -80%;
+
   width: 100%;
   aspect-ratio: 1.2/1;
   rotate: -210deg;
@@ -59,9 +64,10 @@
 @media screen and (min-width: 744px) {
   .cardsContainer {
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 40px;
-    column-gap: 20px;
     max-width: 100%;
+
+    column-gap: 20px;
+    row-gap: 40px;
   }
 
   .companyValues h2 {
@@ -82,24 +88,28 @@
   }
 
   .imgWrapper:nth-child(1) {
+    top: 15%;
     right: -10%;
     bottom: unset;
-    top: 15%;
+
     width: 30%;
+
     transform: rotate(-40deg);
   }
 
   .imgWrapper:nth-child(2) {
-    left: -10%;
-    width: 40%;
     top: unset;
     bottom: -10%;
+    left: -10%;
+
+    width: 40%;
     rotate: -330deg;
   }
 
   .redGlow {
     width: 120%;
     height: 120%;
+
     filter: blur(50px);
   }
 
@@ -115,11 +125,13 @@
 
   .cardsContainer {
     row-gap: 80px;
+
     column-gap: 40px;
   }
 
   .imgWrapper:nth-child(1) {
     right: -15%;
+
     width: 35%;
   }
 

@@ -25,6 +25,7 @@ export default function RootLayout({
   const [mystate, setMystate] = useState(false);
   const [TbFP, setTbFP] = useState(false);
   const router = useRouter();
+
   useLayoutEffect(() => {
     if (
       typeof window !== "undefined" &&
