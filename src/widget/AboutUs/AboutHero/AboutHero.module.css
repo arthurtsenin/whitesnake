@@ -100,14 +100,14 @@
 
   aspect-ratio: 1/1.1;
 
-  transform: translateX(-20%) translateY(-19%);
+  transform: translate(-20%, -19%);
 }
 
 .rightRaindropWrapper {
   top: 0;
   right: 0;
 
-  transform: translateX(10%) translateY(-20%);
+  transform: translate(10%, -20%);
 }
 
 .arcWrapper {
@@ -144,7 +144,7 @@
   border-radius: 80%;
 
   background: rgba(124, 254, 253, 0.5);
-  transform: translateX(-60%) translateY(-40%) rotate(61.935deg);
+  transform: translate(-60%, -40%) rotate(61.935deg);
 
   filter: blur(200px);
 }
@@ -158,7 +158,7 @@
 
   background: rgba(204, 11, 11, 0.5);
 
-  transform: translateX(-50%) translateY(30%) rotate(61.935deg);
+  transform: translate(-50%, 30%) rotate(61.935deg);
 
   opacity: 0.5;
 
@@ -176,7 +176,7 @@
 
   background: rgba(124, 254, 253, 0.4);
 
-  transform: translateX(50%) translateY(-40%);
+  transform: translate(50%, -40%);
 
   filter: blur(214px);
 }
@@ -228,13 +228,13 @@
 
 @media screen and (min-width: 960px) {
   .arcWrapper {
-    transform: translateX(-50%) translateY(40%);
+    transform: translate(-50%, 40%);
   }
 }
 
 @media screen and (min-width: 960px) and (min-height: 1200px) {
   .arcWrapper {
-    transform: translateX(-50%) translateY(-10%) scale(1.3);
+    transform: translate(-50%, -10%) scale(1.3);
   }
 }
 
@@ -246,7 +246,7 @@
   }
 
   .leftRaindropWrapper {
-    transform: translateX(-5%) translateY(-20%);
+    transform: translate(-5%, -20%);
   }
 
   .rightRaindropWrapper {
@@ -254,7 +254,7 @@
   }
 
   .arcWrapper {
-    transform: translateX(-50%) translateY(40%);
+    transform: translate(-50%, 40%);
     max-width: 900px;
   }
 
@@ -277,7 +277,7 @@
 
   .leftRaindropWrapper,
   .rightRaindropWrapper {
-    transform: translateX(0) translateY(0);
+    transform: translate(0, 0);
   }
 
   .arcWrapper {
