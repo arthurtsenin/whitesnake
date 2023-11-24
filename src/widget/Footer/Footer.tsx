@@ -14,9 +14,9 @@ import { ROUTES } from "../Navigation/routes";
 import { Logo } from "../Navigation/ui/Logo/Logo";
 
 import bubble from "&/images/footer/bubble.png";
+import telega from "&/images/footer/telegram.png";
 import linked from "&/images/vacancies/hero/linkedin.png";
 import rabotaby from "&/images/vacancies/hero/rabotaby.png";
-import telega from "&/images/vacancies/hero/telegram.png";
 
 export const Footer = () => {
   const footerRef = useRef<HTMLElement | null>(null);
