@@ -1,0 +1,91 @@
+.description {
+  z-index: 1;
+
+  width: 94%;
+  margin-inline: auto;
+}
+
+.devider {
+  width: 100%;
+  height: 2px;
+
+  background-color: #fff;
+  opacity: 0.2;
+  margin-block: 48px;
+}
+.description p {
+  color: rgba(255, 255, 255, 0.6);
+
+  font-weight: 400;
+
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: -1.25px;
+
+  margin-block: 20px;
+}
+
+.description h5 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: -0.64px;
+
+  background: var(
+    --Linear,
+    linear-gradient(135deg, #fff 30%, rgba(255, 255, 255, 0.38) 100%)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.description ul {
+  /* margin-block: 48px; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 8px;
+
+  list-style-position: outside;
+  list-style-type: disc;
+  margin-block: 24px;
+}
+.description ul li {
+  display: list-item;
+
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 130%;
+  letter-spacing: -1.25px;
+
+  list-style: inside;
+  opacity: 0.9;
+  margin-block: 20px;
+}
+@media screen and (min-width: 744px) {
+  .description p {
+    font-size: 20px;
+  }
+  .description h5 {
+    font-size: 28px;
+  }
+  .description ul li {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .description {
+    width: 70%;
+  }
+  .description p {
+    font-size: 25px;
+  }
+  .description h5 {
+    font-size: 32px;
+  }
+  .description ul li {
+    font-size: 25px;
+  }
+}

@@ -4,6 +4,7 @@ import { VacanciesCards } from "@/widget/Vacancies/VacanciesCards/VacanciesCards
 import { VacanciesHero } from "@/widget/Vacancies/VacanciesHero/VacanciesHero";
 
 import { getVacancies } from "./service";
+import { VacanciesDescription } from "../../../widget/Vacancies/VacanciesDescription/VacanciesDescription";
 
 type VacanciesGroupPageType = {
   params: { department: string };
@@ -35,6 +36,7 @@ export default async function VacanciesGroupPage({
       <PageScript />
       <VacanciesHero path={employerPath} department={params.department} />
       <VacanciesCards cards={cards} />
+      <VacanciesDescription />
       <VacanciesForm jobTitles={jobTitles} formTitle="Оставить заявку" />
     </>
   );

@@ -20,6 +20,7 @@
 .hero::before {
   position: absolute;
   inset: 0;
+
   z-index: 3;
 
   width: 100vw;
@@ -254,8 +255,9 @@
   }
 
   .arcWrapper {
-    transform: translate(-50%, 40%);
     max-width: 900px;
+
+    transform: translate(-50%, 40%);
   }
 
   .glowLeft,
