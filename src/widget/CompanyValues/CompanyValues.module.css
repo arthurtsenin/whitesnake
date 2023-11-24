@@ -1,0 +1,137 @@
+.companyValues h2 {
+  margin-bottom: 50px;
+}
+
+.companyValues {
+  position: relative;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 55px;
+  max-width: 90%;
+  margin-inline: auto;
+}
+
+.redGlow {
+  position: absolute;
+  inset: 0;
+  background: rgba(204, 11, 11, 0.5);
+  filter: blur(80px);
+  width: 120%;
+  height: 120%;
+}
+
+.greenGlow {
+  position: absolute;
+  inset: 0;
+  background: rgba(124, 254, 253, 0.4);
+  filter: blur(90px);
+}
+
+.imgWrapper {
+  position: absolute;
+  width: 100%;
+}
+
+.imgWrapper:nth-child(1) {
+  right: -80%;
+  bottom: -5%;
+  opacity: 0.5;
+  transform: rotate(30deg);
+}
+
+.imgWrapper:nth-child(2) {
+  left: -80%;
+  top: 27%;
+  width: 100%;
+  aspect-ratio: 1.2/1;
+  rotate: -210deg;
+}
+
+.imgWrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 744px) {
+  .cardsContainer {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+    column-gap: 20px;
+    max-width: 100%;
+  }
+
+  .companyValues h2 {
+    margin-bottom: 80px;
+  }
+
+  .cardsContainer div:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .cardsContainer div:nth-child(2) {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .cardsContainer div:nth-child(3) {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  .cardsContainer div:nth-child(4) {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+
+  .imgWrapper:nth-child(1) {
+    right: -10%;
+    bottom: unset;
+    top: 15%;
+    width: 30%;
+    transform: rotate(-40deg);
+  }
+
+  .imgWrapper:nth-child(2) {
+    left: -10%;
+    width: 40%;
+    top: unset;
+    bottom: -10%;
+    rotate: -330deg;
+  }
+
+  .redGlow {
+    width: 120%;
+    height: 120%;
+    filter: blur(50px);
+  }
+
+  .greenGlow {
+    filter: blur(200px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .companyValues h2 {
+    margin-bottom: 150px;
+  }
+
+  .cardsContainer {
+    row-gap: 80px;
+    column-gap: 40px;
+  }
+
+  .imgWrapper:nth-child(1) {
+    right: -15%;
+    width: 35%;
+  }
+
+  .imgWrapper:nth-child(2) {
+    width: 40%;
+  }
+
+  .redGlow {
+    filter: blur(120px);
+  }
+
+  .greenGlow {
+    filter: blur(260px);
+  }
+}
