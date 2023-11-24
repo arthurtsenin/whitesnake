@@ -1,40 +1,45 @@
 .card {
   position: relative;
+
   display: flex;
   flex-direction: column;
   padding: 16px 0 0 16px;
 }
 
 .card::before {
-  content: "";
-  display: block;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
+
+  display: block;
+  height: 40px;
   border: 1px solid var(--clr-main-text);
   border-bottom: none;
-  height: 40px;
+
+  content: "";
 }
 
 .cardId {
+  margin-bottom: 35px;
+  margin-bottom: 20px;
+
   color: var(--clr-secondary-text);
   font-weight: var(--fw-regular);
-  line-height: 130%;
-  margin-bottom: 35px;
   font-size: 16px;
+  line-height: 130%;
   letter-spacing: 0.8px;
   text-transform: uppercase;
-  margin-bottom: 20px;
 }
 
 .cardTitle {
+  margin-bottom: 20px;
+
   color: var(--clr-main-text);
   font-weight: var(--fw-semibold);
   font-size: 32px;
   line-height: 100%;
   letter-spacing: -1.6px;
-  margin-bottom: 20px;
 }
 
 .cardInfo {
@@ -48,15 +53,17 @@
 
 @media screen and (min-width: 1440px) {
   .cardId {
+    margin-bottom: 35px;
+
     font-size: 27px;
     letter-spacing: 1.35px;
-    margin-bottom: 35px;
   }
 
   .cardTitle {
+    margin-bottom: 25px;
+
     font-size: 50px;
     letter-spacing: -2.5px;
-    margin-bottom: 25px;
   }
 
   .cardInfo {
