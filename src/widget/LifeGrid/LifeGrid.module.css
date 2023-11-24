@@ -82,6 +82,10 @@
   object-fit: cover;
 }
 
+.raindropUpper {
+  display: none;
+}
+
 @media screen and (min-width: 744px) {
   .section {
     position: relative;
@@ -125,6 +129,7 @@
   }
 
   .raindropUpper {
+    display: block;
     position: absolute;
 
     top: 0;
