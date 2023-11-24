@@ -1,8 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 import styles from "./CloseButton.module.css";
+
+import close from "&/close.png";
 
 export const CloseButton = () => {
   const router = useRouter();
@@ -10,8 +13,8 @@ export const CloseButton = () => {
   const onClick = () => router.back();
 
   return (
-    <span className={styles.close} onClick={onClick}>
-      X
-    </span>
+    <div className={styles.wrapper} onClick={onClick}>
+      <Image src={close} alt="Закрыть форму" />
+    </div>
   );
 };

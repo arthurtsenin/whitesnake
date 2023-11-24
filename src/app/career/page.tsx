@@ -63,7 +63,7 @@ export default async function CareerPage() {
         title="Часто задаваемые вопросы"
         accordions={ACCORDIONS_DATA}
       />
-      <VacanciesForm jobTitles={jobTitles} />
+      <VacanciesForm jobTitles={jobTitles} formTitle="Оставить заявку" />
     </>
   );
 }

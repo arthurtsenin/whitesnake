@@ -35,7 +35,7 @@ export default async function VacanciesGroupPage({
       <PageScript />
       <VacanciesHero path={employerPath} department={params.department} />
       <VacanciesCards cards={cards} />
-      <VacanciesForm jobTitles={jobTitles} />
+      <VacanciesForm jobTitles={jobTitles} formTitle="Оставить заявку" />
     </>
   );
 }

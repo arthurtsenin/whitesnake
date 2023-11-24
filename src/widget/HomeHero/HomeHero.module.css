@@ -187,6 +187,8 @@
 
   animation: sphere 90s infinite linear;
 
+  clip-path: circle(50% at 50% 50%);
+
   -webkit-user-select: none;
   user-select: none;
   pointer-events: none;
