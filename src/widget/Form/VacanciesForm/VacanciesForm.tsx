@@ -21,7 +21,7 @@ import { Input } from "../ui/Input/Input";
 import { Loader } from "../ui/Loader/Loader";
 import { Textarea } from "../ui/Textarea/Textarea";
 import { Toast } from "../ui/Toast/Toast";
-import { FORM_VACANCIES_SCHEMA } from "../validation";
+import { FILE_REGEX, FORM_VACANCIES_SCHEMA } from "../validation";
 import { storage } from "../../../../firestore";
 
 import raindrops from "&/images/vacancies/form/green-raindrops.png";
@@ -124,7 +124,7 @@ export const VacanciesForm: FC<VacanciesFormProps> = ({
   };
 
   const isFileFormatValid =
-    selectedFileName.length > 0 && !/pdf/.test(selectedFileName);
+    selectedFileName.length > 0 && !FILE_REGEX.test(selectedFileName);
 
   const isDisabled =
     isFileDownloading || isFileFormatValid || Object.keys(errors).length > 0;

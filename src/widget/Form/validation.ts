@@ -2,6 +2,10 @@ import * as yup from "yup";
 
 import { FORM_KEYS } from "./params";
 
+export const ACCEPT_FORMATS = "image/*,.doc,.docx,.txt,.pdf,";
+
+export const FILE_REGEX = /^.*\.(doc|docx|txt|png|pdf|jpeg)$/i;
+
 export const FORM_VACANCIES_SCHEMA = yup.object({
   [FORM_KEYS.jobTitle]: yup.string().required("Поле не должно быть пустым"),
   [FORM_KEYS.name]: yup
