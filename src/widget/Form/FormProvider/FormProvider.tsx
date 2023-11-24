@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useSearchParams } from "next/navigation";
-import { useEffect } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { FC, useEffect } from "react";
 
 import styles from "./FormProvider.module.css";
 
@@ -13,19 +13,29 @@ import raindropLower from "&/images/main-hero/raindrop-lower.webp";
 import raindropUpper from "&/images/main-hero/raindrop-middle.webp";
 import sphere from "&/images/main-hero/sphere.webp";
 
-export const FormProvider = () => {
+export const FormProvider: FC = () => {
+  const router = useRouter();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
-  const currentForm = searchParams?.get("form");
+
+  const formName = searchParams?.get("form") ?? "";
+  const isFormExistInConfig = Object.keys(FORMS).includes(formName);
 
   useEffect(() => {
-    currentForm
+    if (!isFormExistInConfig) {
+      router.replace(pathname);
+    }
+  }, [searchParams, pathname, isFormExistInConfig, router]);
+
+  useEffect(() => {
+    isFormExistInConfig
       ? document.body.classList.add("lock")
       : document.body.classList.remove("lock");
   });
 
   return (
     <>
-      {currentForm && (
+      {isFormExistInConfig && (
         <div className={styles.bg}>
           <div className={styles.container}>
             <div className={styles.sphere}>
@@ -39,7 +49,7 @@ export const FormProvider = () => {
               <Image src={raindropUpper} alt="" priority />
             </div>
             <CloseButton />
-            {FORMS[currentForm]}
+            {FORMS[formName]}
           </div>
         </div>
       )}
