@@ -25,7 +25,7 @@
   width: 100vw;
   height: 100svh;
 
-  background: linear-gradient(330deg, #000 16.22%, rgb(0 0 0 / 0%) 74.01%);
+  background: linear-gradient(rgb(0 0 0 / 0%) 90%, rgb(0 0 0 / 30%));
 
   content: "";
 }
