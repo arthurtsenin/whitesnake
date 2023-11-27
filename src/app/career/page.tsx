@@ -6,6 +6,8 @@ import { CareerHero } from "@/widget/Career/CareerHero/CareerHero";
 import { MANAGER_BENEFITS_DATA } from "@/widget/Career/ManagerBenefits/data";
 import { ManagerBenefits } from "@/widget/Career/ManagerBenefits/ManagerBenefits";
 import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
+import { HIRING_PROCESS_DATA } from "@/widget/HiringProcess/data";
+import { HiringProcess } from "@/widget/HiringProcess/HiringProcess";
 import { InternshipOffice } from "@/widget/Internship/InternshipOffice/InternshipOffice";
 import { InternshipWorkBenefits } from "@/widget/Internship/InternshipWorkBenefits/InternshipWorkBenefits";
 import { VacanciesGroups } from "@/widget/VacanciesGroups/VacanciesGroups";
@@ -59,6 +61,10 @@ export default async function CareerPage() {
       />
       <Advantages />
       <InternshipOffice />
+      <HiringProcess
+        title="Как происходит процесс найма?"
+        cards={HIRING_PROCESS_DATA}
+      />
       <CareerAccordion
         title="Часто задаваемые вопросы"
         accordions={ACCORDIONS_DATA}
