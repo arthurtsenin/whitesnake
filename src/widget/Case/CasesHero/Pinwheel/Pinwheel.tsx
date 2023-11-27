@@ -8,7 +8,7 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroBg from "&/cases/silver-lines-bg.png";
+import heroBg from "&/images/cases/cases-hero/silver-lines-bg.png";
 
 export type PinwheelProps = {
   keywords: string[];

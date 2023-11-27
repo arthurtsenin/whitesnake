@@ -13,10 +13,10 @@ import { Navigation } from "../Navigation/Navigation";
 import { ROUTES } from "../Navigation/routes";
 import { Logo } from "../Navigation/ui/Logo/Logo";
 
-import bubble from "&/images/footer/bubble.png";
-import telega from "&/images/footer/telegram.png";
-import linked from "&/images/vacancies/hero/linkedin.png";
-import rabotaby from "&/images/vacancies/hero/rabotaby.png";
+import linked from "&/images/icons/linkedin.png";
+import rabotaby from "&/images/icons/rabotaby.png";
+import telega from "&/images/icons/telegram.png";
+import bubble from "&/images/raindrops/16.png";
 
 const wsEmail = "contact@whitesnake.io";
 const emailHref = ["mailto:", wsEmail].join("");
@@ -28,7 +28,9 @@ export const Footer = () => {
     <footer className={styles.container} ref={footerRef}>
       <div className={styles.glow} />
       <div className={styles.glow} />
-      <Image alt="" src={bubble} className={styles.image} />
+      <div className={styles.wrapper}>
+        <Image alt="" src={bubble} className={styles.image} />
+      </div>
       <ButtonUp elementRef={footerRef} />
       <div className={styles.contentContainer}>
         <div className={styles.logo}>

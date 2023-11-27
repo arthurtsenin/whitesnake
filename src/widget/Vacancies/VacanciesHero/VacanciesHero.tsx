@@ -4,10 +4,10 @@ import { FC } from "react";
 
 import styles from "./VacanciesHero.module.css";
 
-import linkedin from "&/images/vacancies/hero/linkedin.png";
-import rabotaby from "&/images/vacancies/hero/rabotaby.png";
-import raindrop from "&/images/vacancies/hero/raindrop-lower.png";
-import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
+import linkedin from "&/images/icons/linkedin.png";
+import rabotaby from "&/images/icons/rabotaby.png";
+import raindropPurple from "&/images/raindrops/10.png";
+import raindrop from "&/images/raindrops/14.webp";
 
 type VacanciesHeroProps = {
   path: string;

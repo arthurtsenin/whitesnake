@@ -1,8 +1,8 @@
 import { CaseDataType } from "../types";
 
-import laptop1 from "&/images/cases/fp&aSolutions/laptop1.webp";
-import laptop2 from "&/images/cases/fp&aSolutions/laptop2.webp";
-import laptop3 from "&/images/cases/fp&aSolutions/laptop3.webp";
+import laptop1 from "&/images/cases/cases-main/fp&aSolutions/laptop1.webp";
+import laptop2 from "&/images/cases/cases-main/fp&aSolutions/laptop2.webp";
+import laptop3 from "&/images/cases/cases-main/fp&aSolutions/laptop3.webp";
 
 export const FPA_DATA: CaseDataType = {
   hero: {

@@ -62,7 +62,6 @@
 
   list-style: inside;
   opacity: 0.9;
-  margin-block: 20px;
 }
 @media screen and (min-width: 744px) {
   .description p {
@@ -71,8 +70,13 @@
   .description h5 {
     font-size: 28px;
   }
+
+  .description ul {
+    gap: 20px;
+  }
+
   .description ul li {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -85,7 +89,10 @@
   .description h5 {
     font-size: 32px;
   }
+  .description ul {
+    gap: 25px;
+  }
   .description ul li {
-    font-size: 25px;
+    font-size: 20px;
   }
 }

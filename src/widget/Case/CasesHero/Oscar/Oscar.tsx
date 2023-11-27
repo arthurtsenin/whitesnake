@@ -8,8 +8,8 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroImage from "&/cases/health-insurance-platform.png";
-import heroBg from "&/cases/silver-lines-bg.png";
+import heroImage from "&/images/cases/cases-hero/health-insurance-platform.png";
+import heroBg from "&/images/cases/cases-hero/silver-lines-bg.png";
 
 export type OscarProps = {
   keywords: string[];

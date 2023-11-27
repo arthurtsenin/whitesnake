@@ -11,9 +11,9 @@ import { MotionComponent } from "@/shared/motion/MotionComponent";
 import { WORKFLOW_CARDS } from "./data";
 import { HomeScrollerCard } from "./ui/HomeScrollerCard";
 
-import raindrops from "&/images/scroll-carousel/green-raindrops.png";
+import raindrop from "&/images/raindrops/16.png";
+import raindrops from "&/images/raindrops/18.png";
 import net from "&/images/scroll-carousel/net.png";
-import raindrop from "&/images/scroll-carousel/raindrop.png";
 
 export const HomeScroller = () => {
   const [isDesktop, setIsDesktop] = useState<boolean>(false);

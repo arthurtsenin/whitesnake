@@ -5,8 +5,8 @@ import styles from "./FilePreview.module.css";
 
 import { FILE_REGEX } from "@/widget/Form/validation";
 
-import complete from "&/images/vacancies/complete.png";
-import error from "&/images/vacancies/error.png";
+import complete from "&/images/icons/complete.png";
+import error from "&/images/icons/error.png";
 
 type FilePreviewProps = {
   name: string;

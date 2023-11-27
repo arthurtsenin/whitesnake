@@ -9,7 +9,7 @@ import { checkPath } from "@/shared/utils/checkPath";
 
 import { HOME_LINK } from "../../routes";
 
-import logo from "&/logo.png";
+import logo from "&/images/logo.png";
 
 type LogoProps = {
   variant: "header" | "footer";

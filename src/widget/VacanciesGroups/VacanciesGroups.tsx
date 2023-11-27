@@ -10,7 +10,7 @@ import { CareerVacanciesCards } from "../Career/CareerVacanciesCards/CareerVacan
 import { CareerVacancyCardType } from "../Career/CareerVacanciesCards/ui/CareerVacancyCard";
 import { NAVIGATION_LINKS } from "../Navigation/routes";
 
-import arrow from "&/images/vacancies/arrow.png";
+import arrow from "&/images/icons/arrow.png";
 
 type VacanciesGroupsProps = {
   groups: { [key: string]: Array<Record<string, string>> };
