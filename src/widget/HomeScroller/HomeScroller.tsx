@@ -15,7 +15,7 @@ import raindrops from "&/images/scroll-carousel/green-raindrops.png";
 import net from "&/images/scroll-carousel/net.png";
 import raindrop from "&/images/scroll-carousel/raindrop.png";
 
-export const HomeScroller = () => {
+const HomeScroller = () => {
   const [isDesktop, setIsDesktop] = useState<boolean>(false);
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -77,3 +77,5 @@ export const HomeScroller = () => {
     </div>
   );
 };
+
+export default HomeScroller;

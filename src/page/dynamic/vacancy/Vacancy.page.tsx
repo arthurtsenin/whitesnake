@@ -1,6 +1,6 @@
+import dynamic from "next/dynamic";
 import { FC } from "react";
 
-import { VacancyForm } from "@/widget/Form/VacancyForm/VacancyForm";
 import { VacancyDescription } from "@/widget/Vacancy/VacancyDescription/VacancyDescription";
 import { VacancyHero } from "@/widget/Vacancy/VacancyHero/VacancyHero";
 
@@ -12,6 +12,10 @@ type VacancyPageLayoutProps = {
   lists?: Array<Array<string> | undefined>;
   department: string;
 };
+
+const VacancyForm = dynamic(
+  () => import("@/widget/Form/VacancyForm/VacancyForm"),
+);
 
 export const VacancyPageLayout: FC<VacancyPageLayoutProps> = ({
   jobTitle,

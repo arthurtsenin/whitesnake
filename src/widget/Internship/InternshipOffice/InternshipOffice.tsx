@@ -1,16 +1,20 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import { FC } from "react";
 
 import styles from "./InternshipOffice.module.css";
 
 import { Chip, Container, Title } from "@/shared";
-import { OfficeBenefits } from "@/widget/OfficeBenefits/OfficeBenefits";
 import { MapPreview } from "@/widget/YandexMap/ui/MapPreview/MapPreview";
 
 import { OFFICE_BENEFITS_DATA, OFFICE_TAGS } from "./data";
 
 import bubble2 from "&/images/internship/office_bubble_2.png";
 import bubble from "&/images/internship/office_work_benefits_buble.png";
+
+const OfficeBenefits = dynamic(
+  () => import("@/widget/OfficeBenefits/OfficeBenefits"),
+);
 
 export const InternshipOffice: FC = () => {
   return (
@@ -32,7 +36,6 @@ export const InternshipOffice: FC = () => {
             ))}
           </div>
           <OfficeBenefits data={OFFICE_BENEFITS_DATA} />
-          {/* <YandexMap /> */}
           <MapPreview />
         </div>
       </section>

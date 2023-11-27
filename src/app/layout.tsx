@@ -63,7 +63,6 @@ export default function RootLayout({
           <>
             <Header />
             <main className="main">{children}</main>
-
             <Footer />
             <FormProvider />
           </>

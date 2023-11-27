@@ -13,7 +13,7 @@ import { InternshipWorkCard } from "./ui/InternshipWorkCard";
 import bubble1 from "&/images/internship/map_bubble.png";
 import bubble from "&/images/internship/office_work_benefits_buble.png";
 
-export const InternshipWorkBenefits: FC = () => {
+const InternshipWorkBenefits: FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
 
   const [activeCardId, setActiveCardId] = useState<number>(1);
@@ -61,3 +61,5 @@ export const InternshipWorkBenefits: FC = () => {
     </Container>
   );
 };
+
+export default InternshipWorkBenefits;

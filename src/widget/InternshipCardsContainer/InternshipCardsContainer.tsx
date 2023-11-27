@@ -15,7 +15,7 @@ import raindrop from "&/cases-preview/raindrop.png";
 import raindrops from "&/images/internship/90c48eece4be53e14cb9fe0b75682e36.png";
 import net from "&/images/scroll-carousel/net.png";
 
-export const InternshipCardsContainer = () => {
+const InternshipCardsContainer = () => {
   const [activeCard, setActiveCard] = useState(1);
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -70,3 +70,5 @@ export const InternshipCardsContainer = () => {
     </section>
   );
 };
+
+export default InternshipCardsContainer;

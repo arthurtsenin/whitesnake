@@ -1,16 +1,26 @@
+import dynamic from "next/dynamic";
+
 import PageScript from "@/shared/analitics/PageScript";
 import { ACCORDIONS_DATA } from "@/widget/Accordion/data";
-import { Advantages } from "@/widget/Advantages/Advantages";
 import { CareerAccordion } from "@/widget/Career/CareerAccordion/CareerAccordion";
 import { CareerHero } from "@/widget/Career/CareerHero/CareerHero";
 import { MANAGER_BENEFITS_DATA } from "@/widget/Career/ManagerBenefits/data";
-import { ManagerBenefits } from "@/widget/Career/ManagerBenefits/ManagerBenefits";
-import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
 import { InternshipOffice } from "@/widget/Internship/InternshipOffice/InternshipOffice";
-import { InternshipWorkBenefits } from "@/widget/Internship/InternshipWorkBenefits/InternshipWorkBenefits";
 import { VacanciesGroups } from "@/widget/VacanciesGroups/VacanciesGroups";
 
 import { getVacancies } from "./[department]/service";
+
+const WorkBenefits = dynamic(
+  () =>
+    import("@/widget/Internship/InternshipWorkBenefits/InternshipWorkBenefits"),
+);
+const Advantages = dynamic(() => import("@/widget/Advantages/Advantages"));
+const ManagerBenefits = dynamic(
+  () => import("@/widget/Career/ManagerBenefits/ManagerBenefits"),
+);
+const VacanciesForm = dynamic(
+  () => import("@/widget/Form/VacanciesForm/VacanciesForm"),
+);
 
 export default async function CareerPage() {
   const vacanciesData = await getVacancies();
@@ -51,7 +61,7 @@ export default async function CareerPage() {
       <PageScript />
       <CareerHero />
       <VacanciesGroups groups={groups} />
-      <InternshipWorkBenefits />
+      <WorkBenefits />
       <ManagerBenefits
         title="Стань менеджером"
         subtitle="Мы поощряем ребят, которые берут стажеров под личное руководство и даём возможность расти в сторону менеджмента"

@@ -7,11 +7,13 @@ export default function PortfolioPage() {
   return (
     <>
       <PageScript />
-      <PortfolioHero
-        title="Портфолио"
-        subtitle="Как мы решаем сложные задачи"
-      />
-      <GridContainer title="Портфолио" data={CASES_PREVIEW_CARDS} />
+      <div>
+        <PortfolioHero
+          title="Портфолио"
+          subtitle="Как мы решаем сложные задачи"
+        />
+        <GridContainer title="Портфолио" data={CASES_PREVIEW_CARDS} />
+      </div>
     </>
   );
 }

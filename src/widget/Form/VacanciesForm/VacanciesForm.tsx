@@ -39,10 +39,7 @@ type ToastType = {
   toastText: string;
 };
 
-export const VacanciesForm: FC<VacanciesFormProps> = ({
-  jobTitles,
-  formTitle,
-}) => {
+const VacanciesForm: FC<VacanciesFormProps> = ({ jobTitles, formTitle }) => {
   const [selectedFileName, setSelectedFileName] = useState<string>("");
   const [downloadUrl, setDownloadUrl] = useState<string>("");
   const [isFileDownloading, setIsFileDownloading] = useState<boolean>(false);
@@ -204,3 +201,5 @@ export const VacanciesForm: FC<VacanciesFormProps> = ({
     </section>
   );
 };
+
+export default VacanciesForm;

@@ -19,7 +19,7 @@ type ManagerBenefitsProps = {
   benefits: Array<ManagerBenefitType>;
 } & TitleProps;
 
-export const ManagerBenefits: FC<ManagerBenefitsProps> = ({
+const ManagerBenefits: FC<ManagerBenefitsProps> = ({
   title,
   subtitle,
   benefits,
@@ -66,3 +66,5 @@ export const ManagerBenefits: FC<ManagerBenefitsProps> = ({
     </Container>
   );
 };
+
+export default ManagerBenefits;

@@ -37,7 +37,9 @@ export const Footer = () => {
         <div className={styles.navContainer}>
           <div className={styles.leftSide}>
             <p>Беларусь, Минск, проспект Дзержинского 104 (БЦ Титан) 20 этаж</p>
-            <Link href={emailHref}>{wsEmail}</Link>
+            <Link href={emailHref} target="_blank">
+              {wsEmail}
+            </Link>
             <div className={styles.imagesContainer}>
               <Image alt="" src={telega} />
               <Image alt="" src={rabotaby} />

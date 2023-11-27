@@ -1,5 +1,6 @@
+import dynamic from "next/dynamic";
+
 import PageScript from "@/shared/analitics/PageScript";
-import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
 import { VacanciesCards } from "@/widget/Vacancies/VacanciesCards/VacanciesCards";
 import { VacanciesHero } from "@/widget/Vacancies/VacanciesHero/VacanciesHero";
 
@@ -9,6 +10,10 @@ import { VacanciesDescription } from "../../../widget/Vacancies/VacanciesDescrip
 type VacanciesGroupPageType = {
   params: { department: string };
 };
+
+const VacanciesForm = dynamic(
+  () => import("@/widget/Form/VacanciesForm/VacanciesForm"),
+);
 
 export default async function VacanciesGroupPage({
   params,
