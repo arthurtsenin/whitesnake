@@ -35,7 +35,7 @@ type StaticPannelProps = {
 
 const base64EncodedPixel =
   "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN01ND4DwAC1QGS7X+1fgAAAABJRU5ErkJggg==";
-const placeholderDataURL = `data:image/gif;base64,${base64EncodedPixel}`;
+const placeholderDataURL: `data:image/${string}` = `data:image/gif;base64,${base64EncodedPixel}`;
 
 export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
   const isMobile = useMobileScreen();
