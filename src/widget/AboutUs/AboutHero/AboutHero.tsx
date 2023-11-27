@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./AboutHero.module.css";
 
 import { Button } from "@/shared";
+import { FORM_URL_PARAMS } from "@/widget/Form/params";
 import { NAVIGATION_LINKS } from "@/widget/Navigation/routes";
 
 import arc from "&/images/about/hero/arc.png";
@@ -44,7 +45,7 @@ export const AboutHero = () => {
             <Button>Карьера</Button>
           </Link>
 
-          <Link href="#">
+          <Link href={FORM_URL_PARAMS.LeaveRequest}>
             <Button variant="transparent">Оставить заявку</Button>
           </Link>
         </div>
