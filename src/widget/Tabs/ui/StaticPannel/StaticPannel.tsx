@@ -33,6 +33,10 @@ type StaticPannelProps = {
 //   },
 // };
 
+const base64EncodedPixel =
+  "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN01ND4DwAC1QGS7X+1fgAAAABJRU5ErkJggg==";
+const placeholderDataURL = `data:image/gif;base64,${base64EncodedPixel}`;
+
 export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
   const isMobile = useMobileScreen();
 
@@ -72,7 +76,12 @@ export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
         className={classNames(styles.container, "animateContainer")}
       >
         <div className={styles.wrapper}>
-          <Image alt={panel.name} src={panel.image} fill />
+          <Image
+            alt={panel.name}
+            src={panel.image}
+            placeholder={placeholderDataURL}
+            fill
+          />
           <div className={styles.text}>
             <MotionComponent
               as="h3"
