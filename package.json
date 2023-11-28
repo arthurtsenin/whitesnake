@@ -15,6 +15,7 @@
     "format:check": "prettier -c .",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "prepare": "husky install",
+    "cy:run": "cypress run",
     "cypress:open": "cypress open"
   },
   "dependencies": {
