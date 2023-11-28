@@ -3,12 +3,12 @@ import { UseFormRegister } from "react-hook-form";
 
 import styles from "./Textarea.module.css";
 
-import { VacancyFormType } from "../../formKeys";
+import { FormType } from "../../params";
 
 type TextareaProps = ComponentProps<"textarea"> & {
   label: string;
   required?: boolean;
-  register: UseFormRegister<VacancyFormType>;
+  register: UseFormRegister<FormType>;
 };
 
 export const Textarea: FC<TextareaProps> = ({ label, register, ...props }) => {

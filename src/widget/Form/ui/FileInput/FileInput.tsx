@@ -7,18 +7,19 @@ import { ChangeEvent, FC } from "react";
 import styles from "./FileInput.module.css";
 
 import { FilePreview } from "./ui/FilePreview/FilePreview";
+import { ACCEPT_FORMATS } from "../../validation";
 
-import clip from "&/images/vacancies/clip.png";
+import clip from "&/images/icons/clip.png";
 
 type FileInputProps = {
   selectedFileName: string;
-  isFileDownload: boolean;
+  isFileDownloading: boolean;
   handleFileChange: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export const FileInput: FC<FileInputProps> = ({
   handleFileChange,
-  isFileDownload,
+  isFileDownloading,
   selectedFileName,
 }) => {
   return (
@@ -28,11 +29,15 @@ export const FileInput: FC<FileInputProps> = ({
       })}
     >
       <div className={styles.wrapper}>
-        <Image src={clip} className={styles.icon} alt="upload CV" />
+        <Image
+          src={clip}
+          className={styles.icon}
+          alt="Прикрепить файл резюме."
+        />
       </div>
 
       <div className={styles.placeholder}>
-        {isFileDownload ? (
+        {isFileDownloading ? (
           "Загрузка файла..."
         ) : selectedFileName ? (
           <FilePreview name={selectedFileName} />
@@ -46,6 +51,7 @@ export const FileInput: FC<FileInputProps> = ({
 
       <input
         onChange={handleFileChange}
+        accept={ACCEPT_FORMATS}
         type="file"
         name="file"
         placeholder="CV"

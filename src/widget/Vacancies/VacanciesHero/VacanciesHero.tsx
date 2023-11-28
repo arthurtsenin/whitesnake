@@ -4,16 +4,17 @@ import { FC } from "react";
 
 import styles from "./VacanciesHero.module.css";
 
-import { Button } from "@/shared";
-
-import raindrop from "&/images/vacancies/hero/raindrop-lower.png";
-import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
+import linkedin from "&/images/icons/linkedin.png";
+import rabotaby from "&/images/icons/rabotaby.png";
+import raindropPurple from "&/images/raindrops/10.png";
+import raindrop from "&/images/raindrops/14.webp";
 
 type VacanciesHeroProps = {
   path: string;
+  department: string;
 };
 
-export const VacanciesHero: FC<VacanciesHeroProps> = ({ path }) => {
+export const VacanciesHero: FC<VacanciesHeroProps> = ({ path, department }) => {
   return (
     <div className={styles.hero}>
       <div className={styles.glowRed} />
@@ -36,16 +37,23 @@ export const VacanciesHero: FC<VacanciesHeroProps> = ({ path }) => {
       </div>
 
       <div className={styles.content}>
-        <h1 className={styles.title}>Вакансии</h1>
+        <h1 className={styles.title}>
+          Вакансии <span>{department}</span>
+        </h1>
         <p className={styles.subtitle}>
           Мы активно ищем талантливых, преданных своему делу профессионалов в
           различных областях.Посмотрите, какая возможность из списка ниже
           подходит вам лучше всего!
         </p>
-
         <div className={styles.buttons}>
           <Link target="_blank" href={path}>
-            <Button variant="transparent">Перейти на rabota.by</Button>
+            <Image src={rabotaby} alt="Вакансии на сайте Работабай." />
+          </Link>
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/company/whitesnake/"
+          >
+            <Image src={linkedin} alt="Уайтснейк в ЛинкедИн." />
           </Link>
         </div>
       </div>

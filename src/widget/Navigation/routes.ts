@@ -17,7 +17,8 @@ export const ROUTES = {
   TWO: { label: "Портфолио", href: "portfolio" },
   THREE: { label: "Услуги", href: "services" },
   FOUR: { label: "О нас", href: "about" },
-  FIVE: { label: "Вакансии", href: "vacancies" },
+  FIVE: { label: "Карьера", href: "career" },
+  SIX: { label: "Вакансии", href: "vacancies" },
 };
 
 export const DYNAMIC_ROUTES: Record<string, string> = {

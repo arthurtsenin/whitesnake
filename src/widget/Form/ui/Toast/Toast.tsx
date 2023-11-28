@@ -4,7 +4,8 @@ import { FC, useEffect } from "react";
 
 import styles from "./Toast.module.css";
 
-import close from "&/images/vacancies/form/close.png";
+import close from "&/images/icons/close.png";
+
 type ToastProps = {
   toastType: string;
   toastText: string;
@@ -32,7 +33,7 @@ export const Toast: FC<ToastProps> = ({
       className={classNames(styles.basic, styles[toastType])}
     >
       <p>{toastText}</p>
-      <Image src={close} alt="close icon" />
+      <Image src={close} alt="Иконка закрытия всплывающего уведомления." />
     </div>
   );
 };

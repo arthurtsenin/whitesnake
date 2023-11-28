@@ -1,8 +1,9 @@
 import { BenefitCardData } from "./types";
+import { FORM_URL_PARAMS } from "../Form/params";
 import { ROUTES } from "../Navigation/routes";
 
-import cube from "&/benefit-cards/cube.png";
-import spiral from "&/benefit-cards/spiral.png";
+import cube from "&/images/benefit-cards/cube.png";
+import spiral from "&/images/benefit-cards/spiral.png";
 
 export const BENEFIT_CARD_WITH_ICON_DATA: BenefitCardData[] = [
   {
@@ -10,7 +11,7 @@ export const BENEFIT_CARD_WITH_ICON_DATA: BenefitCardData[] = [
     cardDesc: `Реализация проектов под ключ, расширение вашей команды опытными разработчиками, экспертный консалтинг.`,
     buttonText: "Связаться с нами",
     icon: cube,
-    link: "#",
+    link: FORM_URL_PARAMS.LeaveRequest,
   },
   {
     cardTitle: "Работа в Whitesnake",

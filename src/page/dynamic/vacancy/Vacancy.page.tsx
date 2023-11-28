@@ -1,31 +1,35 @@
+import dynamic from "next/dynamic";
 import { FC } from "react";
 
-import { VacancyForm } from "@/widget/Form/VacancyForm/VacancyForm";
 import { VacancyDescription } from "@/widget/Vacancy/VacancyDescription/VacancyDescription";
 import { VacancyHero } from "@/widget/Vacancy/VacancyHero/VacancyHero";
 
 type VacancyPageLayoutProps = {
-  path: string;
   jobTitle: string;
   title: string;
   subtitle: string;
   titles?: Array<string>;
   lists?: Array<Array<string> | undefined>;
+  department: string;
 };
+
+const VacancyForm = dynamic(
+  () => import("@/widget/Form/VacancyForm/VacancyForm"),
+);
 
 export const VacancyPageLayout: FC<VacancyPageLayoutProps> = ({
   jobTitle,
-  path,
   title,
   subtitle,
   titles,
   lists,
+  department,
 }) => {
   return (
     <>
-      <VacancyHero path={path} title={title} subtitle={subtitle} />
+      <VacancyHero title={title} subtitle={subtitle} department={department} />
       <VacancyDescription titles={titles} lists={lists} />
-      <VacancyForm jobTitle={jobTitle} />
+      <VacancyForm jobTitle={jobTitle} formTitle="Оставить заявку" />
     </>
   );
 };

@@ -1,0 +1,44 @@
+.wrapper {
+  position: relative;
+
+  display: block;
+
+  box-sizing: border-box;
+  min-height: 240px;
+}
+
+.wrapper img {
+  border-radius: 4.55px;
+}
+
+.content {
+  position: absolute;
+  inset: 24px 16px;
+}
+
+@media (min-width: 744px) {
+  .wrapper {
+    min-height: 345px;
+  }
+
+  .wrapper img {
+    border-radius: 16px;
+  }
+  .content {
+    inset: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper {
+    min-height: 700px;
+  }
+
+  .wrapper img {
+    border-radius: 24px;
+  }
+
+  .content {
+    inset: 40px;
+  }
+}

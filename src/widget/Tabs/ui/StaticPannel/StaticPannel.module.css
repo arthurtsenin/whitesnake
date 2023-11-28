@@ -9,9 +9,20 @@
   flex-direction: column;
   justify-content: flex-end;
   height: 60vh;
-  max-height: 320px;
+  min-height: 320px;
+  max-height: 650px;
   padding: 16px;
   border-radius: var(--radius-300);
+}
+
+.wrapper > img {
+  z-index: 0;
+
+  border-radius: var(--radius-300);
+
+  object-fit: cover;
+
+  opacity: 0.8;
 }
 
 .wrapper:before {
@@ -31,13 +42,6 @@
 
   content: "";
   inset: 0;
-}
-
-.wrapper img {
-  position: absolute;
-
-  border-radius: var(--radius-300);
-  object-fit: cover;
 }
 
 .text {
@@ -80,6 +84,6 @@
   }
 
   .description {
-    max-width: 40%;
+    max-width: 50%;
   }
 }

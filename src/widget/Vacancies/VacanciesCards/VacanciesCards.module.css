@@ -1,5 +1,7 @@
 .container {
   --gap-vacancies-cards: 8px;
+  position: relative;
+  z-index: 3;
 
   display: grid;
   grid-auto-rows: 1fr;
@@ -24,9 +26,6 @@
   .gridCol2 {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-@media screen and (min-width: 1440px) {
 }
 
 @media screen and (min-width: 1920px) {

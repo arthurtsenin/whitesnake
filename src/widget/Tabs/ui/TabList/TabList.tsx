@@ -19,16 +19,20 @@ export const TabList: FC<TabListProps> = ({
   return (
     <div className={styles.container}>
       <div className={styles.tabs}>
-        <div className={styles.tabsInner}>
-          {Object.values(tabs).map((tab) => (
-            <Tab
-              key={tab.id}
-              name={tab.name}
-              active={currentTab === tab.name ? "active" : ""}
-              clickHandler={() => clickHandler(tab.name)}
-            />
-          ))}
-        </div>
+        {Object.values(tabs).map((tab) => (
+          <Tab
+            key={tab.id}
+            name={tab.name}
+            active={
+              currentTab === tab.name
+                ? currentTab === "Плюшки"
+                  ? "green"
+                  : "active"
+                : ""
+            }
+            clickHandler={() => clickHandler(tab.name)}
+          />
+        ))}
       </div>
     </div>
   );

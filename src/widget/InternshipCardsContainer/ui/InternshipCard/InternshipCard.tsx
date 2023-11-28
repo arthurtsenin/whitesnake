@@ -1,11 +1,10 @@
-"use client";
 import classNames from "classnames";
-import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import { FC } from "react";
 
 import styles from "./InternshipCard.module.css";
 
+import { MotionComponent } from "@/shared/motion/MotionComponent";
 import { DescriptionItemData } from "@/widget/InternshipCardsContainer/data";
 
 type InternshipCard = {
@@ -30,7 +29,8 @@ export const InternshipCard: FC<InternshipCard> = ({
   index,
 }) => {
   return (
-    <motion.div
+    <MotionComponent
+      as="div"
       className={classNames(styles.card, {
         [styles.active]: activeCard === index,
       })}
@@ -44,7 +44,7 @@ export const InternshipCard: FC<InternshipCard> = ({
         <div className={styles.date}>
           {image ? (
             <div className={styles.wrapper}>
-              <Image src={image} alt="image" />
+              <Image src={image} alt="" />
             </div>
           ) : (
             <>
@@ -55,14 +55,15 @@ export const InternshipCard: FC<InternshipCard> = ({
         </div>
       </div>
 
-      <motion.ul
+      <MotionComponent
+        as="ul"
         className={styles.description}
         animate={{ height: activeCard === index ? "auto" : "0" }}
       >
         {description.map((item) => (
           <li key={item.id}>{item.item}</li>
         ))}
-      </motion.ul>
-    </motion.div>
+      </MotionComponent>
+    </MotionComponent>
   );
 };

@@ -1,0 +1,150 @@
+.section {
+  --gap-section: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--gap-section);
+}
+
+.container {
+  position: relative;
+
+  width: 100%;
+
+  min-width: 334px;
+  height: 100%;
+  min-height: 486px;
+  max-height: 720px;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+
+  object-fit: fill;
+}
+
+.container > div[data-position] {
+  left: 15%;
+
+  width: 70%;
+}
+
+.container > div[data-position="first"] {
+  top: 6%;
+}
+
+.container > div[data-position="second"] {
+  top: 39%;
+}
+
+.container > div[data-position="third"] {
+  top: 71%;
+}
+
+@media screen and (min-width: 500px) {
+  .container {
+    min-height: 700px;
+  }
+
+  .container > div[data-position="first"] {
+    top: 7%;
+  }
+
+  .container > div[data-position="second"] {
+    top: 40%;
+  }
+
+  .container > div[data-position="third"] {
+    top: 72%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    min-height: 900px;
+  }
+
+  .container > div[data-position="second"] {
+    top: 41%;
+  }
+
+  .container > div[data-position="third"] {
+    top: 73%;
+  }
+}
+
+@media screen and (min-width: 744px) {
+  .section {
+    --gap-section: 48px;
+  }
+
+  .container {
+    min-height: 1312px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .container > div[data-position="first"] {
+    top: 8%;
+  }
+
+  .container > div[data-position="second"] {
+    top: 42%;
+  }
+
+  .container > div[data-position="third"] {
+    top: 74%;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .container > div[data-position="first"] {
+    top: 9%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    --gap-section: 64px;
+  }
+
+  .container {
+    min-height: 520px;
+  }
+
+  .container > div[data-position] {
+    top: 27%;
+
+    width: 30%;
+  }
+
+  .container > div[data-position="first"] {
+    left: 2%;
+  }
+
+  .container > div[data-position="second"] {
+    left: 35%;
+  }
+
+  .container > div[data-position="third"] {
+    left: 67%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    min-height: 620px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .container {
+    min-height: 720px;
+  }
+
+  .container > div[data-position] {
+    top: 32%;
+  }
+}

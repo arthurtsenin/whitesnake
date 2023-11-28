@@ -1,0 +1,137 @@
+.yandexMap {
+  position: absolute;
+  top: 0;
+
+  width: 200px;
+
+  color: #fff;
+  font-weight: 400;
+  font-size: 12px;
+  font-family: Inter;
+  font-style: normal;
+  line-height: 120%;
+  letter-spacing: -0.475px;
+  text-align: center;
+
+  background-color: transparent;
+  transform: translateX(-53%);
+}
+
+.yandexMapContainer {
+  position: relative;
+
+  width: 94vw;
+  border: 1px solid #000;
+  border-radius: 25px;
+
+  aspect-ratio: 1/1;
+  margin-inline: auto;
+}
+
+.imageWrapper {
+  position: absolute;
+  top: -50%;
+  right: -78%;
+  z-index: -1;
+
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.redGlow {
+  position: absolute;
+  inset: 0;
+
+  border-radius: 50%;
+
+  background: rgba(204, 11, 11, 0.5);
+  -webkit-filter: blur(125px);
+  filter: blur(125px);
+}
+
+.line {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  z-index: 2;
+
+  width: 101%;
+  height: 35px;
+
+  background-color: black;
+}
+
+.yandexMapContainer:before {
+  position: absolute;
+  right: -3px;
+  bottom: 34px;
+  z-index: 2;
+
+  width: 20px;
+  height: 20px;
+  border-bottom-right-radius: 25px;
+
+  background-color: transparent;
+  box-shadow: 5px 5px 0 5px black;
+
+  content: "";
+}
+
+.yandexMapContainer::after {
+  position: absolute;
+  bottom: 34px;
+  left: 0;
+  z-index: 2;
+
+  width: 20px;
+  height: 20px;
+  border-bottom-left-radius: 25px;
+
+  background-color: transparent;
+  box-shadow: -5px 5px 0 5px black;
+
+  content: "";
+}
+
+.ymaps-2-1-79-map {
+  background: transparent !important;
+}
+
+.ymaps-2-1-79-inner-panes {
+  border-radius: 25px;
+}
+
+@media screen and (min-width: 744px) {
+  .imageWrapper {
+    display: none;
+  }
+
+  .yandexMap {
+    font-size: 18px;
+  }
+
+  .yandexMapContainer {
+    aspect-ratio: 2/1;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .yandexMap {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .yandexMap {
+    font-size: 24px;
+  }
+
+  .yandexMapContainer {
+    aspect-ratio: 3/1;
+  }
+}

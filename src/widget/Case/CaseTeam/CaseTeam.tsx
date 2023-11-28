@@ -7,7 +7,7 @@ import styles from "./CaseTeam.module.css";
 import { caseTeamData } from "./types";
 import { CaseTitle } from "../ui/Title/CaseTitle";
 
-import user from "&/cases/user.svg";
+import user from "&/images/cases/user.svg";
 
 type caseTeamProps = {
   data: caseTeamData[];
@@ -27,7 +27,7 @@ export const CaseTeam: FC<caseTeamProps> = ({ data, title }) => {
           <div key={teamName} className={styles.caseTeam}>
             <p className={styles.caseTeamTitle}>{teamCount}</p>
             <div className={styles.caseTeamDesc}>
-              <Image src={user} alt="user" width={40} height={40} />
+              <Image src={user} alt="" width={40} height={40} />
               <p>{teamName}</p>
             </div>
           </div>

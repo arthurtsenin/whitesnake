@@ -3,8 +3,8 @@ import { FC } from "react";
 
 import styles from "./PortfolioHero.module.css";
 
-import raindrop from "&/images/vacancies/hero/raindrop-lower.png";
-import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
+import raindropPurple from "&/images/raindrops/10.png";
+import raindrop from "&/images/raindrops/14.webp";
 
 type PortfolioHeroProps = {
   title: string;
@@ -18,19 +18,19 @@ export const PortfolioHero: FC<PortfolioHeroProps> = ({ title, subtitle }) => {
       <div className={styles.glowBlue} />
 
       <div className={styles.raindrop1}>
-        <Image src={raindrop} alt="raindrop" priority />
+        <Image src={raindrop} alt="" priority />
       </div>
 
       <div className={styles.raindrop2}>
-        <Image src={raindrop} alt="raindrop" priority />
+        <Image src={raindrop} alt="" priority />
       </div>
 
       <div className={styles.raindrop3}>
-        <Image src={raindropPurple} alt="raindrop" priority />
+        <Image src={raindropPurple} alt="" priority />
       </div>
 
       <div className={styles.raindrop4}>
-        <Image src={raindropPurple} alt="raindrop" priority />
+        <Image src={raindropPurple} alt="" priority />
       </div>
 
       <div className={styles.content}>

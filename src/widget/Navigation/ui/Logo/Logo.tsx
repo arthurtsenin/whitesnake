@@ -9,7 +9,7 @@ import { checkPath } from "@/shared/utils/checkPath";
 
 import { HOME_LINK } from "../../routes";
 
-import logo from "&/logo.png";
+import logo from "&/images/logo.png";
 
 type LogoProps = {
   variant: "header" | "footer";
@@ -27,7 +27,7 @@ export const Logo: FC<LogoProps> = ({ variant, clickHandler }) => {
     >
       <Image
         src={logo}
-        alt="WhiteSnake logo"
+        alt="Логотип кампании УайтСнейк"
         className={styles[variant]}
         priority
       />

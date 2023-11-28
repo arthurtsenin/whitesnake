@@ -2,6 +2,7 @@
   position: relative;
 
   min-height: max-content;
+  margin-inline: auto;
 }
 
 .imgWrapper {
@@ -25,21 +26,25 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 750px;
+  height: 650px;
+
   margin: auto;
 
   background-color: transparent;
   contain: content;
 }
 
-@media screen and (width>=450px) {
+@media screen and (min-width: 450px) {
   .imgWrapper {
     top: -40%;
     left: -40%;
   }
 }
 
-@media screen and (width>=744px) {
+@media screen and (min-width: 744px) {
+  .container {
+    height: 780px;
+  }
   .imgWrapper {
     top: -20%;
     left: -10%;
@@ -49,16 +54,14 @@
   }
 }
 
-@media screen and (width>=1200px) {
+@media screen and (min-width: 1200px) {
   .container {
     width: 80%;
+    height: 1100px;
   }
 }
 
-@media screen and (width>=1440px) {
-  .container {
-    height: 1150px;
-  }
+@media screen and (min-width: 1440px) {
   .imgWrapper {
     top: -20%;
     left: -10%;
@@ -66,7 +69,4 @@
     width: 30vw;
     aspect-ratio: 1/1;
   }
-}
-
-@media screen and (width>=1920px) {
 }

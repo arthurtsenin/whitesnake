@@ -12,7 +12,7 @@ import { StaticPannel } from "./ui/StaticPannel/StaticPannel";
 import { TabList } from "./ui/TabList/TabList";
 import { Container } from "../../shared";
 
-import bubbles from "&/pannels/bubbles.png";
+import bubbles from "&/images/raindrops/17.png";
 
 type StaticTabsProps = {
   data: DataType<IndustryType>;
@@ -30,8 +30,9 @@ const StaticTabs: FC<StaticTabsProps> = ({
     <section className={styles.section}>
       <div className={styles.glow} />
       <div className={styles.image}>
-        <Image alt="design image" src={bubbles} priority />
+        <Image alt="" src={bubbles} priority />
       </div>
+
       <div className={styles.titleContainer}>
         <Title suptitle={suptitle} title={title} subtitle={subtitle} />
       </div>

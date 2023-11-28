@@ -1,7 +1,6 @@
 "use client";
 
 import cn from "classnames";
-import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { FC, useState } from "react";
 import {
@@ -13,20 +12,23 @@ import {
 import styles from "./CustomSelect.module.css";
 
 import { useOutsideClick } from "@/shared/hooks/use-outside-click";
+import { MotionAnimatePresence } from "@/shared/motion/MotionAnimatePresence";
+import { MotionComponent } from "@/shared/motion/MotionComponent";
 
-import { VacancyFormType } from "../../formKeys";
+import { FormType } from "../../params";
 
-import arrowRed from "&/arrow-down-red.svg";
-import arrow from "&/arrow-down-white.svg";
+import arrowRed from "&/images/icons/arrow-down-red.svg";
+import arrow from "&/images/icons/arrow-down-white.svg";
 
 type CustomSelectProps = {
   placeholder: string;
   label: string;
   options: Array<string>;
   error?: boolean;
-  register: UseFormRegister<VacancyFormType>;
-  getValues: UseFormGetValues<VacancyFormType>;
-  setValue: UseFormSetValue<VacancyFormType>;
+  helperText: string;
+  register: UseFormRegister<FormType>;
+  getValues: UseFormGetValues<FormType>;
+  setValue: UseFormSetValue<FormType>;
 };
 
 type SpanProps = {
@@ -49,6 +51,7 @@ export const CustomSelect: FC<CustomSelectProps> = ({
   placeholder,
   options,
   error,
+  helperText,
   register,
   getValues,
   setValue,
@@ -87,16 +90,14 @@ export const CustomSelect: FC<CustomSelectProps> = ({
       >
         <Span value={chosenValue} placeholder={placeholder} />
         <div className={styles.arrow}>
-          <Image
-            src={error ? arrowRed : arrow}
-            alt="arrow which opens dropdown in order to choose job title"
-          />
+          <Image src={error ? arrowRed : arrow} alt="" />
         </div>
       </button>
 
-      <AnimatePresence initial={false}>
+      <MotionAnimatePresence initial={false}>
         {open && (
-          <motion.div
+          <MotionComponent
+            as="div"
             className={styles.dropdown}
             initial="collapsed"
             animate="open"
@@ -116,9 +117,9 @@ export const CustomSelect: FC<CustomSelectProps> = ({
                 {optionName}
               </button>
             ))}
-          </motion.div>
+          </MotionComponent>
         )}
-      </AnimatePresence>
+      </MotionAnimatePresence>
 
       <input
         type="text"
@@ -126,6 +127,7 @@ export const CustomSelect: FC<CustomSelectProps> = ({
         {...register(label)}
         {...props}
       />
+      {helperText && <p className={styles.helper}>{helperText}</p>}
     </div>
   );
 };

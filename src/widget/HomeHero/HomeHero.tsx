@@ -3,14 +3,15 @@ import Link from "next/link";
 
 import styles from "./HomeHero.module.css";
 
-import { Scroller } from "./ui/Scroller";
+import { FORM_URL_PARAMS } from "@/widget/Form/params";
+
 import { ROUTES } from "../Navigation/routes";
 import { Button } from "../../shared";
 
-import raindropLower from "&/images/main-hero/raindrop-lower.webp";
-import raindropMiddle from "&/images/main-hero/raindrop-middle.webp";
-import raindropUpper from "&/images/main-hero/raindrop-upper.png";
-import sphere from "&/images/main-hero/sphere.png";
+import raindropUpper from "&/images/raindrops/10.png";
+import raindropMiddle from "&/images/raindrops/13.png";
+import raindropLower from "&/images/raindrops/14.webp";
+import sphere from "&/images/sphere.webp";
 
 export const HomeHero = () => {
   return (
@@ -26,32 +27,31 @@ export const HomeHero = () => {
             </p>
           </div>
           <div className={styles.buttons}>
-            <Button variant="primary">Связаться с нами</Button>
-            <Link href={`${ROUTES.FIVE.href}/#vacancies-form`}>
+            <Link href={FORM_URL_PARAMS.BookACall}>
+              <Button variant="primary">Связаться с нами</Button>
+            </Link>
+            <Link href={`${ROUTES.FIVE.href}#leave-request`}>
               <Button variant="transparent">Хочу в команду</Button>
             </Link>
           </div>
         </div>
         <div className={styles.rightSide}>
           <div className={styles.imgWrapper}>
-            <Image src={raindropUpper} alt="raindrop" priority />
+            <Image src={raindropUpper} alt="" priority />
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={raindropMiddle} alt="raindrop" priority />
+            <Image src={raindropMiddle} alt="" priority />
           </div>
           <div className={styles.imgWrapper}>
-            <Image src={raindropLower} alt="raindrop" priority />
+            <Image src={raindropLower} alt="" priority />
           </div>
         </div>
       </div>
       <div className={styles.sphere}>
-        <Image src={sphere} alt="sphere" priority placeholder="blur" />
+        <Image src={sphere} alt="" priority placeholder="blur" />
       </div>
       <div className={styles.glowRed}></div>
       <div className={styles.glowBlue}></div>
-      <div className={styles.slider}>
-        <Scroller />
-      </div>
     </section>
   );
 };

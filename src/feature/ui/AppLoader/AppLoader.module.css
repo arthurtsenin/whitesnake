@@ -1,9 +1,10 @@
 @font-face {
   font-weight: 700;
-  font-family: "Govno";
+  font-family: "Mark";
   font-style: normal;
   src: url("../../../../public/fonts/Mark-Pro-Bold.ttf");
 }
+
 .wrapper {
   position: relative;
 
@@ -11,7 +12,7 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
 
   overflow: hidden;
 
@@ -33,6 +34,7 @@
 
   filter: blur(150px);
 }
+
 .glowBlue {
   position: absolute;
   top: -15%;
@@ -48,46 +50,50 @@
   filter: blur(150px);
 }
 
-.container span::after {
+.smile {
   position: absolute;
-  bottom: 9%;
-  left: -1.5%;
+  bottom: 0%;
+  left: 5%;
+  z-index: 2;
 
-  width: 12%;
-  height: 10px;
-  border: 5px solid;
-  border-color: transparent;
-  border-bottom-color: #e20f0f;
+  display: block;
 
-  border-radius: 50%;
+  width: 90%;
+  height: auto;
 
-  content: "";
+  transform: translateY(64%);
+
+  animation: identifier2 3.5s linear forwards infinite;
+
   clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  aspect-ratio: 2/1;
 }
 
 .container h1 {
   position: relative;
 
-  display: block;
+  display: flex;
 
   margin: 0 0;
 
-  font-family: "Govno";
-}
-.container {
-}
-.container h1 {
-  font-size: 28px;
+  font-size: 54px;
+
+  font-family: "Mark";
+  line-height: 80%;
 
   animation: identifier 3.5s linear forwards infinite;
 }
+
 .container h1 span {
-  display: inline-block;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
   height: fit-content;
+
+  line-height: 80%;
 }
-.container span:after {
-  animation: identifier2 3.5s linear forwards infinite;
-}
+
 @keyframes identifier {
   0% {
     opacity: 0;
@@ -110,20 +116,27 @@
 @keyframes identifier2 {
   0% {
     opacity: 0;
+
+    clip-path: polygon(4% 0, 0 0, 0 11%, 2% 8%);
   }
-  45% {
-    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  35% {
+    clip-path: polygon(2% 0, 0 0, 0 100%, 1% 100%);
   }
-  52% {
-    clip-path: polygon(0 0, 66% 0, 3% 100%, 0 100%);
+  40% {
+    clip-path: polygon(64% 0, 0 0, 0 100%, 22% 100%);
   }
-  60% {
+  43% {
     opacity: 1;
 
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(63% 0, 0 0, 0 100%, 100% 100%);
+  }
+  45% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
   }
   100% {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    opacity: 1;
+
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
   }
 }
 
@@ -133,18 +146,14 @@
 
     font-size: 80px;
   }
-  .container span::after {
-    bottom: 0%;
-    left: -2px;
-
-    width: 14%;
-    height: 50px;
-    border-bottom-width: 10px;
+  .smile {
   }
+
   .glowRed {
     right: -5%;
     bottom: -15%;
   }
+
   .glowBlue {
     top: -15%;
     left: -15%;
@@ -153,17 +162,11 @@
 
 @media screen and (min-width: 1200px) {
   .container h1 {
-    height: 175px;
-
     font-size: 140px;
   }
-  .container span::after {
-    bottom: 9%;
-    left: 1%;
 
-    width: 12%;
-    height: 50px;
-    border-bottom-width: 12px;
+  .smile {
+    /* z-index: 11; */
   }
 
   .glowRed {
@@ -180,6 +183,7 @@
 
     filter: blur(250px);
   }
+
   .glowBlue {
     position: absolute;
     top: -15%;

@@ -1,48 +1,68 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import styles from "./HomeScroller.module.css";
 
+import { MotionComponent } from "@/shared/motion/MotionComponent";
+
 import { WORKFLOW_CARDS } from "./data";
 import { HomeScrollerCard } from "./ui/HomeScrollerCard";
-import { useMobileScreen } from "../../shared/hooks/use-mobile-screen";
 
-import raindrops from "&/images/scroll-carousel/green-raindrops.png";
+import raindrop from "&/images/raindrops/16.png";
+import raindrops from "&/images/raindrops/18.png";
 import net from "&/images/scroll-carousel/net.png";
-import raindrop from "&/images/scroll-carousel/raindrop.png";
 
-export const HomeScroller = () => {
+const HomeScroller = () => {
+  const [isDesktop, setIsDesktop] = useState<boolean>(false);
   const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-  const isMobile = useMobileScreen();
   const y = useTransform(
     scrollYProgress,
     [0, 1],
-    !isMobile ? ["35%", `-115%`] : ["0%", "0%"],
+    isDesktop ? ["35%", "-115%"] : ["0%", "0%"],
   );
+
+  useLayoutEffect(() => {
+    setIsDesktop(window.innerWidth >= 1200);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1200);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className={styles.container} ref={targetRef}>
-      <div className={styles.imgBubsWrapper}>
+      <div className={styles.imgRaindropWrapper}>
         <Image src={raindrop} alt="" />
       </div>
-      <div className={styles.imgBubsWrapper}>
+      <div className={styles.imgRaindropWrapper}>
         <Image src={raindrops} alt="" />
       </div>
       <div className={styles.glowRed} />
       <div className={styles.glowBlue} />
       <div className={styles.sticker}>
         <div className={styles.imgWrapper}>
-          <Image src={net} alt="net" />
+          <Image src={net} alt="" />
         </div>
 
         <div className={styles.title}>Как начать работать с нами</div>
         <div className={styles.devider} />
-        <motion.div className={styles.cardContainer} style={{ y }}>
+        <MotionComponent
+          as="div"
+          className={styles.cardContainer}
+          style={{ y }}
+        >
           {WORKFLOW_CARDS.map((el) => (
             <HomeScrollerCard
               description={el.description}
@@ -52,8 +72,10 @@ export const HomeScroller = () => {
               key={el.order}
             />
           ))}
-        </motion.div>
+        </MotionComponent>
       </div>
     </div>
   );
 };
+
+export default HomeScroller;

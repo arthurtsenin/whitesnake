@@ -1,16 +1,14 @@
 .tab {
-  display: flex;
-  flex: 1;
   align-items: center;
   justify-content: center;
-  min-width: max-content;
+  min-width: fit-content;
   height: 56px;
 
   font-weight: var(--fw-light);
   font-size: var(--fs-tab);
   line-height: 120%;
   letter-spacing: -0.7px;
-  text-wrap: nowrap;
+  white-space: nowrap;
 
   cursor: pointer;
   padding-inline: 8px;
@@ -22,6 +20,17 @@
   color: var(--clr-main-text);
 
   background: var(--clr-tab-bg-gradient);
+}
+
+.green {
+  border-radius: 12px;
+
+  background: radial-gradient(
+      70.71% 70.71% at 50% 50%,
+      rgba(124, 254, 253, 0.37) 0%,
+      rgba(88, 84, 84, 0) 100%
+    ),
+    linear-gradient(180deg, rgba(88, 84, 84, 0.1) 0%, rgba(88, 84, 84, 0) 100%);
 }
 
 @media screen and (min-width: 744px) {

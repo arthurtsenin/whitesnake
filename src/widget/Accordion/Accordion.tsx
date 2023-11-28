@@ -5,11 +5,13 @@ import { FC, useState } from "react";
 
 import styles from "./Accordion.module.css";
 
+import { Container } from "@/shared";
+import { MotionComponent } from "@/shared/motion/MotionComponent";
+
 import { AccordionType } from "./data";
 import { AccordionItem } from "./ui/AccordionItem/AccordionItem";
-import { Container } from "../../shared";
 
-import bubble from "&/images/main-questions/bubble.png";
+import bubble from "&/images/raindrops/16.png";
 
 export type AccordionProps = {
   accordions: Array<AccordionType>;
@@ -22,9 +24,10 @@ const Accordion: FC<AccordionProps> = ({ accordions }) => {
     <Container>
       <section className={styles.section}>
         <div className={styles.imgWrapper}>
-          <Image src={bubble} alt="design image" priority />
+          <Image src={bubble} alt="" priority />
         </div>
-        <div className={styles.container}>
+
+        <MotionComponent as="div" className={styles.container}>
           {accordions.map((item) => (
             <AccordionItem
               key={item.id}
@@ -33,7 +36,7 @@ const Accordion: FC<AccordionProps> = ({ accordions }) => {
               setIndex={setIndex}
             />
           ))}
-        </div>
+        </MotionComponent>
       </section>
     </Container>
   );

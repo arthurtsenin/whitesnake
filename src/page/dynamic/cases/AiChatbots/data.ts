@@ -1,8 +1,8 @@
 import { CaseDataType } from "../types";
 
-import cloud from "&/images/cases/aiChatbots/cloud.webp";
-import createChatBots from "&/images/cases/aiChatbots/createChatBots.webp";
-import python from "&/images/cases/aiChatbots/python.webp";
+import cloud from "&/images/cases/cases-main/aiChatbots/cloud.webp";
+import createChatBots from "&/images/cases/cases-main/aiChatbots/createChatBots.webp";
+import python from "&/images/cases/cases-main/aiChatbots/python.webp";
 
 export const AI_CHATBOTS_DATA: CaseDataType = {
   hero: {

@@ -4,23 +4,33 @@ import { UseFormRegister } from "react-hook-form";
 
 import styles from "./Input.module.css";
 
-import { VacancyFormType } from "../../formKeys";
+import { FormType } from "../../params";
 
 type InputProps = ComponentProps<"input"> & {
   error?: boolean;
   refresh?: boolean;
   label: string;
-  register: UseFormRegister<VacancyFormType>;
+  register: UseFormRegister<FormType>;
+  helperText: string;
 };
 
-export const Input: FC<InputProps> = ({ label, register, error, ...props }) => {
+export const Input: FC<InputProps> = ({
+  label,
+  register,
+  error,
+  helperText,
+  ...props
+}) => {
   return (
-    <input
-      className={classNames(styles.input, {
-        [styles.invalid]: error,
-      })}
-      {...register(label)}
-      {...props}
-    />
+    <div className={styles.container}>
+      <input
+        className={classNames(styles.input, {
+          [styles.invalid]: error,
+        })}
+        {...register(label)}
+        {...props}
+      />
+      {helperText && <p className={styles.helper}>{helperText}</p>}
+    </div>
   );
 };

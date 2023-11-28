@@ -8,8 +8,8 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroImage from "&/cases/food-delivery-service.png";
-import heroBg from "&/cases/silver-lines-bg.png";
+import heroImage from "&/images/cases/cases-hero/food-delivery-service.png";
+import heroBg from "&/images/cases/cases-hero/silver-lines-bg.png";
 
 export type OddboxProps = {
   keywords: string[];

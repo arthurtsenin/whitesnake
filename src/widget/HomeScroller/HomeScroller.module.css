@@ -48,7 +48,7 @@
   display: none;
 }
 .imgWrapper,
-.imgBubsWrapper {
+.imgRaindropWrapper {
   position: absolute;
 }
 .imgWrapper {
@@ -60,7 +60,7 @@
 
   opacity: 0.8;
 }
-.imgBubsWrapper:nth-child(1) {
+.imgRaindropWrapper:nth-child(1) {
   top: -10%;
   left: -30%;
   z-index: -1;
@@ -71,7 +71,7 @@
 
   transform: rotate(86.083deg);
 }
-.imgBubsWrapper:nth-child(2) {
+.imgRaindropWrapper:nth-child(2) {
   right: -45%;
   bottom: 15%;
   z-index: 4;
@@ -81,10 +81,10 @@
 
   rotate: -65deg;
 
-  filter: blur(2px);
+  /* filter: blur(2px); */
 }
 .imgWrapper img,
-.imgBubsWrapper img {
+.imgRaindropWrapper img {
   width: 100%;
   height: 100%;
 }
@@ -122,7 +122,7 @@
   aspect-ratio: 1/1;
 }
 @media screen and (min-width: 744px) {
-  .imgBubsWrapper:nth-child(1) {
+  .imgRaindropWrapper:nth-child(1) {
     top: -25%;
     left: -30%;
     z-index: -1;
@@ -157,7 +157,7 @@
 
     aspect-ratio: 1/1;
   }
-  .imgBubsWrapper:nth-child(2) {
+  .imgRaindropWrapper:nth-child(2) {
     bottom: 20%;
   }
   .sticker {
@@ -179,7 +179,7 @@
 
     aspect-ratio: 1/1;
   }
-  .imgBubsWrapper:nth-child(1) {
+  .imgRaindropWrapper:nth-child(1) {
     top: -20%;
     left: -10%;
     z-index: -1;
@@ -241,10 +241,18 @@
     gap: 200px;
     align-items: center;
   }
-  .imgBubsWrapper:nth-child(2) {
+  .imgRaindropWrapper:nth-child(2) {
     right: -10%;
     bottom: 0%;
 
     height: 70vh;
+  }
+}
+@media screen and (max-height: 650px) {
+  .cardContainer {
+    gap: 80px;
+  }
+  .title {
+    font-size: 54px;
   }
 }

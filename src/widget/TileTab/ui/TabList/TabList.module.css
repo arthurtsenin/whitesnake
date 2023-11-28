@@ -1,0 +1,25 @@
+.title {
+  display: none;
+
+  color: #fff;
+  font-weight: 500;
+  font-size: 32px;
+  letter-spacing: -0.64px;
+
+  opacity: 0.6;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .title {
+    display: block;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+}
