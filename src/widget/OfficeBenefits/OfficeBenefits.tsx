@@ -17,7 +17,7 @@ type OfficeBenefitsProps = {
   data: { id: number; icon: StaticImageData }[];
 };
 
-export const OfficeBenefits: FC<OfficeBenefitsProps> = ({ data }) => {
+const OfficeBenefits: FC<OfficeBenefitsProps> = ({ data }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [direction, setdirection] = useState<number>(1);
   const [slidesNum, setSlidesNum] = useState<number | null>(null);
@@ -140,3 +140,5 @@ export const OfficeBenefits: FC<OfficeBenefitsProps> = ({ data }) => {
     </div>
   );
 };
+
+export default OfficeBenefits;

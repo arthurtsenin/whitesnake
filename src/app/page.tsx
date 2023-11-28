@@ -8,13 +8,13 @@ import { BENEFIT_CARD_WITH_ICON_DATA } from "@/widget/BenefitCards/data";
 import { CASES_PREVIEW_CARDS } from "@/widget/GridContainer/data";
 import { GridContainer } from "@/widget/GridContainer/GridContainer";
 import { HomeHero } from "@/widget/HomeHero/HomeHero";
-import { HomeScroller } from "@/widget/HomeScroller/HomeScroller";
 import { Statistic } from "@/widget/Statistic/Statistic";
 import { INDUSTRY_DATA, TECHNOLOGIE_DATA } from "@/widget/Tabs/data";
 
 const StaticTabs = dynamic(() => import("@/widget/Tabs/StaticTabs"));
 const DynamicTabs = dynamic(() => import("@/widget/Tabs/DynamicTabs"));
 const Accordion = dynamic(() => import("@/widget/Accordion/Accordion"));
+const Scroller = dynamic(() => import("@/widget/HomeScroller/HomeScroller"));
 
 export default function Home() {
   return (
@@ -33,7 +33,7 @@ export default function Home() {
         subtitle="Скорее всего, у нас уже есть опыт в вашей нише"
         data={INDUSTRY_DATA}
       />
-      <HomeScroller />
+      <Scroller />
       <Statistic />
       <HomeBanner />
       <DynamicTabs

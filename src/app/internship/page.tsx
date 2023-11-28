@@ -4,14 +4,22 @@ import dynamic from "next/dynamic";
 import { useEffect } from "react";
 
 import PageScript from "@/shared/analitics/PageScript";
-import { Advantages } from "@/widget/Advantages/Advantages";
-import { VacancyForm } from "@/widget/Form/VacancyForm/VacancyForm";
 import { HIRING_PROCESS_DATA } from "@/widget/HiringProcess/data";
 import { InternshipAccardion } from "@/widget/Internship/InternshipAccardion/InternshipAccardion";
 import { InternshipHero } from "@/widget/Internship/InternshipHero/InternshipHero";
 import { InternshipOffice } from "@/widget/Internship/InternshipOffice/InternshipOffice";
-import { InternshipWorkBenefits } from "@/widget/Internship/InternshipWorkBenefits/InternshipWorkBenefits";
-import { InternshipCardsContainer } from "@/widget/InternshipCardsContainer/InternshipCardsContainer";
+
+const IntershipCards = dynamic(
+  () => import("@/widget/InternshipCardsContainer/InternshipCardsContainer"),
+);
+const WorkBenefits = dynamic(
+  () =>
+    import("@/widget/Internship/InternshipWorkBenefits/InternshipWorkBenefits"),
+);
+const Advantages = dynamic(() => import("@/widget/Advantages/Advantages"));
+const VacancyForm = dynamic(
+  () => import("@/widget/Form/VacancyForm/VacancyForm"),
+);
 
 const HiringProcess = dynamic(
   () => import("@/widget/HiringProcess/HiringProcess"),
@@ -37,8 +45,8 @@ export default function InternshipPage() {
     <>
       <PageScript />
       <InternshipHero />
-      <InternshipCardsContainer />
-      <InternshipWorkBenefits />
+      <IntershipCards />
+      <WorkBenefits />
       <InternshipOffice />
       <Advantages />
       <HiringProcess

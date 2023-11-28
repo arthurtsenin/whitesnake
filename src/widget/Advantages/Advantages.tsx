@@ -14,7 +14,7 @@ import {
 import { TabList } from "../Tabs/ui/TabList/TabList";
 import { Title } from "../../shared";
 
-export const Advantages = () => {
+const Advantages = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [tab, setCurrentTab] = useState<string | null>(ADVANTAGES_TABS[0].name);
   const [choosenTab, setChoosenTab] = useState<number>(1);
@@ -150,3 +150,5 @@ export const Advantages = () => {
     </section>
   );
 };
+
+export default Advantages;
