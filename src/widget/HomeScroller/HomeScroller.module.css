@@ -81,7 +81,7 @@
 
   rotate: -65deg;
 
-  filter: blur(2px);
+  /* filter: blur(2px); */
 }
 .imgWrapper img,
 .imgRaindropWrapper img {

@@ -1,8 +1,8 @@
 import { CaseDataType } from "../types";
 
-import getCovered from "&/images/cases/healthInsurance/getCovered.webp";
-import notes from "&/images/cases/healthInsurance/notes.webp";
-import subscriptionProcessing from "&/images/cases/healthInsurance/subscriptionProcessing.webp";
+import getCovered from "&/images/cases/cases-main/healthInsurance/getCovered.webp";
+import notes from "&/images/cases/cases-main/healthInsurance/notes.webp";
+import subscriptionProcessing from "&/images/cases/cases-main/healthInsurance/subscriptionProcessing.webp";
 
 export const INSURANCE_DATA: CaseDataType = {
   hero: {

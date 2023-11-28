@@ -156,6 +156,8 @@ body {
 
   background-color: #000;
   scrollbar-gutter: stable;
+
+  contain: paint;
 }
 
 body.lock {
@@ -479,7 +481,6 @@ body.lock {
   gap: var(--gap-layout);
   align-items: center;
   min-height: 100dvh;
-  contain: paint;
 }
 
 input,

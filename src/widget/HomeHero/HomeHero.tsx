@@ -8,10 +8,10 @@ import { FORM_URL_PARAMS } from "@/widget/Form/params";
 import { ROUTES } from "../Navigation/routes";
 import { Button } from "../../shared";
 
-import raindropLower from "&/images/main-hero/raindrop-lower.webp";
-import raindropMiddle from "&/images/main-hero/raindrop-middle.webp";
-import raindropUpper from "&/images/main-hero/raindrop-upper.png";
-import sphere from "&/images/main-hero/sphere.webp";
+import raindropUpper from "&/images/raindrops/10.png";
+import raindropMiddle from "&/images/raindrops/13.png";
+import raindropLower from "&/images/raindrops/14.webp";
+import sphere from "&/images/sphere.webp";
 
 export const HomeHero = () => {
   return (

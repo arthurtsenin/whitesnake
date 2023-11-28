@@ -3,8 +3,8 @@ import { FC } from "react";
 
 import styles from "./PortfolioHero.module.css";
 
-import raindrop from "&/images/vacancies/hero/raindrop-lower.png";
-import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
+import raindropPurple from "&/images/raindrops/10.png";
+import raindrop from "&/images/raindrops/14.webp";
 
 type PortfolioHeroProps = {
   title: string;

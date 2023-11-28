@@ -1,8 +1,8 @@
 import { BenefitCardData } from "./types";
 import { ROUTES } from "../Navigation/routes";
 
-import cube from "&/benefit-cards/cube.png";
-import spiral from "&/benefit-cards/spiral.png";
+import cube from "&/images/benefit-cards/cube.png";
+import spiral from "&/images/benefit-cards/spiral.png";
 
 export const BENEFIT_CARD_WITH_ICON_DATA: BenefitCardData[] = [
   {

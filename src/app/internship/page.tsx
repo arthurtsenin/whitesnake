@@ -1,4 +1,7 @@
+"use client";
+
 import dynamic from "next/dynamic";
+import { useEffect } from "react";
 
 import PageScript from "@/shared/analitics/PageScript";
 import { Advantages } from "@/widget/Advantages/Advantages";
@@ -15,6 +18,21 @@ const HiringProcess = dynamic(
 );
 
 export default function InternshipPage() {
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      if (typeof window !== "undefined") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    }, 200);
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, []);
+
   return (
     <>
       <PageScript />

@@ -9,7 +9,7 @@ import styles from "./FileInput.module.css";
 import { FilePreview } from "./ui/FilePreview/FilePreview";
 import { ACCEPT_FORMATS } from "../../validation";
 
-import clip from "&/images/vacancies/clip.png";
+import clip from "&/images/icons/clip.png";
 
 type FileInputProps = {
   selectedFileName: string;
