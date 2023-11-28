@@ -8,8 +8,8 @@ import { Container, Title } from "@/shared";
 import { COMPANY_VALUES_DATA } from "./data";
 import { CompanyValueItem } from "./ui/CompanyValueItem";
 
-import bubble1 from "&/images/about/company_values_bubble_1.png";
-import bubble2 from "&/images/about/company_values_bubble_2.png";
+import bubble2 from "&/images/raindrops/11.png";
+import bubble1 from "&/images/raindrops/12.png";
 
 export const CompanyValues: FC = () => {
   return (

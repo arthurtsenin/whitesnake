@@ -37,6 +37,7 @@ const Advantages = () => {
   const dataChangeHandler = (id: number) => {
     setChoosenTab(id);
   };
+
   return (
     <section className={styles.section}>
       <Title title="Наши преимущества и бенефиты" />

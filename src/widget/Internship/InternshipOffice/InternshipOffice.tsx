@@ -9,8 +9,8 @@ import { MapPreview } from "@/widget/YandexMap/ui/MapPreview/MapPreview";
 
 import { OFFICE_BENEFITS_DATA, OFFICE_TAGS } from "./data";
 
-import bubble2 from "&/images/internship/office_bubble_2.png";
-import bubble from "&/images/internship/office_work_benefits_buble.png";
+import bubble from "&/images/raindrops/16.png";
+import bubble2 from "&/images/raindrops/20.png";
 
 const OfficeBenefits = dynamic(
   () => import("@/widget/OfficeBenefits/OfficeBenefits"),

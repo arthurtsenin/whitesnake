@@ -10,8 +10,8 @@ import { Container, Title } from "@/shared";
 import { WORK_BENEFITS_DATA } from "./data";
 import { InternshipWorkCard } from "./ui/InternshipWorkCard";
 
-import bubble1 from "&/images/internship/map_bubble.png";
-import bubble from "&/images/internship/office_work_benefits_buble.png";
+import bubble1 from "&/images/raindrops/15.png";
+import bubble from "&/images/raindrops/16.png";
 
 const InternshipWorkBenefits: FC = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);

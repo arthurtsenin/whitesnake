@@ -1,6 +1,8 @@
 import { StaticImageData } from "next/image";
 
-import blot from "&/images/services/blot.png";
+import dough from "&/images/raindrops/10.png";
+import blot from "&/images/raindrops/18.png";
+import sponge from "&/images/raindrops/21.png";
 import architecture from "&/images/services/consulting/architecture.svg";
 import backrev from "&/images/services/consulting/backend-review.svg";
 import optimal from "&/images/services/consulting/optimal.svg";
@@ -8,7 +10,6 @@ import performance from "&/images/services/consulting/performance.svg";
 import refactoring from "&/images/services/consulting/refactoring.svg";
 import storage from "&/images/services/consulting/storage.svg";
 import vulnerability from "&/images/services/consulting/vulnerability.svg";
-import dough from "&/images/services/dough.png";
 import backdev from "&/images/services/end-to-end/backend-development.svg";
 import dataeng from "&/images/services/end-to-end/data-eng.svg";
 import dataadmin from "&/images/services/end-to-end/database-administration.svg";
@@ -17,7 +18,6 @@ import mvp from "&/images/services/end-to-end/launch-product.svg";
 import testqa from "&/images/services/end-to-end/testingQa.svg";
 import maintains from "&/images/services/end-to-end/testingQa.svg";
 import web3dev from "&/images/services/end-to-end/web3-development.svg";
-import sponge from "&/images/services/sponge.png";
 import aiohttp from "&/images/services/team-extension/aiohttp.svg";
 import aws from "&/images/services/team-extension/aws.svg";
 import azure from "&/images/services/team-extension/azure.svg";

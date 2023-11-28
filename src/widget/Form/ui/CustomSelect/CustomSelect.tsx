@@ -17,8 +17,8 @@ import { MotionComponent } from "@/shared/motion/MotionComponent";
 
 import { FormType } from "../../params";
 
-import arrowRed from "&/arrow-down-red.svg";
-import arrow from "&/arrow-down-white.svg";
+import arrowRed from "&/images/icons/arrow-down-red.svg";
+import arrow from "&/images/icons/arrow-down-white.svg";
 
 type CustomSelectProps = {
   placeholder: string;

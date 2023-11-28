@@ -33,9 +33,7 @@ export default function Home() {
         subtitle="Скорее всего, у нас уже есть опыт в вашей нише"
         data={INDUSTRY_DATA}
       />
-
       <Scroller />
-
       <Statistic />
       <HomeBanner />
       <DynamicTabs

@@ -97,17 +97,17 @@
   left: 0;
 
   display: none;
-
+  width: 70vw;
   aspect-ratio: 1/1.1;
 
-  transform: translate(-20%, -19%);
+  transform: translate(-50%, -40%) rotate(45deg);
 }
 
 .rightRaindropWrapper {
   top: 0;
   right: 0;
 
-  transform: translate(10%, -20%);
+  transform: translate(50%, -10%) rotate(-60deg);
 }
 
 .arcWrapper {
@@ -246,7 +246,7 @@
   }
 
   .leftRaindropWrapper {
-    transform: translate(-5%, -20%);
+    transform: translate(-30%, -40%) rotate(45deg);
   }
 
   .rightRaindropWrapper {
@@ -274,11 +274,6 @@
     --gap-about-hero-content: 40px;
     --fs-about-hero-title: 100px;
     --fs-about-hero-subtitle: 24px;
-  }
-
-  .leftRaindropWrapper,
-  .rightRaindropWrapper {
-    transform: translate(0, 0);
   }
 
   .arcWrapper {

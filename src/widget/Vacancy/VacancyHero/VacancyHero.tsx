@@ -7,9 +7,9 @@ import styles from "./VacancyHero.module.css";
 import { Button } from "@/shared";
 import { NAVIGATION_LINKS } from "@/widget/Navigation/routes";
 
-import arrow from "&/images/vacancies/arrow.png";
-import raindrop from "&/images/vacancies/hero/raindrop-lower.png";
-import raindropPurple from "&/images/vacancies/hero/raindrop-upper.png";
+import arrow from "&/images/icons/arrow.png";
+import raindropPurple from "&/images/raindrops/10.png";
+import raindrop from "&/images/raindrops/14.webp";
 
 type VacancyHeroProps = {
   title: string;

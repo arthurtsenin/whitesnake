@@ -1,7 +1,7 @@
 import { CaseDataType } from "../types";
 
-import scheme from "&/images/cases/integrationSDK/scheme.webp";
-import staires from "&/images/cases/integrationSDK/staires.webp";
+import scheme from "&/images/cases/cases-main/integrationSDK/scheme.webp";
+import staires from "&/images/cases/cases-main/integrationSDK/staires.webp";
 
 export const INTEGRATION_SDK_DATA: CaseDataType = {
   hero: {

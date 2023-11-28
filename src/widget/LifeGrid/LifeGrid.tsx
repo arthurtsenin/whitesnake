@@ -7,7 +7,7 @@ import { Button, Container, Title } from "@/shared";
 
 import { IMAGES } from "./data";
 
-import raindropUpper from "&/images/main-hero/raindrop-middle.webp";
+import raindropUpper from "&/images/raindrops/13.png";
 
 export const LifeGrid = () => {
   return (

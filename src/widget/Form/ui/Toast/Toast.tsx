@@ -4,7 +4,8 @@ import { FC, useEffect } from "react";
 
 import styles from "./Toast.module.css";
 
-import close from "&/images/vacancies/form/close.png";
+import close from "&/images/icons/close.png";
+
 type ToastProps = {
   toastType: string;
   toastText: string;

@@ -8,8 +8,8 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroImage from "&/cases/digital-asset-staking-service.webp";
-import heroBg from "&/cases/hexagon-bg.png";
+import heroImage from "&/images/cases/cases-hero/digital-asset-staking-service.webp";
+import heroBg from "&/images/cases/cases-hero/hexagon-bg.png";
 
 export type Web3Props = {
   keywords: string[];

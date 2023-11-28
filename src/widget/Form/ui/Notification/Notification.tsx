@@ -5,8 +5,8 @@ import styles from "./Notification.module.css";
 
 import { Button } from "@/shared";
 
-import errorRaindrop from "&/images/form/5.png";
-import successRaindrop from "&/images/form/11.png";
+import errorRaindrop from "&/images/raindrops/advantages/5.png";
+import successRaindrop from "&/images/raindrops/advantages/11.png";
 
 type NotificationType = {
   closeFormHandler?: () => void;

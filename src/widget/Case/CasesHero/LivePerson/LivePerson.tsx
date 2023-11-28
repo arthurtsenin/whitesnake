@@ -8,8 +8,8 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroBg from "&/cases/hexagon-bg.png";
-import heroImage from "&/cases/platform-for-customer-support.png";
+import heroBg from "&/images/cases/cases-hero/hexagon-bg.png";
+import heroImage from "&/images/cases/cases-hero/platform-for-customer-support.png";
 
 export type LivePersonProps = {
   keywords: string[];
