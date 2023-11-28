@@ -29,7 +29,6 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           wait-on: "http://localhost:3000"
-          cmd: cy:run # will run yarn cy:run command
 
       - name: Build develop bundle
         uses: borales/actions-yarn@v4
