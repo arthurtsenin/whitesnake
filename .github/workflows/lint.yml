@@ -25,6 +25,12 @@ jobs:
         with:
           cmd: install # will run yarn install command
 
+      - name: Cypress testing
+        uses: cypress-io/github-action@v6
+        with:
+          wait-on: "http://localhost:3000"
+          cmd: cy:run # will run yarn cy:run command
+
       - name: Build develop bundle
         uses: borales/actions-yarn@v4
         with:
@@ -49,8 +55,3 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: format:check # will run yarn format checker command
-
-      - name: Cypress testing
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: cy:run # will run yarn cy:run command
