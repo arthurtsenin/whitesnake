@@ -1,5 +1,6 @@
+import dynamic from "next/dynamic";
+
 import PageScript from "@/shared/analitics/PageScript";
-import Accordion from "@/widget/Accordion/Accordion";
 import { ACCORDIONS_DATA } from "@/widget/Accordion/data";
 import { HomeBanner } from "@/widget/Banner/HomeBanner/HomeBanner";
 import { BenefitCards } from "@/widget/BenefitCards/BenefitCards";
@@ -10,12 +11,10 @@ import { HomeHero } from "@/widget/HomeHero/HomeHero";
 import { HomeScroller } from "@/widget/HomeScroller/HomeScroller";
 import { Statistic } from "@/widget/Statistic/Statistic";
 import { INDUSTRY_DATA, TECHNOLOGIE_DATA } from "@/widget/Tabs/data";
-import DynamicTabs from "@/widget/Tabs/DynamicTabs";
-import StaticTabs from "@/widget/Tabs/StaticTabs";
 
-// const StaticTabs = dynamic(() => import("@/widget/Tabs/StaticTabs"));
-// const DynamicTabs = dynamic(() => import("@/widget/Tabs/DynamicTabs"));
-// const Accordion = dynamic(() => import("@/widget/Accordion/Accordion"));
+const StaticTabs = dynamic(() => import("@/widget/Tabs/StaticTabs"));
+const DynamicTabs = dynamic(() => import("@/widget/Tabs/DynamicTabs"));
+const Accordion = dynamic(() => import("@/widget/Accordion/Accordion"));
 
 export default function Home() {
   return (
