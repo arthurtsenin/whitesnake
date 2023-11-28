@@ -49,3 +49,8 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: format:check # will run yarn format checker command
+
+      - name: Cypress testing
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: cy:run # will run yarn cy:run command
