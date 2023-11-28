@@ -13,11 +13,16 @@
   max-height: 650px;
   padding: 16px;
   border-radius: var(--radius-300);
+}
 
-  background-repeat: no-repeat;
+.wrapper > img {
+  z-index: 0;
 
-  background-position: center;
-  background-size: cover;
+  border-radius: var(--radius-300);
+
+  object-fit: cover;
+
+  opacity: 0.8;
 }
 
 .wrapper:before {

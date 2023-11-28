@@ -32,12 +32,14 @@ export const InternshipHero: FC = () => {
       </div>
 
       <h1 className={styles.herotitle}>Стажировка</h1>
+
       <p className={styles.heroText}>
         Получи возможность расти в нашей команде, или растить начинающих ребят!
       </p>
-      <Button>
-        <Link href="#internship-form">Хочу на стажировку</Link>
-      </Button>
+
+      <Link href="#leave-request">
+        <Button variant="transparent">Хочу на стажировку</Button>
+      </Link>
     </div>
   );
 };

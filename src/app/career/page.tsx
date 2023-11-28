@@ -5,6 +5,9 @@ import { ACCORDIONS_DATA } from "@/widget/Accordion/data";
 import { CareerAccordion } from "@/widget/Career/CareerAccordion/CareerAccordion";
 import { CareerHero } from "@/widget/Career/CareerHero/CareerHero";
 import { MANAGER_BENEFITS_DATA } from "@/widget/Career/ManagerBenefits/data";
+
+
+import { HIRING_PROCESS_DATA } from "@/widget/HiringProcess/data";
 import { InternshipOffice } from "@/widget/Internship/InternshipOffice/InternshipOffice";
 import { VacanciesGroups } from "@/widget/VacanciesGroups/VacanciesGroups";
 
@@ -20,6 +23,8 @@ const ManagerBenefits = dynamic(
 );
 const VacanciesForm = dynamic(
   () => import("@/widget/Form/VacanciesForm/VacanciesForm"),
+const HiringProcess = dynamic(
+  () => import("@/widget/HiringProcess/HiringProcess"),
 );
 
 export default async function CareerPage() {
@@ -69,6 +74,10 @@ export default async function CareerPage() {
       />
       <Advantages />
       <InternshipOffice />
+      <HiringProcess
+        title="Как происходит процесс найма?"
+        cards={HIRING_PROCESS_DATA}
+      />
       <CareerAccordion
         title="Часто задаваемые вопросы"
         accordions={ACCORDIONS_DATA}
