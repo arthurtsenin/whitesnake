@@ -3,3 +3,5 @@ describe("The About Page", () => {
     cy.visit("/about");
   });
 });
+
+export {};

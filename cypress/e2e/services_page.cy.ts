@@ -3,3 +3,5 @@ describe("The Services Page", () => {
     cy.visit("/services");
   });
 });
+
+export {};

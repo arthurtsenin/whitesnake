@@ -3,3 +3,5 @@ describe("The Internship Page", () => {
     cy.visit("/internship");
   });
 });
+
+export {};

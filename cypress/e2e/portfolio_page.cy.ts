@@ -3,3 +3,5 @@ describe("The Portfolio Page", () => {
     cy.visit("/portfolio");
   });
 });
+
+export {};

@@ -1,5 +1,7 @@
 describe("The Career Page", () => {
   it("successfully loads", () => {
-    cy.visit("/Career");
+    cy.visit("/career");
   });
 });
+
+export {};
