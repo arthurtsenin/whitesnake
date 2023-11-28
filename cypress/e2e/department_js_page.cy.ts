@@ -16,7 +16,7 @@ describe("The JS Department Page", () => {
   it("successfully content loads", () => {
     cy.visit(departmentJsRoute);
 
-    cy.get("h1").should("have.text", "Вакансии Js");
+    cy.get("h1").should("have.text", "Вакансии js");
   });
 });
 

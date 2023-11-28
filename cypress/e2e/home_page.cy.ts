@@ -8,7 +8,7 @@ describe("The Home Page", () => {
   it("successfully content loads", () => {
     cy.visit(HOME_LINK.href);
 
-    cy.get("h1").should("have.text", "Ваше видение, наша экспертиза:");
+    cy.get("h1").should("have.text", "Ваше видение,  наша экспертиза:");
   });
 });
 

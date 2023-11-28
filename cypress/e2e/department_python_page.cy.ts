@@ -16,7 +16,7 @@ describe("The Python Department Page", () => {
   it("successfully content loads", () => {
     cy.visit(departmentPythonRoute);
 
-    cy.get("h1").should("have.text", "Вакансии Python");
+    cy.get("h1").should("have.text", "Вакансии python");
   });
 });
 
