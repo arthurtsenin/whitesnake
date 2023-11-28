@@ -2,12 +2,14 @@
 
 import classNames from "classnames";
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./LifeGrid.module.css";
 
 import { Button, Container, Title } from "@/shared";
 
 import { IMAGES } from "./data";
+import { NAVIGATION_LINKS } from "../Navigation/routes";
 
 import raindropUpper from "&/images/raindrops/13.png";
 
@@ -18,11 +20,16 @@ export const LifeGrid = () => {
         <div className={styles.raindropUpper}>
           <Image src={raindropUpper} alt="" priority />
         </div>
+
         <Title
           title="Жизнь в Whitesnake"
           subtitle="Мы строим компанию, в которую приходят по призванию. Мы крутые. Корпоративы тусовки дружеская обстановка"
         />
-        <Button>Присоединиться</Button>
+
+        <Link href={NAVIGATION_LINKS.career.href}>
+          <Button>Присоединиться</Button>
+        </Link>
+
         <div className={styles.gallery}>
           {IMAGES.map((item) => (
             <div
