@@ -1,5 +1,6 @@
 import classNames from "classnames";
 import { animate } from "framer-motion";
+import Image from "next/image";
 import { FC, useEffect } from "react";
 
 import styles from "./StaticPannel.module.css";
@@ -31,6 +32,10 @@ type StaticPannelProps = {
 //     },
 //   },
 // };
+
+const base64EncodedPixel =
+  "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN01ND4DwAC1QGS7X+1fgAAAABJRU5ErkJggg==";
+const placeholderDataURL: `data:image/${string}` = `data:image/gif;base64,${base64EncodedPixel}`;
 
 export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
   const isMobile = useMobileScreen();
@@ -70,13 +75,13 @@ export const StaticPannel: FC<StaticPannelProps> = ({ panel }) => {
         as="div"
         className={classNames(styles.container, "animateContainer")}
       >
-        <div
-          className={styles.wrapper}
-          style={{
-            backgroundImage: `linear-gradient(45.57deg, #000000 -27.33%, rgba(0, 0, 0, 0) 73.09%), url(${panel.image})`,
-          }}
-        >
-          {/* <Image alt={panel.name} src={panel.image} fill priority /> */}
+        <div className={styles.wrapper}>
+          <Image
+            alt={panel.name}
+            src={panel.image}
+            placeholder={placeholderDataURL}
+            fill
+          />
           <div className={styles.text}>
             <MotionComponent
               as="h3"
