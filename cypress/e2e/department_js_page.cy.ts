@@ -12,6 +12,12 @@ describe("The JS Department Page", () => {
   it("successfully loads", () => {
     cy.visit(departmentJsRoute);
   });
+
+  it("successfully content loads", () => {
+    cy.visit(departmentJsRoute);
+
+    cy.get("h1").should("have.text", "Вакансии Js");
+  });
 });
 
 export {};
