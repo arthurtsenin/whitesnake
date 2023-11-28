@@ -15,7 +15,7 @@ type HiringProcessProps = {
   cards: Array<HiringProcessCardType>;
 } & TitleProps;
 
-export const HiringProcess: FC<HiringProcessProps> = ({ title, cards }) => {
+const HiringProcess: FC<HiringProcessProps> = ({ title, cards }) => {
   const [activeItemId, setActiveItemId] = useState<number>(0);
   const innerRef = useRef<HTMLDivElement>(null);
 
@@ -48,3 +48,5 @@ export const HiringProcess: FC<HiringProcessProps> = ({ title, cards }) => {
     </Container>
   );
 };
+
+export default HiringProcess;

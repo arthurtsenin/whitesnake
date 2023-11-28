@@ -1,3 +1,5 @@
+import dynamic from "next/dynamic";
+
 import PageScript from "@/shared/analitics/PageScript";
 import { ACCORDIONS_DATA } from "@/widget/Accordion/data";
 import { Advantages } from "@/widget/Advantages/Advantages";
@@ -7,12 +9,15 @@ import { MANAGER_BENEFITS_DATA } from "@/widget/Career/ManagerBenefits/data";
 import { ManagerBenefits } from "@/widget/Career/ManagerBenefits/ManagerBenefits";
 import { VacanciesForm } from "@/widget/Form/VacanciesForm/VacanciesForm";
 import { HIRING_PROCESS_DATA } from "@/widget/HiringProcess/data";
-import { HiringProcess } from "@/widget/HiringProcess/HiringProcess";
 import { InternshipOffice } from "@/widget/Internship/InternshipOffice/InternshipOffice";
 import { InternshipWorkBenefits } from "@/widget/Internship/InternshipWorkBenefits/InternshipWorkBenefits";
 import { VacanciesGroups } from "@/widget/VacanciesGroups/VacanciesGroups";
 
 import { getVacancies } from "./[department]/service";
+
+const HiringProcess = dynamic(
+  () => import("@/widget/HiringProcess/HiringProcess"),
+);
 
 export default async function CareerPage() {
   const vacanciesData = await getVacancies();
