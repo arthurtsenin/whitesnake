@@ -24,7 +24,7 @@ import { Toast } from "../ui/Toast/Toast";
 import { FILE_REGEX, FORM_VACANCIES_SCHEMA } from "../validation";
 import { storage } from "../../../../firestore";
 
-import raindrops from "&/images/vacancies/form/green-raindrops.png";
+import raindrops from "&/images/raindrops/18.png";
 
 type VacanciesFormProps = {
   jobTitles: Array<string>;

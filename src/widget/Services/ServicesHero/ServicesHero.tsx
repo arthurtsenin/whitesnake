@@ -2,9 +2,9 @@ import Image from "next/image";
 
 import styles from "./ServicesHero.module.css";
 
+import leftRaindrop from "&/images/raindrops/14.webp";
+import rightRaindrop from "&/images/raindrops/16.png";
 import heroBg from "&/images/services/heroBg.png";
-import leftRaindrop from "&/images/services/leftCorner.png";
-import rightRaindrop from "&/images/services/rightCorner.png";
 
 export const ServicesHero = () => {
   return (

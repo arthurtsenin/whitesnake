@@ -9,9 +9,9 @@ import styles from "./FormProvider.module.css";
 import { FORMS } from "../config";
 import { CloseButton } from "../ui/CloseButton/CloseButton";
 
-import raindropLower from "&/images/main-hero/raindrop-lower.webp";
-import raindropUpper from "&/images/main-hero/raindrop-middle.webp";
-import sphere from "&/images/main-hero/sphere.webp";
+import raindropUpper from "&/images/raindrops/13.png";
+import raindropLower from "&/images/raindrops/14.webp";
+import sphere from "&/images/sphere.webp";
 
 export const FormProvider = () => {
   const searchParams = useSearchParams();

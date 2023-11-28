@@ -8,9 +8,9 @@ import { CaseSolution } from "@/widget/Case/CaseSolution/CaseSolution";
 import { HEALTH_MONITORING_DATA } from "./data";
 import { CasePageLayout } from "../CasePageLayout";
 
-import dashboardService from "&/images/cases/healthMonitoring/dashboardService.webp";
-import dataProcessing from "&/images/cases/healthMonitoring/dataProcessing.webp";
-import deviceService from "&/images/cases/healthMonitoring/deviceService.webp";
+import dashboardService from "&/images/cases/cases-main/healthMonitoring/dashboardService.webp";
+import dataProcessing from "&/images/cases/cases-main/healthMonitoring/dataProcessing.webp";
+import deviceService from "&/images/cases/cases-main/healthMonitoring/deviceService.webp";
 
 export const HealthMonitoringPage = () => {
   return (

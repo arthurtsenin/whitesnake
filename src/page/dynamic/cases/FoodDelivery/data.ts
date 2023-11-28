@@ -1,7 +1,7 @@
 import { CaseDataType } from "../types";
 
-import aws from "&/images/cases/foodDelivery/aws.webp";
-import stack from "&/images/cases/foodDelivery/stack.webp";
+import aws from "&/images/cases/cases-main/foodDelivery/aws.webp";
+import stack from "&/images/cases/cases-main/foodDelivery/stack.webp";
 
 export const FOOD_DELIVERY_DATA: CaseDataType = {
   hero: {

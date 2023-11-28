@@ -11,8 +11,8 @@ import { MotionComponent } from "@/shared/motion/MotionComponent";
 import { INTERNSHIP_CARDS_DATA } from "@/widget/InternshipCardsContainer/data";
 import { InternshipCard } from "@/widget/InternshipCardsContainer/ui/InternshipCard/InternshipCard";
 
-import raindrop from "&/cases-preview/raindrop.png";
-import raindrops from "&/images/internship/90c48eece4be53e14cb9fe0b75682e36.png";
+import raindrop from "&/images/raindrops/19.webp";
+import raindrops from "&/images/raindrops/21.png";
 import net from "&/images/scroll-carousel/net.png";
 
 export const InternshipCardsContainer = () => {

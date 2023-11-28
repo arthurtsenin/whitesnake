@@ -6,7 +6,7 @@ import styles from "./CareerVacancyCard.module.css";
 
 import { NAVIGATION_LINKS } from "@/widget/Navigation/routes";
 
-import arrow from "&/arrow-right-white.svg";
+import arrow from "&/images/icons/arrow-right-white.svg";
 
 export type CareerVacancyCardType = {
   id: string;

@@ -9,7 +9,7 @@ import styles from "./DropDown.module.css";
 
 import { useOutsideClick } from "@/shared/hooks/use-outside-click";
 
-import arrow from "&/images/vacancies/arrow.png";
+import arrow from "&/images/icons/arrow.png";
 
 export const DropDown = () => {
   const [open, setOpen] = useState<boolean>(false);

@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 
 import styles from "./CloseButton.module.css";
 
-import close from "&/close.png";
+import close from "&/images/icons/close.png";
 
 export const CloseButton = () => {
   const router = useRouter();

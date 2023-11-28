@@ -7,8 +7,8 @@ import { Button } from "@/shared";
 import { NAVIGATION_LINKS } from "@/widget/Navigation/routes";
 
 import arc from "&/images/about/hero/arc.png";
-import rightRaindrop from "&/images/about/hero/semi-blot.png";
-import leftRaindrop from "&/images/about/hero/semi-cloud.png";
+import leftRaindrop from "&/images/raindrops/16.png";
+import rightRaindrop from "&/images/raindrops/18.png";
 
 export const AboutHero = () => {
   return (
