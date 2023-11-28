@@ -11,7 +11,7 @@ import { Button, Container, Title } from "@/shared";
 import { IMAGES } from "./data";
 import { NAVIGATION_LINKS } from "../Navigation/routes";
 
-import raindropUpper from "&/images/main-hero/raindrop-middle.webp";
+import raindropUpper from "&/images/raindrops/13.png";
 
 export const LifeGrid = () => {
   return (

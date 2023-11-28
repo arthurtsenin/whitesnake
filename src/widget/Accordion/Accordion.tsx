@@ -11,7 +11,7 @@ import { MotionComponent } from "@/shared/motion/MotionComponent";
 import { AccordionType } from "./data";
 import { AccordionItem } from "./ui/AccordionItem/AccordionItem";
 
-import bubble from "&/images/main-questions/bubble.png";
+import bubble from "&/images/raindrops/16.png";
 
 export type AccordionProps = {
   accordions: Array<AccordionType>;

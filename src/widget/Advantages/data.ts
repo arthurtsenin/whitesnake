@@ -1,15 +1,15 @@
-import raindrop1 from "&/images/advantages/1.png";
-import raindrop2 from "&/images/advantages/2.png";
-import raindrop3 from "&/images/advantages/3.png";
-import raindrop4 from "&/images/advantages/4.png";
-import raindrop5 from "&/images/advantages/5.png";
-import raindrop6 from "&/images/advantages/6.png";
-import raindrop7 from "&/images/advantages/7.png";
-import raindrop8 from "&/images/advantages/8.png";
-import raindrop9 from "&/images/advantages/9.png";
-import raindrop10 from "&/images/advantages/10.png";
-import raindrop11 from "&/images/advantages/11.png";
-import raindrop12 from "&/images/advantages/12.png";
+import raindrop1 from "&/images/raindrops/advantages/1.png";
+import raindrop2 from "&/images/raindrops/advantages/2.png";
+import raindrop3 from "&/images/raindrops/advantages/3.png";
+import raindrop4 from "&/images/raindrops/advantages/4.png";
+import raindrop5 from "&/images/raindrops/advantages/5.png";
+import raindrop6 from "&/images/raindrops/advantages/6.png";
+import raindrop7 from "&/images/raindrops/advantages/7.png";
+import raindrop8 from "&/images/raindrops/advantages/8.png";
+import raindrop9 from "&/images/raindrops/advantages/9.png";
+import raindrop10 from "&/images/raindrops/advantages/10.png";
+import raindrop11 from "&/images/raindrops/advantages/11.png";
+import raindrop12 from "&/images/raindrops/advantages/12.png";
 
 export type AdvantageColorVarsType = "green" | "red";
 export type AdvantageTabsVars = "Плюшки" | "Бенефиты";

@@ -209,10 +209,14 @@
 
 @media screen and (min-width: 1200px) {
   .raindropWrapper {
-    right: -40%;
+    top: 0;
+    right: 0;
 
-    width: 85%;
-    aspect-ratio: 1.1/1;
+    width: 50%;
+
+    transform: translate(50%);
+
+    aspect-ratio: 1/1;
 
     rotate: 7deg;
   }
@@ -243,12 +247,5 @@
 
   .answer {
     width: 80%;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .raindropWrapper {
-    right: -36%;
-    bottom: -100%;
   }
 }

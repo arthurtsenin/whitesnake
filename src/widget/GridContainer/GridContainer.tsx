@@ -9,7 +9,7 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 import { CasePreviewType } from "./data";
 import { CaseCard } from "./ui/CaseCard/CaseCard";
 
-import raindrop from "&/cases-preview/raindrop.png";
+import raindrop from "&/images/raindrops/19.webp";
 type GridContainerProps = {
   data: Array<CasePreviewType>;
 } & TitleProps;

@@ -7,7 +7,7 @@ import styles from "./CaseTeam.module.css";
 import { caseTeamData } from "./types";
 import { CaseTitle } from "../ui/Title/CaseTitle";
 
-import user from "&/cases/user.svg";
+import user from "&/images/cases/user.svg";
 
 type caseTeamProps = {
   data: caseTeamData[];

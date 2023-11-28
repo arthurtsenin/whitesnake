@@ -12,7 +12,7 @@ import { DynamicPannel } from "./ui/DynamicPannel/DynamicPannel";
 import { TabList } from "./ui/TabList/TabList";
 import { Container } from "../../shared";
 
-import bubble from "&/pannels/bubble.png";
+import bubble from "&/images/raindrops/22.png";
 
 type DynamicTabsProps = {
   data: DataType<TechnologieType>;

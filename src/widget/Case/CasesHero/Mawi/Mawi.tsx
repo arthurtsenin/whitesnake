@@ -8,8 +8,8 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 
 import { Keyword } from "../ui/Keyword/Keyword";
 
-import heroImage from "&/cases/health-monitoring.png";
-import heroBg from "&/cases/hexagon-bg.png";
+import heroImage from "&/images/cases/cases-hero/health-monitoring.png";
+import heroBg from "&/images/cases/cases-hero/hexagon-bg.png";
 
 export type MawiProps = {
   keywords: string[];

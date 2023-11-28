@@ -12,7 +12,7 @@ import { StaticPannel } from "./ui/StaticPannel/StaticPannel";
 import { TabList } from "./ui/TabList/TabList";
 import { Container } from "../../shared";
 
-import bubbles from "&/pannels/bubbles.png";
+import bubbles from "&/images/raindrops/17.png";
 
 type StaticTabsProps = {
   data: DataType<IndustryType>;

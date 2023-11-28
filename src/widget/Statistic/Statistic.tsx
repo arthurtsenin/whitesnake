@@ -10,16 +10,15 @@ import { SecondCard } from "./ui/SecondCard/SecondCard";
 import { ThirdCard } from "./ui/ThirdCard/ThirdCard";
 import { Container } from "../../shared";
 
-import raindropBlue from "&/images/statistic/raindrop.png";
-import raindropYellow from "&/images/statistic/raindrop.png";
+import raindrop from "&/images/raindrops/13.png";
 
 export const Statistic: FC = () => {
   return (
     <Container>
       <div className={styles.mask}>
         <div className={styles.images}>
-          <Image src={raindropBlue} alt="" />
-          <Image src={raindropYellow} alt="" />
+          <Image src={raindrop} alt="" />
+          <Image src={raindrop} alt="" />
         </div>
         <div className={styles.glowBlue} />
         <div className={styles.glowRed} />

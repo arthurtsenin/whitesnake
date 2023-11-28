@@ -1,7 +1,7 @@
 import { CaseDataType } from "../types";
 
-import laptop1 from "&/images/cases/digitalAssets/laptop1.webp";
-import laptop2 from "&/images/cases/digitalAssets/laptop2.webp";
+import laptop1 from "&/images/cases/cases-main/digitalAssets/laptop1.webp";
+import laptop2 from "&/images/cases/cases-main/digitalAssets/laptop2.webp";
 
 export const DIGITAL_ASSET_DATA: CaseDataType = {
   hero: {

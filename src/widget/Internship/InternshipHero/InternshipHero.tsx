@@ -6,8 +6,8 @@ import styles from "./InternshipHero.module.css";
 
 import { Button } from "@/shared";
 
-import heroBubble2 from "&/images/internship/bubble3.png";
-import heroBubble1 from "&/images/internship/hero_bubble_1.png";
+import raindropPurple from "&/images/raindrops/10.png";
+import raindrop from "&/images/raindrops/14.webp";
 
 export const InternshipHero: FC = () => {
   return (
@@ -15,20 +15,20 @@ export const InternshipHero: FC = () => {
       <div className={styles.glowGreen} />
       <div className={styles.redGlow} />
 
-      <div className={styles.bubble1}>
-        <Image className={styles.image} src={heroBubble1} alt="bubble1" />
+      <div className={styles.raindrop1}>
+        <Image src={raindrop} alt="" />
       </div>
 
-      <div className={styles.bubble2}>
-        <Image className={styles.image} src={heroBubble1} alt="bubble2" />
+      <div className={styles.raindrop2}>
+        <Image src={raindrop} alt="" />
       </div>
 
-      <div className={styles.bubble3}>
-        <Image className={styles.image} src={heroBubble2} alt="bubble3" />
+      <div className={styles.raindrop3}>
+        <Image src={raindropPurple} alt="" />
       </div>
 
-      <div className={styles.bubble4}>
-        <Image className={styles.image} src={heroBubble2} alt="bubble4" />
+      <div className={styles.raindrop4}>
+        <Image src={raindropPurple} alt="" />
       </div>
 
       <h1 className={styles.herotitle}>Стажировка</h1>

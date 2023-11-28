@@ -1,3 +1,7 @@
+"use client";
+
+import { useEffect } from "react";
+
 import PageScript from "@/shared/analitics/PageScript";
 import { AboutHero } from "@/widget/AboutUs/AboutHero/AboutHero";
 import { CompanyNumbers } from "@/widget/AboutUs/CompanyNumbers/CompanyNumbers";
@@ -7,6 +11,21 @@ import { InternshipOffice } from "@/widget/Internship/InternshipOffice/Internshi
 import { LifeGrid } from "@/widget/LifeGrid/LifeGrid";
 
 export default function AboutPage() {
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      if (typeof window !== "undefined") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    }, 200);
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, []);
+
   return (
     <>
       <PageScript />

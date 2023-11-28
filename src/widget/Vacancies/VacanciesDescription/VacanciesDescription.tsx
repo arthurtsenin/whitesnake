@@ -1,9 +1,21 @@
+import Image from "next/image";
 import { FC } from "react";
 
 import styles from "./VacanciesDescription.module.css";
+
+import upperRaindrop from "&/images/raindrops/19.webp";
+import lowerRaindrop from "&/images/raindrops/20.png";
+
 export const VacanciesDescription: FC = () => {
   return (
     <section className={styles.description}>
+      <div className={styles.wrapperUpper}>
+        <Image src={upperRaindrop} alt="" />
+      </div>
+
+      <div className={styles.wrapperLower}>
+        <Image src={lowerRaindrop} alt="" />
+      </div>
       <p>
         Python был представлен более 30 лет назад и с тех пор широко
         используется во многих областях, включая веб-разработку, Data Science и
@@ -60,7 +72,7 @@ export const VacanciesDescription: FC = () => {
         <li>и активное участие в Agile процессах.</li>
       </ul>
       <div className={styles.devider} />
-      <h5>
+      <h5 className={styles.middle}>
         Почему компания Whitesnake – лучшее решение для работы на Python в
         Минске:
       </h5>

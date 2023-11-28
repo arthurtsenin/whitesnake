@@ -27,21 +27,28 @@
 .leftRaindropWrapper {
   position: absolute;
   z-index: 1;
+  aspect-ratio: 1/1;
 }
 
 .rightRaindropWrapper {
   top: 0;
   right: 0;
 
-  width: 40%;
+  width: 60vw;
+
+  transform: translate(40%, -20%);
 }
 
 .leftRaindropWrapper {
-  bottom: 25%;
+  top: 0;
   left: 0;
 
-  width: 30%;
-  max-width: 200px;
+  width: 70vw;
+
+  transform: translate(100%, 20%);
+  filter: blur(2px);
+  rotate: 120deg;
+  /* max-width: 200px; */
 }
 
 .rightRaindropWrapper img,

@@ -8,7 +8,7 @@ import { FORM_URL_PARAMS } from "@/widget/Form/params";
 
 import { BannerTemplate } from "../BannerTemplate";
 
-import homeBanner from "&/banner/banner.png";
+import homeBanner from "&/images/banner/banner.png";
 
 export const HomeBanner: FC = () => {
   return (
