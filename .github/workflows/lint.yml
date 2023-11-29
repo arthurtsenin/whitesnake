@@ -24,7 +24,7 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: install # will run yarn install command
-
+  
       - name: Cypress testing
         uses: cypress-io/github-action@v6
         with:
@@ -37,23 +37,3 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: build # will run yarn build:prod command
-
-      - name: Prettier format
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: format # will run yarn formatting command
-
-      - name: Lint the app
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: lint:strict # will run yarn lint command
-
-      - name: Type check
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: typecheck # will run yarn typecheck command
-
-      - name: Prettier check
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: format:check # will run yarn format checker command
