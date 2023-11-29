@@ -29,6 +29,8 @@ export const DYNAMIC_ROUTES: Record<string, string> = {
   HEALTH_MONITORING: "health-monitoring-service",
   AI_CHATBOTS: "ai-powered-chatbots-building-platform",
   INTEGRATION_SDK: "payroll-integration-sdk",
+  PYTHON: "python",
+  JS: "js",
 };
 
 export const NAVIGATION_LINKS: LinksType = {

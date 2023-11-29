@@ -14,7 +14,9 @@
     "format": "prettier -w .",
     "format:check": "prettier -c .",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cy:run": "cypress run",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
@@ -58,6 +60,7 @@
     "@types/react-dom": "18.2.7",
     "autoprefixer": "^10.4.14",
     "commitlint": "^17.7.1",
+    "cypress": "^13.6.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
@@ -82,7 +85,8 @@
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --max-warnings=0",
-      "prettier -w"
+      "prettier -c .",
+      "tsc --noEmit --incremental false"
     ],
     "**/*.{json,css,scss,md,webmanifest}": [
       "prettier -w"
