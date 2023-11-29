@@ -28,8 +28,10 @@ jobs:
       - name: Cypress testing
         uses: cypress-io/github-action@v6
         with:
+          browser: chrome
           build: yarn build
-          start: yarn start
+          start: yarn dev
+          wait-on: 'http://localhost:3000'
 
       - name: Build develop bundle
         uses: borales/actions-yarn@v4
