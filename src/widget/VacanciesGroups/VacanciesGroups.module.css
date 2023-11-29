@@ -24,6 +24,8 @@
   letter-spacing: -2.4px;
 
   cursor: pointer;
+
+  transition: all 0.5s;
 }
 
 .title span {
@@ -45,6 +47,8 @@
   font-size: 14px;
   line-height: 16px;
   letter-spacing: -0.48px;
+
+  transition: all 0.5s;
 }
 
 .wrapper {
@@ -63,6 +67,13 @@
 @media (hover: hover) {
   .link:hover img {
     animation: arrow-slider-anim 1.5s cubic-bezier(0.2, 1, 0.3, 1) infinite;
+  }
+  .link:hover {
+    scale: 1.005;
+  }
+
+  .link:hover .navigate {
+    color: #fff;
   }
 }
 

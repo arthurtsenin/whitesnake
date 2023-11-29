@@ -34,7 +34,7 @@ export const Navigation: FC<NavigationProps> = ({ clickHandler }) => {
           </Link>
         </li>
       ))}
-      <DropDown />
+      <DropDown clickHandler={clickHandler} />
     </>
   );
 };

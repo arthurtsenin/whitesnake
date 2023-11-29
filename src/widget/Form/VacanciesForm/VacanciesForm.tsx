@@ -166,6 +166,7 @@ const VacanciesForm: FC<VacanciesFormProps> = ({ jobTitles, formTitle }) => {
               />
             ))}
             <Textarea
+              rows={5}
               placeholder="Расскажи немного о себе"
               label={FORM_KEYS.message}
               register={register}

@@ -481,6 +481,7 @@ body.lock {
   gap: var(--gap-layout);
   align-items: center;
   min-height: 100dvh;
+  contain: paint;
 }
 
 input,

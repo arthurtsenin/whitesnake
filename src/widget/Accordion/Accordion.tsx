@@ -6,7 +6,6 @@ import { FC, useState } from "react";
 import styles from "./Accordion.module.css";
 
 import { Container } from "@/shared";
-import { MotionComponent } from "@/shared/motion/MotionComponent";
 
 import { AccordionType } from "./data";
 import { AccordionItem } from "./ui/AccordionItem/AccordionItem";
@@ -27,7 +26,7 @@ const Accordion: FC<AccordionProps> = ({ accordions }) => {
           <Image src={bubble} alt="" priority />
         </div>
 
-        <MotionComponent as="div" className={styles.container}>
+        <div className={styles.container}>
           {accordions.map((item) => (
             <AccordionItem
               key={item.id}
@@ -36,7 +35,7 @@ const Accordion: FC<AccordionProps> = ({ accordions }) => {
               setIndex={setIndex}
             />
           ))}
-        </MotionComponent>
+        </div>
       </section>
     </Container>
   );

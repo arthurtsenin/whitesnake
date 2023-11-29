@@ -4,6 +4,7 @@
   display: flex;
   flex: 1;
   flex-direction: column;
+  gap: 15px;
 }
 
 .form > h2 {
@@ -26,9 +27,6 @@
 }
 
 @media screen and (min-width: 744px) {
-  .form {
-    justify-content: space-evenly;
-  }
   .form > h2 {
     font-size: 48px;
   }
@@ -44,7 +42,7 @@
   }
 
   .form > h2 {
-    font-size: 70px;
+    font-size: 60px;
     letter-spacing: -2px;
   }
 }

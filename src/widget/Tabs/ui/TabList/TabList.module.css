@@ -1,4 +1,7 @@
 .container {
+  position: relative;
+  z-index: 3;
+
   display: flex;
   justify-content: space-around;
 

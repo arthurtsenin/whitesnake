@@ -95,6 +95,7 @@ export const LeaveRequestForm: FC = () => {
         ))}
       </div>
       <Textarea
+        rows={7}
         placeholder="Ваше сообщение"
         label={FORM_KEYS.message}
         register={register}

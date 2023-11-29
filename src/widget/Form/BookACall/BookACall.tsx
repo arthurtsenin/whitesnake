@@ -90,6 +90,7 @@ export const BookACallForm: FC = () => {
         register={register}
       />
       <Textarea
+        rows={5}
         placeholder="Ваше сообщение"
         label={FORM_KEYS.message}
         register={register}

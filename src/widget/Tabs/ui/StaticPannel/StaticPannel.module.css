@@ -1,5 +1,7 @@
 .container {
   margin-inline: auto;
+
+  position: relative;
 }
 
 .wrapper {
@@ -22,7 +24,7 @@
 
   object-fit: cover;
 
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .wrapper:before {

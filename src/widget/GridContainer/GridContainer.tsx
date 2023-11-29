@@ -9,7 +9,8 @@ import { TitleProps } from "@/shared/ui/Title/Title";
 import { CasePreviewType } from "./data";
 import { CaseCard } from "./ui/CaseCard/CaseCard";
 
-import raindrop from "&/images/raindrops/19.webp";
+import upperRaindrop from "&/images/raindrops/19.webp";
+
 type GridContainerProps = {
   data: Array<CasePreviewType>;
 } & TitleProps;
@@ -23,13 +24,10 @@ export const GridContainer: FC<GridContainerProps> = ({
   return (
     <Container>
       <section className={styles.section}>
-        <div className={styles.glowRed} />
-        <div className={styles.raindropWrapper}>
-          <Image src={raindrop} alt="" priority />
+        <div className={styles.upperWrapper}>
+          <Image src={upperRaindrop} alt="" priority />
         </div>
-
         <Title suptitle={suptitle} title={title} subtitle={subtitle} />
-
         <div className={styles.container}>
           {data.map((card) => (
             <div key={card.id} className={styles.wrapper}>

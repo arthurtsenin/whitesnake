@@ -26,13 +26,11 @@ export const Footer = () => {
 
   return (
     <footer className={styles.container} ref={footerRef}>
-      <div className={styles.glow} />
-      <div className={styles.glow} />
-      <div className={styles.wrapper}>
-        <Image alt="" src={bubble} className={styles.image} />
-      </div>
       <ButtonUp elementRef={footerRef} />
       <div className={styles.contentContainer}>
+        <div className={styles.wrapper}>
+          <Image alt="" src={bubble} className={styles.image} />
+        </div>
         <div className={styles.logo}>
           <Logo variant="footer" />
         </div>

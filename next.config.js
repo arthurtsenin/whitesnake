@@ -16,9 +16,6 @@ const nextConfig = {
   eslint: {
     dirs: ["src"],
   },
-  experimental: {
-    serverActions: true,
-  },
   reactStrictMode: true,
   swcMinify: true,
   images: {

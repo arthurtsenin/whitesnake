@@ -3,16 +3,25 @@
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { FC, useState } from "react";
 
 import styles from "./DropDown.module.css";
 
 import { useOutsideClick } from "@/shared/hooks/use-outside-click";
+import { checkPath } from "@/shared/utils/checkPath";
 
 import arrow from "&/images/icons/arrow.png";
 
-export const DropDown = () => {
+type DropDownPropsType = {
+  clickHandler?: () => void;
+};
+
+export const DropDown: FC<DropDownPropsType> = ({ clickHandler }) => {
   const [open, setOpen] = useState<boolean>(false);
+  const pathname = usePathname();
+
+  const linkPath = "/career/python";
 
   const closeDropDownHandler = () => setOpen(false);
   const toggleDropDownHandler = () => setOpen((prev) => !prev);
@@ -33,15 +42,13 @@ export const DropDown = () => {
       </button>
 
       <div
+        onClick={() => checkPath(pathname, linkPath, clickHandler)}
         className={classNames(styles.content, {
           [styles.show]: open,
         })}
       >
-        <Link onClick={closeDropDownHandler} href="/career/python">
+        <Link onClick={closeDropDownHandler} href={linkPath}>
           Python
-        </Link>
-        <Link onClick={closeDropDownHandler} href="/career/js">
-          JS
         </Link>
       </div>
     </div>

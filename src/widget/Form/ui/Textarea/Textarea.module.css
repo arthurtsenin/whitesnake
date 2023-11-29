@@ -8,10 +8,11 @@
 
   box-sizing: border-box;
   width: 100%;
-  width: 100%;
-  padding: 49px 0px 12px 0px;
+  padding: 10px;
   border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  border-radius: 8px;
 
   color: var(--clr-valid-input-text);
 
@@ -27,13 +28,13 @@
 }
 
 .textarea::placeholder {
+  top: 5px;
+
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
   font-size: 16px;
   letter-spacing: -0.8px;
   text-align: left;
-
-  transform: translateY(100%);
 
   transition: 0.5s;
 }
@@ -66,8 +67,6 @@
 
 @media screen and (min-width: 960px) {
   .textarea {
-    padding: 42px 0px 16px 0px;
-
     font-size: 18px;
   }
 }

@@ -28,14 +28,13 @@ const StaticTabs: FC<StaticTabsProps> = ({
 
   return (
     <section className={styles.section}>
-      <div className={styles.glow} />
-      <div className={styles.image}>
-        <Image alt="" src={bubbles} priority />
-      </div>
-
       <div className={styles.titleContainer}>
+        <div className={styles.image}>
+          <Image alt="" src={bubbles} priority />
+        </div>
         <Title suptitle={suptitle} title={title} subtitle={subtitle} />
       </div>
+
       <div className={styles.container}>
         <TabList
           tabs={Object.values(data)}

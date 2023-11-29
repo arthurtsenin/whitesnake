@@ -9,7 +9,7 @@ import { Button, Container, Title } from "@/shared";
 import { IMAGES } from "./data";
 import { NAVIGATION_LINKS } from "../Navigation/routes";
 
-import raindropUpper from "&/images/raindrops/13.png";
+import raindropUpper from "&/images/raindrops/13.webp";
 
 export const LifeGrid = () => {
   return (

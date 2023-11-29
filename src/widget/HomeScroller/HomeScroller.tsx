@@ -6,6 +6,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import styles from "./HomeScroller.module.css";
 
+import { Container } from "@/shared";
 import { MotionComponent } from "@/shared/motion/MotionComponent";
 
 import { WORKFLOW_CARDS } from "./data";
@@ -42,39 +43,40 @@ const HomeScroller = () => {
   }, []);
 
   return (
-    <div className={styles.container} ref={targetRef}>
-      <div className={styles.imgRaindropWrapper}>
-        <Image src={raindrop} alt="" />
-      </div>
-      <div className={styles.imgRaindropWrapper}>
-        <Image src={raindrops} alt="" />
-      </div>
-      <div className={styles.glowRed} />
-      <div className={styles.glowBlue} />
-      <div className={styles.sticker}>
-        <div className={styles.imgWrapper}>
-          <Image src={net} alt="" />
+    <Container>
+      <div className={styles.container} ref={targetRef}>
+        <div className={styles.imgRaindropWrapper}>
+          <Image src={raindrop} alt="" />
+        </div>
+        <div className={styles.imgRaindropWrapper}>
+          <Image src={raindrops} alt="" />
         </div>
 
-        <div className={styles.title}>Как начать работать с нами</div>
-        <div className={styles.devider} />
-        <MotionComponent
-          as="div"
-          className={styles.cardContainer}
-          style={{ y }}
-        >
-          {WORKFLOW_CARDS.map((el) => (
-            <HomeScrollerCard
-              description={el.description}
-              image={el.image}
-              order={el.order}
-              title={el.title}
-              key={el.order}
-            />
-          ))}
-        </MotionComponent>
+        <div className={styles.sticker}>
+          <div className={styles.imgWrapper}>
+            <Image src={net} alt="" />
+          </div>
+
+          <div className={styles.title}>Как начать работать с нами</div>
+          <div className={styles.devider} />
+          <MotionComponent
+            as="div"
+            className={styles.cardContainer}
+            style={{ y }}
+          >
+            {WORKFLOW_CARDS.map((el) => (
+              <HomeScrollerCard
+                description={el.description}
+                image={el.image}
+                order={el.order}
+                title={el.title}
+                key={el.order}
+              />
+            ))}
+          </MotionComponent>
+        </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

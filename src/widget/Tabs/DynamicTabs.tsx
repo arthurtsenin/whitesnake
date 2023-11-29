@@ -1,18 +1,15 @@
 "use client";
 
-import Image from "next/image";
 import { FC, useState } from "react";
 
 import styles from "./DynamicTabs.module.css";
 
+import { Container } from "@/shared";
 import { Title, TitleProps } from "@/shared/ui/Title/Title";
 
 import { DataType, TechnologieType } from "./data";
 import { DynamicPannel } from "./ui/DynamicPannel/DynamicPannel";
 import { TabList } from "./ui/TabList/TabList";
-import { Container } from "../../shared";
-
-import bubble from "&/images/raindrops/22.png";
 
 type DynamicTabsProps = {
   data: DataType<TechnologieType>;
@@ -28,9 +25,6 @@ const DynamicTabs: FC<DynamicTabsProps> = ({
 
   return (
     <section className={styles.section}>
-      <div className={styles.glow} />
-      <Image alt="" src={bubble} className={styles.image} priority />
-
       <Title suptitle={suptitle} title={title} subtitle={subtitle} />
       <div className={styles.container}>
         <TabList

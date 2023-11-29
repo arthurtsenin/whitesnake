@@ -9,7 +9,7 @@ import styles from "./FormProvider.module.css";
 import { FORMS } from "../config";
 import { CloseButton } from "../ui/CloseButton/CloseButton";
 
-import raindropUpper from "&/images/raindrops/13.png";
+import raindropUpper from "&/images/raindrops/13.webp";
 import raindropLower from "&/images/raindrops/14.webp";
 import sphere from "&/images/sphere.webp";
 
